@@ -1,13 +1,13 @@
 # aarch64 benchmarks
 
-- glam-rs commit: `c1ed8d43c9ec1efaf7a7053f995ca811199add69`
+- glam-rs commit: `0fdbfde9480be2ae1d7ea71ae8a5fc012e85dc78`
 - rustc: `rustc 1.98.0 (88d9e12ae 2026-08-18)`
 - valgrind: `valgrind-3.22.0`
 - gungraun: `0.19.4`
 - target: `aarch64-unknown-linux-gnu`
 
-| Benchmark | neon | scalar-math | Δ simd−scalar |
-| --- | --- | --- | --- |
+| Benchmark | neon | scalar | Δ simd−scalar |
+| --- | ---: | ---: | ---: |
 | `affine3a_from_scale_rotation_translation` | 47 | 51 | -4 |
 | `affine3a_inverse` | 50 | 73 | -23 |
 | `affine3a_mul_affine3a` | 28 | 87 | -59 |
