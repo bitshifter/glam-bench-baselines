@@ -1,0 +1,12 @@
+==5804== Callgrind, a call-graph generating cache profiler
+==5804== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==5804== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==5804== Command: /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00003 00004 00000
+==5804== Parent PID: 5773
+==5804== 
+==5804== For interactive control, run 'callgrind_control -h'.
+==5804== 
+==5804== Events    : Ir
+==5804== Collected : 35
+==5804== 
+==5804== I   refs:      35
