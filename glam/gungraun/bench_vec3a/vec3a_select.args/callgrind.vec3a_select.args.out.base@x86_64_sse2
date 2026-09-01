@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6048
+pid: 6295
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00006 00007 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84312
+desc: Timerange: Basic block 0 - 83986
 desc: Trigger: Program termination
 
 positions: line
@@ -19,14 +19,21 @@ events: Ir
 summary: 8
 
 
-ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-fl=???
-fn=0x000000000001f540
+ob=/usr/lib/x86_64-linux-gnu/libc.so.6
+fl=./csu/../csu/libc-start.c
+fn=__libc_start_main@@GLIBC_2.34
+cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
+cfn=(below main)
+calls=1 29 
+360 8
+
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
+fn=(below main)
 cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 cfi=???
-cfn=(below main)
+cfn=main
 calls=1 0 
-0 8
+58 8
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 fl=???
@@ -68,7 +75,7 @@ calls=1 0
 0 8
 
 fn=gungraun::vec3a_select::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select
+cfn=gungraun::vec3a_select::__gungraun_wrapper_mod::vec3a_select
 calls=1 0 
 0 8
 
@@ -77,23 +84,18 @@ cfn=std::rt::lang_start_internal
 calls=1 0 
 0 8
 
-fn=gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select
-0 8
-
-ob=/usr/lib/x86_64-linux-gnu/libc.so.6
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
-fn=(below main)
+ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+fl=???
+fn=0x000000000001f540
 cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 cfi=???
-cfn=main
-calls=1 0 
-58 8
-
-fl=./csu/../csu/libc-start.c
-fn=__libc_start_main@@GLIBC_2.34
-cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
-calls=1 29 
-360 8
+calls=1 0 
+0 8
+
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
+fl=???
+fn=gungraun::vec3a_select::__gungraun_wrapper_mod::vec3a_select
+0 8
 
 totals: 8

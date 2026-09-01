@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6030
+pid: 6278
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00004 00008 00002
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84314
+desc: Timerange: Basic block 0 - 83988
 desc: Trigger: Program termination
 
 positions: line
@@ -21,22 +21,9 @@ summary: 40
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 fl=???
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
-cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-calls=1 0 
-0 40
-
-fn=gungraun::main
-cfn=gungraun::bench_quat::__run
-calls=1 0 
-0 40
-
 fn=gungraun::bench_quat::__run
 cfn=gungraun::quat_slerp::__run_nearly_parallel
 calls=1 0 
-0 40
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 0 40
 
 fn=std::rt::lang_start_internal
@@ -50,7 +37,37 @@ calls=1 0
 0 40
 
 fn=gungraun::quat_slerp::__run_nearly_parallel
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_nearly_parallel::nearly_parallel
+calls=1 0 
+0 40
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 40
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 40
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+0 40
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_nearly_parallel::nearly_parallel
+cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+calls=1 0 
+0 40
+
+fn=(below main)
+cob=/usr/lib/x86_64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 40
+
+fn=gungraun::main
+cfn=gungraun::bench_quat::__run
 calls=1 0 
 0 40
 
@@ -64,14 +81,6 @@ calls=1 0
 0 40
 
 ob=/usr/lib/x86_64-linux-gnu/libc.so.6
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
-fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
-cfi=???
-cfn=main
-calls=1 0 
-58 40
-
 fl=./csu/../csu/libc-start.c
 fn=__libc_start_main@@GLIBC_2.34
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
@@ -79,23 +88,12 @@ cfn=(below main)
 calls=1 29 
 360 40
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
-fl=???
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 40
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 40
-
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/usr/lib/x86_64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 40
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
+cfi=???
+cfn=main
+calls=1 0 
+58 40
 
 totals: 40

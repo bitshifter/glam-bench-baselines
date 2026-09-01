@@ -1,0 +1,12 @@
+==8126== Callgrind, a call-graph generating cache profiler
+==8126== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==8126== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==8126== Command: /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00005 00000 00000
+==8126== Parent PID: 8073
+==8126== 
+==8126== For interactive control, run 'callgrind_control -h'.
+==8126== 
+==8126== Events    : Ir
+==8126== Collected : 12
+==8126== 
+==8126== I   refs:      12
