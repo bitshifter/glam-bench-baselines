@@ -1,0 +1,12 @@
+==6403== Callgrind, a call-graph generating cache profiler
+==6403== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==6403== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==6403== Command: /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00008 00001 00000
+==6403== Parent PID: 6308
+==6403== 
+==6403== For interactive control, run 'callgrind_control -h'.
+==6403== 
+==6403== Events    : Ir
+==6403== Collected : 23
+==6403== 
+==6403== I   refs:      23

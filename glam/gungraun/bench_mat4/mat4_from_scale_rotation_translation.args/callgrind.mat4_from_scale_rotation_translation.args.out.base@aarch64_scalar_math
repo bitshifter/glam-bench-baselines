@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6170
+pid: 6380
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00003 00002 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 70995
+desc: Timerange: Basic block 0 - 71397
 desc: Trigger: Program termination
 
 positions: line
@@ -80,6 +80,9 @@ cfn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_id_mod_ar
 calls=1 0 
 0 54
 
+fn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation
+0 54
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -91,6 +94,11 @@ fe=???
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
+calls=1 0 
+0 54
+
+fn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation
 calls=1 0 
 0 54
 
@@ -136,16 +144,8 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 54
 
-fn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation
-0 54
-
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 54
-
-fn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation
 calls=1 0 
 0 54
 
@@ -177,30 +177,6 @@ calls=1 0
 fe=./elf/./elf/dl-init.c
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./stdlib/./stdlib/cxa_atexit.c
-fn=__cxa_atexit
-cfn=__internal_atexit
-calls=1 36 
-68 54
-
-fn=__internal_atexit
-fi=./csu/../csu/libc-start.c
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34'2
-calls=1 145 
-144 54
-fe=./stdlib/./stdlib/cxa_atexit.c
-
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 54
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
 fl=./nptl/./nptl/pthread_getattr_np.c
 fn=pthread_getattr_np@@GLIBC_2.32
 fi=???
@@ -269,5 +245,29 @@ cfi=???
 cfn=main
 calls=1 0 
 58 54
+
+fl=./stdlib/./stdlib/cxa_atexit.c
+fn=__cxa_atexit
+cfn=__internal_atexit
+calls=1 36 
+68 54
+
+fn=__internal_atexit
+fi=./csu/../csu/libc-start.c
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34'2
+calls=1 145 
+144 54
+fe=./stdlib/./stdlib/cxa_atexit.c
+
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 54
+fe=./nptl/./nptl/pthread_attr_destroy.c
 
 totals: 54

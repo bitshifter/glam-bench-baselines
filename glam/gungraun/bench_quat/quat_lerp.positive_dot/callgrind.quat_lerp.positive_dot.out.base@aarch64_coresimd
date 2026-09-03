@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7741
+pid: 7957
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00004 00004 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71392
+desc: Timerange: Basic block 0 - 71627
 desc: Trigger: Program termination
 
 positions: line
@@ -58,9 +58,7 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 26
 
-fn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_positive_dot::positive_dot
-cfn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
-calls=1 0 
+fn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
 0 26
 
 fn=main
@@ -134,6 +132,11 @@ cfn=std::env::args_os
 calls=1 0 
 0 26
 
+fn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_positive_dot::positive_dot
+cfn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
+calls=1 0 
+0 26
+
 fn=init_have_lse_atomics
 fi=./csu/../csu/libc-start.c
 cfn=__init_cpu_features
@@ -143,11 +146,6 @@ fe=???
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
-calls=1 0 
-0 26
-
-fn=gungraun::quat_lerp::__run_positive_dot
-cfn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_positive_dot::positive_dot
 calls=1 0 
 0 26
 
@@ -170,6 +168,11 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 52
 
+fn=gungraun::quat_lerp::__run_positive_dot
+cfn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_positive_dot::positive_dot
+calls=1 0 
+0 26
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -180,9 +183,6 @@ cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 cfn=sysconf
 calls=1 29 
-0 26
-
-fn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
 0 26
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6

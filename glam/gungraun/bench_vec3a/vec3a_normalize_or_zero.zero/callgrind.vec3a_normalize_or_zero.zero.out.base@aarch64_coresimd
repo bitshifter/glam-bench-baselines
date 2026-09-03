@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7761
+pid: 7978
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00006 00005 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71392
+desc: Timerange: Basic block 0 - 71627
 desc: Trigger: Program termination
 
 positions: line
@@ -48,11 +48,6 @@ fe=./elf/./elf/rtld.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=gungraun::vec3a_normalize_or_zero::__run_zero
-cfn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_id_mod_zero::zero
-calls=1 0 
-0 25
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -70,16 +65,13 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 25
 
-fn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero
-0 25
-
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 25
 
-fn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_id_mod_zero::zero
-cfn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero
+fn=gungraun::vec3a_normalize_or_zero::__run_zero
+cfn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_id_mod_zero::zero
 calls=1 0 
 0 25
 
@@ -154,6 +146,9 @@ cfn=std::env::args_os
 calls=1 0 
 0 25
 
+fn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero
+0 25
+
 fn=init_have_lse_atomics
 fi=./csu/../csu/libc-start.c
 cfn=__init_cpu_features
@@ -163,6 +158,11 @@ fe=???
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
+calls=1 0 
+0 25
+
+fn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_id_mod_zero::zero
+cfn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero
 calls=1 0 
 0 25
 

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6011
+pid: 6188
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00005 00003 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71158
+desc: Timerange: Basic block 0 - 71393
 desc: Trigger: Program termination
 
 positions: line
@@ -47,6 +47,51 @@ calls=1 517
 30 14
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
+fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+fn=sysconf
+fi=???
+cfi=./nptl/./nptl/pthread_getattr_np.c
+cfn=pthread_getattr_np@@GLIBC_2.32
+calls=1 33 
+0 14
+fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+
+fl=./csu/../csu/libc-start.c
+fn=__libc_start_main@@GLIBC_2.34
+cfi=./stdlib/./stdlib/cxa_atexit.c
+cfn=__cxa_atexit
+calls=1 67 
+312 14
+
+fn=__libc_start_main@@GLIBC_2.34'2
+cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
+cfn=(below main)
+calls=1 29 
+350 14
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
+cfi=???
+cfn=init_have_lse_atomics
+calls=1 0 
+145 14
+
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
+fn=(below main)
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
+cfi=???
+cfn=main
+calls=1 0 
+58 14
+
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 14
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
 fl=./stdlib/./stdlib/cxa_atexit.c
 fn=__cxa_atexit
 cfn=__internal_atexit
@@ -95,51 +140,6 @@ calls=1 0
 0 14
 fe=./malloc/./malloc/malloc.c
 
-fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-fn=sysconf
-fi=???
-cfi=./nptl/./nptl/pthread_getattr_np.c
-cfn=pthread_getattr_np@@GLIBC_2.32
-calls=1 33 
-0 14
-fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-
-fl=./csu/../csu/libc-start.c
-fn=__libc_start_main@@GLIBC_2.34
-cfi=./stdlib/./stdlib/cxa_atexit.c
-cfn=__cxa_atexit
-calls=1 67 
-312 14
-
-fn=__libc_start_main@@GLIBC_2.34'2
-cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
-cfn=(below main)
-calls=1 29 
-350 14
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
-cfi=???
-cfn=init_have_lse_atomics
-calls=1 0 
-145 14
-
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
-fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
-cfi=???
-cfn=main
-calls=1 0 
-58 14
-
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 14
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
 fl=???
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
@@ -164,6 +164,9 @@ fe=???
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
+0 14
+
+fn=gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize
 0 14
 
 fn=gungraun::main
@@ -228,11 +231,6 @@ cfn=gungraun::main
 calls=1 0 
 0 14
 
-fn=gungraun::vec3_normalize::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize
-calls=1 0 
-0 14
-
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
@@ -253,7 +251,9 @@ cfn=gungraun::vec3_normalize::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 14
 
-fn=gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize
+fn=gungraun::vec3_normalize::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize
+calls=1 0 
 0 14
 
 fn=(below main)

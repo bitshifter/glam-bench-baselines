@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8082
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00000 00004 00000
+pid: 8232
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00000 00005 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84964
+desc: Timerange: Basic block 0 - 85668
 desc: Trigger: Program termination
 
 positions: line
@@ -37,21 +37,6 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
 fl=???
-fn=(below main)
-cob=/usr/lib/x86_64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 14
-
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 14
-
-fn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2
-0 14
-
 fn=gungraun::bench_mat2::__run
 cfn=gungraun::mat2_mul_transpose_vec2::__run_args
 calls=1 0 
@@ -62,18 +47,21 @@ cfn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 14
 
+fn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2
+0 14
+
 fn=gungraun::main
 cfn=gungraun::bench_mat2::__run
 calls=1 0 
 0 14
 
-fn=main
-cfn=std::rt::lang_start_internal
+fn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2
 calls=1 0 
 0 14
 
-fn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2
+fn=main
+cfn=std::rt::lang_start_internal
 calls=1 0 
 0 14
 
@@ -84,6 +72,18 @@ calls=1 0
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
+calls=1 0 
+0 14
+
+fn=(below main)
+cob=/usr/lib/x86_64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 14
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 14
 

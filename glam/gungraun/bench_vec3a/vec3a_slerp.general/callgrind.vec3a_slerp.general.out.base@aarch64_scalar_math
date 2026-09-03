@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6205
+pid: 6419
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00006 00006 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71015
+desc: Timerange: Basic block 0 - 71417
 desc: Trigger: Program termination
 
 positions: line
@@ -215,7 +215,7 @@ calls=5 0
 0 520
 
 fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
-0 98
+0 95
 cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
 calls=1 0 
 0 8
@@ -225,6 +225,7 @@ cfn=sinf
 calls=3 67 
 0 104
 0 50
+0 3
 
 fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
 0 8

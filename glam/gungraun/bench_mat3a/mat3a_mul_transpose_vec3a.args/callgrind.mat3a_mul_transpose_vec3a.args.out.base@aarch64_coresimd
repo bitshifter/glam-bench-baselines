@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7721
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00002 00005 00000
+pid: 7933
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00002 00006 00000
 part: 1
 thread: 1
 
@@ -11,40 +11,13 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71392
+desc: Timerange: Basic block 0 - 71627
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
 summary: 18
 
-
-ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 18
-fe=./elf/./elf/rtld.c
-
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 18
-
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 18
-fe=./elf/./elf/dl-init.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
@@ -62,11 +35,6 @@ calls=1 29
 
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 18
-
-fn=gungraun::mat3a_mul_transpose_vec3a::__run_args
-cfn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 18
 
@@ -103,6 +71,37 @@ calls=1 0
 cfn=gungraun::main'2
 calls=1 0 
 0 18
+
+ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 18
+
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
+cfi=???
+cfn=(below main)
+calls=1 0 
+52 18
+fe=./elf/./elf/dl-init.c
+
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 18
+fe=./elf/./elf/rtld.c
+
+ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
+fl=???
+fn=gungraun::main'2
 cfn=gungraun::main'2
 calls=1 0 
 0 18
@@ -139,6 +138,11 @@ calls=1 0
 
 fn=std::env::args
 cfn=std::env::args_os
+calls=1 0 
+0 18
+
+fn=gungraun::mat3a_mul_transpose_vec3a::__run_args
+cfn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 18
 

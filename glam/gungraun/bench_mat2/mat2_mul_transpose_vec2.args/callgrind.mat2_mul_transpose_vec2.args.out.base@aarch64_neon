@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 5963
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00000 00004 00000
+pid: 6126
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00000 00005 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71158
+desc: Timerange: Basic block 0 - 71393
 desc: Trigger: Program termination
 
 positions: line
@@ -28,16 +28,6 @@ calls=1 0
 
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 14
-
-fn=gungraun::mat2_mul_transpose_vec2::__run_args
-cfn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 14
-
-fn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2
 calls=1 0 
 0 14
 
@@ -100,6 +90,9 @@ cfn=free'2
 calls=5 3363 
 0 28
 
+fn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2
+0 14
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -116,6 +109,11 @@ calls=1 0
 
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 14
+
+fn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2
 calls=1 0 
 0 14
 
@@ -136,6 +134,11 @@ cfn=sysconf
 calls=1 29 
 0 14
 
+fn=gungraun::mat2_mul_transpose_vec2::__run_args
+cfn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
+0 14
+
 fn=__rustc::__rust_dealloc
 cfn=__rustc::__rdl_dealloc
 calls=2 0 
@@ -145,9 +148,6 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 28
-
-fn=gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2
-0 14
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./stdlib/./stdlib/cxa_atexit.c
@@ -208,6 +208,13 @@ calls=1 0
 0 14
 fe=./malloc/./malloc/malloc.c
 
+fl=./csu/../csu/libc-start.c
+fn=__libc_start_main@@GLIBC_2.34
+cfi=./stdlib/./stdlib/cxa_atexit.c
+cfn=__cxa_atexit
+calls=1 67 
+312 14
+
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
 fl=./elf/./elf/rtld.c
 fn=_dl_start
@@ -237,12 +244,6 @@ fe=./elf/./elf/dl-init.c
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./csu/../csu/libc-start.c
-fn=__libc_start_main@@GLIBC_2.34
-cfi=./stdlib/./stdlib/cxa_atexit.c
-cfn=__cxa_atexit
-calls=1 67 
-312 14
-
 fn=__libc_start_main@@GLIBC_2.34'2
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)

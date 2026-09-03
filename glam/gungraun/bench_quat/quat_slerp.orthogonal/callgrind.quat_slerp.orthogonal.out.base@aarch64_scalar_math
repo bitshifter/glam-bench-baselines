@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6189
+pid: 6402
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00004 00008 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71014
+desc: Timerange: Basic block 0 - 71416
 desc: Trigger: Program termination
 
 positions: line
@@ -142,13 +142,14 @@ calls=1 0
 0 226
 
 fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 88
+0 85
 cob=/usr/lib/aarch64-linux-gnu/libm.so.6
 cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
 cfn=sinf
 calls=3 67 
 0 104
 0 34
+0 3
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>

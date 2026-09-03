@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7731
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00003 00007 00000
+pid: 7947
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00003 00008 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71392
+desc: Timerange: Basic block 0 - 71627
 desc: Trigger: Program termination
 
 positions: line
@@ -48,9 +48,6 @@ fe=./elf/./elf/rtld.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=gungraun::mat4_transform_point3::__gungraun_wrapper_mod::mat4_transform_point3
-0 14
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -68,9 +65,7 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 14
 
-fn=gungraun::mat4_transform_point3::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat4_transform_point3::__gungraun_wrapper_mod::mat4_transform_point3
-calls=1 0 
+fn=gungraun::mat4_transform_point3::__gungraun_wrapper_mod::mat4_transform_point3
 0 14
 
 fn=std::rt::lang_start::<()>::{closure#0}
@@ -129,6 +124,11 @@ calls=5 3363
 
 fn=gungraun::bench_mat4::__run
 cfn=gungraun::mat4_transform_point3::__run_args
+calls=1 0 
+0 14
+
+fn=gungraun::mat4_transform_point3::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat4_transform_point3::__gungraun_wrapper_mod::mat4_transform_point3
 calls=1 0 
 0 14
 

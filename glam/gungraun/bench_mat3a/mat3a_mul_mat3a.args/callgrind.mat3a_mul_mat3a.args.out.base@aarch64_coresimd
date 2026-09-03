@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7719
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00002 00003 00000
+pid: 7931
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00002 00004 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71392
+desc: Timerange: Basic block 0 - 71627
 desc: Trigger: Program termination
 
 positions: line
@@ -169,6 +169,9 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 34
 
+fn=gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a
+0 34
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -237,9 +240,6 @@ cfn=std::env::args_os
 calls=1 0 
 0 34
 
-fn=gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a
-0 34
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -254,6 +254,11 @@ calls=1 29
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
+calls=1 0 
+0 34
+
+fn=gungraun::mat3a_mul_mat3a::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a
 calls=1 0 
 0 34
 
@@ -273,10 +278,5 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 68
-
-fn=gungraun::mat3a_mul_mat3a::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a
-calls=1 0 
-0 34
 
 totals: 34

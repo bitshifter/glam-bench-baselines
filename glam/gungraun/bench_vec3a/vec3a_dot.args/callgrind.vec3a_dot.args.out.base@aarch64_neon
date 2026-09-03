@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6013
+pid: 6191
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00006 00000 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71158
+desc: Timerange: Basic block 0 - 71393
 desc: Trigger: Program termination
 
 positions: line
@@ -21,6 +21,9 @@ summary: 10
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
 fl=???
+fn=gungraun::vec3a_dot::__gungraun_wrapper_mod::vec3a_dot
+0 10
+
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -33,6 +36,11 @@ calls=1 0
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 10
+
+fn=gungraun::vec3a_dot::__run_args
+cfn=gungraun::vec3a_dot::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 10
 
@@ -109,11 +117,6 @@ cfn=gungraun::main
 calls=1 0 
 0 10
 
-fn=gungraun::vec3a_dot::__run_args
-cfn=gungraun::vec3a_dot::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 10
-
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
@@ -145,9 +148,6 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 20
-
-fn=gungraun::vec3a_dot::__gungraun_wrapper_mod::vec3a_dot
-0 10
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./stdlib/./stdlib/cxa_atexit.c

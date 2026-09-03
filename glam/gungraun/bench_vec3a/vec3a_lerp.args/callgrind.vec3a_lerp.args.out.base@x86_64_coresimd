@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8135
+pid: 8303
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00006 00003 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84964
+desc: Timerange: Basic block 0 - 85668
 desc: Trigger: Program termination
 
 positions: line
@@ -47,9 +47,6 @@ cfn=gungraun::vec3a_lerp::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 9
 
-fn=gungraun::vec3a_lerp::__gungraun_wrapper_mod::vec3a_lerp
-0 9
-
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -67,6 +64,11 @@ cfn=std::rt::lang_start_internal
 calls=1 0 
 0 9
 
+fn=gungraun::vec3a_lerp::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::vec3a_lerp::__gungraun_wrapper_mod::vec3a_lerp
+calls=1 0 
+0 9
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -77,13 +79,11 @@ cfn=gungraun::main
 calls=1 0 
 0 9
 
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
+fn=gungraun::vec3a_lerp::__gungraun_wrapper_mod::vec3a_lerp
 0 9
 
-fn=gungraun::vec3a_lerp::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec3a_lerp::__gungraun_wrapper_mod::vec3a_lerp
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 9
 

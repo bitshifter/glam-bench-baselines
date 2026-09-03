@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6268
+pid: 6365
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00004 00001 00000
 part: 1
 thread: 1
@@ -11,12 +11,12 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 83990
+desc: Timerange: Basic block 0 - 84696
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
-summary: 51
+summary: 50
 
 
 ob=/usr/lib/x86_64-linux-gnu/libm.so.6
@@ -56,27 +56,27 @@ fl=???
 fn=gungraun::bench_quat::__run
 cfn=gungraun::quat_from_axis_angle::__run_args
 calls=1 0 
-0 51
+0 50
 
 fn=gungraun::quat_from_axis_angle::__gungraun_wrapper_id_mod_args::args
 cfn=gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle
 calls=1 0 
-0 51
+0 50
 
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
-0 51
+0 50
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
-0 51
+0 50
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 51
+0 50
 
 fn=gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle
 0 9
@@ -85,29 +85,29 @@ cfi=./math/../sysdeps/ieee754/flt-32/s_sincosf.c
 cfn=__sincosf_fma
 calls=1 44 
 0 27
-0 15
+0 14
 
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
-0 51
+0 50
 
 fn=gungraun::quat_from_axis_angle::__run_args
 cfn=gungraun::quat_from_axis_angle::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
-0 51
+0 50
 
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
 cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
-0 51
+0 50
 
 fn=gungraun::main
 cfn=gungraun::bench_quat::__run
 calls=1 0 
-0 51
+0 50
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
@@ -116,7 +116,7 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855
 cfi=???
 cfn=(below main)
 calls=1 0 
-0 51
+0 50
 
 ob=/usr/lib/x86_64-linux-gnu/libc.so.6
 fl=./csu/../csu/libc-start.c
@@ -124,7 +124,7 @@ fn=__libc_start_main@@GLIBC_2.34
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
-360 51
+360 50
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
@@ -132,6 +132,6 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855
 cfi=???
 cfn=main
 calls=1 0 
-58 51
+58 50
 
-totals: 51
+totals: 50

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6186
+pid: 6399
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00004 00005 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 70995
+desc: Timerange: Basic block 0 - 71397
 desc: Trigger: Program termination
 
 positions: line
@@ -152,6 +152,11 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 50
 
+fn=gungraun::quat_mul_quat::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_mul_quat::__gungraun_wrapper_mod::quat_mul_quat
+calls=1 0 
+0 25
+
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -173,11 +178,6 @@ calls=1 0
 
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 25
-
-fn=gungraun::quat_mul_quat::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_mul_quat::__gungraun_wrapper_mod::quat_mul_quat
 calls=1 0 
 0 25
 
@@ -221,6 +221,9 @@ cfn=gungraun::quat_mul_quat::__run_args
 calls=1 0 
 0 25
 
+fn=gungraun::quat_mul_quat::__gungraun_wrapper_mod::quat_mul_quat
+0 25
+
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
@@ -260,9 +263,6 @@ calls=5 3363
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
-0 25
-
-fn=gungraun::quat_mul_quat::__gungraun_wrapper_mod::quat_mul_quat
 0 25
 
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler

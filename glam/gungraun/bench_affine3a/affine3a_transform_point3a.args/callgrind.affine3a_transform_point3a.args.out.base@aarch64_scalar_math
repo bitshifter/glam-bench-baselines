@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6219
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00008 00003 00000
+pid: 6440
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00009 00003 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 70995
+desc: Timerange: Basic block 0 - 71397
 desc: Trigger: Program termination
 
 positions: line
@@ -56,9 +56,6 @@ cfn=gungraun::affine3a_transform_point3a::__run_args
 calls=1 0 
 0 34
 
-fn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_mod::affine3a_transform_point3a
-0 34
-
 fn=std::env::args
 cfn=std::env::args_os
 calls=1 0 
@@ -78,6 +75,11 @@ cfn=free'2
 calls=5 3363 
 0 68
 
+fn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_mod::affine3a_transform_point3a
+calls=1 0 
+0 34
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -90,6 +92,9 @@ fe=???
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
+0 34
+
+fn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_mod::affine3a_transform_point3a
 0 34
 
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
@@ -141,11 +146,6 @@ calls=1 0
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 34
-
-fn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_mod::affine3a_transform_point3a
 calls=1 0 
 0 34
 

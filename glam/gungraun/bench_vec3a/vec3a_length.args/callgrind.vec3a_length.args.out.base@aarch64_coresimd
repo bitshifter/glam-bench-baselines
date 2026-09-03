@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7757
+pid: 7974
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00006 00002 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71392
+desc: Timerange: Basic block 0 - 71627
 desc: Trigger: Program termination
 
 positions: line
@@ -159,13 +159,18 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 26
 
-fn=main
-cfn=std::rt::lang_start_internal
+fn=gungraun::vec3a_length::__run_args
+cfn=gungraun::vec3a_length::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 13
 
 fn=gungraun::vec3a_length::__gungraun_wrapper_id_mod_args::args
 cfn=gungraun::vec3a_length::__gungraun_wrapper_mod::vec3a_length
+calls=1 0 
+0 13
+
+fn=main
+cfn=std::rt::lang_start_internal
 calls=1 0 
 0 13
 
@@ -184,6 +189,9 @@ calls=1 0
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
+0 13
+
+fn=gungraun::vec3a_length::__gungraun_wrapper_mod::vec3a_length
 0 13
 
 fn=__init_cpu_features
@@ -252,14 +260,6 @@ calls=1 0
 fn=std::env::args
 cfn=std::env::args_os
 calls=1 0 
-0 13
-
-fn=gungraun::vec3a_length::__run_args
-cfn=gungraun::vec3a_length::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 13
-
-fn=gungraun::vec3a_length::__gungraun_wrapper_mod::vec3a_length
 0 13
 
 fn=std::rt::lang_start_internal

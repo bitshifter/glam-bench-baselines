@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6005
+pid: 6181
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00004 00008 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71175
+desc: Timerange: Basic block 0 - 71410
 desc: Trigger: Program termination
 
 positions: line
@@ -105,16 +105,6 @@ calls=1 517
 30 197
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 197
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
 fl=./stdlib/./stdlib/cxa_atexit.c
 fn=__cxa_atexit
 cfn=__internal_atexit
@@ -198,8 +188,28 @@ cfn=main
 calls=1 0 
 58 197
 
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 197
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
 fl=???
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=2 0 
+0 197
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 394
+
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -235,11 +245,6 @@ fe=???
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 197
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
-cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 calls=1 0 
 0 197
 
@@ -300,13 +305,23 @@ cfn=free'2
 calls=5 3363 
 0 394
 
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+calls=1 0 
+0 197
+
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 197
 
+fn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 197
+
 fn=gungraun::quat_slerp::__run_negative_dot
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
 calls=1 0 
 0 197
 
@@ -319,20 +334,5 @@ calls=3 67
 0 78
 0 34
 0 4
-
-fn=std::sys::pal::unix::stack_overflow::imp::make_handler
-cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-calls=1 0 
-0 197
-
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=2 0 
-0 197
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 394
 
 totals: 197

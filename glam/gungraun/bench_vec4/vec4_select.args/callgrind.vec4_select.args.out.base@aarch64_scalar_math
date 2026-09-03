@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6214
+pid: 6428
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00007 00004 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 70995
+desc: Timerange: Basic block 0 - 71397
 desc: Trigger: Program termination
 
 positions: line
@@ -142,70 +142,6 @@ fe=./nptl/./nptl/pthread_attr_destroy.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
 fl=???
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 23
-
-fn=std::rt::lang_start_internal
-cfn=std::rt::lang_start_internal'2
-calls=1 0 
-0 23
-
-fn=std::rt::lang_start_internal'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-cfn=sysconf
-calls=1 29 
-0 23
-
-fn=std::env::args
-cfn=std::env::args_os
-calls=1 0 
-0 23
-
-fn=__rustc::__rdl_dealloc
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./malloc/./malloc/malloc.c
-cfn=free
-calls=2 3363 
-0 23
-
-fn=__rustc::__rdl_dealloc'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./malloc/./malloc/malloc.c
-cfn=free'2
-calls=5 3363 
-0 46
-
-fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-cfn=gungraun::main
-calls=1 0 
-0 23
-
-fn=std::sys::pal::unix::stack_overflow::imp::make_handler
-cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-calls=1 0 
-0 23
-
-fn=gungraun::vec4_select::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select
-calls=1 0 
-0 23
-
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=2 0 
-0 23
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 46
-
-fn=gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select
-0 23
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -269,5 +205,69 @@ fn=gungraun::bench_vec4::__run
 cfn=gungraun::vec4_select::__run_args
 calls=1 0 
 0 23
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 23
+
+fn=std::rt::lang_start_internal
+cfn=std::rt::lang_start_internal'2
+calls=1 0 
+0 23
+
+fn=std::rt::lang_start_internal'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+cfn=sysconf
+calls=1 29 
+0 23
+
+fn=std::env::args
+cfn=std::env::args_os
+calls=1 0 
+0 23
+
+fn=__rustc::__rdl_dealloc
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./malloc/./malloc/malloc.c
+cfn=free
+calls=2 3363 
+0 23
+
+fn=__rustc::__rdl_dealloc'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./malloc/./malloc/malloc.c
+cfn=free'2
+calls=5 3363 
+0 46
+
+fn=gungraun::vec4_select::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select
+calls=1 0 
+0 23
+
+fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+cfn=gungraun::main
+calls=1 0 
+0 23
+
+fn=gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select
+0 23
+
+fn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 23
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=2 0 
+0 23
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 46
 
 totals: 23

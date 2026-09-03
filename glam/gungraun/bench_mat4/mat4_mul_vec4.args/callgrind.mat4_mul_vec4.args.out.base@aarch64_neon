@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 5987
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00003 00005 00000
+pid: 6163
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00003 00006 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71158
+desc: Timerange: Basic block 0 - 71393
 desc: Trigger: Program termination
 
 positions: line
@@ -47,16 +47,6 @@ calls=1 517
 30 11
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 11
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
 fl=./stdlib/./stdlib/cxa_atexit.c
 fn=__cxa_atexit
 cfn=__internal_atexit
@@ -140,18 +130,18 @@ cfn=main
 calls=1 0 
 58 11
 
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 11
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
 fl=???
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=2 0 
-0 11
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 22
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -255,11 +245,6 @@ cfn=free'2
 calls=5 3363 
 0 22
 
-fn=gungraun::mat4_mul_vec4::__run_args
-cfn=gungraun::mat4_mul_vec4::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 11
-
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
@@ -269,5 +254,20 @@ fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
 0 11
+
+fn=gungraun::mat4_mul_vec4::__run_args
+cfn=gungraun::mat4_mul_vec4::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
+0 11
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=2 0 
+0 11
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 22
 
 totals: 11

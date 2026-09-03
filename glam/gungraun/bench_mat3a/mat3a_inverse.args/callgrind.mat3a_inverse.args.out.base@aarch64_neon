@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 5975
+pid: 6145
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00002 00002 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71158
+desc: Timerange: Basic block 0 - 71393
 desc: Trigger: Program termination
 
 positions: line
@@ -142,6 +142,21 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
 fl=???
+fn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 44
+
+fn=gungraun::mat3a_inverse::__run_args
+cfn=gungraun::mat3a_inverse::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
+0 44
+
+fn=gungraun::mat3a_inverse::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse
+calls=1 0 
+0 44
+
 fn=__rustc::__rust_dealloc
 cfn=__rustc::__rdl_dealloc
 calls=2 0 
@@ -173,11 +188,6 @@ calls=1 0
 
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 44
-
-fn=gungraun::mat3a_inverse::__run_args
-cfn=gungraun::mat3a_inverse::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 44
 
@@ -257,16 +267,6 @@ calls=5 3363
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
-calls=1 0 
-0 44
-
-fn=std::sys::pal::unix::stack_overflow::imp::make_handler
-cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-calls=1 0 
-0 44
-
-fn=gungraun::mat3a_inverse::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse
 calls=1 0 
 0 44
 

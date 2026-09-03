@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8116
+pid: 8285
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00004 00003 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84964
+desc: Timerange: Basic block 0 - 85668
 desc: Trigger: Program termination
 
 positions: line
@@ -37,13 +37,8 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
 fl=???
-fn=gungraun::bench_quat::__run
-cfn=gungraun::quat_inverse::__run_args
-calls=1 0 
-0 5
-
-fn=gungraun::quat_inverse::__run_args
-cfn=gungraun::quat_inverse::__gungraun_wrapper_id_mod_args::args
+fn=gungraun::quat_inverse::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_inverse::__gungraun_wrapper_mod::quat_inverse
 calls=1 0 
 0 5
 
@@ -64,8 +59,8 @@ cfn=std::rt::lang_start_internal
 calls=1 0 
 0 5
 
-fn=gungraun::quat_inverse::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_inverse::__gungraun_wrapper_mod::quat_inverse
+fn=gungraun::quat_inverse::__run_args
+cfn=gungraun::quat_inverse::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 5
 
@@ -84,6 +79,11 @@ calls=1 0
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 5
+
+fn=gungraun::bench_quat::__run
+cfn=gungraun::quat_inverse::__run_args
 calls=1 0 
 0 5
 

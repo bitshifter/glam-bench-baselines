@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6157
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00001 00004 00000
+pid: 6360
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00001 00005 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 70995
+desc: Timerange: Basic block 0 - 71397
 desc: Trigger: Program termination
 
 positions: line
@@ -111,6 +111,9 @@ cfn=sysconf
 calls=1 29 
 0 25
 
+fn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3
+0 25
+
 fn=__rustc::__rust_dealloc
 cfn=__rustc::__rdl_dealloc
 calls=2 0 
@@ -121,7 +124,9 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 50
 
-fn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3
+fn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3
+calls=1 0 
 0 25
 
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
@@ -131,11 +136,6 @@ calls=1 0
 
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 25
-
-fn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3
 calls=1 0 
 0 25
 
