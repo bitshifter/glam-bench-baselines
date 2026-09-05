@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8292
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00004 00008 00001
+pid: 10200
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00004 00009 00001
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85683
+desc: Timerange: Basic block 0 - 85360
 desc: Trigger: Program termination
 
 positions: line
@@ -19,18 +19,24 @@ events: Ir
 summary: 163
 
 
+ob=/usr/lib/x86_64-linux-gnu/libc.so.6
+fl=./csu/../csu/libc-start.c
+fn=__libc_start_main@@GLIBC_2.34
+cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
+cfn=(below main)
+calls=1 29 
+360 163
+
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
+fn=(below main)
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
+cfi=???
+cfn=main
+calls=1 0 
+58 163
+
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
 fl=???
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 163
-
-fn=gungraun::quat_slerp::__run_negative_dot
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
-calls=1 0 
-0 163
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -53,7 +59,12 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 163
 
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+fn=gungraun::bench_quat::__run
+cfn=gungraun::quat_slerp::__run_negative_dot
+calls=1 0 
+0 163
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
 cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 calls=1 0 
 0 163
@@ -79,13 +90,18 @@ calls=1 44
 0 34
 0 19
 
-fn=gungraun::bench_quat::__run
-cfn=gungraun::quat_slerp::__run_negative_dot
+fn=gungraun::main
+cfn=gungraun::bench_quat::__run
 calls=1 0 
 0 163
 
-fn=gungraun::main
-cfn=gungraun::bench_quat::__run
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 163
+
+fn=gungraun::quat_slerp::__run_negative_dot
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
 calls=1 0 
 0 163
 
@@ -147,21 +163,5 @@ cfi=???
 cfn=(below main)
 calls=1 0 
 0 163
-
-ob=/usr/lib/x86_64-linux-gnu/libc.so.6
-fl=./csu/../csu/libc-start.c
-fn=__libc_start_main@@GLIBC_2.34
-cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
-cfn=(below main)
-calls=1 29 
-360 163
-
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
-fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
-cfi=???
-cfn=main
-calls=1 0 
-58 163
 
 totals: 163

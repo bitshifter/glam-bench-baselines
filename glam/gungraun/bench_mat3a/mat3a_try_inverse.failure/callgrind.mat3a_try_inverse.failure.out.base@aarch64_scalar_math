@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6376
+pid: 8261
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00002 00008 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71398
+desc: Timerange: Basic block 0 - 71408
 desc: Trigger: Program termination
 
 positions: line
@@ -94,14 +94,12 @@ cfn=gungraun::mat3a_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 31
 
-fn=gungraun::mat3a_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse
-calls=1 0 
-0 31
-
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
+0 31
+
+fn=gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse
 0 31
 
 fn=main
@@ -131,9 +129,6 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 62
 
-fn=gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse
-0 31
-
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -149,22 +144,10 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 31
 
-ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 31
-fe=./elf/./elf/rtld.c
-
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 31
+fn=gungraun::mat3a_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse
+calls=1 0 
+0 31
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./stdlib/./stdlib/cxa_atexit.c
@@ -217,22 +200,6 @@ cfi=???
 cfn=gungraun::main'2
 calls=1 0 
 0 31
-fe=./malloc/./malloc/malloc.c
-
-ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 31
-fe=./elf/./elf/dl-init.c
-
-ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./malloc/./malloc/malloc.c
-fn=free'2
 fi=???
 cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
 cfi=???
@@ -259,6 +226,34 @@ cfn=init_have_lse_atomics
 calls=1 0 
 145 31
 
+ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 31
+fe=./elf/./elf/rtld.c
+
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 31
+
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cfi=???
+cfn=(below main)
+calls=1 0 
+52 31
+fe=./elf/./elf/dl-init.c
+
+ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 fn=sysconf
 fi=???

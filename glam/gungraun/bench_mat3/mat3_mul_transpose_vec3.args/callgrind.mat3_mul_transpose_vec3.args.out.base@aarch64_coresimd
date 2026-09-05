@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7921
+pid: 9879
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00001 00005 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71627
+desc: Timerange: Basic block 0 - 71222
 desc: Trigger: Program termination
 
 positions: line
@@ -48,13 +48,25 @@ fe=./elf/./elf/rtld.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=std::env::args_os
-cfn=__rustc::__rust_dealloc
+fn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3
 calls=1 0 
 0 25
 
-fn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3
+fn=std::rt::lang_start_internal
+cfn=std::rt::lang_start_internal'2
+calls=1 0 
+0 25
+
+fn=std::rt::lang_start_internal'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+cfn=sysconf
+calls=1 29 
+0 25
+
+fn=std::env::args_os
+cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 25
 
@@ -170,22 +182,19 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 50
 
-fn=std::rt::lang_start_internal
-cfn=std::rt::lang_start_internal'2
-calls=1 0 
-0 25
-
-fn=std::rt::lang_start_internal'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-cfn=sysconf
-calls=1 29 
-0 25
-
 fn=gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3
 0 25
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
+fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+fn=sysconf
+fi=???
+cfi=./nptl/./nptl/pthread_getattr_np.c
+cfn=pthread_getattr_np@@GLIBC_2.32
+calls=1 33 
+0 25
+fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+
 fl=./csu/../csu/libc-start.c
 fn=__libc_start_main@@GLIBC_2.34
 cfi=./stdlib/./stdlib/cxa_atexit.c
@@ -269,14 +278,5 @@ cfn=gungraun::bench_mat3::__run
 calls=1 0 
 0 25
 fe=./malloc/./malloc/malloc.c
-
-fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-fn=sysconf
-fi=???
-cfi=./nptl/./nptl/pthread_getattr_np.c
-cfn=pthread_getattr_np@@GLIBC_2.32
-calls=1 33 
-0 25
-fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 
 totals: 25

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7918
+pid: 9876
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00001 00002 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71628
+desc: Timerange: Basic block 0 - 71223
 desc: Trigger: Program termination
 
 positions: line
@@ -70,11 +70,6 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 33
 
-fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero
-calls=1 0 
-0 33
-
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
@@ -129,9 +124,6 @@ cfn=gungraun::mat3_inverse_or_zero::__run_failure
 calls=1 0 
 0 33
 
-fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero
-0 33
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -166,6 +158,14 @@ cfn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 33
 
+fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero
+calls=1 0 
+0 33
+
+fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero
+0 33
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -186,15 +186,6 @@ calls=5 0
 0 66
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-fn=sysconf
-fi=???
-cfi=./nptl/./nptl/pthread_getattr_np.c
-cfn=pthread_getattr_np@@GLIBC_2.32
-calls=1 33 
-0 33
-fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-
 fl=./csu/../csu/libc-start.c
 fn=__libc_start_main@@GLIBC_2.34
 cfi=./stdlib/./stdlib/cxa_atexit.c
@@ -278,5 +269,14 @@ cfn=gungraun::bench_mat3::__run
 calls=1 0 
 0 33
 fe=./malloc/./malloc/malloc.c
+
+fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+fn=sysconf
+fi=???
+cfi=./nptl/./nptl/pthread_getattr_np.c
+cfn=pthread_getattr_np@@GLIBC_2.32
+calls=1 33 
+0 33
+fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 
 totals: 33

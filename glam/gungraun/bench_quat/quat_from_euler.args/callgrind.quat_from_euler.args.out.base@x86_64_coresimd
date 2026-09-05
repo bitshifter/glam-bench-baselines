@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8284
+pid: 10191
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00004 00002 00000
 part: 1
 thread: 1
@@ -11,12 +11,12 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85688
+desc: Timerange: Basic block 0 - 85365
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
-summary: 195
+summary: 196
 
 
 ob=/usr/lib/x86_64-linux-gnu/libc.so.6
@@ -25,7 +25,7 @@ fn=__libc_start_main@@GLIBC_2.34
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
-360 195
+360 196
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
@@ -33,31 +33,31 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763
 cfi=???
 cfn=main
 calls=1 0 
-58 195
+58 196
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
 fl=???
 fn=gungraun::bench_quat::__run
 cfn=gungraun::quat_from_euler::__run_args
 calls=1 0 
-0 195
+0 196
 
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
 cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
-0 195
+0 196
 
 fn=gungraun::main
 cfn=gungraun::bench_quat::__run
 calls=1 0 
-0 195
+0 196
 
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
-0 195
+0 196
 
 fn=<glam::f32::coresimd::quat::Quat as glam::euler::FromEuler>::from_euler_angles
 0 44
@@ -83,12 +83,12 @@ calls=1 44
 fn=gungraun::quat_from_euler::__run_args
 cfn=gungraun::quat_from_euler::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
-0 195
+0 196
 
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
-0 195
+0 196
 
 ob=/usr/lib/x86_64-linux-gnu/libm.so.6
 fl=./math/../sysdeps/ieee754/flt-32/s_sincosf.c
@@ -110,14 +110,14 @@ fl=???
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
-0 195
+0 196
 
 fn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
 0 3
 cfn=<glam::f32::coresimd::quat::Quat as glam::euler::FromEuler>::from_euler_angles
 calls=1 0 
 0 190
-0 2
+0 3
 
 ob=/usr/lib/x86_64-linux-gnu/libm.so.6
 fl=./math/../sysdeps/ieee754/flt-32/s_sincosf.c
@@ -145,12 +145,12 @@ fl=???
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 195
+0 196
 
 fn=gungraun::quat_from_euler::__gungraun_wrapper_id_mod_args::args
 cfn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
 calls=1 0 
-0 195
+0 196
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
@@ -159,6 +159,6 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763
 cfi=???
 cfn=(below main)
 calls=1 0 
-0 195
+0 196
 
-totals: 195
+totals: 196

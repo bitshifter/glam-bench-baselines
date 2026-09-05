@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7928
+pid: 9886
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00002 00002 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71627
+desc: Timerange: Basic block 0 - 71222
 desc: Trigger: Program termination
 
 positions: line
@@ -142,6 +142,28 @@ fe=./elf/./elf/dl-init.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 41
+
+fn=init_have_lse_atomics
+fi=./csu/../csu/libc-start.c
+cfn=__init_cpu_features
+calls=1 0 
+145 41
+fe=???
+
+fn=std::env::args_os
+cfn=__rustc::__rust_dealloc
+calls=1 0 
+0 41
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 41
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -210,6 +232,11 @@ cfn=std::env::args_os
 calls=1 0 
 0 41
 
+fn=gungraun::mat3a_inverse::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse
+calls=1 0 
+0 41
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -225,6 +252,9 @@ calls=1 29
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
+0 41
+
+fn=gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse
 0 41
 
 fn=(below main)
@@ -246,36 +276,6 @@ calls=5 0
 
 fn=gungraun::mat3a_inverse::__run_args
 cfn=gungraun::mat3a_inverse::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 41
-
-fn=gungraun::mat3a_inverse::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse
-calls=1 0 
-0 41
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 41
-
-fn=gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse
-0 41
-
-fn=init_have_lse_atomics
-fi=./csu/../csu/libc-start.c
-cfn=__init_cpu_features
-calls=1 0 
-145 41
-fe=???
-
-fn=std::env::args_os
-cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 41
-
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 41
 

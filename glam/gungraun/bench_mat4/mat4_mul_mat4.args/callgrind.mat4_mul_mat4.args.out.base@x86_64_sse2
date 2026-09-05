@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6355
+pid: 8260
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00003 00005 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84693
+desc: Timerange: Basic block 0 - 84662
 desc: Trigger: Program termination
 
 positions: line
@@ -27,21 +27,8 @@ cfn=(below main)
 calls=1 29 
 360 69
 
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
-fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
-cfi=???
-cfn=main
-calls=1 0 
-58 69
-
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 fl=???
-fn=gungraun::main
-cfn=gungraun::bench_mat4::__run
-calls=1 0 
-0 69
-
 fn=gungraun::bench_mat4::__run
 cfn=gungraun::mat4_mul_mat4::__run_args
 calls=1 0 
@@ -82,10 +69,14 @@ cfn=gungraun::mat4_mul_mat4::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 69
 
-fn=gungraun::mat4_mul_mat4::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4
+ob=/usr/lib/x86_64-linux-gnu/libc.so.6
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
+fn=(below main)
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
+cfi=???
+cfn=main
 calls=1 0 
-0 69
+58 69
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
@@ -93,6 +84,18 @@ fn=0x000000000001f540
 cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 cfi=???
 cfn=(below main)
+calls=1 0 
+0 69
+
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
+fl=???
+fn=gungraun::mat4_mul_mat4::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4
+calls=1 0 
+0 69
+
+fn=gungraun::main
+cfn=gungraun::bench_mat4::__run
 calls=1 0 
 0 69
 

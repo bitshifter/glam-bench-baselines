@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7963
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00004 00008 00001
+pid: 9923
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00004 00009 00001
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71644
+desc: Timerange: Basic block 0 - 71239
 desc: Trigger: Program termination
 
 positions: line
@@ -106,25 +106,6 @@ fe=./elf/./elf/rtld.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=__init_cpu_features
-fi=./csu/../csu/libc-start.c
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34'2
-calls=1 350 
-144 201
-fe=???
-
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=1 0 
-0 201
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 402
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -146,21 +127,6 @@ fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 201
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
-cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-calls=1 0 
-0 201
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 85
-cob=/usr/lib/aarch64-linux-gnu/libm.so.6
-cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
-cfn=sinf
-calls=3 67 
-0 78
-0 34
-0 4
 
 fn=main
 cfn=std::rt::lang_start_internal
@@ -233,6 +199,20 @@ cfn=std::env::args_os
 calls=1 0 
 0 201
 
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+calls=1 0 
+0 201
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+0 89
+cob=/usr/lib/aarch64-linux-gnu/libm.so.6
+cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
+cfn=sinf
+calls=3 67 
+0 78
+0 34
+
 fn=init_have_lse_atomics
 fi=./csu/../csu/libc-start.c
 cfn=__init_cpu_features
@@ -245,8 +225,27 @@ cfn=gungraun::main
 calls=1 0 
 0 201
 
+fn=__init_cpu_features
+fi=./csu/../csu/libc-start.c
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34'2
+calls=1 350 
+144 201
+fe=???
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=1 0 
+0 201
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 402
+
 fn=gungraun::quat_slerp::__run_negative_dot
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
 calls=1 0 
 0 201
 

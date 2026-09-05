@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7951
+pid: 9910
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00003 00011 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71631
+desc: Timerange: Basic block 0 - 71226
 desc: Trigger: Program termination
 
 positions: line
@@ -20,16 +20,6 @@ summary: 90
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 90
-fe=./elf/./elf/dl-init.c
-
 fl=./elf/./elf/rtld.c
 fn=_dl_start
 fi=./elf/../sysdeps/aarch64/dl-start.S
@@ -45,6 +35,16 @@ cfi=./elf/./elf/rtld.c
 cfn=_dl_start
 calls=1 517 
 30 90
+
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
+cfi=???
+cfn=(below main)
+calls=1 0 
+52 90
+fe=./elf/./elf/dl-init.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
@@ -65,18 +65,17 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 90
 
+fn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
+0 5
+cfn=<glam::f32::coresimd::mat4::Mat4>::try_inverse
+calls=1 0 
+0 82
+0 3
+
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 90
-
-fn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
-calls=1 0 
-0 90
-
-fn=<glam::f32::coresimd::mat4::Mat4>::try_inverse
-0 82
 
 fn=main
 cfn=std::rt::lang_start_internal
@@ -166,6 +165,14 @@ cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 90
 
+fn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
+calls=1 0 
+0 90
+
+fn=<glam::f32::coresimd::mat4::Mat4>::try_inverse
+0 82
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -184,13 +191,6 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 180
-
-fn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
-0 5
-cfn=<glam::f32::coresimd::mat4::Mat4>::try_inverse
-calls=1 0 
-0 82
-0 3
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./csu/../csu/libc-start.c

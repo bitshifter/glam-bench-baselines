@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7913
+pid: 9870
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00000 00007 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71628
+desc: Timerange: Basic block 0 - 71223
 desc: Trigger: Program termination
 
 positions: line
@@ -20,6 +20,15 @@ summary: 24
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 24
+fe=./elf/./elf/rtld.c
+
 fl=./elf/../sysdeps/aarch64/dl-start.S
 fn=(below main)
 cfi=./elf/./elf/rtld.c
@@ -37,22 +46,8 @@ calls=1 0
 52 24
 fe=./elf/./elf/dl-init.c
 
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 24
-fe=./elf/./elf/rtld.c
-
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=gungraun::mat2_try_inverse::__run_failure
-cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-calls=1 0 
-0 24
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -65,6 +60,9 @@ cfn=sysconf
 calls=1 29 
 0 24
 
+fn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
+0 24
+
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
 calls=1 0 
@@ -75,8 +73,8 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 24
 
-fn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
+fn=gungraun::mat2_try_inverse::__run_failure
+cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 24
 
@@ -163,7 +161,9 @@ cfn=gungraun::main
 calls=1 0 
 0 24
 
-fn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
+fn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
+calls=1 0 
 0 24
 
 fn=__init_cpu_features

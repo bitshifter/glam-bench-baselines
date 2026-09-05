@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6351
+pid: 8236
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00000 00007 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71398
+desc: Timerange: Basic block 0 - 71408
 desc: Trigger: Program termination
 
 positions: line
@@ -21,6 +21,64 @@ summary: 11
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
 fl=???
+fn=std::env::args
+cfn=std::env::args_os
+calls=1 0 
+0 11
+
+fn=__rustc::__rdl_dealloc
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./malloc/./malloc/malloc.c
+cfn=free
+calls=2 3363 
+0 11
+
+fn=__rustc::__rdl_dealloc'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./malloc/./malloc/malloc.c
+cfn=free'2
+calls=5 3363 
+0 22
+
+fn=__init_cpu_features
+fi=./csu/../csu/libc-start.c
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34'2
+calls=1 350 
+144 11
+fe=???
+
+fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+cfn=gungraun::main
+calls=1 0 
+0 11
+
+fn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 11
+
+fn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
+0 11
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 11
+
+fn=std::rt::lang_start_internal
+cfn=std::rt::lang_start_internal'2
+calls=1 0 
+0 11
+
+fn=std::rt::lang_start_internal'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+cfn=sysconf
+calls=1 29 
+0 11
+
 fn=__rustc::__rust_dealloc
 cfn=__rustc::__rdl_dealloc
 calls=2 0 
@@ -33,6 +91,11 @@ calls=5 0
 
 fn=gungraun::mat2_try_inverse::__run_failure
 cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+calls=1 0 
+0 11
+
+fn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
 calls=1 0 
 0 11
 
@@ -84,69 +147,6 @@ calls=1 0
 fn=gungraun::bench_mat2::__run
 cfn=gungraun::mat2_try_inverse::__run_failure
 calls=1 0 
-0 11
-
-fn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
-0 11
-
-fn=std::env::args
-cfn=std::env::args_os
-calls=1 0 
-0 11
-
-fn=__rustc::__rdl_dealloc
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./malloc/./malloc/malloc.c
-cfn=free
-calls=2 3363 
-0 11
-
-fn=__rustc::__rdl_dealloc'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./malloc/./malloc/malloc.c
-cfn=free'2
-calls=5 3363 
-0 22
-
-fn=__init_cpu_features
-fi=./csu/../csu/libc-start.c
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34'2
-calls=1 350 
-144 11
-fe=???
-
-fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-cfn=gungraun::main
-calls=1 0 
-0 11
-
-fn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
-calls=1 0 
-0 11
-
-fn=std::sys::pal::unix::stack_overflow::imp::make_handler
-cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-calls=1 0 
-0 11
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 11
-
-fn=std::rt::lang_start_internal
-cfn=std::rt::lang_start_internal'2
-calls=1 0 
-0 11
-
-fn=std::rt::lang_start_internal'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-cfn=sysconf
-calls=1 29 
 0 11
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -226,6 +226,23 @@ cfn=init_have_lse_atomics
 calls=1 0 
 145 11
 
+fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+fn=sysconf
+fi=???
+cfi=./nptl/./nptl/pthread_getattr_np.c
+cfn=pthread_getattr_np@@GLIBC_2.32
+calls=1 33 
+0 11
+fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
+fn=(below main)
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cfi=???
+cfn=main
+calls=1 0 
+58 11
+
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
 fl=./elf/./elf/rtld.c
 fn=_dl_start
@@ -252,23 +269,5 @@ cfn=(below main)
 calls=1 0 
 52 11
 fe=./elf/./elf/dl-init.c
-
-ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-fn=sysconf
-fi=???
-cfi=./nptl/./nptl/pthread_getattr_np.c
-cfn=pthread_getattr_np@@GLIBC_2.32
-calls=1 33 
-0 11
-fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
-fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
-cfi=???
-cfn=main
-calls=1 0 
-58 11
 
 totals: 11

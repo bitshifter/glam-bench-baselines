@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6637
+pid: 8545
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c --gungraun-run 00009 00002 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85337
+desc: Timerange: Basic block 0 - 85379
 desc: Trigger: Program termination
 
 positions: line
@@ -21,6 +21,18 @@ summary: 111
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
 fl=???
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 111
+
+fn=(below main)
+cob=/usr/lib/x86_64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 111
+
 fn=gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a
 0 111
 
@@ -57,18 +69,6 @@ calls=1 0
 fn=gungraun::affine3a_mul_affine3a::__gungraun_wrapper_id_mod_args::args
 cfn=gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a
 calls=1 0 
-0 111
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 111
-
-fn=(below main)
-cob=/usr/lib/x86_64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
 0 111
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7968
+pid: 9927
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00005 00001 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71627
+desc: Timerange: Basic block 0 - 71222
 desc: Trigger: Program termination
 
 positions: line
@@ -142,58 +142,6 @@ fe=./elf/./elf/dl-init.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=(below main)
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 17
-
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=1 0 
-0 17
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 34
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 17
-
-fn=gungraun::vec3_cross::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross
-calls=1 0 
-0 17
-
-fn=init_have_lse_atomics
-fi=./csu/../csu/libc-start.c
-cfn=__init_cpu_features
-calls=1 0 
-145 17
-fe=???
-
-fn=std::env::args_os
-cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 17
-
-fn=gungraun::vec3_cross::__run_args
-cfn=gungraun::vec3_cross::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 17
-
-fn=gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross
-0 17
-
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 17
-
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -276,6 +224,58 @@ calls=1 29
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
+calls=1 0 
+0 17
+
+fn=(below main)
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 17
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=1 0 
+0 17
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 34
+
+fn=gungraun::vec3_cross::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross
+calls=1 0 
+0 17
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 17
+
+fn=gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross
+0 17
+
+fn=init_have_lse_atomics
+fi=./csu/../csu/libc-start.c
+cfn=__init_cpu_features
+calls=1 0 
+145 17
+fe=???
+
+fn=std::env::args_os
+cfn=__rustc::__rust_dealloc
+calls=1 0 
+0 17
+
+fn=gungraun::vec3_cross::__run_args
+cfn=gungraun::vec3_cross::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
+0 17
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 17
 

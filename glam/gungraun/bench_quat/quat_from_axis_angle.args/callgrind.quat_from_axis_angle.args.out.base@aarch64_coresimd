@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7954
+pid: 9913
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00004 00001 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71632
+desc: Timerange: Basic block 0 - 71227
 desc: Trigger: Program termination
 
 positions: line
@@ -89,15 +89,6 @@ calls=1 517
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle
-0 15
-cob=/usr/lib/aarch64-linux-gnu/libm.so.6
-cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
-cfn=sincosf
-calls=1 67 
-0 35
-0 19
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -112,6 +103,11 @@ calls=1 29
 
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
+calls=1 0 
+0 69
+
+fn=gungraun::quat_from_axis_angle::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle
 calls=1 0 
 0 69
 
@@ -196,11 +192,6 @@ cfn=gungraun::quat_from_axis_angle::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 69
 
-fn=gungraun::quat_from_axis_angle::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle
-calls=1 0 
-0 69
-
 fn=init_have_lse_atomics
 fi=./csu/../csu/libc-start.c
 cfn=__init_cpu_features
@@ -212,6 +203,15 @@ fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 69
+
+fn=gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle
+0 15
+cob=/usr/lib/aarch64-linux-gnu/libm.so.6
+cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
+cfn=sincosf
+calls=1 67 
+0 35
+0 19
 
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c

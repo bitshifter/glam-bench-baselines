@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6364
+pid: 8269
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00004 00000 00000
 part: 1
 thread: 1
@@ -11,65 +11,65 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84692
+desc: Timerange: Basic block 0 - 84661
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
-summary: 12
+summary: 11
 
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 fl=???
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 12
-
 fn=gungraun::quat_dot::__run_args
 cfn=gungraun::quat_dot::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
-0 12
+0 11
 
-fn=gungraun::quat_dot::__gungraun_wrapper_mod::quat_dot
-0 12
+fn=gungraun::quat_dot::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_dot::__gungraun_wrapper_mod::quat_dot
+calls=1 0 
+0 11
 
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
 cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
-0 12
+0 11
 
 fn=gungraun::main
 cfn=gungraun::bench_quat::__run
 calls=1 0 
-0 12
+0 11
 
-fn=gungraun::quat_dot::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_dot::__gungraun_wrapper_mod::quat_dot
-calls=1 0 
-0 12
+fn=gungraun::quat_dot::__gungraun_wrapper_mod::quat_dot
+0 11
 
 fn=gungraun::bench_quat::__run
 cfn=gungraun::quat_dot::__run_args
 calls=1 0 
-0 12
+0 11
 
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
-0 12
+0 11
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
-0 12
+0 11
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 12
+0 11
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 11
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
@@ -78,7 +78,7 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855
 cfi=???
 cfn=(below main)
 calls=1 0 
-0 12
+0 11
 
 ob=/usr/lib/x86_64-linux-gnu/libc.so.6
 fl=./csu/../csu/libc-start.c
@@ -86,7 +86,7 @@ fn=__libc_start_main@@GLIBC_2.34
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
-360 12
+360 11
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
@@ -94,6 +94,6 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855
 cfi=???
 cfn=main
 calls=1 0 
-58 12
+58 11
 
-totals: 12
+totals: 11

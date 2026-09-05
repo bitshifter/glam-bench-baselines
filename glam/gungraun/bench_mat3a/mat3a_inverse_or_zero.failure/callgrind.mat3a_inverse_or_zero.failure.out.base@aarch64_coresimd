@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7930
+pid: 9888
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00002 00003 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71628
+desc: Timerange: Basic block 0 - 71223
 desc: Trigger: Program termination
 
 positions: line
@@ -20,13 +20,6 @@ summary: 24
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 24
-
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
@@ -46,11 +39,15 @@ calls=1 81
 46 24
 fe=./elf/./elf/rtld.c
 
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 24
+
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
-0 24
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -73,9 +70,7 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 24
 
-fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
-calls=1 0 
+fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
 0 24
 
 fn=main
@@ -163,6 +158,11 @@ calls=1 0
 
 fn=gungraun::mat3a_inverse_or_zero::__run_failure
 cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+calls=1 0 
+0 24
+
+fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
 calls=1 0 
 0 24
 

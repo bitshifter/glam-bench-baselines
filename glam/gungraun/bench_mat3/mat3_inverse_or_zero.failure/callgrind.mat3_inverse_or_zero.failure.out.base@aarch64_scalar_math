@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6357
+pid: 8241
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00001 00002 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71399
+desc: Timerange: Basic block 0 - 71409
 desc: Trigger: Program termination
 
 positions: line
@@ -21,6 +21,15 @@ summary: 36
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
 fl=???
+fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero
+0 30
+cfn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero'2
+calls=1 0 
+0 6
+
+fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero'2
+0 6
+
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -33,11 +42,6 @@ calls=1 0
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 36
-
-fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero
 calls=1 0 
 0 36
 
@@ -114,19 +118,15 @@ cfn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 36
 
+fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero
+calls=1 0 
+0 36
+
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
 0 36
-
-fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero
-0 30
-cfn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero'2
-calls=1 0 
-0 6
-
-fn=gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero'2
-0 6
 
 fn=main
 cfn=std::rt::lang_start_internal

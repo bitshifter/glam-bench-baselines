@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6573
+pid: 8481
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c --gungraun-run 00002 00008 00000
 part: 1
 thread: 1
@@ -11,12 +11,12 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85337
+desc: Timerange: Basic block 0 - 85379
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
-summary: 80
+summary: 81
 
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
@@ -24,42 +24,39 @@ fl=???
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
-0 80
+0 81
 
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
 cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
-0 80
+0 81
 
 fn=gungraun::main
 cfn=gungraun::bench_mat3a::__run
 calls=1 0 
-0 80
+0 81
 
 fn=gungraun::mat3a_try_inverse::__run_success
-cfn=gungraun::mat3a_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3a_try_inverse::__gungraun_wrapper_id_mod_success::success
 calls=1 0 
-0 80
-
-fn=gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse
-0 80
+0 81
 
 fn=gungraun::bench_mat3a::__run
 cfn=gungraun::mat3a_try_inverse::__run_success
 calls=1 0 
-0 80
+0 81
 
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
-0 80
+0 81
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
-0 80
+0 81
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
@@ -68,7 +65,7 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b5399
 cfi=???
 cfn=(below main)
 calls=1 0 
-0 80
+0 81
 
 ob=/usr/lib/x86_64-linux-gnu/libc.so.6
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
@@ -77,25 +74,28 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b5399
 cfi=???
 cfn=main
 calls=1 0 
-58 80
+58 81
 
 fl=./csu/../csu/libc-start.c
 fn=__libc_start_main@@GLIBC_2.34
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
-360 80
+360 81
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
 fl=???
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 80
+0 81
 
-fn=gungraun::mat3a_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+fn=gungraun::mat3a_try_inverse::__gungraun_wrapper_id_mod_success::success
 cfn=gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse
 calls=1 0 
-0 80
+0 81
 
-totals: 80
+fn=gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse
+0 81
+
+totals: 81

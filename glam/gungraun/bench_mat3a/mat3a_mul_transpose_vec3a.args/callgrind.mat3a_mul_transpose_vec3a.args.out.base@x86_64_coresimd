@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8257
+pid: 10168
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00002 00006 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85668
+desc: Timerange: Basic block 0 - 85345
 desc: Trigger: Program termination
 
 positions: line
@@ -37,16 +37,13 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
 fl=???
-fn=gungraun::bench_mat3a::__run
-cfn=gungraun::mat3a_mul_transpose_vec3a::__run_args
+fn=gungraun::mat3a_mul_transpose_vec3a::__run_args
+cfn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 19
 
-fn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_transpose_vec3a
-0 19
-
-fn=gungraun::main
-cfn=gungraun::bench_mat3a::__run
+fn=gungraun::bench_mat3a::__run
+cfn=gungraun::mat3a_mul_transpose_vec3a::__run_args
 calls=1 0 
 0 19
 
@@ -55,9 +52,17 @@ cfn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_trans
 calls=1 0 
 0 19
 
+fn=gungraun::main
+cfn=gungraun::bench_mat3a::__run
+calls=1 0 
+0 19
+
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
+0 19
+
+fn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_transpose_vec3a
 0 19
 
 fn=std::rt::lang_start_internal
@@ -67,11 +72,6 @@ calls=1 0
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
-calls=1 0 
-0 19
-
-fn=gungraun::mat3a_mul_transpose_vec3a::__run_args
-cfn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 19
 

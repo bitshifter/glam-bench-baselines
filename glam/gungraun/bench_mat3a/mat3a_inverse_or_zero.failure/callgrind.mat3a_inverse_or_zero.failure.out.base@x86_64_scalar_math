@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6568
+pid: 8476
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c --gungraun-run 00002 00003 00001
 part: 1
 thread: 1
@@ -11,12 +11,12 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85338
+desc: Timerange: Basic block 0 - 85380
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
-summary: 48
+summary: 47
 
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
@@ -24,39 +24,39 @@ fl=???
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
-0 48
+0 47
 
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
 cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
-0 48
+0 47
 
 fn=gungraun::mat3a_inverse_or_zero::__run_failure
 cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
-0 48
+0 47
 
 fn=gungraun::main
 cfn=gungraun::bench_mat3a::__run
 calls=1 0 
-0 48
+0 47
 
 fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
 calls=1 0 
-0 48
+0 47
 
 fn=gungraun::bench_mat3a::__run
 cfn=gungraun::mat3a_inverse_or_zero::__run_failure
 calls=1 0 
-0 48
+0 47
 
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
-0 48
+0 47
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
@@ -65,7 +65,7 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b5399
 cfi=???
 cfn=(below main)
 calls=1 0 
-0 48
+0 47
 
 ob=/usr/lib/x86_64-linux-gnu/libc.so.6
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
@@ -74,28 +74,28 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b5399
 cfi=???
 cfn=main
 calls=1 0 
-58 48
+58 47
 
 fl=./csu/../csu/libc-start.c
 fn=__libc_start_main@@GLIBC_2.34
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
-360 48
+360 47
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
 fl=???
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
-0 48
+0 47
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 48
+0 47
 
 fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
-0 48
+0 47
 
-totals: 48
+totals: 47

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6203
+pid: 8085
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00007 00000 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71393
+desc: Timerange: Basic block 0 - 71407
 desc: Trigger: Program termination
 
 positions: line
@@ -31,7 +31,7 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 11
 
-fn=gungraun::vec4_dot::__gungraun_wrapper_mod::vec4_dot
+fn=gungraun::quat_dot::__gungraun_wrapper_mod::quat_dot
 0 11
 
 fn=std::rt::lang_start::<()>::{closure#0}
@@ -145,9 +145,36 @@ calls=5 0
 0 22
 
 fn=gungraun::vec4_dot::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec4_dot::__gungraun_wrapper_mod::vec4_dot
+cfn=gungraun::quat_dot::__gungraun_wrapper_mod::quat_dot
 calls=1 0 
 0 11
+
+ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 11
+fe=./elf/./elf/rtld.c
+
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 11
+
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
+cfi=???
+cfn=(below main)
+calls=1 0 
+52 11
+fe=./elf/./elf/dl-init.c
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./stdlib/./stdlib/cxa_atexit.c
@@ -242,32 +269,5 @@ cfi=???
 cfn=main
 calls=1 0 
 58 11
-
-ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 11
-fe=./elf/./elf/rtld.c
-
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 11
-
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 11
-fe=./elf/./elf/dl-init.c
 
 totals: 11

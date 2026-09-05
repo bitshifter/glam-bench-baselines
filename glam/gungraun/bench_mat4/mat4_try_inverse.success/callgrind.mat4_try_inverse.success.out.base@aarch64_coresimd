@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7950
+pid: 9909
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00003 00011 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71631
+desc: Timerange: Basic block 0 - 71226
 desc: Trigger: Program termination
 
 positions: line
@@ -20,13 +20,6 @@ summary: 99
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 99
-
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
@@ -45,6 +38,13 @@ cfn=_dl_init
 calls=1 81 
 46 99
 fe=./elf/./elf/rtld.c
+
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 99
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
@@ -102,6 +102,13 @@ cfn=gungraun::mat4_try_inverse::__run_success
 calls=1 0 
 0 99
 
+fn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
+0 5
+cfn=<glam::f32::coresimd::mat4::Mat4>::try_inverse
+calls=1 0 
+0 91
+0 3
+
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -118,14 +125,6 @@ fn=std::env::args
 cfn=std::env::args_os
 calls=1 0 
 0 99
-
-fn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
-calls=1 0 
-0 99
-
-fn=<glam::f32::coresimd::mat4::Mat4>::try_inverse
-0 91
 
 fn=init_have_lse_atomics
 fi=./csu/../csu/libc-start.c
@@ -163,6 +162,14 @@ cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 99
 
+fn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
+calls=1 0 
+0 99
+
+fn=<glam::f32::coresimd::mat4::Mat4>::try_inverse
+0 91
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -174,13 +181,6 @@ cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 cfn=sysconf
 calls=1 29 
 0 99
-
-fn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
-0 5
-cfn=<glam::f32::coresimd::mat4::Mat4>::try_inverse
-calls=1 0 
-0 91
-0 3
 
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc

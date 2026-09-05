@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6410
+pid: 8357
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00005 00003 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71397
+desc: Timerange: Basic block 0 - 71407
 desc: Trigger: Program termination
 
 positions: line
@@ -20,15 +20,6 @@ summary: 14
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 14
-fe=./elf/./elf/rtld.c
-
 fl=./elf/../sysdeps/aarch64/dl-start.S
 fn=(below main)
 cfi=./elf/./elf/rtld.c
@@ -45,6 +36,15 @@ cfn=(below main)
 calls=1 0 
 52 14
 fe=./elf/./elf/dl-init.c
+
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 14
+fe=./elf/./elf/rtld.c
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./stdlib/./stdlib/cxa_atexit.c
@@ -157,7 +157,9 @@ cfn=gungraun::vec3_normalize::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 14
 
-fn=gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize
+fn=gungraun::vec3_normalize::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize
+calls=1 0 
 0 14
 
 fn=(below main)
@@ -196,6 +198,9 @@ fe=???
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
+0 14
+
+fn=gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize
 0 14
 
 fn=gungraun::main
@@ -257,11 +262,6 @@ calls=5 3363
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
-calls=1 0 
-0 14
-
-fn=gungraun::vec3_normalize::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize
 calls=1 0 
 0 14
 

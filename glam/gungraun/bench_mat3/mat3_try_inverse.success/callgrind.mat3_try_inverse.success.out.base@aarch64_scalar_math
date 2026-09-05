@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6362
+pid: 8246
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00001 00007 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71398
+desc: Timerange: Basic block 0 - 71408
 desc: Trigger: Program termination
 
 positions: line
@@ -75,11 +75,6 @@ cfn=free'2
 calls=5 3363 
 0 134
 
-fn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
-calls=1 0 
-0 67
-
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -117,7 +112,12 @@ calls=1 29
 0 67
 
 fn=gungraun::mat3_try_inverse::__run_success
-cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_success::success
+calls=1 0 
+0 67
+
+fn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_success::success
+cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
 calls=1 0 
 0 67
 
@@ -130,9 +130,6 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 134
-
-fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
-0 67
 
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
@@ -147,6 +144,9 @@ calls=1 0
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
+0 67
+
+fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
 0 67
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6130
+pid: 8012
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00000 00007 00001
 part: 1
 thread: 1
@@ -11,143 +11,13 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71394
+desc: Timerange: Basic block 0 - 71408
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
 summary: 23
 
-
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
-fl=???
-fn=std::env::args
-cfn=std::env::args_os
-calls=1 0 
-0 23
-
-fn=__rustc::__rdl_dealloc
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./malloc/./malloc/malloc.c
-cfn=free
-calls=2 3363 
-0 23
-
-fn=__rustc::__rdl_dealloc'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./malloc/./malloc/malloc.c
-cfn=free'2
-calls=5 3363 
-0 46
-
-fn=__init_cpu_features
-fi=./csu/../csu/libc-start.c
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34'2
-calls=1 350 
-144 23
-fe=???
-
-fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-cfn=gungraun::main
-calls=1 0 
-0 23
-
-fn=std::sys::pal::unix::stack_overflow::imp::make_handler
-cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-calls=1 0 
-0 23
-
-fn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
-0 23
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 23
-
-fn=std::rt::lang_start_internal
-cfn=std::rt::lang_start_internal'2
-calls=1 0 
-0 23
-
-fn=std::rt::lang_start_internal'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-cfn=sysconf
-calls=1 29 
-0 23
-
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=2 0 
-0 23
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 46
-
-fn=gungraun::mat2_try_inverse::__run_failure
-cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-calls=1 0 
-0 23
-
-fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-cfn=std::rt::lang_start::<()>::{closure#0}
-calls=1 0 
-0 23
-
-fn=std::env::args_os
-cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 23
-
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 23
-
-fn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
-calls=1 0 
-0 23
-
-fn=(below main)
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 23
-
-fn=init_have_lse_atomics
-fi=./csu/../csu/libc-start.c
-cfn=__init_cpu_features
-calls=1 0 
-145 23
-fe=???
-
-fn=gungraun::main
-cfn=std::env::args
-calls=1 0 
-0 23
-
-fn=gungraun::main'2
-cfn=gungraun::main'2
-calls=1 0 
-0 23
-cfn=gungraun::main'2
-calls=1 0 
-0 23
-cfn=__rustc::__rust_dealloc'2
-calls=1 0 
-0 23
-
-fn=gungraun::bench_mat2::__run
-cfn=gungraun::mat2_try_inverse::__run_failure
-calls=1 0 
-0 23
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./stdlib/./stdlib/cxa_atexit.c
@@ -242,6 +112,136 @@ cfi=???
 cfn=main
 calls=1 0 
 58 23
+
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5
+fl=???
+fn=(below main)
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 23
+
+fn=init_have_lse_atomics
+fi=./csu/../csu/libc-start.c
+cfn=__init_cpu_features
+calls=1 0 
+145 23
+fe=???
+
+fn=gungraun::main
+cfn=std::env::args
+calls=1 0 
+0 23
+
+fn=gungraun::main'2
+cfn=gungraun::main'2
+calls=1 0 
+0 23
+cfn=gungraun::main'2
+calls=1 0 
+0 23
+cfn=__rustc::__rust_dealloc'2
+calls=1 0 
+0 23
+
+fn=gungraun::bench_mat2::__run
+cfn=gungraun::mat2_try_inverse::__run_failure
+calls=1 0 
+0 23
+
+fn=std::env::args
+cfn=std::env::args_os
+calls=1 0 
+0 23
+
+fn=__rustc::__rdl_dealloc
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./malloc/./malloc/malloc.c
+cfn=free
+calls=2 3363 
+0 23
+
+fn=__rustc::__rdl_dealloc'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./malloc/./malloc/malloc.c
+cfn=free'2
+calls=5 3363 
+0 46
+
+fn=__init_cpu_features
+fi=./csu/../csu/libc-start.c
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34'2
+calls=1 350 
+144 23
+fe=???
+
+fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+cfn=gungraun::main
+calls=1 0 
+0 23
+
+fn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
+calls=1 0 
+0 23
+
+fn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 23
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 23
+
+fn=std::rt::lang_start_internal
+cfn=std::rt::lang_start_internal'2
+calls=1 0 
+0 23
+
+fn=std::rt::lang_start_internal'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+cfn=sysconf
+calls=1 29 
+0 23
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=2 0 
+0 23
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 46
+
+fn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
+0 23
+
+fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+cfn=std::rt::lang_start::<()>::{closure#0}
+calls=1 0 
+0 23
+
+fn=std::env::args_os
+cfn=__rustc::__rust_dealloc
+calls=1 0 
+0 23
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 23
+
+fn=gungraun::mat2_try_inverse::__run_failure
+cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+calls=1 0 
+0 23
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
 fl=./elf/./elf/rtld.c

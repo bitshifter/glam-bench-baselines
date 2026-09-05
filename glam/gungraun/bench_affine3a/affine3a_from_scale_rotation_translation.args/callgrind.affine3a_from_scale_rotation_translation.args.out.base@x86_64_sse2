@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6408
+pid: 8314
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00009 00000 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84693
+desc: Timerange: Basic block 0 - 84662
 desc: Trigger: Program termination
 
 positions: line
@@ -36,11 +36,6 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 70
 
-fn=gungraun::affine3a_from_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine3a_from_scale_rotation_translation::__gungraun_wrapper_mod::affine3a_from_scale_rotation_translation
-calls=1 0 
-0 70
-
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
@@ -52,6 +47,11 @@ calls=1 0
 0 70
 
 fn=gungraun::affine3a_from_scale_rotation_translation::__gungraun_wrapper_mod::affine3a_from_scale_rotation_translation
+0 70
+
+fn=gungraun::affine3a_from_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::affine3a_from_scale_rotation_translation::__gungraun_wrapper_mod::affine3a_from_scale_rotation_translation
+calls=1 0 
 0 70
 
 fn=(below main)

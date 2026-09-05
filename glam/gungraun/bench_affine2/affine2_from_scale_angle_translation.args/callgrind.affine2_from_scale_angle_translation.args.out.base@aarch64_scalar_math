@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6430
+pid: 8377
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00008 00000 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71402
+desc: Timerange: Basic block 0 - 71412
 desc: Trigger: Program termination
 
 positions: line
@@ -87,13 +87,13 @@ cfn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_id_mod_ar
 calls=1 0 
 0 72
 
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+fn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation
 calls=1 0 
 0 72
 
-fn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 72
 
@@ -151,6 +151,16 @@ cfn=free'2
 calls=5 3363 
 0 144
 
+fn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation
+0 13
+cob=/usr/lib/aarch64-linux-gnu/libm.so.6
+cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
+cfn=sincosf
+calls=1 67 
+0 35
+0 21
+0 3
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -164,16 +174,6 @@ fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 72
-
-fn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation
-0 13
-cob=/usr/lib/aarch64-linux-gnu/libm.so.6
-cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
-cfn=sincosf
-calls=1 67 
-0 35
-0 21
-0 3
 
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info

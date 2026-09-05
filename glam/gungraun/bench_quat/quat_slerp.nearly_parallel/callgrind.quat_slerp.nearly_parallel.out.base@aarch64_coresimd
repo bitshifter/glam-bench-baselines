@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7964
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00004 00008 00002
+pid: 9924
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00004 00009 00002
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71629
+desc: Timerange: Basic block 0 - 71224
 desc: Trigger: Program termination
 
 positions: line
@@ -90,11 +90,10 @@ calls=1 0
 0 52
 
 fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 41
+0 45
 cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp'2
 calls=1 0 
 0 7
-0 4
 
 fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp'2
 0 7
@@ -193,15 +192,6 @@ calls=1 0
 0 52
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-fn=sysconf
-fi=???
-cfi=./nptl/./nptl/pthread_getattr_np.c
-cfn=pthread_getattr_np@@GLIBC_2.32
-calls=1 33 
-0 52
-fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-
 fl=./csu/../csu/libc-start.c
 fn=__libc_start_main@@GLIBC_2.34
 cfi=./stdlib/./stdlib/cxa_atexit.c
@@ -285,5 +275,14 @@ cfn=gungraun::bench_quat::__run
 calls=1 0 
 0 52
 fe=./malloc/./malloc/malloc.c
+
+fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+fn=sysconf
+fi=???
+cfi=./nptl/./nptl/pthread_getattr_np.c
+cfn=pthread_getattr_np@@GLIBC_2.32
+calls=1 33 
+0 52
+fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 
 totals: 52

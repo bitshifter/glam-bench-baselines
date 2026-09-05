@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6340
+pid: 8246
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00002 00003 00001
 part: 1
 thread: 1
@@ -11,12 +11,12 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84694
+desc: Timerange: Basic block 0 - 84663
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
-summary: 31
+summary: 32
 
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
@@ -24,52 +24,52 @@ fl=???
 fn=gungraun::bench_mat3a::__run
 cfn=gungraun::mat3a_inverse_or_zero::__run_failure
 calls=1 0 
-0 31
+0 32
+
+fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
+0 32
 
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
-0 31
+0 32
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
-0 31
+0 32
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 31
+0 32
 
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
-0 31
+0 32
 
 fn=gungraun::mat3a_inverse_or_zero::__run_failure
 cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
-0 31
-
-fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
-0 31
+0 32
 
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
 cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
-0 31
+0 32
 
 fn=gungraun::main
 cfn=gungraun::bench_mat3a::__run
 calls=1 0 
-0 31
+0 32
 
 fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
 calls=1 0 
-0 31
+0 32
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
@@ -78,7 +78,7 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855
 cfi=???
 cfn=(below main)
 calls=1 0 
-0 31
+0 32
 
 ob=/usr/lib/x86_64-linux-gnu/libc.so.6
 fl=./csu/../csu/libc-start.c
@@ -86,7 +86,7 @@ fn=__libc_start_main@@GLIBC_2.34
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
-360 31
+360 32
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
@@ -94,6 +94,6 @@ cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855
 cfi=???
 cfn=main
 calls=1 0 
-58 31
+58 32
 
-totals: 31
+totals: 32

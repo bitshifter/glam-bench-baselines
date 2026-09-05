@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6401
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00004 00007 00000
+pid: 8349
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00004 00008 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71397
+desc: Timerange: Basic block 0 - 71407
 desc: Trigger: Program termination
 
 positions: line
@@ -20,16 +20,6 @@ summary: 42
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 42
-fe=./elf/./elf/dl-init.c
-
 fl=./elf/./elf/rtld.c
 fn=_dl_start
 fi=./elf/../sysdeps/aarch64/dl-start.S
@@ -46,17 +36,17 @@ cfn=_dl_start
 calls=1 517 
 30 42
 
-ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
 cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
 cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=(below main)
 calls=1 0 
-0 42
-fe=./nptl/./nptl/pthread_attr_destroy.c
+52 42
+fe=./elf/./elf/dl-init.c
 
+ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./stdlib/./stdlib/cxa_atexit.c
 fn=__cxa_atexit
 cfn=__internal_atexit
@@ -140,6 +130,16 @@ cfn=main
 calls=1 0 
 58 42
 
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 42
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
 fl=???
 fn=__rustc::__rust_dealloc
@@ -188,6 +188,14 @@ fe=???
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
+0 42
+
+fn=gungraun::quat_mul_vec3a::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a
+calls=1 0 
+0 42
+
+fn=gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a
 0 42
 
 fn=gungraun::main
@@ -246,14 +254,6 @@ cfi=./malloc/./malloc/malloc.c
 cfn=free'2
 calls=5 3363 
 0 84
-
-fn=gungraun::quat_mul_vec3a::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a
-calls=1 0 
-0 42
-
-fn=gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a
-0 42
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main

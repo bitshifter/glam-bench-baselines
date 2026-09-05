@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6412
+pid: 8318
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00009 00004 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84692
+desc: Timerange: Basic block 0 - 84661
 desc: Trigger: Program termination
 
 positions: line
@@ -21,7 +21,9 @@ summary: 12
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 fl=???
-fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
+fn=gungraun::affine3a_transform_vector3a::__run_args
+cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
 0 12
 
 fn=(below main)
@@ -36,8 +38,16 @@ cfn=gungraun::bench_affine3a::__run
 calls=1 0 
 0 12
 
+fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
+0 12
+
 fn=gungraun::bench_affine3a::__run
 cfn=gungraun::affine3a_transform_vector3a::__run_args
+calls=1 0 
+0 12
+
+fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
 calls=1 0 
 0 12
 
@@ -56,18 +66,8 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 12
 
-fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
-calls=1 0 
-0 12
-
 fn=main
 cfn=std::rt::lang_start_internal
-calls=1 0 
-0 12
-
-fn=gungraun::affine3a_transform_vector3a::__run_args
-cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 12
 

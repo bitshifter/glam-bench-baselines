@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8229
+pid: 10140
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00000 00002 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85669
+desc: Timerange: Basic block 0 - 85346
 desc: Trigger: Program termination
 
 positions: line
@@ -37,6 +37,34 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
 fl=???
+fn=gungraun::bench_mat2::__run
+cfn=gungraun::mat2_inverse_or_zero::__run_failure
+calls=1 0 
+0 19
+
+fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
+0 19
+
+fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
+calls=1 0 
+0 19
+
+fn=gungraun::main
+cfn=gungraun::bench_mat2::__run
+calls=1 0 
+0 19
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 19
+
+fn=gungraun::mat2_inverse_or_zero::__run_failure
+cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+calls=1 0 
+0 19
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -56,34 +84,6 @@ calls=1 242
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 19
-
-fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
-0 19
-
-fn=gungraun::bench_mat2::__run
-cfn=gungraun::mat2_inverse_or_zero::__run_failure
-calls=1 0 
-0 19
-
-fn=gungraun::mat2_inverse_or_zero::__run_failure
-cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
-calls=1 0 
-0 19
-
-fn=gungraun::main
-cfn=gungraun::bench_mat2::__run
-calls=1 0 
-0 19
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 19
-
-fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
 calls=1 0 
 0 19
 
