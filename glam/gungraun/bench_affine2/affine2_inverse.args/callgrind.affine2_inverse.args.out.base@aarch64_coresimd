@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9950
+pid: 9842
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00008 00001 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71222
+desc: Timerange: Basic block 0 - 71682
 desc: Trigger: Program termination
 
 positions: line
@@ -142,23 +142,6 @@ fe=./elf/./elf/dl-init.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=(below main)
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 23
-
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=1 0 
-0 23
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 46
-
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
@@ -176,17 +159,9 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 23
 
-fn=gungraun::affine2_inverse::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine2_inverse::__gungraun_wrapper_mod::affine2_inverse
-calls=1 0 
-0 23
-
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 23
-
-fn=gungraun::affine2_inverse::__gungraun_wrapper_mod::affine2_inverse
 0 23
 
 fn=__init_cpu_features
@@ -262,6 +237,11 @@ cfn=gungraun::affine2_inverse::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 23
 
+fn=gungraun::affine2_inverse::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::affine2_inverse::__gungraun_wrapper_mod::affine2_inverse
+calls=1 0 
+0 23
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -278,5 +258,25 @@ fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 23
+
+fn=gungraun::affine2_inverse::__gungraun_wrapper_mod::affine2_inverse
+0 23
+
+fn=(below main)
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 23
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=1 0 
+0 23
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 46
 
 totals: 23

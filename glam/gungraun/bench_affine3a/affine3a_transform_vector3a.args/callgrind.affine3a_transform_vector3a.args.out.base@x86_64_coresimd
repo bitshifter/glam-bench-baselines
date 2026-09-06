@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 10236
+pid: 10387
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00009 00004 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85345
+desc: Timerange: Basic block 0 - 85342
 desc: Trigger: Program termination
 
 positions: line
@@ -37,26 +37,8 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
 fl=???
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 12
-
-fn=gungraun::affine3a_transform_vector3a::__run_args
-cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 12
-
-fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
-0 12
-
 fn=gungraun::bench_affine3a::__run
 cfn=gungraun::affine3a_transform_vector3a::__run_args
-calls=1 0 
-0 12
-
-fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
 calls=1 0 
 0 12
 
@@ -72,8 +54,18 @@ cfn=gungraun::bench_affine3a::__run
 calls=1 0 
 0 12
 
+fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
+calls=1 0 
+0 12
+
 fn=main
 cfn=std::rt::lang_start_internal
+calls=1 0 
+0 12
+
+fn=gungraun::affine3a_transform_vector3a::__run_args
+cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 12
 
@@ -85,6 +77,14 @@ calls=1 0
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
+0 12
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 12
+
+fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
 0 12
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2

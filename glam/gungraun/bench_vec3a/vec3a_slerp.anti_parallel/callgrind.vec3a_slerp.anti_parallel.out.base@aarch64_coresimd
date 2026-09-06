@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9939
+pid: 9830
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00006 00006 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71231
+desc: Timerange: Basic block 0 - 71691
 desc: Trigger: Program termination
 
 positions: line
@@ -82,6 +82,13 @@ fi=./math/../sysdeps/ieee754/flt-32/s_sincosf.c
 fe=./math/../sysdeps/ieee754/flt-32/math_config.h
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 177
+
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
@@ -101,21 +108,13 @@ calls=1 81
 46 177
 fe=./elf/./elf/rtld.c
 
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 177
-
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
 fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
-0 50
+0 54
 cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
 calls=1 0 
 0 123
-0 4
 
 fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
 0 21
@@ -219,7 +218,7 @@ cfn=std::env::args_os
 calls=1 0 
 0 177
 
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_anti_parallel::anti_parallel
 cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
 calls=1 0 
 0 177
@@ -256,7 +255,7 @@ calls=5 0
 0 354
 
 fn=gungraun::vec3a_slerp::__run_anti_parallel
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_anti_parallel::anti_parallel
 calls=1 0 
 0 177
 
