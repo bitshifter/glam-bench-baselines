@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6403
+pid: 12556
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00005 00000 00000
 part: 1
 thread: 1
@@ -19,25 +19,32 @@ events: Ir
 summary: 15
 
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
-fl=???
-fn=gungraun::main
-cfn=std::env::args
+ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
+cfi=???
+cfn=(below main)
 calls=1 0 
-0 15
+52 15
+fe=./elf/./elf/dl-init.c
 
-fn=gungraun::main'2
-cfn=gungraun::main'2
-calls=1 0 
-0 15
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 15
+fe=./elf/./elf/rtld.c
 
-ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./csu/../csu/libc-start.c
-fn=__libc_start_main@@GLIBC_2.34
-cfi=./stdlib/./stdlib/cxa_atexit.c
-cfn=__cxa_atexit
-calls=1 67 
-312 15
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 15
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
@@ -56,47 +63,15 @@ cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
 0 15
 
-ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./csu/../csu/libc-start.c
-fn=__libc_start_main@@GLIBC_2.34'2
-cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
-cfn=(below main)
-calls=1 29 
-350 15
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
-cfi=???
-cfn=init_have_lse_atomics
-calls=1 0 
-145 15
-
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+fn=gungraun::main
+cfn=std::env::args
 calls=1 0 
 0 15
-fe=./nptl/./nptl/pthread_attr_destroy.c
 
-fl=./nptl/./nptl/pthread_getattr_np.c
-fn=pthread_getattr_np@@GLIBC_2.32
-fi=???
-cfi=./nptl/./nptl/pthread_attr_destroy.c
-cfn=pthread_attr_destroy
-calls=1 26 
-0 15
-fe=./nptl/./nptl/pthread_getattr_np.c
-
-fl=./stdlib/./stdlib/cxa_atexit.c
-fn=__cxa_atexit
-cfn=__internal_atexit
-calls=1 36 
-68 15
-
-ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
-fl=???
 fn=gungraun::main'2
+cfn=gungraun::main'2
+calls=1 0 
+0 15
 cfn=gungraun::main'2
 calls=1 0 
 0 15
@@ -211,7 +186,49 @@ calls=1 0
 0 15
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
+fl=./csu/../csu/libc-start.c
+fn=__libc_start_main@@GLIBC_2.34
+cfi=./stdlib/./stdlib/cxa_atexit.c
+cfn=__cxa_atexit
+calls=1 67 
+312 15
+
+fn=__libc_start_main@@GLIBC_2.34'2
+cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
+cfn=(below main)
+calls=1 29 
+350 15
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
+cfi=???
+cfn=init_have_lse_atomics
+calls=1 0 
+145 15
+
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 15
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
+fl=./nptl/./nptl/pthread_getattr_np.c
+fn=pthread_getattr_np@@GLIBC_2.32
+fi=???
+cfi=./nptl/./nptl/pthread_attr_destroy.c
+cfn=pthread_attr_destroy
+calls=1 26 
+0 15
+fe=./nptl/./nptl/pthread_getattr_np.c
+
 fl=./stdlib/./stdlib/cxa_atexit.c
+fn=__cxa_atexit
+cfn=__internal_atexit
+calls=1 36 
+68 15
+
 fn=__internal_atexit
 fi=./csu/../csu/libc-start.c
 cfi=./csu/../csu/libc-start.c
@@ -261,32 +278,5 @@ cfn=pthread_getattr_np@@GLIBC_2.32
 calls=1 33 
 0 15
 fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-
-ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 15
-
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 15
-fe=./elf/./elf/dl-init.c
-
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 15
-fe=./elf/./elf/rtld.c
 
 totals: 15

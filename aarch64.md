@@ -1,6 +1,6 @@
 # aarch64 benchmarks
 
-- glam-rs commit: `25a68ed551977682b3d920c0475a0296c1e067db`
+- glam-rs commit: `6e42129fd0d177f1a061f5982c5331d4fbfb3221`
 - rustc stable: `rustc 1.98.0 (88d9e12ae 2026-08-18)`
 - rustc nightly: `rustc 1.100.0-nightly (f248f4038 2026-09-05)`
 - valgrind: `valgrind-3.22.0`
