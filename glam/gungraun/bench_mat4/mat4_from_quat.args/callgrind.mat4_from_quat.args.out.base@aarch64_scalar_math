@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8224
+pid: 6140
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00003 00001 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71407
+desc: Timerange: Basic block 0 - 71421
 desc: Trigger: Program termination
 
 positions: line
@@ -20,13 +20,6 @@ summary: 41
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 41
-
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
@@ -46,7 +39,24 @@ calls=1 81
 46 41
 fe=./elf/./elf/rtld.c
 
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 41
+
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 41
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
 fl=./stdlib/./stdlib/cxa_atexit.c
 fn=__cxa_atexit
 cfn=__internal_atexit
@@ -130,16 +140,6 @@ cfn=main
 calls=1 0 
 58 41
 
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 41
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
 fl=???
 fn=__rustc::__rust_dealloc
@@ -151,11 +151,6 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 82
-
-fn=gungraun::mat4_from_quat::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat4_from_quat::__gungraun_wrapper_mod::mat4_from_quat
-calls=1 0 
-0 41
 
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -170,9 +165,6 @@ cfn=__init_cpu_features
 calls=1 0 
 145 41
 fe=???
-
-fn=gungraun::mat4_from_quat::__gungraun_wrapper_mod::mat4_from_quat
-0 41
 
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
@@ -203,6 +195,11 @@ cfn=gungraun::mat4_from_quat::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 41
 
+fn=gungraun::mat4_from_quat::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat4_from_quat::__gungraun_wrapper_mod::mat4_from_quat
+calls=1 0 
+0 41
+
 fn=gungraun::main
 cfn=std::env::args
 calls=1 0 
@@ -222,6 +219,9 @@ calls=1 0
 fn=gungraun::bench_mat4::__run
 cfn=gungraun::mat4_from_quat::__run_args
 calls=1 0 
+0 41
+
+fn=gungraun::mat4_from_quat::__gungraun_wrapper_mod::mat4_from_quat
 0 41
 
 fn=main

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8209
+pid: 6125
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00001 00007 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71409
+desc: Timerange: Basic block 0 - 71423
 desc: Trigger: Program termination
 
 positions: line
@@ -31,6 +31,15 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 76
 
+fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
+0 31
+cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse'2
+calls=1 0 
+0 7
+
+fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse'2
+0 7
+
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -43,11 +52,6 @@ calls=1 0
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 38
-
-fn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
 calls=1 0 
 0 38
 
@@ -124,19 +128,15 @@ cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 38
 
+fn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
+calls=1 0 
+0 38
+
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
 0 38
-
-fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
-0 31
-cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse'2
-calls=1 0 
-0 7
-
-fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse'2
-0 7
 
 fn=main
 cfn=std::rt::lang_start_internal

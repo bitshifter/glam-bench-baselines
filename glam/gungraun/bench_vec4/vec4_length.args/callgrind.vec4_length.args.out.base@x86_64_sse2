@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8453
+pid: 6176
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00007 00001 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84661
+desc: Timerange: Basic block 0 - 84580
 desc: Trigger: Program termination
 
 positions: line
@@ -21,14 +21,6 @@ summary: 13
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 fl=???
-fn=gungraun::vec4_length::__run_args
-cfn=gungraun::vec4_length::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 13
-
-fn=gungraun::vec4_length::__gungraun_wrapper_mod::vec4_length
-0 13
-
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -41,13 +33,18 @@ cfn=gungraun::bench_vec4::__run
 calls=1 0 
 0 13
 
-fn=gungraun::bench_vec4::__run
-cfn=gungraun::vec4_length::__run_args
+fn=gungraun::vec4_length::__run_args
+cfn=gungraun::vec4_length::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 13
 
 fn=gungraun::vec4_length::__gungraun_wrapper_id_mod_args::args
 cfn=gungraun::vec4_length::__gungraun_wrapper_mod::vec4_length
+calls=1 0 
+0 13
+
+fn=gungraun::bench_vec4::__run
+cfn=gungraun::vec4_length::__run_args
 calls=1 0 
 0 13
 
@@ -64,6 +61,9 @@ calls=1 0
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
+0 13
+
+fn=gungraun::vec4_length::__gungraun_wrapper_mod::vec4_length
 0 13
 
 fn=main

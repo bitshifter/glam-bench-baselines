@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8422
+pid: 6147
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6 --gungraun-run 00004 00004 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84661
+desc: Timerange: Basic block 0 - 84580
 desc: Trigger: Program termination
 
 positions: line
@@ -21,16 +21,6 @@ summary: 7
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-cd5089c9cb855eb6
 fl=???
-fn=gungraun::quat_is_near_identity::__run_args
-cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 7
-
-fn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
-calls=1 0 
-0 7
-
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -43,12 +33,19 @@ cfn=gungraun::bench_quat::__run
 calls=1 0 
 0 7
 
-fn=gungraun::bench_quat::__run
-cfn=gungraun::quat_is_near_identity::__run_args
+fn=gungraun::quat_is_near_identity::__run_args
+cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 7
 
-fn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
+fn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
+calls=1 0 
+0 7
+
+fn=gungraun::bench_quat::__run
+cfn=gungraun::quat_is_near_identity::__run_args
+calls=1 0 
 0 7
 
 fn=std::rt::lang_start_internal
@@ -64,6 +61,9 @@ calls=1 0
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
+0 7
+
+fn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
 0 7
 
 fn=main

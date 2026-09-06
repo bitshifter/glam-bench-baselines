@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9762
+pid: 6345
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00000 00007 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71683
+desc: Timerange: Basic block 0 - 71697
 desc: Trigger: Program termination
 
 positions: line
@@ -20,16 +20,6 @@ summary: 31
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 31
-fe=./elf/./elf/dl-init.c
-
 fl=./elf/./elf/rtld.c
 fn=_dl_start
 fi=./elf/../sysdeps/aarch64/dl-start.S
@@ -46,13 +36,18 @@ cfn=_dl_start
 calls=1 517 
 30 31
 
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
+cfi=???
+cfn=(below main)
+calls=1 0 
+52 31
+fe=./elf/./elf/dl-init.c
+
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
-calls=1 0 
-0 31
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -65,6 +60,9 @@ cfn=sysconf
 calls=1 29 
 0 31
 
+fn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
+0 31
+
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
 calls=1 0 
@@ -72,6 +70,11 @@ calls=1 0
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 31
+
+fn=gungraun::mat2_try_inverse::__run_success
+cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_success::success
 calls=1 0 
 0 31
 
@@ -129,9 +132,6 @@ cfn=gungraun::mat2_try_inverse::__run_success
 calls=1 0 
 0 31
 
-fn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
-0 31
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -161,8 +161,8 @@ cfn=gungraun::main
 calls=1 0 
 0 31
 
-fn=gungraun::mat2_try_inverse::__run_success
-cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+fn=gungraun::mat2_try_inverse::__gungraun_wrapper_id_mod_success::success
+cfn=gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse
 calls=1 0 
 0 31
 

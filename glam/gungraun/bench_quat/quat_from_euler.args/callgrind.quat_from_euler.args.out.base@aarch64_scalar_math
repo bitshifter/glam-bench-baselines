@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8240
+pid: 6157
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00004 00002 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71428
+desc: Timerange: Basic block 0 - 71442
 desc: Trigger: Program termination
 
 positions: line
@@ -207,24 +207,10 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 231
 
-fn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles
-0 26
-cfn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles'2
+fn=gungraun::quat_from_euler::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
 calls=1 0 
-0 195
-
-fn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles'2
-0 21
-cfn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles'2
-calls=1 0 
-0 22
-cob=/usr/lib/aarch64-linux-gnu/libm.so.6
-cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
-cfn=sincosf
-calls=3 67 
-0 105
-0 47
-0 22
+0 231
 
 fn=gungraun::main
 cfn=std::env::args
@@ -293,15 +279,17 @@ cfn=gungraun::quat_from_euler::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 231
 
-fn=gungraun::quat_from_euler::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
-calls=1 0 
-0 231
-
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
 0 231
+
+fn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
+0 7
+cfn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles
+calls=1 0 
+0 221
+0 3
 
 fn=__rustc::__rust_dealloc
 cfn=__rustc::__rdl_dealloc
@@ -312,6 +300,25 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 462
+
+fn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles
+0 26
+cfn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles'2
+calls=1 0 
+0 195
+
+fn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles'2
+0 21
+cfn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles'2
+calls=1 0 
+0 22
+cob=/usr/lib/aarch64-linux-gnu/libm.so.6
+cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
+cfn=sincosf
+calls=3 67 
+0 105
+0 47
+0 22
 
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -326,12 +333,5 @@ cfn=__init_cpu_features
 calls=1 0 
 145 231
 fe=???
-
-fn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
-0 7
-cfn=<glam::f32::scalar::quat::Quat as glam::euler::FromEuler>::from_euler_angles
-calls=1 0 
-0 221
-0 3
 
 totals: 231
