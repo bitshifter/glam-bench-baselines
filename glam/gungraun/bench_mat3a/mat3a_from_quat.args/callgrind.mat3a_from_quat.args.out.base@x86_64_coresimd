@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 11839
+pid: 13398
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00002 00001 00000
 part: 1
 thread: 1
@@ -42,12 +42,9 @@ cfn=gungraun::mat3a_from_quat::__run_args
 calls=1 0 
 0 56
 
-fn=gungraun::mat3a_from_quat::__run_args
-cfn=gungraun::mat3a_from_quat::__gungraun_wrapper_id_mod_args::args
+fn=gungraun::mat3a_from_quat::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat3a_from_quat::__gungraun_wrapper_mod::mat3a_from_quat
 calls=1 0 
-0 56
-
-fn=gungraun::mat3a_from_quat::__gungraun_wrapper_mod::mat3a_from_quat
 0 56
 
 fn=(below main)
@@ -55,6 +52,9 @@ cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
 cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
+0 56
+
+fn=gungraun::mat3a_from_quat::__gungraun_wrapper_mod::mat3a_from_quat
 0 56
 
 fn=gungraun::main
@@ -67,8 +67,8 @@ cfn=std::rt::lang_start_internal
 calls=1 0 
 0 56
 
-fn=gungraun::mat3a_from_quat::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat3a_from_quat::__gungraun_wrapper_mod::mat3a_from_quat
+fn=gungraun::mat3a_from_quat::__run_args
+cfn=gungraun::mat3a_from_quat::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 56
 

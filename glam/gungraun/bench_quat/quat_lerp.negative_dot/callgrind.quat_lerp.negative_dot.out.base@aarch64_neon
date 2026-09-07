@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7678
+pid: 6735
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d6f5a6d6136c0fd5 --gungraun-run 00004 00005 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71421
+desc: Timerange: Basic block 0 - 71261
 desc: Trigger: Program termination
 
 positions: line
@@ -190,6 +190,11 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 22
 
+fn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+cfn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
+calls=1 0 
+0 22
+
 fn=gungraun::main
 cfn=std::env::args
 calls=1 0 
@@ -209,6 +214,9 @@ calls=1 0
 fn=gungraun::bench_quat::__run
 cfn=gungraun::quat_lerp::__run_negative_dot
 calls=1 0 
+0 22
+
+fn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
 0 22
 
 fn=main
@@ -247,26 +255,18 @@ cfn=free'2
 calls=5 3363 
 0 44
 
-fn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
-cfn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
-calls=1 0 
-0 22
-
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 22
 
-fn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
+fn=gungraun::quat_lerp::__run_negative_dot
+cfn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+calls=1 0 
 0 22
 
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-calls=1 0 
-0 22
-
-fn=gungraun::quat_lerp::__run_negative_dot
-cfn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
 calls=1 0 
 0 22
 

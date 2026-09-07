@@ -7,9 +7,9 @@ functions under their demangled names. Assembly is source-annotated
 (`cargo asm --rust`). Which benchmarks call a function: the
 `callgrind.*.out.base@x86_64_sse2` files.
 
-- glam-rs commit: `6e42129fd0d177f1a061f5982c5331d4fbfb3221`
+- glam-rs commit: `f7e782368a98c21e3dd0da2ec7d095ccc3ab3e0f`
 - rustc stable: `rustc 1.98.0 (88d9e12ae 2026-08-18)`
-- rustc nightly: `rustc 1.100.0-nightly (f248f4038 2026-09-05)`
+- rustc nightly: `rustc 1.100.0-nightly (5a2be9f5f 2026-09-06)`
 - valgrind: `valgrind-3.22.0`
 - gungraun: `0.19.4`
 - target: `x86_64-unknown-linux-gnu`

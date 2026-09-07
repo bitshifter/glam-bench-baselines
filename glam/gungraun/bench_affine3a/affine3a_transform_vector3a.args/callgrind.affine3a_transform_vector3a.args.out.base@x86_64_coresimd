@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 11917
+pid: 13476
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00009 00004 00000
 part: 1
 thread: 1
@@ -37,8 +37,23 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763
 fl=???
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+fn=(below main)
+cob=/usr/lib/x86_64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 14
+
+fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
+0 14
+
+fn=gungraun::main
+cfn=gungraun::bench_affine3a::__run
+calls=1 0 
+0 14
+
+fn=main
+cfn=std::rt::lang_start_internal
 calls=1 0 
 0 14
 
@@ -47,33 +62,8 @@ cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 14
 
-fn=gungraun::bench_affine3a::__run
-cfn=gungraun::affine3a_transform_vector3a::__run_args
-calls=1 0 
-0 14
-
-fn=(below main)
-cob=/usr/lib/x86_64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 14
-
 fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_id_mod_args::args
 cfn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
-calls=1 0 
-0 14
-
-fn=gungraun::main
-cfn=gungraun::bench_affine3a::__run
-calls=1 0 
-0 14
-
-fn=gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transform_vector3a
-0 14
-
-fn=main
-cfn=std::rt::lang_start_internal
 calls=1 0 
 0 14
 
@@ -84,6 +74,16 @@ calls=1 0
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
+calls=1 0 
+0 14
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 14
+
+fn=gungraun::bench_affine3a::__run
+cfn=gungraun::affine3a_transform_vector3a::__run_args
 calls=1 0 
 0 14
 

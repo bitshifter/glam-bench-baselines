@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 12492
+pid: 12851
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00000 00002 00000
 part: 1
 thread: 1
@@ -48,7 +48,7 @@ fe=./elf/./elf/rtld.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319
 fl=???
-fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_success::success
+fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
 calls=1 0 
 0 29
@@ -162,7 +162,7 @@ calls=1 0
 0 29
 
 fn=gungraun::mat2_inverse_or_zero::__run_success
-cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_success::success
+cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 29
 

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 11878
+pid: 13437
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00004 00008 00000
 part: 1
 thread: 1
@@ -42,11 +42,6 @@ cfn=gungraun::quat_mul_vec3a::__run_args
 calls=1 0 
 0 37
 
-fn=gungraun::quat_mul_vec3a::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a
-calls=1 0 
-0 37
-
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -54,8 +49,16 @@ cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
 0 37
 
+fn=gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a
+0 37
+
 fn=gungraun::main
 cfn=gungraun::bench_quat::__run
+calls=1 0 
+0 37
+
+fn=gungraun::quat_mul_vec3a::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a
 calls=1 0 
 0 37
 
@@ -82,9 +85,6 @@ calls=1 0
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 37
-
-fn=gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a
 0 37
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2

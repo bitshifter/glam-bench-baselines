@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 11852
+pid: 13412
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00003 00002 00000
 part: 1
 thread: 1
@@ -42,6 +42,14 @@ cfn=gungraun::mat4_from_scale_rotation_translation::__run_args
 calls=1 0 
 0 76
 
+fn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation
+0 76
+
+fn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation
+calls=1 0 
+0 76
+
 fn=(below main)
 cob=/usr/lib/x86_64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -64,11 +72,6 @@ cfn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_id_mod_ar
 calls=1 0 
 0 76
 
-fn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation
-calls=1 0 
-0 76
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -82,9 +85,6 @@ calls=1 0
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
-0 76
-
-fn=gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation
 0 76
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2

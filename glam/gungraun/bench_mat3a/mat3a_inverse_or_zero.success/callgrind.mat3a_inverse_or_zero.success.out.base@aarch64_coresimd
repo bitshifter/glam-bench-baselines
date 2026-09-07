@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 12516
+pid: 12876
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00002 00003 00000
 part: 1
 thread: 1
@@ -63,9 +63,6 @@ calls=1 29
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
 calls=1 0 
-0 46
-
-fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
 0 46
 
 fn=std::rt::lang_start::<()>::{closure#0}
@@ -144,9 +141,7 @@ cfn=std::env::args_os
 calls=1 0 
 0 46
 
-fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_success::success
-cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
-calls=1 0 
+fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
 0 46
 
 fn=init_have_lse_atomics
@@ -182,6 +177,11 @@ calls=5 0
 
 fn=gungraun::mat3a_inverse_or_zero::__run_success
 cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_success::success
+calls=1 0 
+0 46
+
+fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_success::success
+cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
 calls=1 0 
 0 46
 

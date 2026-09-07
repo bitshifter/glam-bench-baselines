@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 11865
+pid: 13424
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/ebc897abca3df763/out/gungraun-ebc897abca3df763 --gungraun-run 00003 00012 00000
 part: 1
 thread: 1
@@ -52,7 +52,7 @@ cfn=gungraun::main
 calls=1 0 
 0 129
 
-fn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_success::success
+fn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
 calls=1 0 
 0 129
@@ -82,7 +82,7 @@ calls=1 0
 0 129
 
 fn=gungraun::mat4_try_inverse::__run_success
-cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_success::success
+cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 129
 

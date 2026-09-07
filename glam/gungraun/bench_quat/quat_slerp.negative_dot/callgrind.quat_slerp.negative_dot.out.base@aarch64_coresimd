@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 12553
+pid: 12916
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/828ad4e4ec856319/out/gungraun-828ad4e4ec856319 --gungraun-run 00004 00009 00001
 part: 1
 thread: 1
@@ -199,7 +199,7 @@ cfn=std::env::args_os
 calls=1 0 
 0 201
 
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
 cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 calls=1 0 
 0 201
@@ -246,7 +246,7 @@ calls=5 0
 0 402
 
 fn=gungraun::quat_slerp::__run_negative_dot
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
 calls=1 0 
 0 201
 
