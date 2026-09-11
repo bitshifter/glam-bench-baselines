@@ -3,23 +3,23 @@
 .type	gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3,@function
 gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3:
 	.cfi_startproc
-		// src/f32/neon/mat4.rs:1420
+		// src/f32/neon/mat4.rs:1430
 		let mut res = self.x_axis.mul(rhs.x);
 	ldp q1, q2, [x1]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	add x8, x0, #8
-		// src/f32/neon/mat4.rs:1420
+		// src/f32/neon/mat4.rs:1430
 		let mut res = self.x_axis.mul(rhs.x);
 	ldr s0, [x2]
-		// src/f32/neon/mat4.rs:1421
+		// src/f32/neon/mat4.rs:1431
 		res = self.y_axis.mul(rhs.y).add(res);
 	ldur d3, [x2, #4]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798
 		unsafe { simd_mul(a, vdupq_n_f32(b)) }
 	fmul v0.4s, v1.4s, v0.s[0]
 	fmul v1.4s, v2.4s, v3.s[0]
-		// src/f32/neon/mat4.rs:1422
+		// src/f32/neon/mat4.rs:1432
 		res = self.z_axis.mul(rhs.z).add(res);
 	ldr q2, [x1, #32]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798

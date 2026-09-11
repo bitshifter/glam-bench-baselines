@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9895
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00007 00003 00000
+pid: 12914
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7 --gungraun-run 00007 00003 00000
 part: 1
 thread: 1
 
@@ -20,17 +20,10 @@ summary: 14
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 14
-
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=(below main)
 calls=1 0 
@@ -46,7 +39,24 @@ calls=1 81
 46 14
 fe=./elf/./elf/rtld.c
 
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 14
+
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 14
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
 fl=./stdlib/./stdlib/cxa_atexit.c
 fn=__cxa_atexit
 cfn=__internal_atexit
@@ -73,7 +83,7 @@ fe=./nptl/./nptl/pthread_getattr_np.c
 fl=./malloc/./malloc/malloc.c
 fn=free
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=__rustc::__rust_dealloc'2
 calls=1 0 
@@ -82,13 +92,13 @@ fe=./malloc/./malloc/malloc.c
 
 fn=free'2
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=gungraun::main'2
 calls=1 0 
 0 14
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=gungraun::bench_vec4::__run
 calls=1 0 
@@ -116,7 +126,7 @@ cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
 350 14
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=init_have_lse_atomics
 calls=1 0 
@@ -124,23 +134,13 @@ calls=1 0
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=main
 calls=1 0 
 58 14
 
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 14
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 fl=???
 fn=__rustc::__rust_dealloc
 cfn=__rustc::__rdl_dealloc
@@ -151,11 +151,6 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 28
-
-fn=gungraun::vec4_normalize::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec4_normalize::__gungraun_wrapper_mod::vec4_normalize
-calls=1 0 
-0 14
 
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -200,7 +195,9 @@ cfn=gungraun::vec4_normalize::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 14
 
-fn=gungraun::vec4_normalize::__gungraun_wrapper_mod::vec4_normalize
+fn=gungraun::vec4_normalize::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::vec4_normalize::__gungraun_wrapper_mod::vec4_normalize
+calls=1 0 
 0 14
 
 fn=gungraun::main
@@ -263,6 +260,9 @@ calls=5 3363
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
+0 14
+
+fn=gungraun::vec4_normalize::__gungraun_wrapper_mod::vec4_normalize
 0 14
 
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler

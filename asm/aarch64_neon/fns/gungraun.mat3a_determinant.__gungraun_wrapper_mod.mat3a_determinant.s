@@ -8,8 +8,8 @@ gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant:
 	sub sp, sp, #16
 	.cfi_def_cfa_offset 16
 		// src/f32/neon/mat3a.rs:600
-		self.z_axis.dot(self.x_axis.cross(self.y_axis))
-	ldp q0, q1, [x0]
+		self.x_axis.dot(self.y_axis.cross(self.z_axis))
+	ldp q0, q1, [x0, #16]
 	add x8, sp, #12
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
@@ -28,8 +28,8 @@ gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant:
 		unsafe { simd_sub(a, simd_mul(b, c)) }
 	fmul v0.4s, v0.4s, v1.4s
 		// src/f32/neon/mat3a.rs:600
-		self.z_axis.dot(self.x_axis.cross(self.y_axis))
-	ldr q1, [x0, #32]
+		self.x_axis.dot(self.y_axis.cross(self.z_axis))
+	ldr q1, [x0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:29996
 		unsafe { simd_sub(a, simd_mul(b, c)) }
 	fsub v0.4s, v2.4s, v0.4s

@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 10236
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c --gungraun-run 00004 00009 00001
+pid: 13573
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b --gungraun-run 00004 00009 00001
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85433
+desc: Timerange: Basic block 0 - 85435
 desc: Trigger: Program termination
 
 positions: line
@@ -69,33 +69,20 @@ fi=./math/../sysdeps/x86/fpu/sincosf_poly.h
 109 3
 fe=./math/../sysdeps/ieee754/flt-32/s_sinf.c
 
-ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b
 fl=???
-fn=0x000000000001f540
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
-cfi=???
-cfn=(below main)
+fn=main
+cfn=std::rt::lang_start_internal
 calls=1 0 
 0 166
 
-ob=/usr/lib/x86_64-linux-gnu/libc.so.6
-fl=./csu/../csu/libc-start.c
-fn=__libc_start_main@@GLIBC_2.34
-cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
-cfn=(below main)
-calls=1 29 
-360 166
-
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
-cfi=???
-cfn=main
-calls=1 0 
-58 166
+cob=/usr/lib/x86_64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 166
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
-fl=???
 fn=gungraun::main
 cfn=gungraun::bench_quat::__run
 calls=1 0 
@@ -116,13 +103,6 @@ cfn=gungraun::main
 calls=1 0 
 0 166
 
-fn=(below main)
-cob=/usr/lib/x86_64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 166
-
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
@@ -139,7 +119,37 @@ calls=1 0
 0 166
 
 fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 68
+0 26
+
+ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+fl=???
+fn=0x000000000001f540
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b
+cfi=???
+cfn=(below main)
+calls=1 0 
+0 166
+
+ob=/usr/lib/x86_64-linux-gnu/libc.so.6
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
+fn=(below main)
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b
+cfi=???
+cfn=main
+calls=1 0 
+58 166
+
+fl=./csu/../csu/libc-start.c
+fn=__libc_start_main@@GLIBC_2.34
+cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
+cfn=(below main)
+calls=1 29 
+360 166
+
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b
+fl=???
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+0 42
 cob=/usr/lib/x86_64-linux-gnu/libm.so.6
 cfi=./math/../sysdeps/ieee754/flt-32/s_sinf.c
 cfn=__sinf_fma
@@ -158,10 +168,5 @@ cfn=__sinf_fma
 calls=1 44 
 0 34
 0 19
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 166
 
 totals: 166

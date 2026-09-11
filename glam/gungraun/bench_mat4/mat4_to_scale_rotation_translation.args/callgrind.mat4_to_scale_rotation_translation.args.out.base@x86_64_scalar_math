@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 10217
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c --gungraun-run 00003 00008 00000
+pid: 13555
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b --gungraun-run 00003 00008 00000
 part: 1
 thread: 1
 
@@ -11,22 +11,68 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85422
+desc: Timerange: Basic block 0 - 85424
 desc: Trigger: Program termination
 
 positions: line
 events: Ir
-summary: 111
+summary: 113
 
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
 fn=0x000000000001f540
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b
 cfi=???
 cfn=(below main)
 calls=1 0 
-0 111
+0 113
+
+ob=/usr/lib/x86_64-linux-gnu/libc.so.6
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
+fn=(below main)
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b
+cfi=???
+cfn=main
+calls=1 0 
+58 113
+
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b
+fl=???
+fn=std::rt::lang_start_internal
+cfn=std::rt::lang_start::<()>::{closure#0}
+calls=1 0 
+0 113
+
+fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+cfn=gungraun::main
+calls=1 0 
+0 113
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 113
+
+fn=gungraun::mat4_to_scale_rotation_translation::__run_args
+cfn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
+0 113
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 113
+
+fn=(below main)
+cob=/usr/lib/x86_64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 113
+
+fn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation
+0 113
 
 ob=/usr/lib/x86_64-linux-gnu/libc.so.6
 fl=./csu/../csu/libc-start.c
@@ -34,66 +80,23 @@ fn=__libc_start_main@@GLIBC_2.34
 cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
-360 111
+360 113
 
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
-fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
-cfi=???
-cfn=main
-calls=1 0 
-58 111
-
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-83176e08b539921c
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b
 fl=???
-fn=std::rt::lang_start_internal
-cfn=std::rt::lang_start::<()>::{closure#0}
-calls=1 0 
-0 111
-
-fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-cfn=gungraun::main
-calls=1 0 
-0 111
-
-fn=(below main)
-cob=/usr/lib/x86_64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 111
-
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 111
-
-fn=gungraun::mat4_to_scale_rotation_translation::__run_args
-cfn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 111
-
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 111
-
-fn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation
-0 111
-
 fn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
 cfn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation
 calls=1 0 
-0 111
+0 113
 
 fn=gungraun::main
 cfn=gungraun::bench_mat4::__run
 calls=1 0 
-0 111
+0 113
 
 fn=gungraun::bench_mat4::__run
 cfn=gungraun::mat4_to_scale_rotation_translation::__run_args
 calls=1 0 
-0 111
+0 113
 
-totals: 111
+totals: 113

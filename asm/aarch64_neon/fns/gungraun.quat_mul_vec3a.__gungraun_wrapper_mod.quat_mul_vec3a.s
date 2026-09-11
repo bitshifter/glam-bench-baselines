@@ -15,7 +15,7 @@ gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a:
 		// src/f32/neon/vec3a.rs:256
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	dup v3.2s, v2.s[1]
-		// src/f32/neon/quat.rs:924
+		// src/f32/neon/quat.rs:934
 		vmulq_n_f32(rhs.0, (w * w) - b2),
 	ext v5.16b, v2.16b, v2.16b, #8
 		// src/f32/neon/vec3a.rs:256
@@ -47,7 +47,7 @@ gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
 	fmul v6.4s, v7.4s, v6.4s
-		// src/f32/neon/quat.rs:925
+		// src/f32/neon/quat.rs:935
 		vmulq_n_f32(b.0, rhs.dot(b) * 2.0),
 	fadd s4, s4, s4
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
@@ -60,7 +60,7 @@ gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:29996
 		unsafe { simd_sub(a, simd_mul(b, c)) }
 	fmul v3.4s, v16.4s, v5.4s
-		// src/f32/neon/quat.rs:919
+		// src/f32/neon/quat.rs:929
 		let w = self.w;
 	mov s5, v0.s[3]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798
@@ -70,7 +70,7 @@ gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:29996
 		unsafe { simd_sub(a, simd_mul(b, c)) }
 	fsub v2.4s, v6.4s, v3.4s
-		// src/f32/neon/quat.rs:927
+		// src/f32/neon/quat.rs:937
 		vmulq_n_f32(b.cross(rhs).0, w * 2.0),
 	fadd s3, s5, s5
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:1874

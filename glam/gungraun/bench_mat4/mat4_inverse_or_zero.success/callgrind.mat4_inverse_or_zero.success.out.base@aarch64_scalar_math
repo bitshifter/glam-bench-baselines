@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9848
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00003 00004 00000
+pid: 12868
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7 --gungraun-run 00003 00004 00000
 part: 1
 thread: 1
 
@@ -19,33 +19,8 @@ events: Ir
 summary: 212
 
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 fl=???
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=2 0 
-0 212
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 424
-
-fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-cfn=std::rt::lang_start::<()>::{closure#0}
-calls=1 0 
-0 212
-
-fn=std::env::args_os
-cfn=__rustc::__rust_dealloc
-calls=1 0 
-0 212
-
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 212
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -81,16 +56,6 @@ cfn=gungraun::mat4_inverse_or_zero::__run_success
 calls=1 0 
 0 212
 
-fn=gungraun::mat4_inverse_or_zero::__gungraun_wrapper_mod::mat4_inverse_or_zero
-0 5
-cfn=<glam::f32::scalar::mat4::Mat4>::inverse_or_zero
-calls=1 0 
-0 204
-0 3
-
-fn=<glam::f32::scalar::mat4::Mat4>::inverse_or_zero
-0 204
-
 fn=std::env::args
 cfn=std::env::args_os
 calls=1 0 
@@ -109,6 +74,11 @@ cfi=./malloc/./malloc/malloc.c
 cfn=free'2
 calls=5 3363 
 0 424
+
+fn=gungraun::mat4_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat4_inverse_or_zero::__gungraun_wrapper_mod::mat4_inverse_or_zero
+calls=1 0 
+0 212
 
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
@@ -147,12 +117,42 @@ calls=1 29
 0 212
 
 fn=gungraun::mat4_inverse_or_zero::__run_success
-cfn=gungraun::mat4_inverse_or_zero::__gungraun_wrapper_id_mod_success::success
+cfn=gungraun::mat4_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 212
 
-fn=gungraun::mat4_inverse_or_zero::__gungraun_wrapper_id_mod_success::success
-cfn=gungraun::mat4_inverse_or_zero::__gungraun_wrapper_mod::mat4_inverse_or_zero
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=2 0 
+0 212
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 424
+
+fn=gungraun::mat4_inverse_or_zero::__gungraun_wrapper_mod::mat4_inverse_or_zero
+0 5
+cfn=<glam::f32::scalar::mat4::Mat4>::inverse_or_zero
+calls=1 0 
+0 204
+0 3
+
+fn=<glam::f32::scalar::mat4::Mat4>::inverse_or_zero
+0 204
+
+fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+cfn=std::rt::lang_start::<()>::{closure#0}
+calls=1 0 
+0 212
+
+fn=std::env::args_os
+cfn=__rustc::__rust_dealloc
+calls=1 0 
+0 212
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 212
 
@@ -176,7 +176,7 @@ calls=1 517
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=(below main)
 calls=1 0 
@@ -201,7 +201,7 @@ fe=./stdlib/./stdlib/cxa_atexit.c
 fl=./nptl/./nptl/pthread_attr_destroy.c
 fn=pthread_attr_destroy
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
 calls=1 0 
@@ -220,7 +220,7 @@ fe=./nptl/./nptl/pthread_getattr_np.c
 fl=./malloc/./malloc/malloc.c
 fn=free
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=__rustc::__rust_dealloc'2
 calls=1 0 
@@ -229,13 +229,13 @@ fe=./malloc/./malloc/malloc.c
 
 fn=free'2
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=gungraun::main'2
 calls=1 0 
 0 212
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=gungraun::bench_mat4::__run
 calls=1 0 
@@ -254,7 +254,7 @@ cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
 350 212
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=init_have_lse_atomics
 calls=1 0 
@@ -271,7 +271,7 @@ fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=main
 calls=1 0 

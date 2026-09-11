@@ -137,25 +137,35 @@
 	uzp1 v5.4s, v0.4s, v2.4s
 	uzp1 v6.4s, v3.4s, v4.4s
 	uzp1 v5.4s, v5.4s, v6.4s
-	movi v6.2d, #0000000000000000
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
 	fmul v1.4s, v1.4s, v5.4s
-	movi v5.2d, #0000000000000000
-		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/aarch64/neon/generated.rs:597
-		unsafe { _vaddvq_f32(a) }
-	faddp v1.4s, v1.4s, v1.4s
-	faddp s16, v1.2s
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
+		$crate::intrinsics::simd::simd_shuffle(
+	dup v5.4s, v1.s[1]
+	dup v6.4s, v1.s[2]
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:1874
+		unsafe { simd_add(a, b) }
+	fadd v5.4s, v1.4s, v5.4s
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
+		$crate::intrinsics::simd::simd_shuffle(
+	dup v1.4s, v1.s[3]
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:1874
+		unsafe { simd_add(a, b) }
+	fadd v5.4s, v6.4s, v5.4s
+	movi v6.2d, #0000000000000000
+	fadd v16.4s, v1.4s, v5.4s
 	movi v1.2d, #0000000000000000
-		// src/f32/neon/mat4.rs:822
+	movi v5.2d, #0000000000000000
+		// src/f32/neon/mat4.rs:832
 		if dot0 == 0.0 {
 	fcmp s16, #0.0
 	b.ne .LBB4_2
-		// src/f32/neon/mat4.rs:869
+		// src/f32/neon/mat4.rs:879
 		self.inverse_checked::<true>().0
 	stp q7, q6, [x8]
 	stp q5, q1, [x8, #32]
-		// src/f32/neon/mat4.rs:870
+		// src/f32/neon/mat4.rs:880
 		}
 	ret
 .LBB4_2:
@@ -169,10 +179,10 @@
 	fmul v6.4s, v2.4s, v1.s[0]
 	fmul v5.4s, v3.4s, v1.s[0]
 	fmul v1.4s, v4.4s, v1.s[0]
-		// src/f32/neon/mat4.rs:869
+		// src/f32/neon/mat4.rs:879
 		self.inverse_checked::<true>().0
 	stp q7, q6, [x8]
 	stp q5, q1, [x8, #32]
-		// src/f32/neon/mat4.rs:870
+		// src/f32/neon/mat4.rs:880
 		}
 	ret

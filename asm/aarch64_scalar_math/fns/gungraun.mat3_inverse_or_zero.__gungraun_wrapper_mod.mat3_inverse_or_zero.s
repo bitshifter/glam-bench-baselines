@@ -5,132 +5,156 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 	.cfi_startproc
 		// src/f32/mat3.rs:532
 		let tmp0 = self.y_axis.cross(self.z_axis);
-	ldur q0, [x1, #20]
-		// src/f32/mat3.rs:533
-		let tmp1 = self.z_axis.cross(self.x_axis);
-	ldr q6, [x1]
-		// src/f32/mat3.rs:532
-		let tmp0 = self.y_axis.cross(self.z_axis);
-	ldur d4, [x1, #12]
-	ldr s1, [x1, #16]
-		// src/f32/mat3.rs:533
-		let tmp1 = self.z_axis.cross(self.x_axis);
-	ldur d5, [x1, #4]
-		// src/f32/mat3.rs:532
-		let tmp0 = self.y_axis.cross(self.z_axis);
-	ldr s17, [x1, #32]
+	ldr s18, [x1, #20]
+	ldp s7, s0, [x1, #8]
+	ldr q2, [x1, #16]
+	ldr d1, [x1, #24]
+	ldur d6, [x1, #28]
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
-	dup v3.2s, v0.s[0]
-	dup v18.2s, v6.s[0]
-	zip1 v2.2s, v0.2s, v4.2s
-		// src/f32/vec3.rs:264
-		self.x * rhs.y - rhs.x * self.y,
-	fmul s16, s1, s6
+	mov v3.16b, v18.16b
+		// src/f32/mat3.rs:533
+		let tmp1 = self.z_axis.cross(self.x_axis);
+	ldr s16, [x1, #4]
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
-	mov v3.s[0], v1.s[0]
-	zip2 v7.2s, v5.2s, v18.2s
-	fmul v2.2s, v2.2s, v5.2s
-	fmul v7.2s, v3.2s, v7.2s
-	fsub v1.2s, v2.2s, v7.2s
+	zip1 v4.2s, v2.2s, v1.2s
+	ext v5.8b, v6.8b, v18.8b, #4
 		// src/f32/vec3.rs:264
 		self.x * rhs.y - rhs.x * self.y,
-	fmul v2.2s, v4.2s, v5.2s
-		// src/f32/mat3.rs:532
-		let tmp0 = self.y_axis.cross(self.z_axis);
-	ldr d7, [x1, #24]
-		// src/f32/vec3.rs:264
-		self.x * rhs.y - rhs.x * self.y,
-	fsub s2, s16, s2
+	fmul s19, s2, v1.s[0]
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	mov v3.s[1], v0.s[0]
+	fmul v4.2s, v4.2s, v5.2s
+		// src/f32/mat3.rs:533
+		let tmp1 = self.z_axis.cross(self.x_axis);
+	ldr d5, [x1]
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	fmul v3.2s, v3.2s, v6.2s
 		// src/f32/vec3.rs:247
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
-	fmul v16.2s, v7.2s, v1.2s
-	faddp s16, v16.2s
-	fmul s19, s17, s2
-	fadd s16, s19, s16
+	mov v17.16b, v5.16b
+	mov v17.s[1], v16.s[0]
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	fsub v3.2s, v4.2s, v3.2s
+		// src/f32/vec3.rs:264
+		self.x * rhs.y - rhs.x * self.y,
+	fmul s4, s0, s6
+	fsub s4, s4, s19
+		// src/f32/vec3.rs:247
+		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
+	fmul v19.2s, v17.2s, v3.2s
+	faddp s19, v19.2s
+	fmul s20, s4, s7
+	fadd s19, s19, s20
 		// src/f32/mat3.rs:537
 		if det == 0.0 {
-	fcmp s16, #0.0
+	fcmp s19, #0.0
 	b.ne .LBB246_2
-	movi d0, #0000000000000000
-	movi v3.2d, #0000000000000000
 	movi d1, #0000000000000000
+	movi v2.2d, #0000000000000000
+	movi d0, #0000000000000000
+	movi d3, #0000000000000000
 	movi d5, #0000000000000000
-	movi d4, #0000000000000000
-	b .LBB246_3
-.LBB246_2:
-		// src/f32/vec3.rs:262
-		self.y * rhs.z - rhs.y * self.z,
-	ext v19.16b, v6.16b, v0.16b, #12
-		// src/f32/vec3.rs:264
-		self.x * rhs.y - rhs.x * self.y,
-	zip2 v18.2s, v4.2s, v18.2s
-		// src/f32/vec3.rs:262
-		self.y * rhs.z - rhs.y * self.z,
-	ext v20.16b, v0.16b, v0.16b, #4
-	uzp2 v22.4s, v0.4s, v6.4s
-	fmov s21, #1.00000000
-		// src/f32/vec3.rs:264
-		self.x * rhs.y - rhs.x * self.y,
-	rev64 v23.2s, v7.2s
-	zip1 v4.2s, v4.2s, v5.2s
-		// src/f32/vec3.rs:262
-		self.y * rhs.z - rhs.y * self.z,
-	uzp1 v19.4s, v6.4s, v19.4s
-	rev64 v6.4s, v6.4s
-		// src/f32/vec3.rs:264
-		self.x * rhs.y - rhs.x * self.y,
-	fmul v18.2s, v7.2s, v18.2s
-		// src/f32/vec3.rs:262
-		self.y * rhs.z - rhs.y * self.z,
-	mov v7.s[0], v17.s[0]
-	movi d17, #0000000000000000
-		// src/f32/mat3.rs:543
-		let inv_det = Vec3::splat(1.0 / det);
-	fdiv s16, s21, s16
-		// src/f32/vec3.rs:262
-		self.y * rhs.z - rhs.y * self.z,
-	trn2 v20.4s, v20.4s, v0.4s
-	ext v22.16b, v22.16b, v22.16b, #4
-	ext v19.16b, v19.16b, v19.16b, #4
-	mov v6.s[1], v21.s[0]
-	fmul v3.2s, v3.2s, v7.2s
-	mov v20.s[1], v1.s[0]
-	mov v22.s[1], v17.s[0]
-	mov v19.s[1], v21.s[0]
-	mov v6.s[2], v0.s[3]
-		// src/f32/vec3.rs:264
-		self.x * rhs.y - rhs.x * self.y,
-	fmul v0.2s, v23.2s, v4.2s
-		// src/f32/vec3.rs:262
-		self.y * rhs.z - rhs.y * self.z,
-	dup v4.2s, v3.s[1]
-	fmul v5.4s, v20.4s, v19.4s
-	fmul v6.4s, v22.4s, v6.4s
-		// src/f32/vec3.rs:264
-		self.x * rhs.y - rhs.x * self.y,
-	fsub v0.2s, v0.2s, v18.2s
-		// src/f32/vec3.rs:262
-		self.y * rhs.z - rhs.y * self.z,
-	fsub v3.2s, v3.2s, v4.2s
-	fsub v5.4s, v5.4s, v6.4s
-		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
-		fn mul(self, other: $t) -> $t { self * other }
-	dup v6.4s, v16.s[0]
-	fmul s4, s16, s3
-	fmul v0.2s, v0.2s, v6.2s
-	fmul v3.4s, v5.4s, v16.s[0]
-	fmul s5, s16, v1.s[1]
-	fmul s1, s2, s16
-.LBB246_3:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
-	str s4, [x0]
-	stur q3, [x0, #4]
-	str s5, [x0, #20]
-	str d0, [x0, #24]
-	str s1, [x0, #32]
+	str s5, [x0]
+	stur q2, [x0, #4]
+	stp s3, s0, [x0, #20]
+	stur d1, [x0, #28]
+	//APP
+	//NO_APP
+		// benches/gungraun.rs:235
+		}
+	ret
+.LBB246_2:
+		// src/f32/vec3.rs:263
+		self.z * rhs.x - rhs.z * self.x,
+	fmul s18, s18, s5
+		// src/f32/vec3.rs:264
+		self.x * rhs.y - rhs.x * self.y,
+	dup v20.2s, v5.s[0]
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	mov v5.s[3], v5.s[0]
+	mov v21.16b, v2.16b
+	fmov s23, #1.00000000
+	fmov v24.4s, #1.00000000
+		// src/f32/vec3.rs:264
+		self.x * rhs.y - rhs.x * self.y,
+	dup v25.2s, v2.s[0]
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	mov v22.16b, v5.16b
+	mov v21.s[0], v2.s[3]
+		// src/f32/mat3.rs:543
+		let inv_det = Vec3::splat(1.0 / det);
+	fdiv s19, s23, s19
+		// src/f32/vec3.rs:264
+		self.x * rhs.y - rhs.x * self.y,
+	mov v20.s[0], v16.s[0]
+	mov v25.s[0], v1.s[0]
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	mov v22.s[0], v7.s[0]
+	mov v21.s[2], v3.s[1]
+	mov v22.s[2], v23.s[0]
+	movi d23, #0000000000000000
+	mov v21.s[3], v6.s[1]
+	dup v6.4s, v22.s[0]
+	ext v2.16b, v21.16b, v2.16b, #12
+	trn1 v6.4s, v24.4s, v6.4s
+		// src/f32/vec3.rs:264
+		self.x * rhs.y - rhs.x * self.y,
+	dup v24.2s, v1.s[1]
+	fmul v1.2s, v25.2s, v20.2s
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	mov v2.s[2], v23.s[0]
+	mov v6.s[0], v5.s[1]
+		// src/f32/vec3.rs:264
+		self.x * rhs.y - rhs.x * self.y,
+	mov v24.s[1], v0.s[0]
+		// src/f32/vec3.rs:263
+		self.z * rhs.x - rhs.z * self.x,
+	fmul s0, s0, s7
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	fmul v7.4s, v21.4s, v22.4s
+		// src/f32/vec3.rs:264
+		self.x * rhs.y - rhs.x * self.y,
+	fmul v5.2s, v24.2s, v17.2s
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	fmul v2.4s, v2.4s, v6.4s
+		// src/f32/vec3.rs:263
+		self.z * rhs.x - rhs.z * self.x,
+	fsub s6, s0, s18
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
+		fn mul(self, other: $t) -> $t { self * other }
+	fmul s0, s4, s19
+		// src/f32/vec3.rs:264
+		self.x * rhs.y - rhs.x * self.y,
+	fsub v1.2s, v1.2s, v5.2s
+		// src/f32/vec3.rs:262
+		self.y * rhs.z - rhs.y * self.z,
+	fsub v2.4s, v7.4s, v2.4s
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
+		fn mul(self, other: $t) -> $t { self * other }
+	dup v7.4s, v19.s[0]
+	fmul s5, s19, s3
+	fmul s3, s6, s19
+	fmul v2.4s, v2.4s, v19.s[0]
+	fmul v1.2s, v1.2s, v7.2s
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
+		crate::intrinsics::black_box(dummy)
+	str s5, [x0]
+	stur q2, [x0, #4]
+	stp s3, s0, [x0, #20]
+	stur d1, [x0, #28]
 	//APP
 	//NO_APP
 		// benches/gungraun.rs:235

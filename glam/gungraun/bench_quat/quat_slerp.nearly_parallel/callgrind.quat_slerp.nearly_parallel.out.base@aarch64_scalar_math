@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9873
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00004 00009 00002
+pid: 12892
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7 --gungraun-run 00004 00009 00002
 part: 1
 thread: 1
 
@@ -19,7 +19,7 @@ events: Ir
 summary: 54
 
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 fl=???
 fn=__rustc::__rust_dealloc
 cfn=__rustc::__rdl_dealloc
@@ -31,16 +31,17 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 108
 
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
 cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 calls=1 0 
 0 54
 
 fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 47
+0 44
 cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp'2
 calls=1 0 
 0 7
+0 3
 
 fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp'2
 0 7
@@ -56,7 +57,7 @@ calls=1 0
 0 54
 
 fn=gungraun::quat_slerp::__run_nearly_parallel
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
 calls=1 0 
 0 54
 
@@ -175,7 +176,7 @@ calls=1 517
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=(below main)
 calls=1 0 
@@ -194,7 +195,7 @@ fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=main
 calls=1 0 
@@ -217,7 +218,7 @@ fe=./stdlib/./stdlib/cxa_atexit.c
 fl=./nptl/./nptl/pthread_attr_destroy.c
 fn=pthread_attr_destroy
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
 calls=1 0 
@@ -236,7 +237,7 @@ fe=./nptl/./nptl/pthread_getattr_np.c
 fl=./malloc/./malloc/malloc.c
 fn=free
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=__rustc::__rust_dealloc'2
 calls=1 0 
@@ -245,13 +246,13 @@ fe=./malloc/./malloc/malloc.c
 
 fn=free'2
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=gungraun::main'2
 calls=1 0 
 0 54
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=gungraun::bench_quat::__run
 calls=1 0 
@@ -270,7 +271,7 @@ cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
 350 54
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=init_have_lse_atomics
 calls=1 0 

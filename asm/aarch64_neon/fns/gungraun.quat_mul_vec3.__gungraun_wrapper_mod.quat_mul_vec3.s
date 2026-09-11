@@ -13,7 +13,7 @@ gungraun::quat_mul_vec3::__gungraun_wrapper_mod::quat_mul_vec3:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
 	ext v6.16b, v0.16b, v0.16b, #12
-		// src/f32/neon/quat.rs:919
+		// src/f32/neon/quat.rs:929
 		let w = self.w;
 	mov s18, v0.s[3]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
@@ -61,22 +61,22 @@ gungraun::quat_mul_vec3::__gungraun_wrapper_mod::quat_mul_vec3:
 	ext v5.16b, v6.16b, v0.16b, #8
 	ext v6.16b, v19.16b, v0.16b, #12
 	mov v20.d[1], v1.d[0]
-		// src/f32/neon/quat.rs:924
+		// src/f32/neon/quat.rs:934
 		vmulq_n_f32(rhs.0, (w * w) - b2),
 	fmul s1, s18, v0.s[3]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
 	fmul v5.4s, v5.4s, v16.4s
-		// src/f32/neon/quat.rs:924
+		// src/f32/neon/quat.rs:934
 		vmulq_n_f32(rhs.0, (w * w) - b2),
 	fsub s1, s1, s2
-		// src/f32/neon/quat.rs:925
+		// src/f32/neon/quat.rs:935
 		vmulq_n_f32(b.0, rhs.dot(b) * 2.0),
 	fadd s2, s3, s3
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:29996
 		unsafe { simd_sub(a, simd_mul(b, c)) }
 	fmul v3.4s, v6.4s, v20.4s
-		// src/f32/neon/quat.rs:927
+		// src/f32/neon/quat.rs:937
 		vmulq_n_f32(b.cross(rhs).0, w * 2.0),
 	fadd s6, s18, s18
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798

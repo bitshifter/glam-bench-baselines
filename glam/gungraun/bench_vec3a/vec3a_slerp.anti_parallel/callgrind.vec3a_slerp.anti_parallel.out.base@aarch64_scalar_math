@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9888
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020 --gungraun-run 00006 00006 00001
+pid: 12907
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7 --gungraun-run 00006 00006 00001
 part: 1
 thread: 1
 
@@ -81,7 +81,7 @@ fi=./math/../sysdeps/ieee754/flt-32/s_sincosf.c
 104 2
 fe=./math/../sysdeps/ieee754/flt-32/math_config.h
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 fl=???
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -118,6 +118,11 @@ cfn=gungraun::vec3a_slerp::__run_anti_parallel
 calls=1 0 
 0 201
 
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_anti_parallel::anti_parallel
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+calls=1 0 
+0 201
+
 fn=std::env::args
 cfn=std::env::args_os
 calls=1 0 
@@ -138,7 +143,7 @@ calls=5 3363
 0 402
 
 fn=gungraun::vec3a_slerp::__run_anti_parallel
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_anti_parallel::anti_parallel
 calls=1 0 
 0 201
 
@@ -188,22 +193,6 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 402
 
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
-0 60
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
-calls=1 0 
-0 8
-cob=/usr/lib/aarch64-linux-gnu/libm.so.6
-cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
-cfn=sincosf
-calls=1 67 
-0 50
-0 80
-0 3
-
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
-0 8
-
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -214,58 +203,27 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 201
 
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+0 63
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
 calls=1 0 
-0 201
+0 8
+cob=/usr/lib/aarch64-linux-gnu/libm.so.6
+cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
+cfn=sincosf
+calls=1 67 
+0 50
+0 80
+
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
+0 8
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 201
 
-ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 201
-fe=./elf/./elf/rtld.c
-
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 201
-
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./stdlib/./stdlib/cxa_atexit.c
-fn=__cxa_atexit
-cfn=__internal_atexit
-calls=1 36 
-68 201
-
-fn=__internal_atexit
-fi=./csu/../csu/libc-start.c
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34'2
-calls=1 145 
-144 201
-fe=./stdlib/./stdlib/cxa_atexit.c
-
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 201
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
 fl=./nptl/./nptl/pthread_getattr_np.c
 fn=pthread_getattr_np@@GLIBC_2.32
 fi=???
@@ -278,7 +236,7 @@ fe=./nptl/./nptl/pthread_getattr_np.c
 fl=./malloc/./malloc/malloc.c
 fn=free
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=__rustc::__rust_dealloc'2
 calls=1 0 
@@ -287,13 +245,13 @@ fe=./malloc/./malloc/malloc.c
 
 fn=free'2
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=gungraun::main'2
 calls=1 0 
 0 201
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=gungraun::bench_vec3a::__run
 calls=1 0 
@@ -312,24 +270,12 @@ cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
 350 201
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=init_have_lse_atomics
 calls=1 0 
 145 201
 
-ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 201
-fe=./elf/./elf/dl-init.c
-
-ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 fn=sysconf
 fi=???
@@ -339,12 +285,64 @@ calls=1 33
 0 201
 fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 
+ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 201
+fe=./elf/./elf/rtld.c
+
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 201
+
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cfi=???
+cfn=(below main)
+calls=1 0 
+52 201
+fe=./elf/./elf/dl-init.c
+
+ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-d90579c679419020
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
 cfi=???
 cfn=main
 calls=1 0 
 58 201
+
+fl=./stdlib/./stdlib/cxa_atexit.c
+fn=__cxa_atexit
+cfn=__internal_atexit
+calls=1 36 
+68 201
+
+fn=__internal_atexit
+fi=./csu/../csu/libc-start.c
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34'2
+calls=1 145 
+144 201
+fe=./stdlib/./stdlib/cxa_atexit.c
+
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 201
+fe=./nptl/./nptl/pthread_attr_destroy.c
 
 totals: 201
