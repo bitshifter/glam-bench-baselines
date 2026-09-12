@@ -18,7 +18,7 @@ gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse:
 	dup v3.2s, v2.s[1]
 	dup v4.2s, v1.s[1]
 		// src/f32/scalar/mat3a.rs:601
-		let tmp1 = self.z_axis.cross(self.x_axis);
+		let det = self.x_axis.dot(tmp0);
 	ldur d17, [x1, #4]
 		// src/f32/scalar/vec3a.rs:273
 		self.y * rhs.z - rhs.y * self.z,
@@ -27,7 +27,7 @@ gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse:
 	ext v23.8b, v1.8b, v17.8b, #4
 	mov v4.d[1], v3.d[0]
 		// src/f32/scalar/mat3a.rs:601
-		let tmp1 = self.z_axis.cross(self.x_axis);
+		let det = self.x_axis.dot(tmp0);
 	ldr d3, [x1]
 		// src/f32/scalar/vec3a.rs:273
 		self.y * rhs.z - rhs.y * self.z,
@@ -90,7 +90,7 @@ gungraun::mat3a_inverse::__gungraun_wrapper_mod::mat3a_inverse:
 		self.x * rhs.y - rhs.x * self.y,
 	fsub v2.2s, v2.2s, v16.2s
 		// src/f32/scalar/mat3a.rs:601
-		let tmp1 = self.z_axis.cross(self.x_axis);
+		let det = self.x_axis.dot(tmp0);
 	ldr s16, [x1, #8]
 		// src/f32/scalar/vec3a.rs:258
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)

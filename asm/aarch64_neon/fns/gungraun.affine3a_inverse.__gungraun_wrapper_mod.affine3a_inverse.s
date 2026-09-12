@@ -8,7 +8,7 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 	ldp q1, q2, [x1, #16]
 	fmov s0, #1.00000000
 		// src/f32/neon/mat3a.rs:618
-		let tmp1 = self.z_axis.cross(self.x_axis);
+		let det = self.x_axis.dot(tmp0);
 	ldr q3, [x1]
 		// src/f32/affine3a.rs:480
 		let translation = -(matrix3 * self.translation);
@@ -106,5 +106,8 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 	//APP
 	//NO_APP
 		// benches/gungraun.rs:612
+		}
+	ret
+
 		}
 	ret

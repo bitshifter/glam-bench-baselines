@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 15927
+pid: 16080
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00002 00006 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71239
+desc: Timerange: Basic block 0 - 71700
 desc: Trigger: Program termination
 
 positions: line
@@ -20,15 +20,14 @@ summary: 19
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/dl-init.c
-fn=_dl_init
+fl=./elf/./elf/rtld.c
+fn=_dl_start
 fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
-cfi=???
-cfn=(below main)
-calls=1 0 
-52 19
-fe=./elf/./elf/dl-init.c
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 19
+fe=./elf/./elf/rtld.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
 fl=???
@@ -68,6 +67,28 @@ calls=1 0
 cfn=gungraun::main'2
 calls=1 0 
 0 19
+
+ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/../sysdeps/aarch64/dl-start.S
+fn=(below main)
+cfi=./elf/./elf/rtld.c
+cfn=_dl_start
+calls=1 517 
+30 19
+
+fl=./elf/./elf/dl-init.c
+fn=_dl_init
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+cfi=???
+cfn=(below main)
+calls=1 0 
+52 19
+fe=./elf/./elf/dl-init.c
+
+ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+fl=???
+fn=gungraun::main'2
 cfn=__rustc::__rust_dealloc'2
 calls=1 0 
 0 19
@@ -101,11 +122,6 @@ cfn=std::env::args_os
 calls=1 0 
 0 19
 
-fn=gungraun::mat3a_mul_transpose_vec3a::__run_args
-cfn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 19
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -125,25 +141,6 @@ cfn=gungraun::main
 calls=1 0 
 0 19
 
-ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 19
-fe=./elf/./elf/rtld.c
-
-fl=./elf/../sysdeps/aarch64/dl-start.S
-fn=(below main)
-cfi=./elf/./elf/rtld.c
-cfn=_dl_start
-calls=1 517 
-30 19
-
-ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
-fl=???
 fn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_transpose_vec3a
 0 19
 
@@ -188,7 +185,21 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 19
 
+fn=gungraun::mat3a_mul_transpose_vec3a::__run_args
+cfn=gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
+0 19
+
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
+fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+fn=sysconf
+fi=???
+cfi=./nptl/./nptl/pthread_getattr_np.c
+cfn=pthread_getattr_np@@GLIBC_2.32
+calls=1 33 
+0 19
+fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+
 fl=./csu/../csu/libc-start.c
 fn=__libc_start_main@@GLIBC_2.34
 cfi=./stdlib/./stdlib/cxa_atexit.c
@@ -272,14 +283,5 @@ cfn=gungraun::bench_mat3a::__run
 calls=1 0 
 0 19
 fe=./malloc/./malloc/malloc.c
-
-fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-fn=sysconf
-fi=???
-cfi=./nptl/./nptl/pthread_getattr_np.c
-cfn=pthread_getattr_np@@GLIBC_2.32
-calls=1 33 
-0 19
-fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 
 totals: 19

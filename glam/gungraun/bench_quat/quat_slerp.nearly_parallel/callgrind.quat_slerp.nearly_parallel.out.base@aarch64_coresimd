@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 15967
+pid: 16114
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00004 00009 00002
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71241
+desc: Timerange: Basic block 0 - 71702
 desc: Trigger: Program termination
 
 positions: line
@@ -20,6 +20,15 @@ summary: 52
 
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 52
+fe=./elf/./elf/rtld.c
+
 fl=./elf/../sysdeps/aarch64/dl-start.S
 fn=(below main)
 cfi=./elf/./elf/rtld.c
@@ -37,15 +46,6 @@ calls=1 0
 52 52
 fe=./elf/./elf/dl-init.c
 
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 52
-fe=./elf/./elf/rtld.c
-
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
 fl=???
 fn=init_have_lse_atomics
@@ -59,15 +59,6 @@ fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 52
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 45
-cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp'2
-calls=1 0 
-0 7
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp'2
-0 7
 
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
@@ -88,6 +79,20 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 104
 
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+calls=1 0 
+0 52
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+0 45
+cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp'2
+calls=1 0 
+0 7
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp'2
+0 7
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -105,13 +110,13 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 52
 
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_nearly_parallel::nearly_parallel
-cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 52
 
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+fn=gungraun::quat_slerp::__run_nearly_parallel
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
 calls=1 0 
 0 52
 
@@ -183,11 +188,6 @@ calls=1 0
 
 fn=std::env::args
 cfn=std::env::args_os
-calls=1 0 
-0 52
-
-fn=gungraun::quat_slerp::__run_nearly_parallel
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_nearly_parallel::nearly_parallel
 calls=1 0 
 0 52
 

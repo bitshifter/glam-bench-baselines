@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 16817
+pid: 16907
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd --gungraun-run 00009 00003 00000
 part: 1
 thread: 1
@@ -37,19 +37,6 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
 fl=???
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 15
-
-fn=gungraun::affine3a_transform_point3a::__run_args
-cfn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 15
-
-fn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_mod::affine3a_transform_point3a
-0 15
-
 fn=gungraun::bench_affine3a::__run
 cfn=gungraun::affine3a_transform_point3a::__run_args
 calls=1 0 
@@ -62,11 +49,6 @@ cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
 0 15
 
-fn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_mod::affine3a_transform_point3a
-calls=1 0 
-0 15
-
 fn=gungraun::main
 cfn=gungraun::bench_affine3a::__run
 calls=1 0 
@@ -77,6 +59,16 @@ cfn=std::rt::lang_start_internal
 calls=1 0 
 0 15
 
+fn=gungraun::affine3a_transform_point3a::__run_args
+cfn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
+0 15
+
+fn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_mod::affine3a_transform_point3a
+calls=1 0 
+0 15
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -84,6 +76,14 @@ calls=1 0
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
+calls=1 0 
+0 15
+
+fn=gungraun::affine3a_transform_point3a::__gungraun_wrapper_mod::affine3a_transform_point3a
+0 15
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 15
 

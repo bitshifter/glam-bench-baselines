@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 15992
+pid: 16142
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00008 00000 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71244
+desc: Timerange: Basic block 0 - 71705
 desc: Trigger: Program termination
 
 positions: line
@@ -62,18 +62,6 @@ fe=./math/../sysdeps/ieee754/flt-32/math_config.h
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
 fl=???
-fn=std::rt::lang_start_internal
-cfn=std::rt::lang_start_internal'2
-calls=1 0 
-0 72
-
-fn=std::rt::lang_start_internal'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-cfn=sysconf
-calls=1 29 
-0 72
-
 fn=std::env::args_os
 cfn=__rustc::__rust_dealloc
 calls=1 0 
@@ -84,13 +72,13 @@ cfn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_id_mod_ar
 calls=1 0 
 0 72
 
-fn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 72
 
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+fn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation
 calls=1 0 
 0 72
 
@@ -158,15 +146,6 @@ cfn=std::env::args_os
 calls=1 0 
 0 72
 
-fn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation
-0 16
-cob=/usr/lib/aarch64-linux-gnu/libm.so.6
-cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
-cfn=sincosf
-calls=1 67 
-0 35
-0 21
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -185,6 +164,15 @@ fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 72
+
+fn=gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation
+0 16
+cob=/usr/lib/aarch64-linux-gnu/libm.so.6
+cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
+cfn=sincosf
+calls=1 67 
+0 35
+0 21
 
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
@@ -205,7 +193,28 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 144
 
+fn=std::rt::lang_start_internal
+cfn=std::rt::lang_start_internal'2
+calls=1 0 
+0 72
+
+fn=std::rt::lang_start_internal'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+cfn=sysconf
+calls=1 29 
+0 72
+
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
+fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+fn=sysconf
+fi=???
+cfi=./nptl/./nptl/pthread_getattr_np.c
+cfn=pthread_getattr_np@@GLIBC_2.32
+calls=1 33 
+0 72
+fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
+
 fl=./csu/../csu/libc-start.c
 fn=__libc_start_main@@GLIBC_2.34
 cfi=./stdlib/./stdlib/cxa_atexit.c
@@ -290,16 +299,16 @@ calls=1 0
 0 72
 fe=./malloc/./malloc/malloc.c
 
-fl=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-fn=sysconf
-fi=???
-cfi=./nptl/./nptl/pthread_getattr_np.c
-cfn=pthread_getattr_np@@GLIBC_2.32
-calls=1 33 
-0 72
-fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
-
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 72
+fe=./elf/./elf/rtld.c
+
 fl=./elf/../sysdeps/aarch64/dl-start.S
 fn=(below main)
 cfi=./elf/./elf/rtld.c
@@ -316,14 +325,5 @@ cfn=(below main)
 calls=1 0 
 52 72
 fe=./elf/./elf/dl-init.c
-
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 72
-fe=./elf/./elf/rtld.c
 
 totals: 72

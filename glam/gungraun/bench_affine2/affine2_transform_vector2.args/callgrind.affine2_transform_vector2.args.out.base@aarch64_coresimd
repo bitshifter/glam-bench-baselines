@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 15996
+pid: 16146
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00008 00004 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71239
+desc: Timerange: Basic block 0 - 71700
 desc: Trigger: Program termination
 
 positions: line
@@ -66,7 +66,7 @@ fe=./elf/./elf/rtld.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
 fl=???
-fn=gungraun::affine2_transform_vector2::__gungraun_wrapper_mod::affine2_transform_vector2
+fn=gungraun::mat2_mul_vec2::__gungraun_wrapper_mod::mat2_mul_vec2
 0 12
 
 fn=std::env::args_os
@@ -168,7 +168,7 @@ calls=1 0
 0 12
 
 fn=gungraun::affine2_transform_vector2::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::affine2_transform_vector2::__gungraun_wrapper_mod::affine2_transform_vector2
+cfn=gungraun::mat2_mul_vec2::__gungraun_wrapper_mod::mat2_mul_vec2
 calls=1 0 
 0 12
 

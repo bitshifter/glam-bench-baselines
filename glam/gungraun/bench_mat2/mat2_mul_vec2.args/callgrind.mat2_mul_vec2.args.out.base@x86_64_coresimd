@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 16724
+pid: 16807
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd --gungraun-run 00000 00004 00000
 part: 1
 thread: 1
@@ -37,29 +37,6 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
 fl=???
-fn=main
-cfn=std::rt::lang_start_internal
-calls=1 0 
-0 10
-
-fn=std::rt::lang_start_internal
-cfn=std::rt::lang_start::<()>::{closure#0}
-calls=1 0 
-0 10
-
-fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-cfn=gungraun::main
-calls=1 0 
-0 10
-
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 10
-
-fn=gungraun::mat2_mul_vec2::__gungraun_wrapper_mod::mat2_mul_vec2
-0 10
-
 fn=gungraun::bench_mat2::__run
 cfn=gungraun::mat2_mul_vec2::__run_args
 calls=1 0 
@@ -84,6 +61,29 @@ calls=1 0
 
 fn=gungraun::mat2_mul_vec2::__gungraun_wrapper_id_mod_args::args
 cfn=gungraun::mat2_mul_vec2::__gungraun_wrapper_mod::mat2_mul_vec2
+calls=1 0 
+0 10
+
+fn=main
+cfn=std::rt::lang_start_internal
+calls=1 0 
+0 10
+
+fn=gungraun::mat2_mul_vec2::__gungraun_wrapper_mod::mat2_mul_vec2
+0 10
+
+fn=std::rt::lang_start_internal
+cfn=std::rt::lang_start::<()>::{closure#0}
+calls=1 0 
+0 10
+
+fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+cfn=gungraun::main
+calls=1 0 
+0 10
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 10
 

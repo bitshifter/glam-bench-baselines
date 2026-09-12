@@ -7,7 +7,7 @@ gungraun::mat3_inverse::__gungraun_wrapper_mod::mat3_inverse:
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldur q2, [x1, #20]
 		// src/f32/mat3.rs:533
-		let tmp1 = self.z_axis.cross(self.x_axis);
+		let det = self.x_axis.dot(tmp0);
 	ldr q1, [x1]
 	fmov s0, #1.00000000
 	ldur q6, [x1, #4]
@@ -99,7 +99,7 @@ gungraun::mat3_inverse::__gungraun_wrapper_mod::mat3_inverse:
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fmul s4, s6, v3.s[2]
 		// src/f32/mat3.rs:533
-		let tmp1 = self.z_axis.cross(self.x_axis);
+		let det = self.x_axis.dot(tmp0);
 	ldr s6, [x1, #8]
 		// src/f32/vec3.rs:247
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)

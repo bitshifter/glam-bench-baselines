@@ -154,3 +154,15 @@ gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 		// benches/gungraun.rs:248
 		}
 	ret
+/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
+		crate::intrinsics::black_box(dummy)
+	str w8, [x0]
+	str s2, [x0, #4]
+	stur q1, [x0, #8]
+	stp s4, s3, [x0, #24]
+	str d0, [x0, #32]
+	//APP
+	//NO_APP
+		// benches/gungraun.rs:248
+		}
+	ret

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 16775
+pid: 16864
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd --gungraun-run 00004 00005 00000
 part: 1
 thread: 1
@@ -42,7 +42,7 @@ cfn=gungraun::quat_lerp::__run_positive_dot
 calls=1 0 
 0 37
 
-fn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+fn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_positive_dot::positive_dot
 cfn=gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp
 calls=1 0 
 0 37
@@ -65,7 +65,7 @@ calls=1 0
 0 37
 
 fn=gungraun::quat_lerp::__run_positive_dot
-cfn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+cfn=gungraun::quat_lerp::__gungraun_wrapper_id_mod_positive_dot::positive_dot
 calls=1 0 
 0 37
 

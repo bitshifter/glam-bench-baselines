@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 15965
+pid: 16112
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00004 00009 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71258
+desc: Timerange: Basic block 0 - 71719
 desc: Trigger: Program termination
 
 positions: line
@@ -204,23 +204,6 @@ fe=./elf/./elf/dl-init.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
 fl=???
-fn=(below main)
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 227
-
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=1 0 
-0 227
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 454
-
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
@@ -242,20 +225,6 @@ fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 227
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
-cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-calls=1 0 
-0 227
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 89
-cob=/usr/lib/aarch64-linux-gnu/libm.so.6
-cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
-cfn=sinf
-calls=3 67 
-0 104
-0 34
 
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
@@ -325,6 +294,21 @@ cfn=std::env::args_os
 calls=1 0 
 0 227
 
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+calls=1 0 
+0 227
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+0 85
+cob=/usr/lib/aarch64-linux-gnu/libm.so.6
+cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
+cfn=sinf
+calls=3 67 
+0 104
+0 34
+0 4
+
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -341,6 +325,23 @@ fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 227
+
+fn=(below main)
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 227
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=1 0 
+0 227
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 454
 
 fn=gungraun::quat_slerp::__run_orthogonal
 cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal

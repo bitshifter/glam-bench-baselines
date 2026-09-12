@@ -1,12 +1,12 @@
-==15986== Callgrind, a call-graph generating cache profiler
-==15986== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
-==15986== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==15986== Command: /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00007 00000 00000
-==15986== Parent PID: 15868
-==15986== 
-==15986== For interactive control, run 'callgrind_control -h'.
-==15986== 
-==15986== Events    : Ir
-==15986== Collected : 10
-==15986== 
-==15986== I   refs:      10
+==16135== Callgrind, a call-graph generating cache profiler
+==16135== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==16135== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==16135== Command: /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00007 00000 00000
+==16135== Parent PID: 16041
+==16135== 
+==16135== For interactive control, run 'callgrind_control -h'.
+==16135== 
+==16135== Events    : Ir
+==16135== Collected : 12
+==16135== 
+==16135== I   refs:      12

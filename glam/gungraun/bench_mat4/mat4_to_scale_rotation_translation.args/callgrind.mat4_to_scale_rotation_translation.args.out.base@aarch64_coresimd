@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 15943
+pid: 16094
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00003 00008 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71242
+desc: Timerange: Basic block 0 - 71703
 desc: Trigger: Program termination
 
 positions: line
@@ -85,6 +85,11 @@ cfn=gungraun::mat4_to_scale_rotation_translation::__run_args
 calls=1 0 
 0 82
 
+fn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation
+calls=1 0 
+0 82
+
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -119,9 +124,7 @@ cfn=gungraun::main
 calls=1 0 
 0 82
 
-fn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation
-calls=1 0 
+fn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation
 0 82
 
 fn=__init_cpu_features
@@ -142,9 +145,6 @@ fn=__rustc::__rust_dealloc'2
 cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 164
-
-fn=gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation
-0 82
 
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
@@ -253,6 +253,15 @@ calls=1 0
 fe=./malloc/./malloc/malloc.c
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 82
+fe=./elf/./elf/rtld.c
+
 fl=./elf/../sysdeps/aarch64/dl-start.S
 fn=(below main)
 cfi=./elf/./elf/rtld.c
@@ -269,14 +278,5 @@ cfn=(below main)
 calls=1 0 
 52 82
 fe=./elf/./elf/dl-init.c
-
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 82
-fe=./elf/./elf/rtld.c
 
 totals: 82

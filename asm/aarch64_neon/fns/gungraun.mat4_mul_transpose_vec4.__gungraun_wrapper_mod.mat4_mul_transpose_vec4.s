@@ -3,10 +3,10 @@
 .type	gungraun::mat4_mul_transpose_vec4::__gungraun_wrapper_mod::mat4_mul_transpose_vec4,@function
 gungraun::mat4_mul_transpose_vec4::__gungraun_wrapper_mod::mat4_mul_transpose_vec4:
 	.cfi_startproc
-		// src/f32/neon/mat4.rs:1496
+		// src/f32/neon/mat4.rs:1486
 		self.x_axis.dot(rhs),
 	ldp q1, q2, [x1]
-		// src/f32/neon/mat4.rs:1498
+		// src/f32/neon/mat4.rs:1488
 		self.z_axis.dot(rhs),
 	ldp q3, q4, [x1, #32]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218

@@ -160,3 +160,20 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 		// benches/gungraun.rs:235
 		}
 	ret
+aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
+		fn mul(self, other: $t) -> $t { self * other }
+	dup v7.4s, v18.s[0]
+	fmul s3, s1, s18
+	fmul v2.4s, v2.4s, v18.s[0]
+	fmul v1.2s, v6.2s, v7.2s
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
+		crate::intrinsics::black_box(dummy)
+	str s4, [x0]
+	stur q2, [x0, #4]
+	stp s3, s0, [x0, #20]
+	stur d1, [x0, #28]
+	//APP
+	//NO_APP
+		// benches/gungraun.rs:235
+		}
+	ret
