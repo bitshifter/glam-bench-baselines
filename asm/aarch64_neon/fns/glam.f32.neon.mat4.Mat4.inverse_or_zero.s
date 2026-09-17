@@ -4,13 +4,13 @@
 .type	<glam::f32::neon::mat4::Mat4>::inverse_or_zero,@function
 <glam::f32::neon::mat4::Mat4>::inverse_or_zero:
 	.cfi_startproc
-		// src/f32/neon/mat4.rs:694
+		// src/f32/neon/mat4.rs:807
 		let swp0a = swizzle3377(self.w_axis.0, self.z_axis.0);
 	ldp q4, q3, [x0, #32]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
 	fmov v0.4s, #1.00000000
-		// src/f32/neon/mat4.rs:697
+		// src/f32/neon/mat4.rs:810
 		let swp00 = swizzle2266(self.z_axis.0, self.y_axis.0);
 	ldp q1, q2, [x0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
@@ -137,35 +137,25 @@
 	uzp1 v5.4s, v0.4s, v2.4s
 	uzp1 v6.4s, v3.4s, v4.4s
 	uzp1 v5.4s, v5.4s, v6.4s
+	movi v6.2d, #0000000000000000
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
 	fmul v1.4s, v1.4s, v5.4s
-		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
-		$crate::intrinsics::simd::simd_shuffle(
-	dup v5.4s, v1.s[1]
-	dup v6.4s, v1.s[2]
-		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:1874
-		unsafe { simd_add(a, b) }
-	fadd v5.4s, v1.4s, v5.4s
-		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
-		$crate::intrinsics::simd::simd_shuffle(
-	dup v1.4s, v1.s[3]
-		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:1874
-		unsafe { simd_add(a, b) }
-	fadd v5.4s, v6.4s, v5.4s
-	movi v6.2d, #0000000000000000
-	fadd v16.4s, v1.4s, v5.4s
-	movi v1.2d, #0000000000000000
 	movi v5.2d, #0000000000000000
-		// src/f32/neon/mat4.rs:832
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/aarch64/neon/generated.rs:597
+		unsafe { _vaddvq_f32(a) }
+	faddp v1.4s, v1.4s, v1.4s
+	faddp s16, v1.2s
+	movi v1.2d, #0000000000000000
+		// src/f32/neon/mat4.rs:935
 		if dot0 == 0.0 {
 	fcmp s16, #0.0
 	b.ne .LBB4_2
-		// src/f32/neon/mat4.rs:879
+		// src/f32/neon/mat4.rs:982
 		self.inverse_checked::<true>().0
 	stp q7, q6, [x8]
 	stp q5, q1, [x8, #32]
-		// src/f32/neon/mat4.rs:880
+		// src/f32/neon/mat4.rs:983
 		}
 	ret
 .LBB4_2:
@@ -179,10 +169,10 @@
 	fmul v6.4s, v2.4s, v1.s[0]
 	fmul v5.4s, v3.4s, v1.s[0]
 	fmul v1.4s, v4.4s, v1.s[0]
-		// src/f32/neon/mat4.rs:879
+		// src/f32/neon/mat4.rs:982
 		self.inverse_checked::<true>().0
 	stp q7, q6, [x8]
 	stp q5, q1, [x8, #32]
-		// src/f32/neon/mat4.rs:880
+		// src/f32/neon/mat4.rs:983
 		}
 	ret

@@ -3,7 +3,7 @@
 .type	gungraun::mat4_mul_transpose_vec4::__gungraun_wrapper_mod::mat4_mul_transpose_vec4,@function
 gungraun::mat4_mul_transpose_vec4::__gungraun_wrapper_mod::mat4_mul_transpose_vec4:
 	.cfi_startproc
-		// src/f32/scalar/mat4.rs:1375
+		// src/f32/scalar/mat4.rs:1488
 		self.x_axis.dot(rhs),
 	ld4 { v0.4s, v1.4s, v2.4s, v3.4s }, [x1]
 	ldur d5, [x2, #4]
@@ -14,7 +14,7 @@ gungraun::mat4_mul_transpose_vec4::__gungraun_wrapper_mod::mat4_mul_transpose_ve
 	fmul v5.4s, v1.4s, v5.s[0]
 	fadd v4.4s, v4.4s, v5.4s
 	fmul v5.4s, v2.4s, v6.s[0]
-		// src/f32/scalar/mat4.rs:1375
+		// src/f32/scalar/mat4.rs:1488
 		self.x_axis.dot(rhs),
 	ldr s6, [x2, #12]
 		// src/f32/scalar/vec4.rs:243

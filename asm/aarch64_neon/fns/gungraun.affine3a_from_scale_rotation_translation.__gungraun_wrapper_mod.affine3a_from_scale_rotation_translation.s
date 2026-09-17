@@ -3,94 +3,94 @@
 .type	gungraun::affine3a_from_scale_rotation_translation::__gungraun_wrapper_mod::affine3a_from_scale_rotation_translation,@function
 gungraun::affine3a_from_scale_rotation_translation::__gungraun_wrapper_mod::affine3a_from_scale_rotation_translation:
 	.cfi_startproc
-		// src/f32/neon/mat3a.rs:286
+		// src/f32/neon/mat3a.rs:327
 		let y2 = rotation.y + rotation.y;
 	mov s3, v0.s[1]
-		// src/f32/neon/mat3a.rs:287
+		// src/f32/neon/mat3a.rs:328
 		let z2 = rotation.z + rotation.z;
 	mov s4, v0.s[2]
-		// src/f32/neon/mat3a.rs:285
+		// src/f32/neon/mat3a.rs:326
 		let x2 = rotation.x + rotation.x;
 	fadd v5.4s, v0.4s, v0.4s
-		// src/f32/neon/mat3a.rs:300
+		// src/f32/neon/mat3a.rs:341
 		Vec3A::new(xy - wz, 1.0 - (xx + zz), yz + wx),
 	fmov v21.2s, #1.00000000
 	fmov s17, #1.00000000
 		// src/f32/neon/vec3a.rs:108
 		unsafe { UnionCast { a: [x, y, z, z] }.v }
 	mov v1.s[2], v2.s[0]
-		// src/f32/neon/mat3a.rs:286
+		// src/f32/neon/mat3a.rs:327
 		let y2 = rotation.y + rotation.y;
 	fadd s3, s3, s3
-		// src/f32/neon/mat3a.rs:287
+		// src/f32/neon/mat3a.rs:328
 		let z2 = rotation.z + rotation.z;
 	fadd s4, s4, s4
-		// src/f32/neon/mat3a.rs:288
+		// src/f32/neon/mat3a.rs:329
 		let xx = rotation.x * x2;
 	fmul v16.4s, v0.4s, v5.4s
-		// src/f32/neon/mat3a.rs:294
+		// src/f32/neon/mat3a.rs:335
 		let wx = rotation.w * x2;
 	fmul s5, s5, v0.s[3]
 		// src/f32/neon/vec3a.rs:108
 		unsafe { UnionCast { a: [x, y, z, z] }.v }
 	mov v1.s[3], v2.s[0]
-		// src/f32/neon/mat3a.rs:291
+		// src/f32/neon/mat3a.rs:332
 		let yy = rotation.y * y2;
 	fmul s6, s3, v0.s[1]
-		// src/f32/neon/mat3a.rs:293
+		// src/f32/neon/mat3a.rs:334
 		let zz = rotation.z * z2;
 	fmul s7, s4, v0.s[2]
-		// src/f32/neon/mat3a.rs:289
+		// src/f32/neon/mat3a.rs:330
 		let xy = rotation.x * y2;
 	fmul s18, s3, s0
-		// src/f32/neon/mat3a.rs:296
+		// src/f32/neon/mat3a.rs:337
 		let wz = rotation.w * z2;
 	fmul s19, s4, v0.s[3]
-		// src/f32/neon/mat3a.rs:295
+		// src/f32/neon/mat3a.rs:336
 		let wy = rotation.w * y2;
 	fmul s3, s3, v0.s[3]
-		// src/f32/neon/mat3a.rs:290
+		// src/f32/neon/mat3a.rs:331
 		let xz = rotation.x * z2;
 	fmul s22, s4, s0
-		// src/f32/neon/mat3a.rs:292
+		// src/f32/neon/mat3a.rs:333
 		let yz = rotation.y * z2;
 	fmul s0, s4, v0.s[1]
-		// src/f32/neon/mat3a.rs:299
+		// src/f32/neon/mat3a.rs:340
 		Vec3A::new(1.0 - (yy + zz), xy + wz, xz - wy),
 	fadd s20, s6, s7
-		// src/f32/neon/mat3a.rs:300
+		// src/f32/neon/mat3a.rs:341
 		Vec3A::new(xy - wz, 1.0 - (xx + zz), yz + wx),
 	fadd s7, s16, s7
 	mov v21.s[0], v18.s[0]
-		// src/f32/neon/mat3a.rs:299
+		// src/f32/neon/mat3a.rs:340
 		Vec3A::new(1.0 - (yy + zz), xy + wz, xz - wy),
 	fadd s4, s18, s19
-		// src/f32/neon/mat3a.rs:301
+		// src/f32/neon/mat3a.rs:342
 		Vec3A::new(xz + wy, yz - wx, 1.0 - (xx + yy)),
 	fadd s6, s16, s6
 	fsub s18, s0, s5
-		// src/f32/neon/mat3a.rs:300
+		// src/f32/neon/mat3a.rs:341
 		Vec3A::new(xy - wz, 1.0 - (xx + zz), yz + wx),
 	fadd s0, s0, s5
-		// src/f32/neon/mat3a.rs:299
+		// src/f32/neon/mat3a.rs:340
 		Vec3A::new(1.0 - (yy + zz), xy + wz, xz - wy),
 	fsub s20, s17, s20
-		// src/f32/neon/mat3a.rs:300
+		// src/f32/neon/mat3a.rs:341
 		Vec3A::new(xy - wz, 1.0 - (xx + zz), yz + wx),
 	mov v19.s[1], v7.s[0]
-		// src/f32/neon/mat3a.rs:301
+		// src/f32/neon/mat3a.rs:342
 		Vec3A::new(xz + wy, yz - wx, 1.0 - (xx + yy)),
 	fadd s7, s22, s3
-		// src/f32/neon/mat3a.rs:299
+		// src/f32/neon/mat3a.rs:340
 		Vec3A::new(1.0 - (yy + zz), xy + wz, xz - wy),
 	fsub s3, s22, s3
-		// src/f32/neon/mat3a.rs:301
+		// src/f32/neon/mat3a.rs:342
 		Vec3A::new(xz + wy, yz - wx, 1.0 - (xx + yy)),
 	fsub s5, s17, s6
 		// src/f32/neon/vec3a.rs:108
 		unsafe { UnionCast { a: [x, y, z, z] }.v }
 	mov v20.s[1], v4.s[0]
-		// src/f32/neon/mat3a.rs:300
+		// src/f32/neon/mat3a.rs:341
 		Vec3A::new(xy - wz, 1.0 - (xx + zz), yz + wx),
 	fsub v4.2s, v21.2s, v19.2s
 		// src/f32/neon/vec3a.rs:108
@@ -119,6 +119,6 @@ gungraun::affine3a_from_scale_rotation_translation::__gungraun_wrapper_mod::affi
 	stp q3, q1, [x0, #32]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:576
+		// benches/gungraun.rs:582
 		}
 	ret

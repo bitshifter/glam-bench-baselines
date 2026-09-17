@@ -7,7 +7,7 @@ gungraun::mat2_determinant::__gungraun_wrapper_mod::mat2_determinant:
 	.cfi_startproc
 	sub sp, sp, #16
 	.cfi_def_cfa_offset 16
-		// src/f32/scalar/mat2.rs:286
+		// src/f32/scalar/mat2.rs:370
 		self.x_axis.x * self.y_axis.y - self.x_axis.y * self.y_axis.x
 	ldp d1, d0, [x0]
 	add x8, sp, #12

@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9911
+pid: 9799
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00003 00007 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71733
+desc: Timerange: Basic block 0 - 71287
 desc: Trigger: Program termination
 
 positions: line
@@ -228,11 +228,6 @@ cfn=free'2
 calls=5 3363 
 0 40
 
-fn=gungraun::mat4_mul_transpose_vec4::__run_args
-cfn=gungraun::mat4_mul_transpose_vec4::__gungraun_wrapper_id_mod_args::args
-calls=1 0 
-0 20
-
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
@@ -240,6 +235,11 @@ calls=1 0
 
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 20
+
+fn=gungraun::mat4_mul_transpose_vec4::__run_args
+cfn=gungraun::mat4_mul_transpose_vec4::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 20
 

@@ -3,13 +3,13 @@
 .type	gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse,@function
 gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse:
 	.cfi_startproc
-		// src/f32/scalar/mat3a.rs:600
+		// src/f32/scalar/mat3a.rs:695
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldr d2, [x1, #16]
 	ldr d6, [x1, #32]
 	ldur d3, [x1, #20]
 	ldur d16, [x1, #36]
-		// src/f32/scalar/mat3a.rs:601
+		// src/f32/scalar/mat3a.rs:696
 		let det = self.x_axis.dot(tmp0);
 	ldr d5, [x1]
 	ldr s7, [x1, #8]
@@ -35,10 +35,10 @@ gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse:
 	faddp s4, v4.2s
 	fmul s17, s7, s1
 	fadd s4, s4, s17
-		// src/f32/scalar/mat3a.rs:603
+		// src/f32/scalar/mat3a.rs:698
 		if det == 0.0 {
 	fcmp s4, #0.0
-	b.ne .LBB240_2
+	b.ne .LBB241_2
 	movi v0.2d, #0000000000000000
 	movi v1.2d, #0000000000000000
 	movi v2.2d, #0000000000000000
@@ -52,7 +52,7 @@ gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse:
 		// benches/gungraun.rs:298
 		}
 	ret
-.LBB240_2:
+.LBB241_2:
 		// src/f32/scalar/vec3a.rs:274
 		self.z * rhs.x - rhs.z * self.x,
 	mov s17, v16.s[1]
@@ -110,7 +110,7 @@ gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse:
 		// src/f32/scalar/vec3a.rs:273
 		self.y * rhs.z - rhs.y * self.z,
 	fsub s5, s5, s7
-		// src/f32/scalar/mat3a.rs:611
+		// src/f32/scalar/mat3a.rs:706
 		let inv_det = Vec3A::splat(1.0 / det);
 	fdiv s4, s17, s4
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350

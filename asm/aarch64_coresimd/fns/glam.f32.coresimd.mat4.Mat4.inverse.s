@@ -4,13 +4,13 @@
 .type	<glam::f32::coresimd::mat4::Mat4>::inverse,@function
 <glam::f32::coresimd::mat4::Mat4>::inverse:
 	.cfi_startproc
-		// src/f32/coresimd/mat4.rs:684
+		// src/f32/coresimd/mat4.rs:797
 		let swp0a = simd_swizzle!(self.w_axis.0, self.z_axis.0, [3, 3, 7, 7]);
 	ldp q4, q3, [x0, #32]
 		// ~/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/ops.rs:38
 		unsafe { core::intrinsics::simd::$simd_call($lhs, $rhs) }
 	fmov v0.4s, #1.00000000
-		// src/f32/coresimd/mat4.rs:687
+		// src/f32/coresimd/mat4.rs:800
 		let swp00 = simd_swizzle!(self.z_axis.0, self.y_axis.0, [2, 2, 6, 6]);
 	ldp q1, q2, [x0]
 		// ~/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/swizzle.rs:88
@@ -136,10 +136,10 @@
 	fmul v4.4s, v5.4s, v1.s[0]
 	fmul v0.4s, v0.4s, v1.s[0]
 	fmul v1.4s, v2.4s, v1.s[0]
-		// src/f32/coresimd/mat4.rs:840
+		// src/f32/coresimd/mat4.rs:953
 		self.inverse_checked::<false>().0
 	stp q3, q4, [x8]
 	stp q0, q1, [x8, #32]
-		// src/f32/coresimd/mat4.rs:841
+		// src/f32/coresimd/mat4.rs:954
 		}
 	ret

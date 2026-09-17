@@ -3,7 +3,7 @@
 .type	gungraun::vec4_normalize::__gungraun_wrapper_mod::vec4_normalize,@function
 gungraun::vec4_normalize::__gungraun_wrapper_mod::vec4_normalize:
 	.cfi_startproc
-		// benches/gungraun.rs:539
+		// benches/gungraun.rs:545
 		black_box(v.normalize())
 	ldr q0, [x1]
 		// src/f32/scalar/vec4.rs:243
@@ -30,6 +30,6 @@ gungraun::vec4_normalize::__gungraun_wrapper_mod::vec4_normalize:
 	str q0, [x0]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:540
+		// benches/gungraun.rs:546
 		}
 	ret

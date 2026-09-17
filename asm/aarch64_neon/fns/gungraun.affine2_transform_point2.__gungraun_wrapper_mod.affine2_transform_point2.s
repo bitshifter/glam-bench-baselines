@@ -2,7 +2,7 @@
 	.p2align	2
 .type	gungraun::affine2_transform_point2::__gungraun_wrapper_mod::affine2_transform_point2,@function
 gungraun::affine2_transform_point2::__gungraun_wrapper_mod::affine2_transform_point2:
-		// benches/gungraun.rs:597
+		// benches/gungraun.rs:603
 		#[bench::args(affine2(), vec2())]
 	.cfi_startproc
 	sub sp, sp, #16
@@ -34,7 +34,7 @@ gungraun::affine2_transform_point2::__gungraun_wrapper_mod::affine2_transform_po
 	str d0, [sp, #8]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:600
+		// benches/gungraun.rs:606
 		}
 	ldp s0, s1, [sp, #8]
 	add sp, sp, #16

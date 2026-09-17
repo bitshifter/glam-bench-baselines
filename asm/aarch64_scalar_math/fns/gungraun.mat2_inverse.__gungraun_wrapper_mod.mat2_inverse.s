@@ -3,7 +3,7 @@
 .type	gungraun::mat2_inverse::__gungraun_wrapper_mod::mat2_inverse,@function
 gungraun::mat2_inverse::__gungraun_wrapper_mod::mat2_inverse:
 	.cfi_startproc
-		// src/f32/scalar/mat2.rs:286
+		// src/f32/scalar/mat2.rs:370
 		self.x_axis.x * self.y_axis.y - self.x_axis.y * self.y_axis.x
 	ldr q1, [x1]
 	fmov s0, #1.00000000
@@ -12,13 +12,13 @@ gungraun::mat2_inverse::__gungraun_wrapper_mod::mat2_inverse:
 	fmul v2.2s, v1.2s, v2.2s
 	dup v3.2s, v2.s[1]
 	fsub v2.2s, v2.2s, v3.2s
-		// src/f32/scalar/mat2.rs:311
+		// src/f32/scalar/mat2.rs:395
 		let inv_det = 1.0 / det;
 	fdiv s0, s0, s2
-		// src/f32/scalar/mat2.rs:315
+		// src/f32/scalar/mat2.rs:399
 		self.x_axis.y * -inv_det,
 	fneg s2, s0
-		// src/f32/scalar/mat2.rs:314
+		// src/f32/scalar/mat2.rs:398
 		self.y_axis.y * inv_det,
 	mov v0.s[1], v2.s[0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491

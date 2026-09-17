@@ -3,7 +3,7 @@
 .type	gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse,@function
 gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 	.cfi_startproc
-		// src/f32/mat3.rs:532
+		// src/f32/mat3.rs:627
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldr s1, [x1, #20]
 	ldp s6, s0, [x1, #8]
@@ -13,7 +13,7 @@ gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
 	mov v3.16b, v1.16b
-		// src/f32/mat3.rs:533
+		// src/f32/mat3.rs:628
 		let det = self.x_axis.dot(tmp0);
 	ldr s7, [x1, #4]
 		// src/f32/vec3.rs:262
@@ -28,7 +28,7 @@ gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
 	fmul v18.2s, v3.2s, v19.2s
-		// src/f32/mat3.rs:533
+		// src/f32/mat3.rs:628
 		let det = self.x_axis.dot(tmp0);
 	ldr d3, [x1]
 		// src/f32/vec3.rs:247
@@ -52,18 +52,18 @@ gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 	fmul s20, s5, s6
 	faddp s18, v18.2s
 	fadd s18, s18, s20
-		// src/f32/mat3.rs:535
+		// src/f32/mat3.rs:630
 		if det == 0.0 {
 	fcmp s18, #0.0
-	b.ne .LBB232_2
+	b.ne .LBB233_2
 	movi d0, #0000000000000000
 	movi v1.2d, #0000000000000000
 	mov w8, wzr
 	movi d2, #0000000000000000
 	movi d4, #0000000000000000
 	movi d3, #0000000000000000
-	b .LBB232_3
-.LBB232_2:
+	b .LBB233_3
+.LBB233_2:
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
 	mov v20.16b, v3.16b
@@ -84,7 +84,7 @@ gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 		self.y * rhs.z - rhs.y * self.z,
 	mov v20.s[3], v3.s[0]
 	mov v21.s[0], v17.s[3]
-		// src/f32/mat3.rs:543
+		// src/f32/mat3.rs:638
 		let inv_det = Vec3::splat(1.0 / det);
 	fdiv s18, s23, s18
 		// src/f32/vec3.rs:264
@@ -150,7 +150,7 @@ gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 	fmul s4, s0, s18
 	fmul v1.4s, v6.4s, v18.s[0]
 	fmul v0.2s, v7.2s, v16.2s
-.LBB232_3:
+.LBB233_3:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str w8, [x0]

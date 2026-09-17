@@ -3,20 +3,20 @@
 .type	gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3,@function
 gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3:
 	.cfi_startproc
-		// src/f32/scalar/mat4.rs:1323
+		// src/f32/scalar/mat4.rs:1436
 		let mut res = self.x_axis.mul(rhs.x);
 	ldp s0, s1, [x2]
 	ldr d2, [x1]
-		// src/f32/scalar/mat4.rs:1324
+		// src/f32/scalar/mat4.rs:1437
 		res = self.y_axis.mul(rhs.y).add(res);
 	ldr d3, [x1, #16]
-		// src/f32/scalar/mat4.rs:1323
+		// src/f32/scalar/mat4.rs:1436
 		let mut res = self.x_axis.mul(rhs.x);
 	ldr s4, [x1, #8]
-		// src/f32/scalar/mat4.rs:1324
+		// src/f32/scalar/mat4.rs:1437
 		res = self.y_axis.mul(rhs.y).add(res);
 	ldr s5, [x1, #24]
-		// src/f32/scalar/mat4.rs:1325
+		// src/f32/scalar/mat4.rs:1438
 		res = self.z_axis.mul(rhs.z).add(res);
 	ldr s6, [x1, #40]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -25,7 +25,7 @@ gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3
 	fmul v3.2s, v3.2s, v1.s[0]
 	fmul s0, s4, s0
 	fmul s1, s5, s1
-		// src/f32/scalar/mat4.rs:1325
+		// src/f32/scalar/mat4.rs:1438
 		res = self.z_axis.mul(rhs.z).add(res);
 	ldr s4, [x2, #8]
 	ldr d5, [x1, #32]

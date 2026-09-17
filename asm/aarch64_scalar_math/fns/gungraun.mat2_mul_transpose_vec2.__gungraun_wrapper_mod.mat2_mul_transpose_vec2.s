@@ -14,7 +14,7 @@ gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_ve
 	mov v1.s[1], v0.s[0]
 	ld1 { v2.s }[1], [x0]
 	fmul v0.2s, v1.2s, v2.2s
-		// src/f32/scalar/mat2.rs:370
+		// src/f32/scalar/mat2.rs:454
 		Vec2::new(self.x_axis.dot(rhs), self.y_axis.dot(rhs))
 	ldur d2, [x0, #4]
 		// src/f32/vec2.rs:188

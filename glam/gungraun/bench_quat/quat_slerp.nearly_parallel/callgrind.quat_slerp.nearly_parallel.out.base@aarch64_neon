@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9931
+pid: 9819
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00004 00009 00002
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71734
+desc: Timerange: Basic block 0 - 71288
 desc: Trigger: Program termination
 
 positions: line
@@ -21,6 +21,11 @@ summary: 31
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
 fl=???
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 31
+
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
@@ -78,17 +83,22 @@ cfn=free'2
 calls=5 3363 
 0 62
 
+fn=gungraun::quat_slerp::__run_nearly_parallel
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+calls=1 0 
+0 31
+
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 31
 
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+0 31
+
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
-0 31
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 0 31
 
 fn=(below main)
@@ -115,11 +125,6 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 62
 
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_nearly_parallel::nearly_parallel
-cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-calls=1 0 
-0 31
-
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -139,13 +144,8 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 31
 
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 31
-
-fn=gungraun::quat_slerp::__run_nearly_parallel
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_nearly_parallel::nearly_parallel
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_negative_dot::negative_dot
+cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 calls=1 0 
 0 31
 

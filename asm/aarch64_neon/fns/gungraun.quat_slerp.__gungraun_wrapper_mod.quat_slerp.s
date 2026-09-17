@@ -28,7 +28,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/neon/quat.rs:788
 		if dot > DOT_THRESHOLD {
 	fcmp s4, s6
-	b.le .LBB148_2
+	b.le .LBB149_2
 	fmov s3, #1.00000000
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798
 		unsafe { simd_mul(a, vdupq_n_f32(b)) }
@@ -66,7 +66,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// benches/gungraun.rs:465
 		}
 	ret
-.LBB148_2:
+.LBB149_2:
 	mov w8, #31276
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1632
 		intrinsics::fabs(self)

@@ -54,7 +54,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		// src/f32/neon/vec3a.rs:1325
 		if math::abs(dot) < 1.0 - 3e-7 {
 	fcmp s3, s0
-	b.pl .LBB158_2
+	b.pl .LBB159_2
 	mov w8, #31276
 	movi d6, #0000000000000000
 	mov w9, #63875
@@ -274,12 +274,12 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	fmul v0.4s, v1.4s, v0.s[0]
 		// src/f32/neon/vec3a.rs:1360
 		}
-	b .LBB158_8
-.LBB158_2:
+	b .LBB159_8
+.LBB159_2:
 		// src/f32/neon/vec3a.rs:1347
 		if dot < 0.0 {
 	fcmp s2, #0.0
-	b.pl .LBB158_5
+	b.pl .LBB159_5
 	mov s1, v16.s[1]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1632
 		intrinsics::fabs(self)
@@ -292,7 +292,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		// src/f32/neon/vec3a.rs:1267
 		if math::abs(self.x) > math::abs(self.y) {
 	fcmp s0, s2
-	b.le .LBB158_6
+	b.le .LBB159_6
 		// src/f32/neon/vec3a.rs:1268
 		Self::new(-self.z, 0.0, self.x) // self.cross(Self::Y)
 	fneg s1, s9
@@ -302,8 +302,8 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	mov v0.s[0], v1.s[0]
 	mov v0.s[2], v16.s[0]
 	mov v0.s[3], v16.s[0]
-	b .LBB158_7
-.LBB158_5:
+	b .LBB159_7
+.LBB159_5:
 	fmov s0, #1.00000000
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798
 		unsafe { simd_mul(a, vdupq_n_f32(b)) }
@@ -319,8 +319,8 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	fadd v0.4s, v1.4s, v0.4s
 		// src/f32/neon/vec3a.rs:1347
 		if dot < 0.0 {
-	b .LBB158_8
-.LBB158_6:
+	b .LBB159_8
+.LBB159_6:
 		// src/f32/neon/vec3a.rs:108
 		unsafe { UnionCast { a: [x, y, z, z] }.v }
 	movi v0.2d, #0000000000000000
@@ -332,7 +332,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	mov v0.s[1], v16.s[2]
 	mov v0.s[2], v1.s[0]
 	mov v0.s[3], v1.s[0]
-.LBB158_7:
+.LBB159_7:
 		// src/f32/neon/vec3a.rs:256
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fmul v1.4s, v0.4s, v0.4s
@@ -470,7 +470,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798
 		unsafe { simd_mul(a, vdupq_n_f32(b)) }
 	fmul v0.4s, v0.4s, v3.s[0]
-.LBB158_8:
+.LBB159_8:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str q0, [x0]

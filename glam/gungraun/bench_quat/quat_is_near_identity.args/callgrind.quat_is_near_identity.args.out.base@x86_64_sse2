@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 10368
+pid: 10304
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17 --gungraun-run 00004 00004 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84164
+desc: Timerange: Basic block 0 - 85306
 desc: Trigger: Program termination
 
 positions: line
@@ -26,7 +26,9 @@ cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 7
 
-fn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
+fn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
+calls=1 0 
 0 7
 
 fn=(below main)
@@ -46,9 +48,7 @@ cfn=gungraun::quat_is_near_identity::__run_args
 calls=1 0 
 0 7
 
-fn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
-calls=1 0 
+fn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
 0 7
 
 fn=std::rt::lang_start_internal

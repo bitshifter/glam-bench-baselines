@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9893
+pid: 9779
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00002 00003 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71734
+desc: Timerange: Basic block 0 - 71288
 desc: Trigger: Program termination
 
 positions: line
@@ -163,6 +163,11 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 25
 
+fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
+calls=1 0 
+0 25
+
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
@@ -201,6 +206,9 @@ cfn=gungraun::mat3a_inverse_or_zero::__run_failure
 calls=1 0 
 0 25
 
+fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
+0 25
+
 fn=std::env::args
 cfn=std::env::args_os
 calls=1 0 
@@ -230,17 +238,9 @@ cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 25
 
-fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
-calls=1 0 
-0 25
-
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
-0 25
-
-fn=gungraun::mat3a_inverse_or_zero::__gungraun_wrapper_mod::mat3a_inverse_or_zero
 0 25
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1

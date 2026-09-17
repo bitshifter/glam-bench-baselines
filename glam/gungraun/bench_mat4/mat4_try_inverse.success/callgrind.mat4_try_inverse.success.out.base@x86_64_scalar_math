@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 13663
+pid: 13629
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1076833d9e2bb74b --gungraun-run 00003 00012 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85427
+desc: Timerange: Basic block 0 - 85467
 desc: Trigger: Program termination
 
 positions: line
@@ -33,7 +33,7 @@ cfn=__libc_start_main@@GLIBC_2.34
 calls=1 242 
 0 314
 
-fn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_success::success
+fn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_mod::mat4_try_inverse
 calls=1 0 
 0 314
@@ -59,7 +59,7 @@ calls=1 0
 0 314
 
 fn=gungraun::mat4_try_inverse::__run_success
-cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_success::success
+cfn=gungraun::mat4_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 314
 

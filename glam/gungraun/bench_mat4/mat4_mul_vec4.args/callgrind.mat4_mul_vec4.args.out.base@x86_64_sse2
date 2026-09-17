@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 10355
+pid: 10291
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17 --gungraun-run 00003 00006 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 84164
+desc: Timerange: Basic block 0 - 85306
 desc: Trigger: Program termination
 
 positions: line
@@ -37,6 +37,16 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17
 fl=???
+fn=gungraun::mat4_mul_vec4::__run_args
+cfn=gungraun::mat4_mul_vec4::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
+0 18
+
+fn=gungraun::mat4_mul_vec4::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat4_mul_vec4::__gungraun_wrapper_mod::mat4_mul_vec4
+calls=1 0 
+0 18
+
 fn=gungraun::main
 cfn=gungraun::bench_mat4::__run
 calls=1 0 
@@ -45,9 +55,6 @@ calls=1 0
 fn=gungraun::bench_mat4::__run
 cfn=gungraun::mat4_mul_vec4::__run_args
 calls=1 0 
-0 18
-
-fn=gungraun::mat4_mul_vec4::__gungraun_wrapper_mod::mat4_mul_vec4
 0 18
 
 fn=std::rt::lang_start_internal
@@ -71,9 +78,7 @@ calls=1 0
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17
 fl=???
-fn=gungraun::mat4_mul_vec4::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat4_mul_vec4::__gungraun_wrapper_mod::mat4_mul_vec4
-calls=1 0 
+fn=gungraun::mat4_mul_vec4::__gungraun_wrapper_mod::mat4_mul_vec4
 0 18
 
 fn=(below main)
@@ -90,11 +95,6 @@ calls=1 0
 
 fn=main
 cfn=std::rt::lang_start_internal
-calls=1 0 
-0 18
-
-fn=gungraun::mat4_mul_vec4::__run_args
-cfn=gungraun::mat4_mul_vec4::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 18
 

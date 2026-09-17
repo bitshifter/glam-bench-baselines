@@ -3,35 +3,35 @@
 .type	gungraun::mat3_mul_mat3::__gungraun_wrapper_mod::mat3_mul_mat3,@function
 gungraun::mat3_mul_mat3::__gungraun_wrapper_mod::mat3_mul_mat3:
 	.cfi_startproc
-		// src/f32/mat3.rs:700
+		// src/f32/mat3.rs:795
 		let mut res = self.x_axis.mul(rhs.x);
 	ldp q0, q1, [x2]
-		// src/f32/mat3.rs:957
+		// src/f32/mat3.rs:1052
 		self.mul(rhs.y_axis),
 	add x8, x2, #12
-		// src/f32/mat3.rs:958
+		// src/f32/mat3.rs:1053
 		self.mul(rhs.z_axis),
 	ldr d5, [x2, #24]
-		// src/f32/mat3.rs:956
+		// src/f32/mat3.rs:1051
 		self.mul(rhs.x_axis),
 	ldur q3, [x1, #4]
-		// src/f32/mat3.rs:958
+		// src/f32/mat3.rs:1053
 		self.mul(rhs.z_axis),
 	add x9, x2, #32
-		// src/f32/mat3.rs:956
+		// src/f32/mat3.rs:1051
 		self.mul(rhs.x_axis),
 	ldur q2, [x1, #20]
-		// src/f32/mat3.rs:701
+		// src/f32/mat3.rs:796
 		res = res.add(self.y_axis.mul(rhs.y));
 	ldr s16, [x2, #4]
-		// src/f32/mat3.rs:956
+		// src/f32/mat3.rs:1051
 		self.mul(rhs.x_axis),
 	ldur d20, [x1, #28]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	zip1 v4.4s, v0.4s, v1.4s
 	dup v6.4s, v5.s[1]
-		// src/f32/mat3.rs:957
+		// src/f32/mat3.rs:1052
 		self.mul(rhs.y_axis),
 	ldur q19, [x2, #20]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -43,7 +43,7 @@ gungraun::mat3_mul_mat3::__gungraun_wrapper_mod::mat3_mul_mat3:
 	ld1 { v19.s }[1], [x9]
 	ext v24.16b, v2.16b, v2.16b, #4
 	zip1 v5.4s, v5.4s, v6.4s
-		// src/f32/mat3.rs:956
+		// src/f32/mat3.rs:1051
 		self.mul(rhs.x_axis),
 	ldr s6, [x1]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -70,13 +70,13 @@ gungraun::mat3_mul_mat3::__gungraun_wrapper_mod::mat3_mul_mat3:
 		fn mul(self, other: $t) -> $t { self * other }
 	zip2 v0.4s, v0.4s, v0.4s
 	fmul v3.4s, v3.4s, v5.4s
-		// src/f32/mat3.rs:702
+		// src/f32/mat3.rs:797
 		res = res.add(self.z_axis.mul(rhs.z));
 	ldr s5, [x2, #8]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mov v17.s[3], v4.s[0]
-		// src/f32/mat3.rs:956
+		// src/f32/mat3.rs:1051
 		self.mul(rhs.x_axis),
 	ldr s4, [x1, #24]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104

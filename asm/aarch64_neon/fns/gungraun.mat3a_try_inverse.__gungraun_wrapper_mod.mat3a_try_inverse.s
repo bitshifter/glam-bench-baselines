@@ -3,10 +3,10 @@
 .type	gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse,@function
 gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse:
 	.cfi_startproc
-		// src/f32/neon/mat3a.rs:617
+		// src/f32/neon/mat3a.rs:712
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldp q2, q4, [x1, #16]
-		// src/f32/neon/mat3a.rs:618
+		// src/f32/neon/mat3a.rs:713
 		let det = self.x_axis.dot(tmp0);
 	ldr q1, [x1]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
@@ -32,10 +32,10 @@ gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse:
 	faddp s7, v6.2s
 	mov s6, v6.s[2]
 	fadd s6, s6, s7
-		// src/f32/neon/mat3a.rs:620
+		// src/f32/neon/mat3a.rs:715
 		if det == 0.0 {
 	fcmp s6, #0.0
-	b.ne .LBB238_2
+	b.ne .LBB239_2
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	stp xzr, xzr, [x0]
@@ -46,14 +46,14 @@ gungraun::mat3a_try_inverse::__gungraun_wrapper_mod::mat3a_try_inverse:
 		// benches/gungraun.rs:298
 		}
 	ret
-.LBB238_2:
+.LBB239_2:
 	fmov s7, #1.00000000
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
 	uzp1 v16.4s, v1.4s, v1.4s
 	mov w8, #1
 	ext v17.16b, v1.16b, v1.16b, #4
-		// src/f32/neon/mat3a.rs:628
+		// src/f32/neon/mat3a.rs:723
 		let inv_det = Vec3A::splat(1.0 / det);
 	fdiv s6, s7, s6
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183

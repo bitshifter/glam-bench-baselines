@@ -3,10 +3,10 @@
 .type	gungraun::mat3a_transpose::__gungraun_wrapper_mod::mat3a_transpose,@function
 gungraun::mat3a_transpose::__gungraun_wrapper_mod::mat3a_transpose:
 	.cfi_startproc
-		// src/f32/neon/mat3a.rs:568
+		// src/f32/neon/mat3a.rs:663
 		let x = self.x_axis.0;
 	ldp q0, q1, [x1]
-		// src/f32/neon/mat3a.rs:570
+		// src/f32/neon/mat3a.rs:665
 		let z = self.z_axis.0;
 	ldr q3, [x1, #32]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173

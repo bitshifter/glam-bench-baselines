@@ -3,11 +3,11 @@
 .type	gungraun::mat3_inverse::__gungraun_wrapper_mod::mat3_inverse,@function
 gungraun::mat3_inverse::__gungraun_wrapper_mod::mat3_inverse:
 	.cfi_startproc
-		// src/f32/mat3.rs:532
+		// src/f32/mat3.rs:627
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldur q2, [x1, #20]
-		// src/f32/mat3.rs:533
-		let tmp1 = self.z_axis.cross(self.x_axis);
+		// src/f32/mat3.rs:628
+		let det = self.x_axis.dot(tmp0);
 	ldr q1, [x1]
 	fmov s0, #1.00000000
 	ldur q6, [x1, #4]
@@ -98,15 +98,15 @@ gungraun::mat3_inverse::__gungraun_wrapper_mod::mat3_inverse:
 		// src/f32/vec3.rs:247
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fmul s4, s6, v3.s[2]
-		// src/f32/mat3.rs:533
-		let tmp1 = self.z_axis.cross(self.x_axis);
+		// src/f32/mat3.rs:628
+		let det = self.x_axis.dot(tmp0);
 	ldr s6, [x1, #8]
 		// src/f32/vec3.rs:247
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fmul s6, s6, v2.s[1]
 	fadd s1, s1, s4
 	fadd s1, s1, s6
-		// src/f32/mat3.rs:543
+		// src/f32/mat3.rs:638
 		let inv_det = Vec3::splat(1.0 / det);
 	fdiv s0, s0, s1
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350

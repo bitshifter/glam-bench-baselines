@@ -6,10 +6,10 @@ gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
 	rev64 v1.4s, v0.4s
-	adrp x8, .LCPI242_0
+	adrp x8, .LCPI245_0
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:3712
 		unsafe { simd_and(a, b) }
-	ldr q3, [x8, :lo12:.LCPI242_0]
+	ldr q3, [x8, :lo12:.LCPI245_0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
 	ext v1.16b, v1.16b, v1.16b, #8
@@ -45,14 +45,14 @@ gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:188
 		($x:expr, $idx:expr $(,)?) => {{ $crate::intrinsics::simd::simd_extract($x, const { $idx }) }};
 	fmov w8, s3
-		// src/f32/neon/mat2.rs:337
+		// src/f32/neon/mat2.rs:421
 		if Vec4(det) == Vec4::ZERO {
 	cmp w8, #15
-	b.eq .LBB242_2
-	adrp x8, .LCPI242_1
+	b.eq .LBB245_2
+	adrp x8, .LCPI245_1
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/aarch64/neon/generated.rs:7921
 		unsafe { simd_div(a, b) }
-	ldr q2, [x8, :lo12:.LCPI242_1]
+	ldr q2, [x8, :lo12:.LCPI245_1]
 	fdiv v1.4s, v2.4s, v1.4s
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
@@ -62,7 +62,7 @@ gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
 	fmul v2.4s, v2.4s, v1.4s
-.LBB242_2:
+.LBB245_2:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str q2, [x0]

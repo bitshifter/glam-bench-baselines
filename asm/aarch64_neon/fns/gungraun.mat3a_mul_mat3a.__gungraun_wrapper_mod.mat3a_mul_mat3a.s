@@ -3,13 +3,13 @@
 .type	gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a,@function
 gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	.cfi_startproc
-		// src/f32/neon/mat3a.rs:1048
+		// src/f32/neon/mat3a.rs:1143
 		self.mul(rhs.x_axis),
 	ldp q0, q1, [x1]
-		// src/f32/neon/mat3a.rs:1050
+		// src/f32/neon/mat3a.rs:1145
 		self.mul(rhs.z_axis),
 	ldr q4, [x2, #32]
-		// src/f32/neon/mat3a.rs:1048
+		// src/f32/neon/mat3a.rs:1143
 		self.mul(rhs.x_axis),
 	ldp q2, q3, [x2]
 	ldr q17, [x1, #32]

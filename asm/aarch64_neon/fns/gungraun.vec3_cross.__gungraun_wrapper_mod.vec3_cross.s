@@ -3,7 +3,7 @@
 .type	gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross,@function
 gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross:
 	.cfi_startproc
-		// benches/gungraun.rs:557
+		// benches/gungraun.rs:563
 		black_box(v1.cross(v2))
 	ldur d0, [x1, #4]
 	ldur d1, [x2, #4]
@@ -33,6 +33,6 @@ gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross:
 	str s0, [x0, #8]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:558
+		// benches/gungraun.rs:564
 		}
 	ret

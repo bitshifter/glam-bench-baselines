@@ -3,7 +3,7 @@
 .type	gungraun::mat2_transpose::__gungraun_wrapper_mod::mat2_transpose,@function
 gungraun::mat2_transpose::__gungraun_wrapper_mod::mat2_transpose:
 	.cfi_startproc
-		// src/f32/scalar/mat2.rs:270
+		// src/f32/scalar/mat2.rs:354
 		x_axis: Vec2::new(self.x_axis.x, self.y_axis.x),
 	ldr q0, [x1]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491

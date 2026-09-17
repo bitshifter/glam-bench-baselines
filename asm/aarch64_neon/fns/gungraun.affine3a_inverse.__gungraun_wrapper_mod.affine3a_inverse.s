@@ -3,11 +3,11 @@
 .type	gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse,@function
 gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 	.cfi_startproc
-		// src/f32/neon/mat3a.rs:617
+		// src/f32/neon/mat3a.rs:712
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldp q1, q2, [x1, #16]
 	fmov s0, #1.00000000
-		// src/f32/neon/mat3a.rs:618
+		// src/f32/neon/mat3a.rs:713
 		let det = self.x_axis.dot(tmp0);
 	ldr q3, [x1]
 		// src/f32/affine3a.rs:480
@@ -40,7 +40,7 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
 	ext v17.16b, v3.16b, v3.16b, #4
-		// src/f32/neon/mat3a.rs:628
+		// src/f32/neon/mat3a.rs:723
 		let inv_det = Vec3A::splat(1.0 / det);
 	fdiv s0, s0, s7
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
@@ -105,9 +105,6 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 	stp q3, q0, [x0, #32]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:612
-		}
-	ret
-
+		// benches/gungraun.rs:618
 		}
 	ret

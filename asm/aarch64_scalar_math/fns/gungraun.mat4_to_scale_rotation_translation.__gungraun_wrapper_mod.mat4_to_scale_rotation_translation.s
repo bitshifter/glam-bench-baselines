@@ -3,7 +3,7 @@
 .type	gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation,@function
 gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation:
 	.cfi_startproc
-		// src/f32/scalar/mat4.rs:255
+		// src/f32/scalar/mat4.rs:305
 		let r = Mat3::from_mat4(*self);
 	ldr s2, [x1]
 	ldur d3, [x1, #4]
@@ -22,7 +22,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		self.x * rhs.y - rhs.x * self.y,
 	ext v18.8b, v6.8b, v7.8b, #4
 	ext v19.8b, v7.8b, v6.8b, #4
-		// src/f32/scalar/mat4.rs:255
+		// src/f32/scalar/mat4.rs:305
 		let r = Mat3::from_mat4(*self);
 	ldr s17, [x1, #40]
 	ldr s16, [x1, #24]
@@ -33,7 +33,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fadd s0, s0, s1
 	fmul s1, s4, v3.s[1]
-		// src/f32/scalar/mat4.rs:255
+		// src/f32/scalar/mat4.rs:305
 		let r = Mat3::from_mat4(*self);
 	ldr d4, [x1, #32]
 		// src/f32/vec3.rs:262
@@ -88,7 +88,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1656
 		if self.is_nan() { Self::NAN } else { 1.0_f32.copysign(self) }
 	fcsel s19, s20, s19, vs
-		// src/f32/scalar/mat4.rs:262
+		// src/f32/scalar/mat4.rs:312
 		r.x_axis.length() * math::signum(det),
 	fmul s1, s1, s19
 		// src/f32/vec3.rs:963
@@ -119,7 +119,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul s6, s16, s22
 		// src/f32/scalar/quat.rs:212
 		if m22 <= 0.0 {
-	b.ls .LBB280_3
+	b.ls .LBB283_3
 		// src/f32/scalar/quat.rs:239
 		let sum10 = m11 + m00;
 	fadd s16, s20, s19
@@ -129,7 +129,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/scalar/quat.rs:241
 		if sum10 <= 0.0 {
 	fcmp s16, #0.0
-	b.ls .LBB280_5
+	b.ls .LBB283_5
 		// src/f32/scalar/quat.rs:253
 		let four_wsq = opm22 + sum10;
 	fadd s16, s17, s16
@@ -163,8 +163,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul s5, s16, s17
 		// src/f32/scalar/quat.rs:241
 		if sum10 <= 0.0 {
-	b .LBB280_8
-.LBB280_3:
+	b .LBB283_8
+.LBB283_3:
 		// src/f32/scalar/quat.rs:214
 		let dif10 = m11 - m00;
 	fsub s16, s20, s19
@@ -174,7 +174,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/scalar/quat.rs:216
 		if dif10 <= 0.0 {
 	fcmp s16, #0.0
-	b.ls .LBB280_6
+	b.ls .LBB283_6
 		// src/f32/scalar/quat.rs:228
 		let four_ysq = omm22 + dif10;
 	fadd s16, s17, s16
@@ -205,8 +205,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul s4, s5, s17
 		// src/f32/scalar/quat.rs:234
 		(m20 - m02) * inv4y,
-	b .LBB280_7
-.LBB280_5:
+	b .LBB283_7
+.LBB283_5:
 		// src/f32/scalar/quat.rs:243
 		let four_zsq = opm22 - sum10;
 	fsub s16, s17, s16
@@ -240,8 +240,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul s5, s5, s17
 		// src/f32/scalar/quat.rs:241
 		if sum10 <= 0.0 {
-	b .LBB280_8
-.LBB280_6:
+	b .LBB283_8
+.LBB283_6:
 		// src/f32/scalar/quat.rs:218
 		let four_xsq = omm22 - dif10;
 	fsub s16, s17, s16
@@ -270,19 +270,19 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/scalar/quat.rs:223
 		(m02 + m20) * inv4x,
 	fmul s4, s4, s17
-.LBB280_7:
+.LBB283_7:
 	fmul s5, s6, s17
-.LBB280_8:
+.LBB283_8:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	stp s2, s3, [x0]
-		// src/f32/scalar/mat4.rs:277
+		// src/f32/scalar/mat4.rs:327
 		let translation = self.w_axis.xyz();
 	ldr s2, [x1, #56]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str s1, [x0, #16]
-		// src/f32/scalar/mat4.rs:277
+		// src/f32/scalar/mat4.rs:327
 		let translation = self.w_axis.xyz();
 	ldr d1, [x1, #48]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491

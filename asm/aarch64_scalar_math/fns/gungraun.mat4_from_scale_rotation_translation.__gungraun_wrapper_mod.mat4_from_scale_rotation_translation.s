@@ -3,13 +3,13 @@
 .type	gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation,@function
 gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation:
 	.cfi_startproc
-		// src/f32/scalar/mat4.rs:187
+		// src/f32/scalar/mat4.rs:237
 		let (x, y, z, w) = rotation.into();
 	ldp s1, s0, [x2, #4]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	movi v21.2d, #0000000000000000
-		// src/f32/scalar/mat4.rs:187
+		// src/f32/scalar/mat4.rs:237
 		let (x, y, z, w) = rotation.into();
 	ldr s5, [x2]
 	ldr s2, [x2, #12]
@@ -17,81 +17,81 @@ gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_fro
 		fn mul(self, other: $t) -> $t { self * other }
 	movi v22.2d, #0000000000000000
 	movi v23.2d, #0000000000000000
-		// src/f32/scalar/mat4.rs:224
+		// src/f32/scalar/mat4.rs:274
 		Vec4::from((translation, 1.0)),
 	add x8, x3, #8
-		// src/f32/scalar/mat4.rs:189
+		// src/f32/scalar/mat4.rs:239
 		let y2 = y + y;
 	fadd s3, s1, s1
-		// src/f32/scalar/mat4.rs:190
+		// src/f32/scalar/mat4.rs:240
 		let z2 = z + z;
 	fadd s4, s0, s0
-		// src/f32/scalar/mat4.rs:188
+		// src/f32/scalar/mat4.rs:238
 		let x2 = x + x;
 	fadd s6, s5, s5
-		// src/f32/scalar/mat4.rs:194
+		// src/f32/scalar/mat4.rs:244
 		let yy = y * y2;
 	fmul s7, s1, s3
-		// src/f32/scalar/mat4.rs:196
+		// src/f32/scalar/mat4.rs:246
 		let zz = z * z2;
 	fmul s16, s0, s4
 	fmov s0, #1.00000000
-		// src/f32/scalar/mat4.rs:191
+		// src/f32/scalar/mat4.rs:241
 		let xx = x * x2;
 	fmul s17, s5, s6
-		// src/f32/scalar/mat4.rs:192
+		// src/f32/scalar/mat4.rs:242
 		let xy = x * y2;
 	fmul s19, s5, s3
-		// src/f32/scalar/mat4.rs:199
+		// src/f32/scalar/mat4.rs:249
 		let wz = w * z2;
 	fmul s20, s2, s4
-		// src/f32/scalar/mat4.rs:193
+		// src/f32/scalar/mat4.rs:243
 		let xz = x * z2;
 	fmul s5, s5, s4
-		// src/f32/scalar/mat4.rs:198
+		// src/f32/scalar/mat4.rs:248
 		let wy = w * y2;
 	fmul s3, s3, s2
-		// src/f32/scalar/mat4.rs:195
+		// src/f32/scalar/mat4.rs:245
 		let yz = y * z2;
 	fmul s1, s1, s4
-		// src/f32/scalar/mat4.rs:201
+		// src/f32/scalar/mat4.rs:251
 		let x_axis = Vec4::new(1.0 - (yy + zz), xy + wz, xz - wy, 0.0);
 	fadd s18, s7, s16
-		// src/f32/scalar/mat4.rs:197
+		// src/f32/scalar/mat4.rs:247
 		let wx = w * x2;
 	fmul s2, s6, s2
-		// src/f32/scalar/mat4.rs:202
+		// src/f32/scalar/mat4.rs:252
 		let y_axis = Vec4::new(xy - wz, 1.0 - (xx + zz), yz + wx, 0.0);
 	fadd s16, s17, s16
-		// src/f32/scalar/mat4.rs:203
+		// src/f32/scalar/mat4.rs:253
 		let z_axis = Vec4::new(xz + wy, yz - wx, 1.0 - (xx + yy), 0.0);
 	fadd s7, s17, s7
-		// src/f32/scalar/mat4.rs:202
+		// src/f32/scalar/mat4.rs:252
 		let y_axis = Vec4::new(xy - wz, 1.0 - (xx + zz), yz + wx, 0.0);
 	fsub s4, s19, s20
-		// src/f32/scalar/mat4.rs:201
+		// src/f32/scalar/mat4.rs:251
 		let x_axis = Vec4::new(1.0 - (yy + zz), xy + wz, xz - wy, 0.0);
 	fadd s19, s19, s20
-		// src/f32/scalar/mat4.rs:203
+		// src/f32/scalar/mat4.rs:253
 		let z_axis = Vec4::new(xz + wy, yz - wx, 1.0 - (xx + yy), 0.0);
 	fadd s6, s5, s3
-		// src/f32/scalar/mat4.rs:201
+		// src/f32/scalar/mat4.rs:251
 		let x_axis = Vec4::new(1.0 - (yy + zz), xy + wz, xz - wy, 0.0);
 	fsub s3, s5, s3
 	fsub s18, s0, s18
-		// src/f32/scalar/mat4.rs:202
+		// src/f32/scalar/mat4.rs:252
 		let y_axis = Vec4::new(xy - wz, 1.0 - (xx + zz), yz + wx, 0.0);
 	fsub s16, s0, s16
-		// src/f32/scalar/mat4.rs:203
+		// src/f32/scalar/mat4.rs:253
 		let z_axis = Vec4::new(xz + wy, yz - wx, 1.0 - (xx + yy), 0.0);
 	fsub s0, s0, s7
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mov v22.s[0], v4.s[0]
-		// src/f32/scalar/mat4.rs:203
+		// src/f32/scalar/mat4.rs:253
 		let z_axis = Vec4::new(xz + wy, yz - wx, 1.0 - (xx + yy), 0.0);
 	fsub s4, s1, s2
-		// src/f32/scalar/mat4.rs:202
+		// src/f32/scalar/mat4.rs:252
 		let y_axis = Vec4::new(xy - wz, 1.0 - (xx + zz), yz + wx, 0.0);
 	fadd s1, s1, s2
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -108,14 +108,14 @@ gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_fro
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	ld1 { v2.s }[0], [x8]
-		// src/f32/scalar/mat4.rs:224
+		// src/f32/scalar/mat4.rs:274
 		Vec4::from((translation, 1.0)),
 	ldr d4, [x3]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mov v21.s[1], v19.s[0]
 	mov v22.s[2], v1.s[0]
-		// src/f32/scalar/mat4.rs:221
+		// src/f32/scalar/mat4.rs:271
 		x_axis.mul(scale.x),
 	ldr d1, [x1]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
@@ -124,13 +124,13 @@ gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_fro
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mov v23.s[2], v0.s[0]
-		// src/f32/scalar/mat4.rs:222
+		// src/f32/scalar/mat4.rs:272
 		y_axis.mul(scale.y),
 	ldur d0, [x1, #4]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mov v21.s[2], v3.s[0]
-		// src/f32/scalar/mat4.rs:223
+		// src/f32/scalar/mat4.rs:273
 		z_axis.mul(scale.z),
 	ldr s3, [x1, #8]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350

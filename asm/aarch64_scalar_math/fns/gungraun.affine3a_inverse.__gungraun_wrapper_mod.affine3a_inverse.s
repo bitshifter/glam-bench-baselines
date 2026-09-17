@@ -3,29 +3,29 @@
 .type	gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse,@function
 gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 	.cfi_startproc
-		// src/f32/scalar/mat3a.rs:600
+		// src/f32/scalar/mat3a.rs:695
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldr d1, [x1, #16]
-		// src/f32/scalar/mat3a.rs:601
+		// src/f32/scalar/mat3a.rs:696
 		let det = self.x_axis.dot(tmp0);
 	ldr d2, [x1]
 	fmov s0, #1.00000000
-		// src/f32/scalar/mat3a.rs:600
+		// src/f32/scalar/mat3a.rs:695
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldp s3, s4, [x1, #20]
-		// src/f32/scalar/mat3a.rs:601
+		// src/f32/scalar/mat3a.rs:696
 		let det = self.x_axis.dot(tmp0);
 	ldr s16, [x1, #8]
 		// src/f32/scalar/vec3a.rs:273
 		self.y * rhs.z - rhs.y * self.z,
 	ext v5.8b, v1.8b, v2.8b, #4
-		// src/f32/scalar/mat3a.rs:600
+		// src/f32/scalar/mat3a.rs:695
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldp d7, d6, [x1, #32]
 		// src/f32/scalar/vec3a.rs:273
 		self.y * rhs.z - rhs.y * self.z,
 	mov v18.16b, v4.16b
-		// src/f32/scalar/mat3a.rs:600
+		// src/f32/scalar/mat3a.rs:695
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	rev64 v17.2s, v7.2s
 		// src/f32/scalar/vec3a.rs:274
@@ -91,7 +91,7 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 		// src/f32/scalar/vec3a.rs:275
 		self.x * rhs.y - rhs.x * self.y,
 	fmul s1, s1, v2.s[1]
-		// src/f32/scalar/mat3a.rs:611
+		// src/f32/scalar/mat3a.rs:706
 		let inv_det = Vec3A::splat(1.0 / det);
 	fdiv s0, s0, s7
 		// src/f32/scalar/vec3a.rs:274
@@ -126,15 +126,15 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 	fmul s3, s4, s0
 	fmul v4.2s, v5.2s, v0.s[0]
 	fmul s0, s1, s0
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	fmul v5.2s, v16.2s, v6.2s
 	fmul v16.2s, v7.2s, v17.2s
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	fmul s1, s2, s7
 	fmul s7, s3, v7.s[1]
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	fmul v19.2s, v4.2s, v18.s[0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
@@ -142,19 +142,19 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 	stp s2, s2, [x0, #8]
 	stp s0, s0, [x0, #40]
 	stp s3, s3, [x0, #24]
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	fadd v5.2s, v5.2s, v16.2s
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	fmul s16, s18, s0
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str d4, [x0, #32]
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	fadd s1, s1, s7
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	fadd v2.2s, v19.2s, v5.2s
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -163,7 +163,7 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	mov v17.s[1], v6.s[1]
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	fadd s1, s16, s1
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
@@ -185,6 +185,6 @@ gungraun::affine3a_inverse::__gungraun_wrapper_mod::affine3a_inverse:
 	stp s0, s0, [x0, #56]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:612
+		// benches/gungraun.rs:618
 		}
 	ret

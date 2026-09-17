@@ -3,7 +3,7 @@
 .type	gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero,@function
 gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 	.cfi_startproc
-		// src/f32/mat3.rs:532
+		// src/f32/mat3.rs:627
 		let tmp0 = self.y_axis.cross(self.z_axis);
 	ldr s1, [x1, #20]
 	ldp s6, s0, [x1, #8]
@@ -13,7 +13,7 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
 	mov v3.16b, v1.16b
-		// src/f32/mat3.rs:533
+		// src/f32/mat3.rs:628
 		let det = self.x_axis.dot(tmp0);
 	ldr s7, [x1, #4]
 		// src/f32/vec3.rs:262
@@ -28,7 +28,7 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
 	fmul v18.2s, v3.2s, v19.2s
-		// src/f32/mat3.rs:533
+		// src/f32/mat3.rs:628
 		let det = self.x_axis.dot(tmp0);
 	ldr d3, [x1]
 		// src/f32/vec3.rs:247
@@ -52,10 +52,10 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 	fmul s20, s5, s6
 	faddp s18, v18.2s
 	fadd s18, s18, s20
-		// src/f32/mat3.rs:535
+		// src/f32/mat3.rs:630
 		if det == 0.0 {
 	fcmp s18, #0.0
-	b.ne .LBB246_2
+	b.ne .LBB249_2
 	movi d1, #0000000000000000
 	movi v2.2d, #0000000000000000
 	movi d0, #0000000000000000
@@ -72,7 +72,7 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 		// benches/gungraun.rs:235
 		}
 	ret
-.LBB246_2:
+.LBB249_2:
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
 	mov v20.16b, v3.16b
@@ -92,7 +92,7 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 		self.y * rhs.z - rhs.y * self.z,
 	mov v20.s[3], v3.s[0]
 	mov v21.s[0], v17.s[3]
-		// src/f32/mat3.rs:543
+		// src/f32/mat3.rs:638
 		let inv_det = Vec3::splat(1.0 / det);
 	fdiv s18, s23, s18
 		// src/f32/vec3.rs:264

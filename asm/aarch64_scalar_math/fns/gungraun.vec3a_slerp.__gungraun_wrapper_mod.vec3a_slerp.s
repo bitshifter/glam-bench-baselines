@@ -71,7 +71,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		// src/f32/scalar/vec3a.rs:1319
 		if math::abs(dot) < 1.0 - 3e-7 {
 	fcmp s2, s3
-	b.pl .LBB158_2
+	b.pl .LBB159_2
 	mov w8, #31276
 	fmov s10, #1.00000000
 	str q5, [sp, #48]
@@ -212,12 +212,12 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	fmul s1, s4, s2
 		// src/f32/scalar/vec3a.rs:1347
 		}
-	b .LBB158_5
-.LBB158_2:
+	b .LBB159_5
+.LBB159_2:
 		// src/f32/scalar/vec3a.rs:1334
 		if dot < 0.0 {
 	fcmp s0, #0.0
-	b.pl .LBB158_4
+	b.pl .LBB159_4
 		// src/f32/vec3.rs:264
 		self.x * rhs.y - rhs.x * self.y,
 	mov s8, v5.s[1]
@@ -411,8 +411,8 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		fn mul(self, other: $t) -> $t { self * other }
 	fmul v0.2s, v0.2s, v4.s[0]
 	fmul s1, s4, s1
-	b .LBB158_5
-.LBB158_4:
+	b .LBB159_5
+.LBB159_4:
 	fmov s0, #1.00000000
 	fmul s1, s6, s1
 		// src/f32/scalar/vec3a.rs:986
@@ -427,7 +427,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		fn add(self, other: $t) -> $t { self + other }
 	fadd v0.2s, v2.2s, v0.2s
 	fadd s1, s3, s1
-.LBB158_5:
+.LBB159_5:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str d0, [x19]

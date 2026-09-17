@@ -3,7 +3,7 @@
 .type	gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation,@function
 gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation:
 	.cfi_startproc
-		// src/f32/neon/mat4.rs:253
+		// src/f32/neon/mat4.rs:303
 		let r = Mat3A::from_mat4(*self);
 	ldp q2, q3, [x1]
 	mov w8, #2143289344
@@ -81,7 +81,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1656
 		if self.is_nan() { Self::NAN } else { 1.0_f32.copysign(self) }
 	fcsel s1, s1, s6, vs
-		// src/f32/neon/mat4.rs:260
+		// src/f32/neon/mat4.rs:310
 		r.x_axis.length() * math::signum(det),
 	fmul s1, s16, s1
 		// src/f32/vec3.rs:963
@@ -109,7 +109,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/neon/quat.rs:214
 		if m22 <= 0.0 {
 	fcmp s16, #0.0
-	b.ls .LBB276_3
+	b.ls .LBB279_3
 		// src/f32/neon/quat.rs:241
 		let sum10 = m11 + m00;
 	fadd s7, s7, s2
@@ -120,7 +120,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/neon/quat.rs:243
 		if sum10 <= 0.0 {
 	fcmp s7, #0.0
-	b.ls .LBB276_5
+	b.ls .LBB279_5
 		// src/f32/neon/quat.rs:255
 		let four_wsq = opm22 + sum10;
 	fadd s6, s16, s7
@@ -147,8 +147,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul v2.4s, v2.4s, v4.s[0]
 		// src/f32/neon/quat.rs:243
 		if sum10 <= 0.0 {
-	b .LBB276_7
-.LBB276_3:
+	b .LBB279_7
+.LBB279_3:
 		// src/f32/neon/quat.rs:216
 		let dif10 = m11 - m00;
 	fsub s7, s7, s2
@@ -158,7 +158,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/neon/quat.rs:218
 		if dif10 <= 0.0 {
 	fcmp s7, #0.0
-	b.ls .LBB276_6
+	b.ls .LBB279_6
 		// src/f32/neon/quat.rs:230
 		let four_ysq = omm22 + dif10;
 	fadd s5, s5, s7
@@ -194,8 +194,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul v2.4s, v3.4s, v7.s[0]
 		// src/f32/neon/quat.rs:218
 		if dif10 <= 0.0 {
-	b .LBB276_7
-.LBB276_5:
+	b .LBB279_7
+.LBB279_5:
 		// src/f32/neon/quat.rs:245
 		let four_zsq = opm22 - sum10;
 	fsub s6, s16, s7
@@ -222,8 +222,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul v2.4s, v2.4s, v3.4s
 		// src/f32/neon/quat.rs:243
 		if sum10 <= 0.0 {
-	b .LBB276_7
-.LBB276_6:
+	b .LBB279_7
+.LBB279_6:
 		// src/f32/neon/quat.rs:220
 		let four_xsq = omm22 - dif10;
 	trn1 v6.4s, v3.4s, v4.4s
@@ -247,11 +247,11 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/neon/quat.rs:223
 		four_xsq * inv4x,
 	fmul v2.4s, v6.4s, v3.s[0]
-.LBB276_7:
+.LBB279_7:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str q2, [x0]
-		// src/f32/neon/mat4.rs:275
+		// src/f32/neon/mat4.rs:325
 		let translation = self.w_axis.xyz();
 	ldr q2, [x1, #48]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491

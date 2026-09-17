@@ -3,13 +3,13 @@
 .type	gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_transpose_vec3a,@function
 gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_transpose_vec3a:
 	.cfi_startproc
-		// src/f32/neon/mat3a.rs:810
+		// src/f32/neon/mat3a.rs:905
 		self.x_axis.dot(rhs),
 	ldp q2, q3, [x1]
 		// src/f32/neon/vec3a.rs:256
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	zip1 v16.4s, v0.4s, v0.4s
-		// src/f32/neon/mat3a.rs:812
+		// src/f32/neon/mat3a.rs:907
 		self.z_axis.dot(rhs),
 	ldr q6, [x1, #32]
 	fmov s1, #1.00000000

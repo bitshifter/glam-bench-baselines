@@ -3,10 +3,10 @@
 .type	gungraun::affine2_inverse::__gungraun_wrapper_mod::affine2_inverse,@function
 gungraun::affine2_inverse::__gungraun_wrapper_mod::affine2_inverse:
 	.cfi_startproc
-		// src/f32/neon/mat2.rs:330
+		// src/f32/neon/mat2.rs:414
 		let abcd = self.0;
 	ldr q0, [x1]
-	adrp x8, .LCPI208_0
+	adrp x8, .LCPI209_0
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
 	rev64 v1.4s, v0.4s
@@ -21,7 +21,7 @@ gungraun::affine2_inverse::__gungraun_wrapper_mod::affine2_inverse:
 	fsub v1.4s, v2.4s, v1.4s
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/aarch64/neon/generated.rs:7921
 		unsafe { simd_div(a, b) }
-	ldr q2, [x8, :lo12:.LCPI208_0]
+	ldr q2, [x8, :lo12:.LCPI209_0]
 	fdiv v1.4s, v2.4s, v1.4s
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
@@ -49,6 +49,6 @@ gungraun::affine2_inverse::__gungraun_wrapper_mod::affine2_inverse:
 	str d0, [x0, #16]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:588
+		// benches/gungraun.rs:594
 		}
 	ret

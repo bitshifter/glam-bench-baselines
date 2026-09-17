@@ -9,15 +9,15 @@ gungraun::quat_mul_quat::__gungraun_wrapper_mod::quat_mul_quat:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
 	fmov v2.4s, #1.00000000
-	adrp x8, .LCPI188_0
+	adrp x8, .LCPI189_0
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
 	ext v5.16b, v1.16b, v1.16b, #8
-	adrp x9, .LCPI188_1
+	adrp x9, .LCPI189_1
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
-	ldr q6, [x8, :lo12:.LCPI188_0]
-	ldr q7, [x9, :lo12:.LCPI188_1]
+	ldr q6, [x8, :lo12:.LCPI189_0]
+	ldr q7, [x9, :lo12:.LCPI189_1]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
 	ext v4.16b, v3.16b, v3.16b, #8

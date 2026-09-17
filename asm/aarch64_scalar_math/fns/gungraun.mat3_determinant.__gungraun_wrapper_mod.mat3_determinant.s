@@ -7,7 +7,7 @@ gungraun::mat3_determinant::__gungraun_wrapper_mod::mat3_determinant:
 	.cfi_startproc
 	sub sp, sp, #16
 	.cfi_def_cfa_offset 16
-		// src/f32/mat3.rs:515
+		// src/f32/mat3.rs:610
 		self.x_axis.dot(self.y_axis.cross(self.z_axis))
 	ldur d0, [x0, #12]
 	ldr d1, [x0, #24]
@@ -17,7 +17,7 @@ gungraun::mat3_determinant::__gungraun_wrapper_mod::mat3_determinant:
 		self.x * rhs.y - rhs.x * self.y,
 	dup v2.2s, v0.s[0]
 	dup v3.2s, v1.s[0]
-		// src/f32/mat3.rs:515
+		// src/f32/mat3.rs:610
 		self.x_axis.dot(self.y_axis.cross(self.z_axis))
 	ldp s6, s5, [x0, #16]
 		// src/f32/vec3.rs:264
@@ -32,7 +32,7 @@ gungraun::mat3_determinant::__gungraun_wrapper_mod::mat3_determinant:
 		self.x * rhs.y - rhs.x * self.y,
 	fmul v1.2s, v2.2s, v1.2s
 	fmul v0.2s, v0.2s, v3.2s
-		// src/f32/mat3.rs:515
+		// src/f32/mat3.rs:610
 		self.x_axis.dot(self.y_axis.cross(self.z_axis))
 	ldur d3, [x0, #4]
 		// src/f32/vec3.rs:262
@@ -41,7 +41,7 @@ gungraun::mat3_determinant::__gungraun_wrapper_mod::mat3_determinant:
 		// src/f32/vec3.rs:264
 		self.x * rhs.y - rhs.x * self.y,
 	fsub v0.2s, v1.2s, v0.2s
-		// src/f32/mat3.rs:515
+		// src/f32/mat3.rs:610
 		self.x_axis.dot(self.y_axis.cross(self.z_axis))
 	ldr s1, [x0]
 		// src/f32/vec3.rs:247

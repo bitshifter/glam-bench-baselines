@@ -2,12 +2,12 @@
 	.p2align	2
 .type	gungraun::vec3_dot::__gungraun_wrapper_mod::vec3_dot,@function
 gungraun::vec3_dot::__gungraun_wrapper_mod::vec3_dot:
-		// benches/gungraun.rs:549
+		// benches/gungraun.rs:555
 		#[bench::args(vec3(), vec3())]
 	.cfi_startproc
 	sub sp, sp, #16
 	.cfi_def_cfa_offset 16
-		// benches/gungraun.rs:551
+		// benches/gungraun.rs:557
 		black_box(v1.dot(v2))
 	ldr s0, [x0]
 	ldur d1, [x0, #4]
@@ -26,7 +26,7 @@ gungraun::vec3_dot::__gungraun_wrapper_mod::vec3_dot:
 	str s0, [sp, #12]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:552
+		// benches/gungraun.rs:558
 		}
 	ldr s0, [sp, #12]
 	add sp, sp, #16

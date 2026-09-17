@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9945
+pid: 9834
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00006 00006 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71736
+desc: Timerange: Basic block 0 - 71290
 desc: Trigger: Program termination
 
 positions: line
@@ -142,16 +142,6 @@ fe=./nptl/./nptl/pthread_attr_destroy.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
 fl=???
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=2 0 
-0 160
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 320
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -165,16 +155,6 @@ cfn=__init_cpu_features
 calls=1 0 
 145 160
 fe=???
-
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
-0 150
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
-calls=1 0 
-0 6
-0 4
-
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
-0 6
 
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
@@ -200,10 +180,15 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 160
 
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+0 150
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
 calls=1 0 
-0 160
+0 6
+0 4
+
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
+0 6
 
 fn=gungraun::main
 cfn=std::env::args
@@ -262,8 +247,18 @@ cfn=free'2
 calls=5 3363 
 0 320
 
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+calls=1 0 
+0 160
+
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
+calls=1 0 
+0 160
+
+fn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
 0 160
 
@@ -272,9 +267,14 @@ cfn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
 calls=1 0 
 0 160
 
-fn=std::sys::pal::unix::stack_overflow::imp::make_handler
-cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-calls=1 0 
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=2 0 
 0 160
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 320
 
 totals: 160

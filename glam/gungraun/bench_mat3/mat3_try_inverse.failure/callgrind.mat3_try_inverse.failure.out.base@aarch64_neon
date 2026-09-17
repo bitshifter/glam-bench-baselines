@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9887
+pid: 9773
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00001 00007 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71735
+desc: Timerange: Basic block 0 - 71289
 desc: Trigger: Program termination
 
 positions: line
@@ -20,33 +20,6 @@ summary: 38
 
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 38
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
-fl=./csu/../sysdeps/nptl/libc_start_call_main.h
-fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
-cfi=???
-cfn=main
-calls=1 0 
-58 38
-
-fl=./nptl/./nptl/pthread_getattr_np.c
-fn=pthread_getattr_np@@GLIBC_2.32
-fi=???
-cfi=./nptl/./nptl/pthread_attr_destroy.c
-cfn=pthread_attr_destroy
-calls=1 26 
-0 38
-fe=./nptl/./nptl/pthread_getattr_np.c
-
 fl=./stdlib/./stdlib/cxa_atexit.c
 fn=__cxa_atexit
 cfn=__internal_atexit
@@ -113,6 +86,33 @@ cfn=init_have_lse_atomics
 calls=1 0 
 145 38
 
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 38
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
+fl=./csu/../sysdeps/nptl/libc_start_call_main.h
+fn=(below main)
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cfi=???
+cfn=main
+calls=1 0 
+58 38
+
+fl=./nptl/./nptl/pthread_getattr_np.c
+fn=pthread_getattr_np@@GLIBC_2.32
+fi=???
+cfi=./nptl/./nptl/pthread_attr_destroy.c
+cfn=pthread_attr_destroy
+calls=1 26 
+0 38
+fe=./nptl/./nptl/pthread_getattr_np.c
+
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
 fl=???
 fn=(below main)
@@ -139,15 +139,6 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 76
 
-fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
-0 32
-cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse'2
-calls=1 0 
-0 6
-
-fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse'2
-0 6
-
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -169,6 +160,11 @@ calls=1 0
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 38
+
+fn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
 calls=1 0 
 0 38
 
@@ -239,10 +235,14 @@ cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_failure::failure
 calls=1 0 
 0 38
 
-fn=gungraun::mat3_try_inverse::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
+fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse
+0 32
+cfn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse'2
 calls=1 0 
-0 38
+0 6
+
+fn=gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse'2
+0 6
 
 fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info

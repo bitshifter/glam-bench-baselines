@@ -2,7 +2,7 @@
 	.p2align	2
 .type	gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation,@function
 gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation:
-		// benches/gungraun.rs:579
+		// benches/gungraun.rs:585
 		#[bench::args(vec2(), bb_f32(), vec2())]
 	.cfi_startproc
 	sub sp, sp, #80
@@ -34,7 +34,7 @@ gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mov v2.16b, v0.16b
-		// src/f32/neon/mat2.rs:133
+		// src/f32/neon/mat2.rs:173
 		Self::new(cos, sin, -sin, cos)
 	fneg s3, s1
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -52,7 +52,7 @@ gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_
 	//APP
 	//NO_APP
 	.cfi_def_cfa wsp, 80
-		// benches/gungraun.rs:582
+		// benches/gungraun.rs:588
 		}
 	ldp x29, x30, [sp, #48]
 	ldr x19, [sp, #64]

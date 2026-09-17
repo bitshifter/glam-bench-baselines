@@ -3,7 +3,7 @@
 .type	gungraun::mat3_mul_vec3::__gungraun_wrapper_mod::mat3_mul_vec3,@function
 gungraun::mat3_mul_vec3::__gungraun_wrapper_mod::mat3_mul_vec3:
 	.cfi_startproc
-		// src/f32/mat3.rs:700
+		// src/f32/mat3.rs:795
 		let mut res = self.x_axis.mul(rhs.x);
 	ldp s0, s1, [x2]
 		// benches/gungraun.rs:259
@@ -19,7 +19,7 @@ gungraun::mat3_mul_vec3::__gungraun_wrapper_mod::mat3_mul_vec3:
 	fmul v3.2s, v3.2s, v1.s[0]
 	fmul s0, s4, s0
 	fmul s1, s5, s1
-		// src/f32/mat3.rs:702
+		// src/f32/mat3.rs:797
 		res = res.add(self.z_axis.mul(rhs.z));
 	ldr s4, [x2, #8]
 		// benches/gungraun.rs:259

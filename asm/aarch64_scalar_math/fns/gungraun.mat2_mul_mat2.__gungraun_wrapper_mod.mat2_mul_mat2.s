@@ -7,7 +7,7 @@ gungraun::mat2_mul_mat2::__gungraun_wrapper_mod::mat2_mul_mat2:
 		black_box(m1 * m2)
 	ldp d0, d1, [x1]
 	ldr q2, [x2]
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	trn1 v3.4s, v2.4s, v2.4s
 	trn2 v2.4s, v2.4s, v2.4s
@@ -15,7 +15,7 @@ gungraun::mat2_mul_mat2::__gungraun_wrapper_mod::mat2_mul_mat2:
 		black_box(m1 * m2)
 	mov v0.d[1], v0.d[0]
 	mov v1.d[1], v1.d[0]
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	fmul v0.4s, v0.4s, v3.4s
 	fmul v1.4s, v1.4s, v2.4s

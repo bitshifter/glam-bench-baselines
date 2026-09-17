@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9921
+pid: 9809
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00004 00002 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71754
+desc: Timerange: Basic block 0 - 71308
 desc: Trigger: Program termination
 
 positions: line
@@ -61,6 +61,15 @@ fi=./math/../sysdeps/ieee754/flt-32/s_sincosf.c
 fe=./math/../sysdeps/ieee754/flt-32/math_config.h
 
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
+fl=./elf/./elf/rtld.c
+fn=_dl_start
+fi=./elf/../sysdeps/aarch64/dl-start.S
+cfi=./elf/./elf/dl-init.c
+cfn=_dl_init
+calls=1 81 
+46 227
+fe=./elf/./elf/rtld.c
+
 fl=./elf/../sysdeps/aarch64/dl-start.S
 fn=(below main)
 cfi=./elf/./elf/rtld.c
@@ -77,15 +86,6 @@ cfn=(below main)
 calls=1 0 
 52 227
 fe=./elf/./elf/dl-init.c
-
-fl=./elf/./elf/rtld.c
-fn=_dl_start
-fi=./elf/../sysdeps/aarch64/dl-start.S
-cfi=./elf/./elf/dl-init.c
-cfn=_dl_init
-calls=1 81 
-46 227
-fe=./elf/./elf/rtld.c
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
 fl=./stdlib/./stdlib/cxa_atexit.c
@@ -183,16 +183,6 @@ fe=./nptl/./nptl/pthread_attr_destroy.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
 fl=???
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=2 0 
-0 227
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 454
-
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -231,11 +221,6 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 227
 
-fn=gungraun::quat_from_euler::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
-calls=1 0 
-0 227
-
 fn=gungraun::main
 cfn=std::env::args
 calls=1 0 
@@ -256,13 +241,6 @@ fn=gungraun::bench_quat::__run
 cfn=gungraun::quat_from_euler::__run_args
 calls=1 0 
 0 227
-
-fn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
-0 5
-cfn=<glam::f32::neon::quat::Quat as glam::euler::FromEuler>::from_euler_angles
-calls=1 0 
-0 219
-0 3
 
 fn=main
 cfn=std::rt::lang_start_internal
@@ -310,6 +288,32 @@ cfn=gungraun::quat_from_euler::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 227
 
+fn=gungraun::quat_from_euler::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
+calls=1 0 
+0 227
+
+fn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 227
+
+fn=gungraun::quat_from_euler::__gungraun_wrapper_mod::quat_from_euler
+0 8
+cfn=<glam::f32::neon::quat::Quat as glam::euler::FromEuler>::from_euler_angles
+calls=1 0 
+0 219
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=2 0 
+0 227
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 454
+
 fn=<glam::f32::neon::quat::Quat as glam::euler::FromEuler>::from_euler_angles
 0 26
 cfn=<glam::f32::neon::quat::Quat as glam::euler::FromEuler>::from_euler_angles'2
@@ -328,10 +332,5 @@ calls=3 67
 0 105
 0 47
 0 20
-
-fn=std::sys::pal::unix::stack_overflow::imp::make_handler
-cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
-calls=1 0 
-0 227
 
 totals: 227

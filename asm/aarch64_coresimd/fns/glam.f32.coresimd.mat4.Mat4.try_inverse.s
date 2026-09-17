@@ -4,13 +4,13 @@
 .type	<glam::f32::coresimd::mat4::Mat4>::try_inverse,@function
 <glam::f32::coresimd::mat4::Mat4>::try_inverse:
 	.cfi_startproc
-		// src/f32/coresimd/mat4.rs:686
+		// src/f32/coresimd/mat4.rs:797
 		let swp0a = simd_swizzle!(self.w_axis.0, self.z_axis.0, [3, 3, 7, 7]);
 	ldp q4, q3, [x0, #32]
 		// ~/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/ops.rs:38
 		unsafe { core::intrinsics::simd::$simd_call($lhs, $rhs) }
 	fmov v0.4s, #1.00000000
-		// src/f32/coresimd/mat4.rs:689
+		// src/f32/coresimd/mat4.rs:800
 		let swp00 = simd_swizzle!(self.z_axis.0, self.y_axis.0, [2, 2, 6, 6]);
 	ldp q1, q2, [x0]
 		// ~/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/swizzle.rs:88
@@ -119,24 +119,17 @@
 	fmul v1.4s, v1.4s, v5.4s
 		// ~/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/swizzle.rs:88
 		core::intrinsics::simd::simd_shuffle(
-	dup v5.4s, v1.s[1]
-	dup v6.4s, v1.s[2]
+	dup v5.2d, v1.d[1]
 		// ~/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/ops.rs:38
 		unsafe { core::intrinsics::simd::$simd_call($lhs, $rhs) }
-	fadd v5.4s, v1.4s, v5.4s
-		// ~/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/swizzle.rs:88
-		core::intrinsics::simd::simd_shuffle(
-	dup v1.4s, v1.s[3]
-		// ~/.rustup/toolchains/nightly-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/ops.rs:38
-		unsafe { core::intrinsics::simd::$simd_call($lhs, $rhs) }
-	fadd v5.4s, v6.4s, v5.4s
 	fadd v1.4s, v1.4s, v5.4s
-		// src/f32/coresimd/mat4.rs:817
+	faddp s1, v1.2s
+		// src/f32/coresimd/mat4.rs:924
 		if dot0 == 0.0 {
 	fcmp s1, #0.0
 	b.ne .LBB3_2
 	stp xzr, xzr, [x8]
-		// src/f32/coresimd/mat4.rs:858
+		// src/f32/coresimd/mat4.rs:965
 		}
 	ret
 .LBB3_2:
@@ -151,11 +144,11 @@
 	fmul v2.4s, v2.4s, v1.s[0]
 	fmul v3.4s, v3.4s, v1.s[0]
 	fmul v1.4s, v4.4s, v1.s[0]
-		// src/f32/coresimd/mat4.rs:854
+		// src/f32/coresimd/mat4.rs:961
 		Some(m)
 	stp q0, q2, [x8, #16]
 	stp q3, q1, [x8, #48]
 	stp x9, xzr, [x8]
-		// src/f32/coresimd/mat4.rs:858
+		// src/f32/coresimd/mat4.rs:965
 		}
 	ret

@@ -3,7 +3,7 @@
 .type	gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2,@function
 gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 	.cfi_startproc
-		// benches/gungraun.rs:593
+		// benches/gungraun.rs:599
 		black_box(a1 * a2)
 	ldr d0, [x2, #16]
 	ldr q1, [x2]
@@ -26,7 +26,7 @@ gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 	mov v4.16b, v3.16b
 	zip2 v3.2d, v3.2d, v1.2d
 	mov v4.d[1], v1.d[0]
-		// benches/gungraun.rs:593
+		// benches/gungraun.rs:599
 		black_box(a1 * a2)
 	ldr d1, [x1, #16]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
@@ -44,6 +44,6 @@ gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 	str d0, [x0, #16]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:594
+		// benches/gungraun.rs:600
 		}
 	ret

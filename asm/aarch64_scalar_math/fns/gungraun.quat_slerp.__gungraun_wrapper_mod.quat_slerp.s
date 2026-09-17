@@ -52,7 +52,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/scalar/quat.rs:769
 		if dot > DOT_THRESHOLD {
 	fcmp s0, s4
-	b.le .LBB148_2
+	b.le .LBB149_2
 	fmov s0, #1.00000000
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
@@ -81,8 +81,8 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/scalar/vec4.rs:630
 		1.0 / self.length()
 	fdiv s0, s0, s2
-	b .LBB148_3
-.LBB148_2:
+	b .LBB149_3
+.LBB149_2:
 	mov w8, #31276
 	stur q2, [x29, #-32]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1632
@@ -192,7 +192,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	fadd v1.4s, v1.4s, v2.4s
-.LBB148_3:
+.LBB149_3:
 	fmul v0.4s, v1.4s, v0.s[0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
