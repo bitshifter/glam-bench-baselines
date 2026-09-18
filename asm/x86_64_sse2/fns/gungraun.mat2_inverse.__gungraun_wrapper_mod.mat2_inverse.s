@@ -18,7 +18,7 @@ gungraun::mat2_inverse::__gungraun_wrapper_mod::mat2_inverse:
 	subps xmm2, xmm1
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:114
 		unsafe { simd_div(a, b) }
-	movaps xmm1, xmmword ptr [rip + .LCPI164_0]
+	movaps xmm1, xmmword ptr [rip + .LCPI165_0]
 	divps xmm1, xmm2
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(

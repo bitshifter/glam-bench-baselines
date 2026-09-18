@@ -3,10 +3,10 @@
 .type	gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant,@function
 gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant:
 	.cfi_startproc
-		// src/f32/sse2/mat3a.rs:594
-		self.z_axis.dot(self.x_axis.cross(self.y_axis))
-	movaps xmm0, xmmword ptr [rdi]
-	movaps xmm1, xmmword ptr [rdi + 16]
+		// src/f32/sse2/mat3a.rs:689
+		self.x_axis.dot(self.y_axis.cross(self.z_axis))
+	movaps xmm0, xmmword ptr [rdi + 16]
+	movaps xmm1, xmmword ptr [rdi + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
 	movaps xmm2, xmm0
@@ -28,7 +28,7 @@ gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant:
 	shufps xmm2, xmm2, 210
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
 		unsafe { simd_mul(a, b) }
-	mulps xmm2, xmmword ptr [rdi + 32]
+	mulps xmm2, xmmword ptr [rdi]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:23
 		unsafe { simd_insert!(a, 0, _mm_cvtss_f32(a) + _mm_cvtss_f32(b)) }
 	movaps xmm0, xmm2

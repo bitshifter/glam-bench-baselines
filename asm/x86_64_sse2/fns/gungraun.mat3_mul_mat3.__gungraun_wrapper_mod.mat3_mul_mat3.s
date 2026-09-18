@@ -3,18 +3,18 @@
 .type	gungraun::mat3_mul_mat3::__gungraun_wrapper_mod::mat3_mul_mat3,@function
 gungraun::mat3_mul_mat3::__gungraun_wrapper_mod::mat3_mul_mat3:
 	.cfi_startproc
-		// src/f32/mat3.rs:956
+		// src/f32/mat3.rs:1051
 		self.mul(rhs.x_axis),
 	movss xmm1, dword ptr [rsi + 32]
 	movups xmm2, xmmword ptr [rsi]
 	movss xmm0, dword ptr [rsi + 20]
-		// src/f32/mat3.rs:700
+		// src/f32/mat3.rs:795
 		let mut res = self.x_axis.mul(rhs.x);
 	movsd xmm4, qword ptr [rdx]
-		// src/f32/mat3.rs:702
+		// src/f32/mat3.rs:797
 		res = res.add(self.z_axis.mul(rhs.z));
 	movups xmm3, xmmword ptr [rdx + 8]
-		// src/f32/mat3.rs:956
+		// src/f32/mat3.rs:1051
 		self.mul(rhs.x_axis),
 	movups xmm5, xmmword ptr [rsi + 16]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -57,14 +57,14 @@ gungraun::mat3_mul_mat3::__gungraun_wrapper_mod::mat3_mul_mat3:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movups xmmword ptr [rdi], xmm3
-		// src/f32/mat3.rs:958
+		// src/f32/mat3.rs:1053
 		self.mul(rhs.z_axis),
 	movsd xmm3, qword ptr [rdx + 28]
 	movss xmm5, dword ptr [rdx + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mulss xmm5, xmm1
-		// src/f32/mat3.rs:956
+		// src/f32/mat3.rs:1051
 		self.mul(rhs.x_axis),
 	movsd xmm6, qword ptr [rsi + 24]
 	movsd xmm8, qword ptr [rsi + 4]
@@ -72,7 +72,7 @@ gungraun::mat3_mul_mat3::__gungraun_wrapper_mod::mat3_mul_mat3:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mulss xmm9, dword ptr [rdx + 24]
-		// src/f32/mat3.rs:957
+		// src/f32/mat3.rs:1052
 		self.mul(rhs.y_axis),
 	movups xmm10, xmmword ptr [rdx + 12]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350

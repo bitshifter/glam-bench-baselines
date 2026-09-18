@@ -3,19 +3,19 @@
 .type	gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4,@function
 gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 	.cfi_startproc
-		// src/f32/scalar/mat4.rs:1363
+		// src/f32/scalar/mat4.rs:1476
 		let mut res = self.x_axis.mul(rhs.x);
 	movups xmm2, xmmword ptr [rdx]
-		// src/f32/scalar/mat4.rs:1364
+		// src/f32/scalar/mat4.rs:1477
 		res = res.add(self.y_axis.mul(rhs.y));
 	movups xmm3, xmmword ptr [rdx + 4]
-		// src/f32/scalar/mat4.rs:1365
+		// src/f32/scalar/mat4.rs:1478
 		res = res.add(self.z_axis.mul(rhs.z));
 	movups xmm5, xmmword ptr [rdx + 8]
-		// src/f32/scalar/mat4.rs:1366
+		// src/f32/scalar/mat4.rs:1479
 		res = res.add(self.w_axis.mul(rhs.w));
 	movups xmm4, xmmword ptr [rdx + 12]
-		// src/f32/scalar/mat4.rs:1632
+		// src/f32/scalar/mat4.rs:1745
 		self.mul(rhs.x_axis),
 	movups xmm1, xmmword ptr [rsi]
 	movups xmm0, xmmword ptr [rsi + 16]
@@ -28,7 +28,7 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm3, xmm2
-		// src/f32/scalar/mat4.rs:1632
+		// src/f32/scalar/mat4.rs:1745
 		self.mul(rhs.x_axis),
 	movups xmm2, xmmword ptr [rsi + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -38,7 +38,7 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm5, xmm3
-		// src/f32/scalar/mat4.rs:1632
+		// src/f32/scalar/mat4.rs:1745
 		self.mul(rhs.x_axis),
 	movups xmm3, xmmword ptr [rsi + 48]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -48,13 +48,13 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm4, xmm5
-		// src/f32/scalar/mat4.rs:1633
+		// src/f32/scalar/mat4.rs:1746
 		self.mul(rhs.y_axis),
 	movups xmm5, xmmword ptr [rdx + 16]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movups xmmword ptr [rdi], xmm4
-		// src/f32/scalar/mat4.rs:1633
+		// src/f32/scalar/mat4.rs:1746
 		self.mul(rhs.y_axis),
 	movups xmm4, xmmword ptr [rdx + 20]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -66,7 +66,7 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm4, xmm5
-		// src/f32/scalar/mat4.rs:1633
+		// src/f32/scalar/mat4.rs:1746
 		self.mul(rhs.y_axis),
 	movups xmm5, xmmword ptr [rdx + 24]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -76,7 +76,7 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm5, xmm4
-		// src/f32/scalar/mat4.rs:1633
+		// src/f32/scalar/mat4.rs:1746
 		self.mul(rhs.y_axis),
 	movups xmm4, xmmword ptr [rdx + 28]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -86,13 +86,13 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm4, xmm5
-		// src/f32/scalar/mat4.rs:1634
+		// src/f32/scalar/mat4.rs:1747
 		self.mul(rhs.z_axis),
 	movups xmm5, xmmword ptr [rdx + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movups xmmword ptr [rdi + 16], xmm4
-		// src/f32/scalar/mat4.rs:1634
+		// src/f32/scalar/mat4.rs:1747
 		self.mul(rhs.z_axis),
 	movups xmm4, xmmword ptr [rdx + 36]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -104,7 +104,7 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm4, xmm5
-		// src/f32/scalar/mat4.rs:1634
+		// src/f32/scalar/mat4.rs:1747
 		self.mul(rhs.z_axis),
 	movups xmm5, xmmword ptr [rdx + 40]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -114,7 +114,7 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm5, xmm4
-		// src/f32/scalar/mat4.rs:1634
+		// src/f32/scalar/mat4.rs:1747
 		self.mul(rhs.z_axis),
 	movups xmm4, xmmword ptr [rdx + 44]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -127,7 +127,7 @@ gungraun::mat4_mul_mat4::__gungraun_wrapper_mod::mat4_mul_mat4:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movups xmmword ptr [rdi + 32], xmm4
-		// src/f32/scalar/mat4.rs:1635
+		// src/f32/scalar/mat4.rs:1748
 		self.mul(rhs.w_axis),
 	movups xmm4, xmmword ptr [rdx + 48]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350

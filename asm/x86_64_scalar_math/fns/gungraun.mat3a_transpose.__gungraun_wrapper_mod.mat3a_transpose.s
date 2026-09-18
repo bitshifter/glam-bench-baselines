@@ -3,12 +3,12 @@
 .type	gungraun::mat3a_transpose::__gungraun_wrapper_mod::mat3a_transpose,@function
 gungraun::mat3a_transpose::__gungraun_wrapper_mod::mat3a_transpose:
 	.cfi_startproc
-		// src/f32/scalar/mat3a.rs:568
+		// src/f32/scalar/mat3a.rs:663
 		z_axis: Vec3A::new(self.x_axis.z, self.y_axis.z, self.z_axis.z),
 	movss xmm0, dword ptr [rsi + 8]
 	movss xmm1, dword ptr [rsi + 24]
 	movss xmm2, dword ptr [rsi + 40]
-		// src/f32/scalar/mat3a.rs:566
+		// src/f32/scalar/mat3a.rs:661
 		x_axis: Vec3A::new(self.x_axis.x, self.y_axis.x, self.z_axis.x),
 	movsd xmm3, qword ptr [rsi]
 	movsd xmm4, qword ptr [rsi + 16]

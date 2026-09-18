@@ -9,7 +9,7 @@ gungraun::vec3a_lerp::__gungraun_wrapper_mod::vec3a_lerp:
 	movaps xmm2, xmmword ptr [rdx]
 		// src/f32/scalar/vec3a.rs:986
 		self * (1.0 - s) + rhs * s
-	movaps xmm3, xmmword ptr [rip + .LCPI152_0]
+	movaps xmm3, xmmword ptr [rip + .LCPI153_0]
 	movss xmm3, xmm0
 	movq xmm0, xmm0
 	xorps xmm4, xmm4

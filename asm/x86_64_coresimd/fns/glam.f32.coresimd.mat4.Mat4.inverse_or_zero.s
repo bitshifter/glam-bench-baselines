@@ -3,17 +3,17 @@
 	.prefalign	4, .Lfunc_end4, nop
 .type	<glam::f32::coresimd::mat4::Mat4>::inverse_or_zero,@function
 <glam::f32::coresimd::mat4::Mat4>::inverse_or_zero:
-		// src/f32/coresimd/mat4.rs:856
+		// src/f32/coresimd/mat4.rs:969
 		pub fn inverse_or_zero(&self) -> Self {
 	.cfi_startproc
 	mov rax, rdi
-		// src/f32/coresimd/mat4.rs:764
+		// src/f32/coresimd/mat4.rs:877
 		let temp0 = simd_swizzle!(self.y_axis.0, self.x_axis.0, [0, 0, 4, 4]);
 	movaps xmm1, xmmword ptr [rsi]
-		// src/f32/coresimd/mat4.rs:687
+		// src/f32/coresimd/mat4.rs:800
 		let swp00 = simd_swizzle!(self.z_axis.0, self.y_axis.0, [2, 2, 6, 6]);
 	movaps xmm0, xmmword ptr [rsi + 16]
-		// src/f32/coresimd/mat4.rs:684
+		// src/f32/coresimd/mat4.rs:797
 		let swp0a = simd_swizzle!(self.w_axis.0, self.z_axis.0, [3, 3, 7, 7]);
 	movaps xmm10, xmmword ptr [rsi + 32]
 	movaps xmm5, xmmword ptr [rsi + 48]
@@ -150,13 +150,13 @@
 		// ~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../portable-simd/crates/core_simd/src/ops.rs:38
 		unsafe { core::intrinsics::simd::$simd_call($lhs, $rhs) }
 	addps xmm1, xmm2
-		// src/coresimd.rs:224
+		// src/coresimd.rs:220
 		dot4_in_x(lhs, rhs)[0]
 	movaps xmm2, xmm1
 	shufps xmm2, xmm1, 85
 	addss xmm2, xmm1
 	xorps xmm1, xmm1
-		// src/f32/coresimd/mat4.rs:811
+		// src/f32/coresimd/mat4.rs:924
 		if dot0 == 0.0 {
 	ucomiss xmm2, xmm1
 	xorps xmm1, xmm1
@@ -184,12 +184,12 @@
 	movaps xmm4, xmm9
 	movaps xmm6, xmm8
 .LBB4_2:
-		// src/f32/coresimd/mat4.rs:857
+		// src/f32/coresimd/mat4.rs:970
 		self.inverse_checked::<true>().0
 	movaps xmmword ptr [rax], xmm6
 	movaps xmmword ptr [rax + 16], xmm4
 	movaps xmmword ptr [rax + 32], xmm3
 	movaps xmmword ptr [rax + 48], xmm1
-		// src/f32/coresimd/mat4.rs:858
+		// src/f32/coresimd/mat4.rs:971
 		}
 	ret

@@ -5,7 +5,7 @@ gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp:
 		// benches/gungraun.rs:441
 		#[bench::positive_dot(quat(), quat_rot_x_180(), bb_f32())]
 	.cfi_startproc
-	movss xmm1, dword ptr [rip + .LCPI292_0]
+	movss xmm1, dword ptr [rip + .LCPI295_0]
 		// src/f32/scalar/quat.rs:705
 		(self * (1.0 - s) + end * s).normalize()
 	movaps xmm2, xmm1
@@ -33,7 +33,7 @@ gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp:
 	xor eax, eax
 	ucomiss xmm6, xmm4
 	setb al
-	lea rcx, [rip + .LCPI292_1]
+	lea rcx, [rip + .LCPI295_1]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	movss xmm4, dword ptr [rcx + 4*rax]

@@ -3,18 +3,18 @@
 .type	gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant,@function
 gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant:
 	.cfi_startproc
-		// src/f32/scalar/mat3a.rs:583
-		self.z_axis.dot(self.x_axis.cross(self.y_axis))
-	movss xmm0, dword ptr [rdi + 8]
-	movss xmm1, dword ptr [rdi + 24]
-	movsd xmm2, qword ptr [rdi + 36]
-	movsd xmm3, qword ptr [rdi]
-	movsd xmm4, qword ptr [rdi + 16]
-	movss xmm5, dword ptr [rdi + 4]
+		// src/f32/scalar/mat3a.rs:678
+		self.x_axis.dot(self.y_axis.cross(self.z_axis))
+	movss xmm0, dword ptr [rdi + 24]
+	movss xmm1, dword ptr [rdi + 40]
+	movsd xmm2, qword ptr [rdi + 4]
+	movsd xmm3, qword ptr [rdi + 16]
+	movsd xmm4, qword ptr [rdi + 32]
+	movss xmm5, dword ptr [rdi + 20]
 		// src/f32/scalar/vec3a.rs:273
 		self.y * rhs.z - rhs.y * self.z,
 	mulss xmm5, xmm1
-	movss xmm6, dword ptr [rdi + 20]
+	movss xmm6, dword ptr [rdi + 36]
 	mulss xmm6, xmm0
 	subss xmm5, xmm6
 		// src/f32/scalar/vec3a.rs:275
@@ -30,7 +30,7 @@ gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant:
 		// src/f32/scalar/vec3a.rs:258
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	mulps xmm6, xmm2
-	mulss xmm5, dword ptr [rdi + 32]
+	mulss xmm5, dword ptr [rdi]
 	addss xmm5, xmm6
 	shufps xmm6, xmm6, 85
 	addss xmm6, xmm5

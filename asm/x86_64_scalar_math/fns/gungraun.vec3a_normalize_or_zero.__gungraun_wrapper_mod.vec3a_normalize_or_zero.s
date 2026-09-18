@@ -24,7 +24,7 @@ gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_ze
 		intrinsics::sqrtf32(x)
 	xorps xmm1, xmm1
 	sqrtss xmm1, xmm2
-	movss xmm2, dword ptr [rip + .LCPI268_0]
+	movss xmm2, dword ptr [rip + .LCPI271_0]
 		// src/f32/scalar/vec3a.rs:597
 		1.0 / self.length()
 	divss xmm2, xmm1

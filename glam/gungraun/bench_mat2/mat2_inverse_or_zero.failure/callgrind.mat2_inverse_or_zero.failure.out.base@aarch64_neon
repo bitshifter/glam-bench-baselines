@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9755
+pid: 6793
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00000 00002 00001
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71288
+desc: Timerange: Basic block 0 - 70823
 desc: Trigger: Program termination
 
 positions: line
@@ -115,6 +115,38 @@ fe=./nptl/./nptl/pthread_getattr_np.c
 
 ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
 fl=???
+fn=std::env::args
+cfn=std::env::args_os
+calls=1 0 
+0 21
+
+fn=__rustc::__rdl_dealloc
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./malloc/./malloc/malloc.c
+cfn=free
+calls=2 3363 
+0 21
+
+fn=__rustc::__rdl_dealloc'2
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./malloc/./malloc/malloc.c
+cfn=free'2
+calls=5 3363 
+0 42
+
+fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+cfn=gungraun::main
+calls=1 0 
+0 21
+
+fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
+0 21
+
+fn=std::sys::pal::unix::stack_overflow::imp::make_handler
+cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
+calls=1 0 
+0 21
+
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
 cfi=./csu/../csu/libc-start.c
@@ -139,7 +171,9 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 42
 
-fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
+fn=gungraun::mat2_inverse_or_zero::__run_failure
+cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+calls=1 0 
 0 21
 
 fn=__init_cpu_features
@@ -166,8 +200,8 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 21
 
-fn=gungraun::mat2_inverse_or_zero::__run_failure
-cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
 calls=1 0 
 0 21
 
@@ -206,40 +240,6 @@ calls=1 0
 
 fn=gungraun::bench_mat2::__run
 cfn=gungraun::mat2_inverse_or_zero::__run_failure
-calls=1 0 
-0 21
-
-fn=std::env::args
-cfn=std::env::args_os
-calls=1 0 
-0 21
-
-fn=__rustc::__rdl_dealloc
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./malloc/./malloc/malloc.c
-cfn=free
-calls=2 3363 
-0 21
-
-fn=__rustc::__rdl_dealloc'2
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./malloc/./malloc/malloc.c
-cfn=free'2
-calls=5 3363 
-0 42
-
-fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-cfn=gungraun::main
-calls=1 0 
-0 21
-
-fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
-calls=1 0 
-0 21
-
-fn=std::sys::pal::unix::stack_overflow::imp::make_handler
-cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
 0 21
 

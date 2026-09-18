@@ -9,7 +9,7 @@ gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 	movaps xmm1, xmm0
 	shufps xmm1, xmm0, 156
 	movups xmm2, xmmword ptr [rdx]
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	movaps xmm3, xmm1
 	mulps xmm3, xmm2
@@ -26,7 +26,7 @@ gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 		translation: self.matrix2 * rhs.translation + self.translation,
 	movsd xmm2, qword ptr [rdx + 16]
 	movsd xmm3, qword ptr [rsi + 16]
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	shufps xmm0, xmm0, 230
 	mulps xmm1, xmm2
@@ -41,6 +41,6 @@ gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 	movlps qword ptr [rdi + 16], xmm2
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:594
+		// benches/gungraun.rs:600
 		}
 	ret

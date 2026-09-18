@@ -3,13 +3,13 @@
 .type	gungraun::mat3a_mul_vec3a::__gungraun_wrapper_mod::mat3a_mul_vec3a,@function
 gungraun::mat3a_mul_vec3a::__gungraun_wrapper_mod::mat3a_mul_vec3a:
 	.cfi_startproc
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	movss xmm2, dword ptr [rdx]
 	movss xmm0, dword ptr [rdx + 4]
 	movss xmm1, dword ptr [rdx + 8]
 	movss xmm3, dword ptr [rsi + 8]
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	mulss xmm3, xmm2
 	movss xmm4, dword ptr [rsi + 24]
@@ -23,7 +23,7 @@ gungraun::mat3a_mul_vec3a::__gungraun_wrapper_mod::mat3a_mul_vec3a:
 	movsd xmm4, qword ptr [rsi]
 	movsd xmm5, qword ptr [rsi + 16]
 	movsd xmm6, qword ptr [rsi + 32]
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	unpcklps xmm2, xmm2
 	mulps xmm2, xmm4

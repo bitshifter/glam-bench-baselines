@@ -11,70 +11,70 @@ gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_fro
 	unpckhpd xmm6, xmm0
 	movaps xmm4, xmm0
 	shufps xmm4, xmm0, 255
-		// src/f32/sse2/mat4.rs:189
+		// src/f32/sse2/mat4.rs:239
 		let x2 = x + x;
 	movaps xmm1, xmm0
 	addps xmm1, xmm0
-		// src/f32/sse2/mat4.rs:199
+		// src/f32/sse2/mat4.rs:249
 		let wy = w * y2;
 	movaps xmm8, xmm1
 	shufps xmm8, xmm1, 85
-		// src/f32/sse2/mat4.rs:193
+		// src/f32/sse2/mat4.rs:243
 		let xy = x * y2;
 	movaps xmm9, xmm0
 	mulss xmm9, xmm8
-		// src/f32/sse2/mat4.rs:199
+		// src/f32/sse2/mat4.rs:249
 		let wy = w * y2;
 	mulss xmm8, xmm4
-		// src/f32/sse2/mat4.rs:192
+		// src/f32/sse2/mat4.rs:242
 		let xx = x * x2;
 	movaps xmm7, xmm0
 	mulps xmm7, xmm1
-		// src/f32/sse2/mat4.rs:191
+		// src/f32/sse2/mat4.rs:241
 		let z2 = z + z;
 	movaps xmm10, xmm6
 	addss xmm10, xmm6
-		// src/f32/sse2/mat4.rs:194
+		// src/f32/sse2/mat4.rs:244
 		let xz = x * z2;
 	mulss xmm0, xmm10
-		// src/f32/sse2/mat4.rs:196
+		// src/f32/sse2/mat4.rs:246
 		let yz = y * z2;
 	mulss xmm2, xmm10
-		// src/f32/sse2/mat4.rs:197
+		// src/f32/sse2/mat4.rs:247
 		let zz = z * z2;
 	mulss xmm6, xmm10
-		// src/f32/sse2/mat4.rs:203
+		// src/f32/sse2/mat4.rs:253
 		let y_axis = Vec4::new(xy - wz, 1.0 - (xx + zz), yz + wx, 0.0);
 	movaps xmm11, xmm7
 	addss xmm11, xmm6
-		// src/f32/sse2/mat4.rs:200
+		// src/f32/sse2/mat4.rs:250
 		let wz = w * z2;
 	mulss xmm10, xmm4
-		// src/f32/sse2/mat4.rs:203
+		// src/f32/sse2/mat4.rs:253
 		let y_axis = Vec4::new(xy - wz, 1.0 - (xx + zz), yz + wx, 0.0);
-	movaps xmm5, xmmword ptr [rip + .LCPI280_0]
+	movaps xmm5, xmmword ptr [rip + .LCPI283_0]
 	movaps xmm3, xmm5
 	shufps xmm3, xmm9, 1
 	shufps xmm3, xmm9, 226
-		// src/f32/sse2/mat4.rs:202
+		// src/f32/sse2/mat4.rs:252
 		let x_axis = Vec4::new(1.0 - (yy + zz), xy + wz, xz - wy, 0.0);
 	movaps xmm12, xmm9
 	addss xmm12, xmm10
 	movaps xmm13, xmm0
 	subss xmm13, xmm8
-		// src/f32/sse2/mat4.rs:203
+		// src/f32/sse2/mat4.rs:253
 		let y_axis = Vec4::new(xy - wz, 1.0 - (xx + zz), yz + wx, 0.0);
 	unpcklps xmm10, xmm11
 	subps xmm3, xmm10
-		// src/f32/sse2/mat4.rs:204
+		// src/f32/sse2/mat4.rs:254
 		let z_axis = Vec4::new(xz + wy, yz - wx, 1.0 - (xx + yy), 0.0);
 	addss xmm0, xmm8
 	movaps xmm9, xmm7
 	shufps xmm9, xmm7, 85
-		// src/f32/sse2/mat4.rs:202
+		// src/f32/sse2/mat4.rs:252
 		let x_axis = Vec4::new(1.0 - (yy + zz), xy + wz, xz - wy, 0.0);
 	addss xmm6, xmm9
-	movss xmm8, dword ptr [rip + .LCPI280_1]
+	movss xmm8, dword ptr [rip + .LCPI283_1]
 	subss xmm8, xmm6
 		// src/f32/sse2/vec4.rs:113
 		unsafe { UnionCast { a: [x, y, z, w] }.v }
@@ -83,17 +83,17 @@ gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_fro
 	xorps xmm10, xmm10
 	movss xmm10, xmm13
 	movlhps xmm8, xmm10
-		// src/f32/sse2/mat4.rs:204
+		// src/f32/sse2/mat4.rs:254
 		let z_axis = Vec4::new(xz + wy, yz - wx, 1.0 - (xx + yy), 0.0);
 	addss xmm9, xmm7
-		// src/f32/sse2/mat4.rs:198
+		// src/f32/sse2/mat4.rs:248
 		let wx = w * x2;
 	mulss xmm1, xmm4
-		// src/f32/sse2/mat4.rs:204
+		// src/f32/sse2/mat4.rs:254
 		let z_axis = Vec4::new(xz + wy, yz - wx, 1.0 - (xx + yy), 0.0);
 	shufps xmm5, xmm2, 1
 	shufps xmm5, xmm2, 226
-		// src/f32/sse2/mat4.rs:203
+		// src/f32/sse2/mat4.rs:253
 		let y_axis = Vec4::new(xy - wz, 1.0 - (xx + zz), yz + wx, 0.0);
 	addss xmm2, xmm1
 		// src/f32/sse2/vec4.rs:113
@@ -101,7 +101,7 @@ gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_fro
 	xorps xmm4, xmm4
 	movlhps xmm4, xmm2
 	shufps xmm3, xmm4, 36
-		// src/f32/sse2/mat4.rs:204
+		// src/f32/sse2/mat4.rs:254
 		let z_axis = Vec4::new(xz + wy, yz - wx, 1.0 - (xx + yy), 0.0);
 	unpcklps xmm1, xmm9
 	subps xmm5, xmm1
@@ -134,8 +134,8 @@ gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_fro
 		// src/f32/sse2/vec4.rs:113
 		unsafe { UnionCast { a: [x, y, z, w] }.v }
 	movss xmm3, dword ptr [rdx]
-	shufpd xmm3, xmmword ptr [rip + .LCPI280_2], 2
-		// src/f32/sse2/mat4.rs:225
+	shufpd xmm3, xmmword ptr [rip + .LCPI283_2], 2
+		// src/f32/sse2/mat4.rs:275
 		Vec4::from((translation, 1.0)),
 	movsd xmm4, qword ptr [rdx + 4]
 		// src/f32/sse2/vec4.rs:113

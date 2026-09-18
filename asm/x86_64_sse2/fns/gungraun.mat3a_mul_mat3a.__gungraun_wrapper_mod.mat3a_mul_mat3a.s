@@ -3,16 +3,16 @@
 .type	gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a,@function
 gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	.cfi_startproc
-		// src/f32/sse2/mat3a.rs:1042
+		// src/f32/sse2/mat3a.rs:1137
 		self.mul(rhs.x_axis),
 	movaps xmm5, xmmword ptr [rsi]
 	movaps xmm4, xmmword ptr [rsi + 16]
 	movaps xmm3, xmmword ptr [rsi + 32]
 	movaps xmm0, xmmword ptr [rdx]
-		// src/f32/sse2/mat3a.rs:1043
+		// src/f32/sse2/mat3a.rs:1138
 		self.mul(rhs.y_axis),
 	movaps xmm1, xmmword ptr [rdx + 16]
-		// src/f32/sse2/mat3a.rs:1044
+		// src/f32/sse2/mat3a.rs:1139
 		self.mul(rhs.z_axis),
 	movaps xmm2, xmmword ptr [rdx + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173

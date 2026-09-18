@@ -3,7 +3,7 @@
 .type	gungraun::mat2_inverse::__gungraun_wrapper_mod::mat2_inverse,@function
 gungraun::mat2_inverse::__gungraun_wrapper_mod::mat2_inverse:
 	.cfi_startproc
-		// src/f32/scalar/mat2.rs:286
+		// src/f32/scalar/mat2.rs:370
 		self.x_axis.x * self.y_axis.y - self.x_axis.y * self.y_axis.x
 	movups xmm0, xmmword ptr [rsi]
 	movaps xmm1, xmm0
@@ -12,15 +12,15 @@ gungraun::mat2_inverse::__gungraun_wrapper_mod::mat2_inverse:
 	movaps xmm2, xmm1
 	shufps xmm2, xmm1, 85
 	subss xmm1, xmm2
-	movss xmm2, dword ptr [rip + .LCPI164_0]
-		// src/f32/scalar/mat2.rs:311
+	movss xmm2, dword ptr [rip + .LCPI165_0]
+		// src/f32/scalar/mat2.rs:395
 		let inv_det = 1.0 / det;
 	divss xmm2, xmm1
-	movaps xmm1, xmmword ptr [rip + .LCPI164_1]
-		// src/f32/scalar/mat2.rs:315
+	movaps xmm1, xmmword ptr [rip + .LCPI165_1]
+		// src/f32/scalar/mat2.rs:399
 		self.x_axis.y * -inv_det,
 	xorps xmm1, xmm2
-		// src/f32/scalar/mat2.rs:314
+		// src/f32/scalar/mat2.rs:398
 		self.y_axis.y * inv_det,
 	unpcklps xmm2, xmm1
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491

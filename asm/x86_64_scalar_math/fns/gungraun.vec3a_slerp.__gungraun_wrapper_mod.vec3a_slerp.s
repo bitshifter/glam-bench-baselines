@@ -60,46 +60,46 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	movaps xmm2, xmm6
 	mulss xmm2, xmm9
 	divss xmm12, xmm2
-	movaps xmm2, xmmword ptr [rip + .LCPI158_0]
+	movaps xmm2, xmmword ptr [rip + .LCPI159_0]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1632
 		intrinsics::fabs(self)
 	andps xmm2, xmm12
-	movss xmm3, dword ptr [rip + .LCPI158_1]
+	movss xmm3, dword ptr [rip + .LCPI159_1]
 		// src/f32/scalar/vec3a.rs:1319
 		if math::abs(dot) < 1.0 - 3e-7 {
 	ucomiss xmm3, xmm2
-	jbe .LBB158_1
-	movss xmm3, dword ptr [rip + .LCPI158_6]
-	movss xmm1, dword ptr [rip + .LCPI158_9]
+	jbe .LBB159_1
+	movss xmm3, dword ptr [rip + .LCPI159_6]
+	movss xmm1, dword ptr [rip + .LCPI159_9]
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI158_10]
+	addss xmm1, dword ptr [rip + .LCPI159_10]
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI158_11]
+	addss xmm1, dword ptr [rip + .LCPI159_11]
 		// src/f32/math.rs:8
 		let mut omx = 1.0 - x;
 	subss xmm3, xmm2
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI158_12]
+	addss xmm1, dword ptr [rip + .LCPI159_12]
 		// src/f32/math.rs:9
 		if omx < 0.0 {
 	xorps xmm4, xmm4
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI158_13]
+	addss xmm1, dword ptr [rip + .LCPI159_13]
 		// src/f32/math.rs:9
 		if omx < 0.0 {
 	maxss xmm4, xmm3
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI158_14]
+	addss xmm1, dword ptr [rip + .LCPI159_14]
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI158_15]
+	addss xmm1, dword ptr [rip + .LCPI159_15]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:2103
 		intrinsics::sqrtf32(x)
 	xorps xmm3, xmm3
@@ -107,11 +107,11 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI158_16]
+	addss xmm1, dword ptr [rip + .LCPI159_16]
 		// src/f32/math.rs:25
 		result *= root;
 	mulss xmm1, xmm3
-	movss xmm2, dword ptr [rip + .LCPI158_3]
+	movss xmm2, dword ptr [rip + .LCPI159_3]
 		// src/f32/math.rs:28
 		if nonnegative {
 	subss xmm2, xmm1
@@ -136,7 +136,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	movss dword ptr [rsp + 112], xmm0
 		// src/f32/scalar/vec3a.rs:1324
 		let t1 = math::sin(theta * (1.0 - s));
-	movss xmm0, dword ptr [rip + .LCPI158_6]
+	movss xmm0, dword ptr [rip + .LCPI159_6]
 	subss xmm0, dword ptr [rsp + 16]
 	mulss xmm0, dword ptr [rsp + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/num/f32.rs:702
@@ -190,7 +190,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm0, xmm2
-	movss xmm11, dword ptr [rip + .LCPI158_6]
+	movss xmm11, dword ptr [rip + .LCPI159_6]
 		// src/f32/scalar/vec3a.rs:1332
 		* (1.0 / sin_theta);
 	divss xmm11, dword ptr [rsp + 112]
@@ -200,32 +200,32 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	mulps xmm11, xmm0
 		// src/f32/scalar/vec3a.rs:1347
 		}
-	jmp .LBB158_9
-.LBB158_1:
+	jmp .LBB159_9
+.LBB159_1:
 	xorps xmm2, xmm2
 		// src/f32/scalar/vec3a.rs:1334
 		if dot < 0.0 {
 	ucomiss xmm2, xmm12
-	jbe .LBB158_2
+	jbe .LBB159_2
 	movaps xmmword ptr [rsp + 48], xmm9
 	movaps xmmword ptr [rsp + 64], xmm7
 	movaps xmmword ptr [rsp + 80], xmm6
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1632
 		intrinsics::fabs(self)
-	movaps xmm0, xmmword ptr [rip + .LCPI158_0]
+	movaps xmm0, xmmword ptr [rip + .LCPI159_0]
 	movaps xmmword ptr [rsp + 128], xmm11
 	andps xmm11, xmm0
 	movaps xmmword ptr [rsp + 112], xmm11
 	andps xmm0, xmm4
 	movaps xmmword ptr [rsp + 96], xmm0
-	movss xmm0, dword ptr [rip + .LCPI158_3]
+	movss xmm0, dword ptr [rip + .LCPI159_3]
 	movaps xmmword ptr [rsp + 16], xmm5
 		// src/f32/scalar/vec3a.rs:1339
 		let rotation = Quat::from_axis_angle(axis, core::f32::consts::PI * s);
 	mulss xmm0, xmm5
 		// src/f32/scalar/quat.rs:146
 		let (s, c) = math::sin_cos(angle * 0.5);
-	mulss xmm0, dword ptr [rip + .LCPI158_4]
+	mulss xmm0, dword ptr [rip + .LCPI159_4]
 	lea rdi, [rsp + 12]
 	lea rsi, [rsp + 8]
 	movaps xmmword ptr [rsp + 32], xmm4
@@ -238,18 +238,18 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		// src/f32/scalar/vec3a.rs:1261
 		if math::abs(self.x) > math::abs(self.y) {
 	ucomiss xmm6, xmm8
-	movaps xmm0, xmmword ptr [rip + .LCPI158_5]
+	movaps xmm0, xmmword ptr [rip + .LCPI159_5]
 	movaps xmm5, xmm14
 	xorps xmm5, xmm0
-	ja .LBB158_4
+	ja .LBB159_4
 	xorps xmm0, xmm0
 	movaps xmm13, xmmword ptr [rsp + 80]
 	movaps xmm7, xmmword ptr [rsp + 64]
-	jmp .LBB158_6
-.LBB158_2:
+	jmp .LBB159_6
+.LBB159_2:
 		// src/f32/scalar/vec3a.rs:986
 		self * (1.0 - s) + rhs * s
-	movaps xmm0, xmmword ptr [rip + .LCPI158_2]
+	movaps xmm0, xmmword ptr [rip + .LCPI159_2]
 	movss xmm0, xmm5
 	movq xmm2, xmm5
 	xorps xmm3, xmm3
@@ -269,14 +269,14 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	addps xmm11, xmm8
 		// src/f32/scalar/vec3a.rs:1334
 		if dot < 0.0 {
-	jmp .LBB158_9
-.LBB158_4:
+	jmp .LBB159_9
+.LBB159_4:
 	movaps xmm7, xmmword ptr [rsp + 64]
 		// src/f32/scalar/vec3a.rs:1261
 		if math::abs(self.x) > math::abs(self.y) {
 	xorps xmm0, xmm7
 	movaps xmm13, xmmword ptr [rsp + 80]
-.LBB158_6:
+.LBB159_6:
 	movaps xmm3, xmmword ptr [rsp + 48]
 		// src/f32/scalar/vec3a.rs:258
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
@@ -305,9 +305,9 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	andnps xmm8, xmm5
 	orps xmm8, xmm6
 	xorps xmm6, xmm6
-	ja .LBB158_8
+	ja .LBB159_8
 	movaps xmm6, xmm7
-.LBB158_8:
+.LBB159_8:
 		// src/f32/scalar/vec3a.rs:258
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	movaps xmm5, xmm6
@@ -320,7 +320,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		intrinsics::sqrtf32(x)
 	xorps xmm4, xmm4
 	sqrtss xmm4, xmm5
-	movss xmm5, dword ptr [rip + .LCPI158_6]
+	movss xmm5, dword ptr [rip + .LCPI159_6]
 		// src/f32/scalar/vec3a.rs:597
 		1.0 / self.length()
 	divss xmm5, xmm4
@@ -345,7 +345,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		// src/f32/scalar/quat.rs:820
 		rhs.mul(w * w - b2)
 	subss xmm3, xmm5
-	movaps xmm4, xmmword ptr [rip + .LCPI158_7]
+	movaps xmm4, xmmword ptr [rip + .LCPI159_7]
 	movss xmm4, xmm3
 	shufps xmm4, xmm4, 64
 		// src/f32/vec3.rs:247
@@ -369,7 +369,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 	mulss xmm7, xmm0
 		// src/f32/scalar/quat.rs:821
 		.add(b.mul(rhs.dot(b) * 2.0))
-	movss xmm8, dword ptr [rip + .LCPI158_8]
+	movss xmm8, dword ptr [rip + .LCPI159_8]
 	movaps xmm5, xmm12
 	movlhps xmm5, xmm8
 	movaps xmm9, xmm8
@@ -436,7 +436,7 @@ gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp:
 		fn mul(self, other: $t) -> $t { self * other }
 	shufps xmm11, xmm11, 0
 	mulps xmm11, xmm3
-.LBB158_9:
+.LBB159_9:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movaps xmmword ptr [rbx], xmm11

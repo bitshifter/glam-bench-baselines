@@ -3,7 +3,7 @@
 .type	gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2,@function
 gungraun::mat2_mul_transpose_vec2::__gungraun_wrapper_mod::mat2_mul_transpose_vec2:
 	.cfi_startproc
-		// src/f32/scalar/mat2.rs:370
+		// src/f32/scalar/mat2.rs:454
 		Vec2::new(self.x_axis.dot(rhs), self.y_axis.dot(rhs))
 	movsd xmm2, qword ptr [rdi + 4]
 	movups xmm3, xmmword ptr [rdi]

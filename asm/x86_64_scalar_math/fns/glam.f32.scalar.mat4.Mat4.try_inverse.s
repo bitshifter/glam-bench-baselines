@@ -3,35 +3,35 @@
 	.p2align	4
 .type	<glam::f32::scalar::mat4::Mat4>::try_inverse,@function
 <glam::f32::scalar::mat4::Mat4>::try_inverse:
-		// src/f32/scalar/mat4.rs:760
+		// src/f32/scalar/mat4.rs:873
 		pub fn try_inverse(&self) -> Option<Self> {
 	.cfi_startproc
 	sub rsp, 200
 	.cfi_def_cfa_offset 208
 	mov rax, rdi
-		// src/f32/scalar/mat4.rs:669
+		// src/f32/scalar/mat4.rs:782
 		let (m10, m11, m12, m13) = self.y_axis.into();
 	movsd xmm8, qword ptr [rsi + 16]
-		// src/f32/scalar/mat4.rs:670
+		// src/f32/scalar/mat4.rs:783
 		let (m20, m21, m22, m23) = self.z_axis.into();
 	movsd xmm10, qword ptr [rsi + 32]
 	movsd xmm11, qword ptr [rsi + 40]
-		// src/f32/scalar/mat4.rs:671
+		// src/f32/scalar/mat4.rs:784
 		let (m30, m31, m32, m33) = self.w_axis.into();
 	movsd xmm5, qword ptr [rsi + 48]
 	movsd xmm1, qword ptr [rsi + 56]
-		// src/f32/scalar/mat4.rs:689
+		// src/f32/scalar/mat4.rs:802
 		let coef16 = m20 * m32 - m30 * m22;
 	movaps xmm0, xmm1
 	shufps xmm0, xmm1, 225
-		// src/f32/scalar/mat4.rs:673
+		// src/f32/scalar/mat4.rs:786
 		let coef00 = m22 * m33 - m32 * m23;
 	movaps xmm6, xmm11
 	mulps xmm6, xmm0
 	movaps xmm2, xmm6
 	shufps xmm2, xmm6, 85
 	subps xmm6, xmm2
-		// src/f32/scalar/mat4.rs:681
+		// src/f32/scalar/mat4.rs:794
 		let coef08 = m21 * m32 - m31 * m22;
 	movaps xmm13, xmm10
 	shufps xmm13, xmm10, 85
@@ -43,7 +43,7 @@
 	movaps xmmword ptr [rsp + 160], xmm4
 	mulps xmm2, xmm4
 	subps xmm3, xmm2
-		// src/f32/scalar/mat4.rs:689
+		// src/f32/scalar/mat4.rs:802
 		let coef16 = m20 * m32 - m30 * m22;
 	movaps xmm9, xmm10
 	shufps xmm9, xmm10, 0
@@ -57,7 +57,7 @@
 	subps xmm9, xmm2
 	movss xmm4, dword ptr [rsi + 52]
 	movaps xmmword ptr [rsp + 128], xmm10
-		// src/f32/scalar/mat4.rs:693
+		// src/f32/scalar/mat4.rs:806
 		let coef20 = m20 * m31 - m30 * m21;
 	mulss xmm4, xmm10
 	movss xmm2, dword ptr [rsi + 36]
@@ -74,7 +74,7 @@
 	movaps xmm5, xmm6
 	shufps xmm5, xmm6, 0
 	mulps xmm5, xmm2
-		// src/f32/scalar/mat4.rs:669
+		// src/f32/scalar/mat4.rs:782
 		let (m10, m11, m12, m13) = self.y_axis.into();
 	movsd xmm12, qword ptr [rsi + 24]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -118,7 +118,7 @@
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addps xmm14, xmm5
-		// src/f32/scalar/mat4.rs:668
+		// src/f32/scalar/mat4.rs:781
 		let (m00, m01, m02, m03) = self.x_axis.into();
 	movsd xmm10, qword ptr [rsi]
 	movss xmm11, dword ptr [rsi + 4]
@@ -128,12 +128,12 @@
 	movlhps xmm11, xmm10
 	shufps xmm11, xmm10, 226
 	mulps xmm11, xmm2
-		// src/f32/scalar/mat4.rs:732
+		// src/f32/scalar/mat4.rs:845
 		let dot1 = dot0.x + dot0.y + dot0.z + dot0.w;
 	movaps xmm12, xmm11
 	shufps xmm12, xmm11, 85
 	subss xmm11, xmm12
-		// src/f32/scalar/mat4.rs:668
+		// src/f32/scalar/mat4.rs:781
 		let (m00, m01, m02, m03) = self.x_axis.into();
 	movsd xmm5, qword ptr [rsi + 8]
 	movaps xmmword ptr [rsp - 96], xmm5
@@ -142,7 +142,7 @@
 		fn mul(self, other: $t) -> $t { self * other }
 	movaps xmm15, xmm5
 	mulps xmm15, xmm14
-		// src/f32/scalar/mat4.rs:732
+		// src/f32/scalar/mat4.rs:845
 		let dot1 = dot0.x + dot0.y + dot0.z + dot0.w;
 	movaps xmm12, xmm15
 	shufps xmm12, xmm15, 85
@@ -150,13 +150,13 @@
 	subss xmm12, xmm15
 	xor ecx, ecx
 	xorps xmm11, xmm11
-		// src/f32/scalar/mat4.rs:735
+		// src/f32/scalar/mat4.rs:848
 		if dot1 == 0.0 {
 	ucomiss xmm12, xmm11
 	jne .LBB3_1
 	jp .LBB3_1
 	mov dword ptr [rax], ecx
-		// src/f32/scalar/mat4.rs:767
+		// src/f32/scalar/mat4.rs:880
 		}
 	add rsp, 200
 	.cfi_def_cfa_offset 8
@@ -164,11 +164,11 @@
 .LBB3_1:
 	.cfi_def_cfa_offset 208
 	movaps xmm11, xmmword ptr [rsp - 32]
-		// src/f32/scalar/mat4.rs:682
+		// src/f32/scalar/mat4.rs:795
 		let coef10 = m11 * m32 - m31 * m12;
 	shufps xmm11, xmm11, 85
 	movaps xmmword ptr [rsp - 128], xmm11
-		// src/f32/scalar/mat4.rs:683
+		// src/f32/scalar/mat4.rs:796
 		let coef11 = m11 * m22 - m21 * m12;
 	mulps xmm11, xmmword ptr [rsp - 112]
 	mulps xmm13, xmmword ptr [rsp - 48]
@@ -198,7 +198,7 @@
 	addss xmm15, xmm13
 	movaps xmmword ptr [rsp + 80], xmm15
 	movaps xmm14, xmmword ptr [rsp - 48]
-		// src/f32/scalar/mat4.rs:674
+		// src/f32/scalar/mat4.rs:787
 		let coef02 = m12 * m33 - m32 * m13;
 	mulps xmm0, xmm14
 	movaps xmm13, xmm0
@@ -206,11 +206,11 @@
 	subss xmm0, xmm13
 	movaps xmmword ptr [rsp], xmm0
 	movaps xmm13, xmmword ptr [rsp - 128]
-		// src/f32/scalar/mat4.rs:682
+		// src/f32/scalar/mat4.rs:795
 		let coef10 = m11 * m32 - m31 * m12;
 	mulps xmm13, xmm1
 	movaps xmmword ptr [rsp - 128], xmm13
-		// src/f32/scalar/mat4.rs:690
+		// src/f32/scalar/mat4.rs:803
 		let coef18 = m10 * m32 - m30 * m12;
 	mulps xmm1, xmm8
 	mulps xmm7, xmm14
@@ -231,10 +231,10 @@
 	addss xmm15, xmm7
 	movaps xmmword ptr [rsp + 48], xmm15
 	movaps xmm13, xmmword ptr [rsp - 112]
-		// src/f32/scalar/mat4.rs:691
+		// src/f32/scalar/mat4.rs:804
 		let coef19 = m10 * m22 - m20 * m12;
 	shufps xmm13, xmm13, 225
-		// src/f32/scalar/mat4.rs:675
+		// src/f32/scalar/mat4.rs:788
 		let coef03 = m12 * m23 - m22 * m13;
 	mulps xmm13, xmm14
 	movaps xmm7, xmm13
@@ -290,7 +290,7 @@
 	xorps xmm0, xmmword ptr [rip + .LCPI3_0]
 	unpcklps xmm0, xmm4
 	movaps xmmword ptr [rsp + 64], xmm0
-		// src/f32/scalar/mat4.rs:691
+		// src/f32/scalar/mat4.rs:804
 		let coef19 = m10 * m22 - m20 * m12;
 	mulps xmm8, xmmword ptr [rsp - 112]
 	movaps xmm0, xmmword ptr [rsp + 96]
@@ -302,7 +302,7 @@
 	movaps xmm4, xmm10
 	mulss xmm4, xmm11
 	movaps xmm3, xmmword ptr [rsp + 128]
-		// src/f32/scalar/mat4.rs:695
+		// src/f32/scalar/mat4.rs:808
 		let coef23 = m10 * m21 - m20 * m11;
 	shufps xmm11, xmm3, 17
 	shufps xmm11, xmm3, 226
@@ -370,7 +370,7 @@
 	xorps xmm8, xmm15
 	unpcklps xmm8, xmm6
 	movaps xmm0, xmmword ptr [rsp + 160]
-		// src/f32/scalar/mat4.rs:682
+		// src/f32/scalar/mat4.rs:795
 		let coef10 = m11 * m32 - m31 * m12;
 	mulps xmm0, xmm1
 	movaps xmm9, xmmword ptr [rsp - 128]
@@ -389,7 +389,7 @@
 		fn mul(self, other: $t) -> $t { self * other }
 	mulss xmm5, xmm2
 	movaps xmm0, xmmword ptr [rsp + 144]
-		// src/f32/scalar/mat4.rs:694
+		// src/f32/scalar/mat4.rs:807
 		let coef22 = m10 * m31 - m30 * m11;
 	movlhps xmm2, xmm0
 	shufps xmm2, xmm0, 226
@@ -445,7 +445,7 @@
 		fn mul(self, other: $t) -> $t { self * other }
 	movlhps xmm1, xmm5
 	movss xmm0, dword ptr [rip + .LCPI3_1]
-		// src/f32/scalar/mat4.rs:742
+		// src/f32/scalar/mat4.rs:855
 		let rcp_det = 1.0 / dot1;
 	divss xmm0, xmm12
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -455,7 +455,7 @@
 	movaps xmm1, xmm0
 	shufps xmm1, xmm0, 0
 	mulps xmm7, xmm1
-		// src/f32/scalar/mat4.rs:763
+		// src/f32/scalar/mat4.rs:876
 		Some(m)
 	movups xmmword ptr [rax + 4], xmm7
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -467,7 +467,7 @@
 	unpcklps xmm5, xmm0
 	movlhps xmm8, xmm5
 	mulps xmm8, xmm2
-		// src/f32/scalar/mat4.rs:763
+		// src/f32/scalar/mat4.rs:876
 		Some(m)
 	movups xmmword ptr [rax + 20], xmm8
 	movaps xmm2, xmm6
@@ -476,7 +476,7 @@
 	shufps xmm2, xmmword ptr [rsp - 80], 212
 	shufps xmm2, xmm11, 34
 	mulps xmm2, xmm1
-		// src/f32/scalar/mat4.rs:763
+		// src/f32/scalar/mat4.rs:876
 		Some(m)
 	movups xmmword ptr [rax + 36], xmm2
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -487,12 +487,12 @@
 	movlhps xmm1, xmm3
 	shufps xmm0, xmm0, 64
 	mulps xmm1, xmm0
-		// src/f32/scalar/mat4.rs:763
+		// src/f32/scalar/mat4.rs:876
 		Some(m)
 	movups xmmword ptr [rax + 52], xmm1
 	mov ecx, 1
 	mov dword ptr [rax], ecx
-		// src/f32/scalar/mat4.rs:767
+		// src/f32/scalar/mat4.rs:880
 		}
 	add rsp, 200
 	.cfi_def_cfa_offset 8

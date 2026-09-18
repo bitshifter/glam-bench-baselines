@@ -3,11 +3,11 @@
 .type	gungraun::mat4_transpose::__gungraun_wrapper_mod::mat4_transpose,@function
 gungraun::mat4_transpose::__gungraun_wrapper_mod::mat4_transpose:
 	.cfi_startproc
-		// src/f32/sse2/mat4.rs:621
+		// src/f32/sse2/mat4.rs:734
 		let tmp0 = _mm_shuffle_ps(self.x_axis.0, self.y_axis.0, 0b01_00_01_00);
 	movaps xmm0, xmmword ptr [rsi]
 	movaps xmm1, xmmword ptr [rsi + 16]
-		// src/f32/sse2/mat4.rs:623
+		// src/f32/sse2/mat4.rs:736
 		let tmp2 = _mm_shuffle_ps(self.z_axis.0, self.w_axis.0, 0b01_00_01_00);
 	movaps xmm2, xmmword ptr [rsi + 32]
 	movaps xmm3, xmmword ptr [rsi + 48]

@@ -28,19 +28,21 @@ gungraun::quat_mul_quat::__gungraun_wrapper_mod::quat_mul_quat:
 	shufps xmm2, xmm1, 78
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
 		unsafe { simd_mul(a, b) }
-	mulps xmm5, xmmword ptr [rip + .LCPI188_0]
 	mulps xmm2, xmm3
-		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:36
-		unsafe { simd_add(a, b) }
-	addps xmm5, xmm0
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
 	shufps xmm1, xmm1, 177
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
 		unsafe { simd_mul(a, b) }
+	mulps xmm2, xmmword ptr [rip + .LCPI189_0]
+	mulps xmm5, xmmword ptr [rip + .LCPI189_1]
 	mulps xmm1, xmm4
-	mulps xmm2, xmmword ptr [rip + .LCPI188_1]
-	mulps xmm1, xmmword ptr [rip + .LCPI188_2]
+		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:36
+		unsafe { simd_add(a, b) }
+	addps xmm5, xmm0
+		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
+		unsafe { simd_mul(a, b) }
+	mulps xmm1, xmmword ptr [rip + .LCPI189_2]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:36
 		unsafe { simd_add(a, b) }
 	addps xmm1, xmm2

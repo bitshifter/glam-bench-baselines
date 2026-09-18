@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 16040
+pid: 11587
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00003 00003 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71253
+desc: Timerange: Basic block 0 - 71714
 desc: Trigger: Program termination
 
 positions: line
@@ -227,11 +227,6 @@ cfn=std::env::args_os
 calls=1 0 
 0 95
 
-fn=gungraun::mat4_inverse::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::mat4_inverse::__gungraun_wrapper_mod::mat4_inverse
-calls=1 0 
-0 95
-
 fn=std::rt::lang_start_internal
 cfn=std::rt::lang_start_internal'2
 calls=1 0 
@@ -248,16 +243,6 @@ fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
 0 95
-
-fn=gungraun::mat4_inverse::__gungraun_wrapper_mod::mat4_inverse
-0 5
-cfn=<glam::f32::coresimd::mat4::Mat4>::inverse
-calls=1 0 
-0 87
-0 3
-
-fn=<glam::f32::coresimd::mat4::Mat4>::inverse
-0 87
 
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -281,9 +266,24 @@ cfn=gungraun::mat4_inverse::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 95
 
+fn=gungraun::mat4_inverse::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::mat4_inverse::__gungraun_wrapper_mod::mat4_inverse
+calls=1 0 
+0 95
+
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
 0 95
+
+fn=gungraun::mat4_inverse::__gungraun_wrapper_mod::mat4_inverse
+0 5
+cfn=<glam::f32::coresimd::mat4::Mat4>::inverse
+calls=1 0 
+0 87
+0 3
+
+fn=<glam::f32::coresimd::mat4::Mat4>::inverse
+0 87
 
 totals: 95

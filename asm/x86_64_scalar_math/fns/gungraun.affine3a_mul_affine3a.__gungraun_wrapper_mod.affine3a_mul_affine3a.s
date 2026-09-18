@@ -7,13 +7,13 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 		matrix3: self.matrix3 * rhs.matrix3,
 	movsd xmm1, qword ptr [rsi + 16]
 	movsd xmm0, qword ptr [rsi + 32]
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	movsd xmm2, qword ptr [rdx]
-		// src/f32/scalar/mat3a.rs:1033
+		// src/f32/scalar/mat3a.rs:1128
 		self.mul(rhs.y_axis),
 	movsd xmm3, qword ptr [rdx + 16]
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	movaps xmm4, xmm2
 	movlhps xmm4, xmm3
@@ -26,7 +26,7 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	movaps xmm12, xmm5
 	unpcklps xmm12, xmm3
 	shufps xmm12, xmm12, 84
-		// src/f32/scalar/mat3a.rs:1034
+		// src/f32/scalar/mat3a.rs:1129
 		self.mul(rhs.z_axis),
 	movsd xmm9, qword ptr [rdx + 32]
 		// src/f32/affine3a.rs:575
@@ -35,7 +35,7 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	movsd xmm6, qword ptr [rsi + 4]
 	movsd xmm3, qword ptr [rsi + 20]
 	movsd xmm7, qword ptr [rsi + 36]
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	movaps xmm11, xmm6
 	shufps xmm11, xmm10, 69
@@ -51,13 +51,13 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	shufps xmm11, xmm11, 120
 	mulps xmm11, xmm12
 	addps xmm11, xmm4
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	movaps xmm8, xmm1
 	shufps xmm8, xmm3, 64
-	movss xmm12, dword ptr [rip + .LCPI252_0]
+	movss xmm12, dword ptr [rip + .LCPI255_0]
 	movss xmm8, xmm12
-	movss xmm4, dword ptr [rip + .LCPI252_1]
+	movss xmm4, dword ptr [rip + .LCPI255_1]
 	movaps xmm14, xmm4
 	shufps xmm14, xmm9, 212
 	shufps xmm14, xmm9, 88
@@ -99,14 +99,14 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	movlps qword ptr [rdi], xmm5
 	movss dword ptr [rdi + 8], xmm11
 	movups xmmword ptr [rdi + 12], xmm11
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	movss xmm0, dword ptr [rsi + 8]
 	movlhps xmm0, xmm6
 		// src/f32/affine3a.rs:576
 		translation: self.matrix3 * rhs.translation + self.translation,
 	movsd xmm1, qword ptr [rdx + 48]
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	shufps xmm12, xmm0, 36
 	movaps xmm0, xmm4
@@ -146,6 +146,6 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	movss dword ptr [rdi + 60], xmm9
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:618
+		// benches/gungraun.rs:624
 		}
 	ret

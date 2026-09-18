@@ -3,17 +3,17 @@
 .type	gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a,@function
 gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	.cfi_startproc
-		// src/f32/scalar/mat3a.rs:1032
+		// src/f32/scalar/mat3a.rs:1127
 		self.mul(rhs.x_axis),
 	movsd xmm1, qword ptr [rsi + 32]
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	movsd xmm2, qword ptr [rdx]
 	movups xmm0, xmmword ptr [rdx + 4]
-		// src/f32/scalar/mat3a.rs:1033
+		// src/f32/scalar/mat3a.rs:1128
 		self.mul(rhs.y_axis),
 	movsd xmm3, qword ptr [rdx + 16]
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	movaps xmm6, xmm2
 	movlhps xmm6, xmm3
@@ -26,17 +26,17 @@ gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	movaps xmm12, xmm3
 	unpcklps xmm12, xmm4
 	shufps xmm12, xmm12, 84
-		// src/f32/scalar/mat3a.rs:1034
+		// src/f32/scalar/mat3a.rs:1129
 		self.mul(rhs.z_axis),
 	movsd xmm10, qword ptr [rdx + 32]
-		// src/f32/scalar/mat3a.rs:1032
+		// src/f32/scalar/mat3a.rs:1127
 		self.mul(rhs.x_axis),
 	movsd xmm7, qword ptr [rsi]
 	movsd xmm9, qword ptr [rsi + 4]
 	movsd xmm5, qword ptr [rsi + 16]
 	movsd xmm8, qword ptr [rsi + 20]
 	movsd xmm4, qword ptr [rsi + 36]
-		// src/f32/scalar/mat3a.rs:778
+		// src/f32/scalar/mat3a.rs:873
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	movaps xmm13, xmm9
 	shufps xmm13, xmm7, 69
@@ -52,13 +52,13 @@ gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	shufps xmm6, xmm6, 120
 	mulps xmm6, xmm12
 	addps xmm6, xmm14
-		// src/f32/scalar/mat3a.rs:776
+		// src/f32/scalar/mat3a.rs:871
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	movaps xmm11, xmm5
 	shufps xmm11, xmm8, 64
-	movss xmm12, dword ptr [rip + .LCPI214_0]
+	movss xmm12, dword ptr [rip + .LCPI215_0]
 	movss xmm11, xmm12
-	movss xmm13, dword ptr [rip + .LCPI214_1]
+	movss xmm13, dword ptr [rip + .LCPI215_1]
 	movaps xmm14, xmm13
 	shufps xmm14, xmm10, 212
 	shufps xmm14, xmm10, 88
@@ -74,7 +74,7 @@ gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	shufps xmm11, xmm4, 64
 	movss xmm11, xmm12
 	movss xmm12, dword ptr [rdx + 40]
-	movaps xmm10, xmmword ptr [rip + .LCPI214_2]
+	movaps xmm10, xmmword ptr [rip + .LCPI215_2]
 	unpcklps xmm10, xmm12
 	shufps xmm10, xmm10, 84
 	mulps xmm10, xmm11

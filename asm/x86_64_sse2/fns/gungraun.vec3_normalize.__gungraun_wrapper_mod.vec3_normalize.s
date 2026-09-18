@@ -3,14 +3,14 @@
 .type	gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize,@function
 gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize:
 	.cfi_startproc
-		// benches/gungraun.rs:569
+		// benches/gungraun.rs:575
 		black_box(v.normalize())
 	movss xmm0, dword ptr [rsi + 8]
 		// src/f32/vec3.rs:247
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	movaps xmm1, xmm0
 	mulss xmm1, xmm0
-		// benches/gungraun.rs:569
+		// benches/gungraun.rs:575
 		black_box(v.normalize())
 	movsd xmm2, qword ptr [rsi]
 		// src/f32/vec3.rs:247
@@ -25,7 +25,7 @@ gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize:
 		intrinsics::sqrtf32(x)
 	xorps xmm1, xmm1
 	sqrtss xmm1, xmm4
-	movss xmm3, dword ptr [rip + .LCPI204_0]
+	movss xmm3, dword ptr [rip + .LCPI205_0]
 		// src/f32/vec3.rs:586
 		1.0 / self.length()
 	divss xmm3, xmm1
@@ -40,6 +40,6 @@ gungraun::vec3_normalize::__gungraun_wrapper_mod::vec3_normalize:
 	movss dword ptr [rdi + 8], xmm0
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:570
+		// benches/gungraun.rs:576
 		}
 	ret

@@ -5,8 +5,8 @@ gungraun::vec3a_lerp::__gungraun_wrapper_mod::vec3a_lerp:
 		// benches/gungraun.rs:498
 		#[bench::args(vec3a(), vec3a(), bb_f32())]
 	.cfi_startproc
-	movss xmm3, dword ptr [rip + .LCPI152_0]
-		// src/f32/sse2/vec3a.rs:1000
+	movss xmm3, dword ptr [rip + .LCPI153_0]
+		// src/f32/sse2/vec3a.rs:999
 		self * (1.0 - s) + rhs * s
 	subss xmm3, xmm2
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/simd.rs:57

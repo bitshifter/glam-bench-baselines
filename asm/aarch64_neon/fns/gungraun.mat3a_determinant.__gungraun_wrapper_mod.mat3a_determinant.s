@@ -50,3 +50,29 @@ gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant:
 	add sp, sp, #16
 	.cfi_def_cfa_offset 0
 	ret
+core_arch/src/arm_shared/neon/generated.rs:15148
+		let b: float32x4_t = simd_neg(b);
+	ext v1.16b, v5.16b, v4.16b, #12
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:15008
+		unsafe { simd_fma(b, c, a) }
+	fmla v0.4s, v3.4s, v1.4s
+		// src/f32/neon/mat3a.rs:695
+		self.x_axis.dot(self.y_axis.cross(self.z_axis))
+	ldr q1, [x0]
+		// src/f32/neon/vec3a.rs:256
+		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
+	fmul v0.4s, v1.4s, v0.4s
+	faddp s1, v0.2s
+	mov s0, v0.s[2]
+	fadd s0, s0, s1
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
+		crate::intrinsics::black_box(dummy)
+	str s0, [sp, #12]
+	//APP
+	//NO_APP
+		// benches/gungraun.rs:272
+		}
+	ldr s0, [sp, #12]
+	add sp, sp, #16
+	.cfi_def_cfa_offset 0
+	ret

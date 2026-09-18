@@ -3,15 +3,15 @@
 .type	gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation,@function
 gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_scale_rotation_translation:
 	.cfi_startproc
-		// src/f32/sse2/mat4.rs:256
+		// src/f32/sse2/mat4.rs:306
 		let r = Mat3A::from_mat4(*self);
 	movaps xmm6, xmmword ptr [rsi]
 	movaps xmm2, xmmword ptr [rsi + 16]
 	movaps xmm5, xmmword ptr [rsi + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
-	movaps xmm3, xmm6
-	shufps xmm3, xmm6, 210
+	movaps xmm3, xmm5
+	shufps xmm3, xmm5, 210
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
 		unsafe { simd_mul(a, b) }
 	mulps xmm3, xmm2
@@ -25,7 +25,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	movhlps xmm0, xmm0
 	addss xmm0, xmm1
 	sqrtss xmm0, xmm0
-	movss xmm4, dword ptr [rip + .LCPI276_3]
+	movss xmm4, dword ptr [rip + .LCPI279_3]
 		// src/f32/vec3.rs:963
 		Self::new(1.0 / self.x, 1.0 / self.y, 1.0 / self.z)
 	movaps xmm1, xmm4
@@ -38,52 +38,53 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	mulps xmm1, xmm2
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
-	shufps xmm2, xmm2, 210
+	movaps xmm7, xmm2
+	shufps xmm7, xmm2, 210
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
 		unsafe { simd_mul(a, b) }
-	mulps xmm2, xmm6
+	mulps xmm7, xmm5
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:62
 		unsafe { simd_sub(a, b) }
-	subps xmm3, xmm2
+	subps xmm7, xmm3
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
 		$crate::intrinsics::simd::simd_shuffle(
-	shufps xmm3, xmm3, 210
+	shufps xmm7, xmm7, 210
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
 		unsafe { simd_mul(a, b) }
-	mulps xmm3, xmm5
+	mulps xmm7, xmm6
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:23
 		unsafe { simd_insert!(a, 0, _mm_cvtss_f32(a) + _mm_cvtss_f32(b)) }
-	movaps xmm2, xmm3
-	shufps xmm2, xmm3, 85
-	addss xmm2, xmm3
-	movhlps xmm3, xmm3
-	addss xmm3, xmm2
+	movaps xmm2, xmm7
+	shufps xmm2, xmm7, 85
+	addss xmm2, xmm7
+	movhlps xmm7, xmm7
+	addss xmm7, xmm2
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
 		unsafe { simd_mul(a, b) }
 	movaps xmm2, xmm6
 	mulps xmm2, xmm6
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:188
 		($x:expr, $idx:expr $(,)?) => {{ $crate::intrinsics::simd::simd_extract($x, const { $idx }) }};
-	movaps xmm7, xmm2
-	shufps xmm7, xmm2, 85
-	addss xmm7, xmm2
+	movaps xmm3, xmm2
+	shufps xmm3, xmm2, 85
+	addss xmm3, xmm2
 	movhlps xmm2, xmm2
-	addss xmm2, xmm7
-	xorps xmm7, xmm7
-	sqrtss xmm7, xmm2
-	movaps xmm8, xmmword ptr [rip + .LCPI276_0]
+	addss xmm2, xmm3
+	xorps xmm3, xmm3
+	sqrtss xmm3, xmm2
+	movaps xmm8, xmmword ptr [rip + .LCPI279_0]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1656
 		if self.is_nan() { Self::NAN } else { 1.0_f32.copysign(self) }
-	andps xmm8, xmm3
-	orps xmm8, xmmword ptr [rip + .LCPI276_1]
-	cmpunordss xmm3, xmm3
-	movss xmm2, dword ptr [rip + .LCPI276_2]
-	andps xmm2, xmm3
-	andnps xmm3, xmm8
-	orps xmm2, xmm3
-		// src/f32/sse2/mat4.rs:263
+	andps xmm8, xmm7
+	orps xmm8, xmmword ptr [rip + .LCPI279_1]
+	cmpunordss xmm7, xmm7
+	movss xmm2, dword ptr [rip + .LCPI279_2]
+	andps xmm2, xmm7
+	andnps xmm7, xmm8
+	orps xmm2, xmm7
+		// src/f32/sse2/mat4.rs:313
 		r.x_axis.length() * math::signum(det),
-	mulss xmm2, xmm7
+	mulss xmm2, xmm3
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse.rs:88
 		unsafe { simd_mul(a, b) }
 	movaps xmm3, xmm5
@@ -132,18 +133,18 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/sse2/quat.rs:217
 		if m22 <= 0.0 {
 	ucomiss xmm13, xmm12
-	jae .LBB276_5
+	jae .LBB279_5
 		// src/f32/sse2/quat.rs:244
 		let sum10 = m11 + m00;
 	addss xmm10, xmm11
-	movss xmm4, dword ptr [rip + .LCPI276_3]
+	movss xmm4, dword ptr [rip + .LCPI279_3]
 		// src/f32/sse2/quat.rs:245
 		let opm22 = 1.0 + m22;
 	addss xmm4, xmm12
 		// src/f32/sse2/quat.rs:246
 		if sum10 <= 0.0 {
 	ucomiss xmm13, xmm10
-	jae .LBB276_3
+	jae .LBB279_3
 		// src/f32/sse2/quat.rs:258
 		let four_wsq = opm22 + sum10;
 	addss xmm4, xmm10
@@ -151,7 +152,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		intrinsics::sqrtf32(x)
 	xorps xmm10, xmm10
 	sqrtss xmm10, xmm4
-	movss xmm11, dword ptr [rip + .LCPI276_4]
+	movss xmm11, dword ptr [rip + .LCPI279_4]
 		// src/f32/sse2/quat.rs:259
 		let inv4w = 0.5 / math::sqrt(four_wsq);
 	divss xmm11, xmm10
@@ -177,8 +178,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	mulps xmm1, xmm11
 		// src/f32/sse2/quat.rs:246
 		if sum10 <= 0.0 {
-	jmp .LBB276_7
-.LBB276_5:
+	jmp .LBB279_7
+.LBB279_5:
 		// src/f32/sse2/quat.rs:219
 		let dif10 = m11 - m00;
 	subss xmm10, xmm11
@@ -188,7 +189,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/sse2/quat.rs:221
 		if dif10 <= 0.0 {
 	ucomiss xmm13, xmm10
-	jae .LBB276_6
+	jae .LBB279_6
 		// src/f32/sse2/quat.rs:233
 		let four_ysq = omm22 + dif10;
 	addss xmm4, xmm10
@@ -196,7 +197,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		intrinsics::sqrtf32(x)
 	xorps xmm10, xmm10
 	sqrtss xmm10, xmm4
-	movss xmm11, dword ptr [rip + .LCPI276_4]
+	movss xmm11, dword ptr [rip + .LCPI279_4]
 		// src/f32/sse2/quat.rs:234
 		let inv4y = 0.5 / math::sqrt(four_ysq);
 	divss xmm11, xmm10
@@ -223,8 +224,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	movaps xmm1, xmm5
 		// src/f32/sse2/quat.rs:221
 		if dif10 <= 0.0 {
-	jmp .LBB276_7
-.LBB276_3:
+	jmp .LBB279_7
+.LBB279_3:
 		// src/f32/sse2/quat.rs:248
 		let four_zsq = opm22 - sum10;
 	subss xmm4, xmm10
@@ -232,7 +233,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		intrinsics::sqrtf32(x)
 	xorps xmm10, xmm10
 	sqrtss xmm10, xmm4
-	movss xmm11, dword ptr [rip + .LCPI276_4]
+	movss xmm11, dword ptr [rip + .LCPI279_4]
 		// src/f32/sse2/quat.rs:249
 		let inv4z = 0.5 / math::sqrt(four_zsq);
 	divss xmm11, xmm10
@@ -257,8 +258,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	movaps xmm1, xmm11
 		// src/f32/sse2/quat.rs:246
 		if sum10 <= 0.0 {
-	jmp .LBB276_7
-.LBB276_6:
+	jmp .LBB279_7
+.LBB279_6:
 		// src/f32/sse2/quat.rs:223
 		let four_xsq = omm22 - dif10;
 	subss xmm4, xmm10
@@ -266,7 +267,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		intrinsics::sqrtf32(x)
 	xorps xmm10, xmm10
 	sqrtss xmm10, xmm4
-	movss xmm11, dword ptr [rip + .LCPI276_4]
+	movss xmm11, dword ptr [rip + .LCPI279_4]
 		// src/f32/sse2/quat.rs:224
 		let inv4x = 0.5 / math::sqrt(four_xsq);
 	divss xmm11, xmm10
@@ -291,8 +292,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	movlhps xmm4, xmm7
 	mulps xmm4, xmm11
 	movaps xmm1, xmm4
-.LBB276_7:
-		// src/f32/sse2/mat4.rs:278
+.LBB279_7:
+		// src/f32/sse2/mat4.rs:328
 		let translation = self.w_axis.xyz();
 	movaps xmm4, xmmword ptr [rsi + 48]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491

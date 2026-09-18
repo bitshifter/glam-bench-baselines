@@ -3,10 +3,10 @@
 .type	gungraun::mat4_transform_point3::__gungraun_wrapper_mod::mat4_transform_point3,@function
 gungraun::mat4_transform_point3::__gungraun_wrapper_mod::mat4_transform_point3:
 	.cfi_startproc
-		// src/f32/scalar/mat4.rs:1302
+		// src/f32/scalar/mat4.rs:1415
 		let mut res = self.x_axis.mul(rhs.x);
 	movss xmm1, dword ptr [rdx]
-		// src/f32/scalar/mat4.rs:1303
+		// src/f32/scalar/mat4.rs:1416
 		res = self.y_axis.mul(rhs.y).add(res);
 	movss xmm0, dword ptr [rdx + 4]
 	movss xmm2, dword ptr [rsi + 8]
@@ -18,7 +18,7 @@ gungraun::mat4_transform_point3::__gungraun_wrapper_mod::mat4_transform_point3:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addss xmm3, xmm2
-		// src/f32/scalar/mat4.rs:1304
+		// src/f32/scalar/mat4.rs:1417
 		res = self.z_axis.mul(rhs.z).add(res);
 	movss xmm2, dword ptr [rdx + 8]
 	movss xmm4, dword ptr [rsi + 40]
@@ -32,19 +32,19 @@ gungraun::mat4_transform_point3::__gungraun_wrapper_mod::mat4_transform_point3:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	unpcklps xmm1, xmm1
-		// src/f32/scalar/mat4.rs:1302
+		// src/f32/scalar/mat4.rs:1415
 		let mut res = self.x_axis.mul(rhs.x);
 	movsd xmm3, qword ptr [rsi]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mulps xmm3, xmm1
-		// src/f32/scalar/mat4.rs:1303
+		// src/f32/scalar/mat4.rs:1416
 		res = self.y_axis.mul(rhs.y).add(res);
 	movsd xmm1, qword ptr [rsi + 16]
-		// src/f32/scalar/mat4.rs:1304
+		// src/f32/scalar/mat4.rs:1417
 		res = self.z_axis.mul(rhs.z).add(res);
 	movsd xmm5, qword ptr [rsi + 32]
-		// src/f32/scalar/mat4.rs:1305
+		// src/f32/scalar/mat4.rs:1418
 		res = self.w_axis.add(res);
 	movsd xmm6, qword ptr [rsi + 48]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350

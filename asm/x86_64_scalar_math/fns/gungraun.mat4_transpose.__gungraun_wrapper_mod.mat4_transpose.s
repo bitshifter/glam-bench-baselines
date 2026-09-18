@@ -3,10 +3,10 @@
 .type	gungraun::mat4_transpose::__gungraun_wrapper_mod::mat4_transpose,@function
 gungraun::mat4_transpose::__gungraun_wrapper_mod::mat4_transpose:
 	.cfi_startproc
-		// src/f32/scalar/mat4.rs:619
+		// src/f32/scalar/mat4.rs:732
 		x_axis: Vec4::new(self.x_axis.x, self.y_axis.x, self.z_axis.x, self.w_axis.x),
 	movss xmm3, dword ptr [rsi]
-		// src/f32/scalar/mat4.rs:622
+		// src/f32/scalar/mat4.rs:735
 		w_axis: Vec4::new(self.x_axis.w, self.y_axis.w, self.z_axis.w, self.w_axis.w),
 	movss xmm0, dword ptr [rsi + 28]
 	movss xmm1, dword ptr [rsi + 44]
@@ -14,7 +14,7 @@ gungraun::mat4_transpose::__gungraun_wrapper_mod::mat4_transpose:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movss dword ptr [rdi], xmm3
-		// src/f32/scalar/mat4.rs:620
+		// src/f32/scalar/mat4.rs:733
 		y_axis: Vec4::new(self.x_axis.y, self.y_axis.y, self.z_axis.y, self.w_axis.y),
 	movups xmm3, xmmword ptr [rsi + 4]
 	movups xmm4, xmmword ptr [rsi + 20]
@@ -25,7 +25,7 @@ gungraun::mat4_transpose::__gungraun_wrapper_mod::mat4_transpose:
 	shufps xmm4, xmm3, 51
 	shufps xmm4, xmm5, 130
 	movups xmmword ptr [rdi + 4], xmm4
-		// src/f32/scalar/mat4.rs:621
+		// src/f32/scalar/mat4.rs:734
 		z_axis: Vec4::new(self.x_axis.z, self.y_axis.z, self.z_axis.z, self.w_axis.z),
 	movups xmm3, xmmword ptr [rsi + 8]
 	movups xmm4, xmmword ptr [rsi + 24]
@@ -36,7 +36,7 @@ gungraun::mat4_transpose::__gungraun_wrapper_mod::mat4_transpose:
 	shufps xmm4, xmm3, 51
 	shufps xmm4, xmm5, 130
 	movups xmmword ptr [rdi + 20], xmm4
-		// src/f32/scalar/mat4.rs:622
+		// src/f32/scalar/mat4.rs:735
 		w_axis: Vec4::new(self.x_axis.w, self.y_axis.w, self.z_axis.w, self.w_axis.w),
 	movups xmm3, xmmword ptr [rsi + 12]
 	movups xmm4, xmmword ptr [rsi + 28]

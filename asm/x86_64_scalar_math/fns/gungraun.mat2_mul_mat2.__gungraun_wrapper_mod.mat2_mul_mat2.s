@@ -7,7 +7,7 @@ gungraun::mat2_mul_mat2::__gungraun_wrapper_mod::mat2_mul_mat2:
 		black_box(m1 * m2)
 	movups xmm0, xmmword ptr [rsi]
 	movups xmm1, xmmword ptr [rdx]
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	movaps xmm2, xmm1
 	shufps xmm1, xmm1, 210

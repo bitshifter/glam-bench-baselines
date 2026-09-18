@@ -3,13 +3,13 @@
 .type	gungraun::vec3_dot::__gungraun_wrapper_mod::vec3_dot,@function
 gungraun::vec3_dot::__gungraun_wrapper_mod::vec3_dot:
 	.cfi_startproc
-		// benches/gungraun.rs:551
+		// benches/gungraun.rs:557
 		black_box(v1.dot(v2))
 	movss xmm0, dword ptr [rdi]
 		// src/f32/vec3.rs:247
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	mulss xmm0, dword ptr [rsi]
-		// benches/gungraun.rs:551
+		// benches/gungraun.rs:557
 		black_box(v1.dot(v2))
 	movsd xmm1, qword ptr [rdi + 4]
 	movsd xmm2, qword ptr [rsi + 4]
@@ -25,7 +25,7 @@ gungraun::vec3_dot::__gungraun_wrapper_mod::vec3_dot:
 	lea rax, [rsp - 4]
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:552
+		// benches/gungraun.rs:558
 		}
 	movss xmm0, dword ptr [rsp - 4]
 	ret

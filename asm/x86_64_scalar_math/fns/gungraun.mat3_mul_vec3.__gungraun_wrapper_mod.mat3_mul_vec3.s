@@ -3,10 +3,10 @@
 .type	gungraun::mat3_mul_vec3::__gungraun_wrapper_mod::mat3_mul_vec3,@function
 gungraun::mat3_mul_vec3::__gungraun_wrapper_mod::mat3_mul_vec3:
 	.cfi_startproc
-		// src/f32/mat3.rs:700
+		// src/f32/mat3.rs:795
 		let mut res = self.x_axis.mul(rhs.x);
 	movss xmm1, dword ptr [rdx]
-		// src/f32/mat3.rs:701
+		// src/f32/mat3.rs:796
 		res = res.add(self.y_axis.mul(rhs.y));
 	movss xmm0, dword ptr [rdx + 4]
 	movss xmm2, dword ptr [rsi + 8]
@@ -18,7 +18,7 @@ gungraun::mat3_mul_vec3::__gungraun_wrapper_mod::mat3_mul_vec3:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addss xmm3, xmm2
-		// src/f32/mat3.rs:702
+		// src/f32/mat3.rs:797
 		res = res.add(self.z_axis.mul(rhs.z));
 	movss xmm2, dword ptr [rdx + 8]
 	movss xmm4, dword ptr [rsi + 32]

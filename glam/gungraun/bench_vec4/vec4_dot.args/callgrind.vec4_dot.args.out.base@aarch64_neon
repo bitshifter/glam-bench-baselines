@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 9839
+pid: 6873
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00007 00000 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71287
+desc: Timerange: Basic block 0 - 70822
 desc: Trigger: Program termination
 
 positions: line
@@ -92,7 +92,7 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 11
 
-fn=gungraun::vec4_dot::__gungraun_wrapper_mod::vec4_dot
+fn=gungraun::quat_dot::__gungraun_wrapper_mod::quat_dot
 0 11
 
 fn=std::rt::lang_start::<()>::{closure#0}
@@ -245,7 +245,7 @@ calls=5 0
 0 22
 
 fn=gungraun::vec4_dot::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::vec4_dot::__gungraun_wrapper_mod::vec4_dot
+cfn=gungraun::quat_dot::__gungraun_wrapper_mod::quat_dot
 calls=1 0 
 0 11
 

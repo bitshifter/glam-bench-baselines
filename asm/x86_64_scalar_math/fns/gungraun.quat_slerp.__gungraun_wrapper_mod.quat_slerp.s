@@ -33,19 +33,19 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 	addss xmm2, xmm0
 		// src/f32/scalar/quat.rs:763
 		if dot < 0.0 {
-	movaps xmm1, xmmword ptr [rip + .LCPI148_0]
+	movaps xmm1, xmmword ptr [rip + .LCPI149_0]
 	movaps xmm0, xmm2
 	xorps xmm0, xmm1
 	ucomiss xmm0, xmm2
 	maxss xmm0, xmm2
-	jbe .LBB148_2
+	jbe .LBB149_2
 	xorps xmm3, xmm1
-.LBB148_2:
+.LBB149_2:
 		// src/f32/scalar/quat.rs:769
 		if dot > DOT_THRESHOLD {
-	ucomiss xmm0, dword ptr [rip + .LCPI148_1]
-	jbe .LBB148_3
-	movss xmm6, dword ptr [rip + .LCPI148_3]
+	ucomiss xmm0, dword ptr [rip + .LCPI149_1]
+	jbe .LBB149_3
+	movss xmm6, dword ptr [rip + .LCPI149_3]
 		// src/f32/scalar/quat.rs:705
 		(self * (1.0 - s) + end * s).normalize()
 	movaps xmm0, xmm6
@@ -82,20 +82,20 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		fn mul(self, other: $t) -> $t { self * other }
 	shufps xmm6, xmm6, 0
 	mulps xmm6, xmm0
-	jmp .LBB148_5
-.LBB148_3:
-	movaps xmm2, xmmword ptr [rip + .LCPI148_2]
+	jmp .LBB149_5
+.LBB149_3:
+	movaps xmm2, xmmword ptr [rip + .LCPI149_2]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1632
 		intrinsics::fabs(self)
 	andps xmm2, xmm0
-	movss xmm1, dword ptr [rip + .LCPI148_4]
+	movss xmm1, dword ptr [rip + .LCPI149_4]
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI148_5]
-	movss xmm6, dword ptr [rip + .LCPI148_3]
+	addss xmm1, dword ptr [rip + .LCPI149_5]
+	movss xmm6, dword ptr [rip + .LCPI149_3]
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI148_6]
+	addss xmm1, dword ptr [rip + .LCPI149_6]
 	movaps xmmword ptr [rsp + 64], xmm3
 		// src/f32/math.rs:8
 		let mut omx = 1.0 - x;
@@ -103,14 +103,14 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI148_7]
+	addss xmm1, dword ptr [rip + .LCPI149_7]
 		// src/f32/math.rs:8
 		let mut omx = 1.0 - x;
 	subss xmm3, xmm2
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI148_8]
+	addss xmm1, dword ptr [rip + .LCPI149_8]
 	movaps xmmword ptr [rsp + 48], xmm4
 		// src/f32/math.rs:9
 		if omx < 0.0 {
@@ -118,16 +118,16 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI148_9]
+	addss xmm1, dword ptr [rip + .LCPI149_9]
 		// src/f32/math.rs:9
 		if omx < 0.0 {
 	maxss xmm4, xmm3
 		// src/f32/math.rs:17
 		((((((-0.001_262_491_1 * x + 0.006_670_09) * x - 0.017_088_126) * x + 0.030_891_88) * x
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI148_10]
+	addss xmm1, dword ptr [rip + .LCPI149_10]
 	mulss xmm1, xmm2
-	addss xmm1, dword ptr [rip + .LCPI148_11]
+	addss xmm1, dword ptr [rip + .LCPI149_11]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:2103
 		intrinsics::sqrtf32(x)
 	xorps xmm2, xmm2
@@ -135,7 +135,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/math.rs:25
 		result *= root;
 	mulss xmm1, xmm2
-	movss xmm2, dword ptr [rip + .LCPI148_12]
+	movss xmm2, dword ptr [rip + .LCPI149_12]
 		// src/f32/math.rs:28
 		if nonnegative {
 	subss xmm2, xmm1
@@ -167,7 +167,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 	movaps xmmword ptr [rsp], xmm0
 	movaps xmm0, xmmword ptr [rsp + 16]
 	call r14
-	movss xmm6, dword ptr [rip + .LCPI148_3]
+	movss xmm6, dword ptr [rip + .LCPI149_3]
 	movaps xmm1, xmmword ptr [rsp + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
@@ -188,7 +188,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		fn mul(self, other: $t) -> $t { self * other }
 	shufps xmm6, xmm6, 0
 	mulps xmm6, xmm1
-.LBB148_5:
+.LBB149_5:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movups xmmword ptr [rbx], xmm6

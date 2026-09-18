@@ -21,17 +21,17 @@ gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero:
 	xorps xmm2, xmm2
 	movaps xmm3, xmm1
 	cmpeqps xmm3, xmm2
-		// src/f32/sse2/mat2.rs:332
+		// src/f32/sse2/mat2.rs:416
 		if Vec4(det) == Vec4::ZERO {
 	movmskps eax, xmm3
 	xor eax, 15
-	je .LBB242_2
-	movaps xmm2, xmmword ptr [rip + .LCPI242_0]
+	je .LBB245_2
+	movaps xmm2, xmmword ptr [rip + .LCPI245_0]
 	divps xmm2, xmm1
 	shufps xmm0, xmm0, 39
 	mulps xmm0, xmm2
 	movaps xmm2, xmm0
-.LBB242_2:
+.LBB245_2:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movaps xmmword ptr [rdi], xmm2

@@ -3,7 +3,7 @@
 .type	gungraun::mat2_determinant::__gungraun_wrapper_mod::mat2_determinant,@function
 gungraun::mat2_determinant::__gungraun_wrapper_mod::mat2_determinant:
 	.cfi_startproc
-		// src/f32/scalar/mat2.rs:286
+		// src/f32/scalar/mat2.rs:370
 		self.x_axis.x * self.y_axis.y - self.x_axis.y * self.y_axis.x
 	movsd xmm0, qword ptr [rdi]
 	movsd xmm1, qword ptr [rdi + 8]

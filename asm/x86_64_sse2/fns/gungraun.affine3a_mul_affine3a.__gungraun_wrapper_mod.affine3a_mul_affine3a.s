@@ -8,13 +8,13 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	movaps xmm6, xmmword ptr [rsi]
 	movaps xmm5, xmmword ptr [rsi + 16]
 	movaps xmm4, xmmword ptr [rsi + 32]
-		// src/f32/sse2/mat3a.rs:1042
+		// src/f32/sse2/mat3a.rs:1137
 		self.mul(rhs.x_axis),
 	movaps xmm0, xmmword ptr [rdx]
-		// src/f32/sse2/mat3a.rs:1043
+		// src/f32/sse2/mat3a.rs:1138
 		self.mul(rhs.y_axis),
 	movaps xmm1, xmmword ptr [rdx + 16]
-		// src/f32/sse2/mat3a.rs:1044
+		// src/f32/sse2/mat3a.rs:1139
 		self.mul(rhs.z_axis),
 	movaps xmm2, xmmword ptr [rdx + 32]
 		// src/f32/affine3a.rs:576
@@ -133,6 +133,6 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	movaps xmmword ptr [rdi + 48], xmm3
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:618
+		// benches/gungraun.rs:624
 		}
 	ret

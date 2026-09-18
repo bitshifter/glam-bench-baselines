@@ -4,13 +4,13 @@
 .type	<glam::f32::sse2::mat4::Mat4>::determinant,@function
 <glam::f32::sse2::mat4::Mat4>::determinant:
 	.cfi_startproc
-		// src/f32/sse2/mat4.rs:661
+		// src/f32/sse2/mat4.rs:774
 		let swpfaca = _mm_shuffle_ps(self.y_axis.0, self.y_axis.0, 0b00_00_00_01);
 	movaps xmm0, xmmword ptr [rdi + 16]
-		// src/f32/sse2/mat4.rs:647
+		// src/f32/sse2/mat4.rs:760
 		let swp2a = _mm_shuffle_ps(self.z_axis.0, self.z_axis.0, 0b00_01_01_10);
 	movaps xmm2, xmmword ptr [rdi + 32]
-		// src/f32/sse2/mat4.rs:648
+		// src/f32/sse2/mat4.rs:761
 		let swp3a = _mm_shuffle_ps(self.w_axis.0, self.w_axis.0, 0b11_10_11_11);
 	movaps xmm3, xmmword ptr [rdi + 48]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:173
@@ -98,6 +98,6 @@
 	movaps xmm0, xmm1
 	shufps xmm0, xmm1, 85
 	addss xmm0, xmm1
-		// src/f32/sse2/mat4.rs:680
+		// src/f32/sse2/mat4.rs:793
 		}
 	ret

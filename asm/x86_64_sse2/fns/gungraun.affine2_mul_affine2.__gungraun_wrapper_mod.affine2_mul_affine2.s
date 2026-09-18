@@ -3,7 +3,7 @@
 .type	gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2,@function
 gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 	.cfi_startproc
-		// benches/gungraun.rs:593
+		// benches/gungraun.rs:599
 		black_box(a1 * a2)
 	movaps xmm0, xmmword ptr [rsi]
 	movaps xmm1, xmmword ptr [rdx]
@@ -30,7 +30,7 @@ gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movaps xmmword ptr [rdi], xmm1
-		// benches/gungraun.rs:593
+		// benches/gungraun.rs:599
 		black_box(a1 * a2)
 	movsd xmm0, qword ptr [rsi + 16]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
@@ -44,6 +44,6 @@ gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 	movlps qword ptr [rdi + 16], xmm1
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:594
+		// benches/gungraun.rs:600
 		}
 	ret

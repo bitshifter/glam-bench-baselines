@@ -3,20 +3,20 @@
 .type	gungraun::affine2_transform_point2::__gungraun_wrapper_mod::affine2_transform_point2,@function
 gungraun::affine2_transform_point2::__gungraun_wrapper_mod::affine2_transform_point2:
 	.cfi_startproc
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	unpcklps xmm0, xmm0
 		// src/f32/affine2.rs:271
 		self.matrix2 * rhs + self.translation
 	movsd xmm2, qword ptr [rdi]
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	mulps xmm2, xmm0
 		// src/f32/affine2.rs:271
 		self.matrix2 * rhs + self.translation
 	movsd xmm0, qword ptr [rdi + 8]
 	movsd xmm3, qword ptr [rdi + 16]
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	unpcklps xmm1, xmm1
 	mulps xmm1, xmm0
@@ -30,7 +30,7 @@ gungraun::affine2_transform_point2::__gungraun_wrapper_mod::affine2_transform_po
 	lea rax, [rsp - 8]
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:600
+		// benches/gungraun.rs:606
 		}
 	movss xmm0, dword ptr [rsp - 8]
 	movss xmm1, dword ptr [rsp - 4]

@@ -3,17 +3,17 @@
 	.p2align	4
 .type	<glam::f32::sse2::mat4::Mat4>::try_inverse,@function
 <glam::f32::sse2::mat4::Mat4>::try_inverse:
-		// src/f32/sse2/mat4.rs:861
+		// src/f32/sse2/mat4.rs:974
 		pub fn try_inverse(&self) -> Option<Self> {
 	.cfi_startproc
 	mov rax, rdi
-		// src/f32/sse2/mat4.rs:779
+		// src/f32/sse2/mat4.rs:892
 		let temp0 = _mm_shuffle_ps(self.y_axis.0, self.x_axis.0, 0b00_00_00_00);
 	movaps xmm1, xmmword ptr [rsi]
-		// src/f32/sse2/mat4.rs:702
+		// src/f32/sse2/mat4.rs:815
 		let swp00 = _mm_shuffle_ps(self.z_axis.0, self.y_axis.0, 0b10_10_10_10);
 	movaps xmm0, xmmword ptr [rsi + 16]
-		// src/f32/sse2/mat4.rs:699
+		// src/f32/sse2/mat4.rs:812
 		let swp0a = _mm_shuffle_ps(self.w_axis.0, self.z_axis.0, 0b11_11_11_11);
 	movaps xmm10, xmmword ptr [rsi + 32]
 	movaps xmm7, xmmword ptr [rsi + 48]
@@ -198,7 +198,7 @@
 	shufps xmm1, xmm3, 85
 	addss xmm1, xmm3
 	xorps xmm2, xmm2
-		// src/f32/sse2/mat4.rs:826
+		// src/f32/sse2/mat4.rs:939
 		if dot0 == 0.0 {
 	ucomiss xmm1, xmm2
 	jne .LBB4_2
@@ -206,7 +206,7 @@
 	xor ecx, ecx
 	mov qword ptr [rax], rcx
 	mov qword ptr [rax + 8], 0
-		// src/f32/sse2/mat4.rs:868
+		// src/f32/sse2/mat4.rs:981
 		}
 	ret
 .LBB4_2:
@@ -223,7 +223,7 @@
 	mulps xmm9, xmm2
 	mulps xmm0, xmm2
 	mulps xmm7, xmm2
-		// src/f32/sse2/mat4.rs:864
+		// src/f32/sse2/mat4.rs:977
 		Some(m)
 	movaps xmmword ptr [rax + 16], xmm8
 	movaps xmmword ptr [rax + 32], xmm9
@@ -232,6 +232,6 @@
 	mov ecx, 1
 	mov qword ptr [rax], rcx
 	mov qword ptr [rax + 8], 0
-		// src/f32/sse2/mat4.rs:868
+		// src/f32/sse2/mat4.rs:981
 		}
 	ret

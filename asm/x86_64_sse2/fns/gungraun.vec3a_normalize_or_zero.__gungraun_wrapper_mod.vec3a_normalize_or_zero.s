@@ -16,10 +16,10 @@ gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_ze
 	addss xmm1, xmm2
 	xorps xmm2, xmm2
 	sqrtss xmm2, xmm1
-	movss xmm1, dword ptr [rip + .LCPI266_0]
+	movss xmm1, dword ptr [rip + .LCPI269_0]
 	divss xmm1, xmm2
 	movd eax, xmm1
-		// src/f32/sse2/vec3a.rs:710
+		// src/f32/sse2/vec3a.rs:709
 		if rcp.is_finite() && rcp > 0.0 {
 	mov ecx, eax
 	and ecx, 2147483647
@@ -28,14 +28,14 @@ gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_ze
 	mulps xmm1, xmm0
 	xorps xmm0, xmm0
 	test eax, eax
-	jns .LBB266_1
+	jns .LBB269_1
 	dec eax
 	cmp ecx, 2130706432
-	jae .LBB266_3
-.LBB266_4:
+	jae .LBB269_3
+.LBB269_4:
 	cmp eax, 8388607
-	jae .LBB266_5
-.LBB266_6:
+	jae .LBB269_5
+.LBB269_6:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	movaps xmmword ptr [rdi], xmm1
@@ -44,18 +44,18 @@ gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_ze
 		// benches/gungraun.rs:508
 		}
 	ret
-.LBB266_1:
+.LBB269_1:
 	movaps xmm0, xmm1
-		// src/f32/sse2/vec3a.rs:710
+		// src/f32/sse2/vec3a.rs:709
 		if rcp.is_finite() && rcp > 0.0 {
 	dec eax
 	cmp ecx, 2130706432
-	jb .LBB266_4
-.LBB266_3:
+	jb .LBB269_4
+.LBB269_3:
 	xorps xmm0, xmm0
 	cmp eax, 8388607
-	jb .LBB266_6
-.LBB266_5:
+	jb .LBB269_6
+.LBB269_5:
 	movaps xmm1, xmm0
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)

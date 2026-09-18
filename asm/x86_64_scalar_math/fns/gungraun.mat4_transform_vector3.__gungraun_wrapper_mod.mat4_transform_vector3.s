@@ -3,10 +3,10 @@
 .type	gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3,@function
 gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3:
 	.cfi_startproc
-		// src/f32/scalar/mat4.rs:1323
+		// src/f32/scalar/mat4.rs:1436
 		let mut res = self.x_axis.mul(rhs.x);
 	movss xmm1, dword ptr [rdx]
-		// src/f32/scalar/mat4.rs:1324
+		// src/f32/scalar/mat4.rs:1437
 		res = self.y_axis.mul(rhs.y).add(res);
 	movss xmm0, dword ptr [rdx + 4]
 	movss xmm2, dword ptr [rsi + 8]
@@ -18,7 +18,7 @@ gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	addss xmm3, xmm2
-		// src/f32/scalar/mat4.rs:1325
+		// src/f32/scalar/mat4.rs:1438
 		res = self.z_axis.mul(rhs.z).add(res);
 	movss xmm2, dword ptr [rdx + 8]
 	movss xmm4, dword ptr [rsi + 40]
@@ -31,16 +31,16 @@ gungraun::mat4_transform_vector3::__gungraun_wrapper_mod::mat4_transform_vector3
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	unpcklps xmm1, xmm1
-		// src/f32/scalar/mat4.rs:1323
+		// src/f32/scalar/mat4.rs:1436
 		let mut res = self.x_axis.mul(rhs.x);
 	movsd xmm3, qword ptr [rsi]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
 	mulps xmm3, xmm1
-		// src/f32/scalar/mat4.rs:1324
+		// src/f32/scalar/mat4.rs:1437
 		res = self.y_axis.mul(rhs.y).add(res);
 	movsd xmm1, qword ptr [rsi + 16]
-		// src/f32/scalar/mat4.rs:1325
+		// src/f32/scalar/mat4.rs:1438
 		res = self.z_axis.mul(rhs.z).add(res);
 	movsd xmm5, qword ptr [rsi + 32]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350

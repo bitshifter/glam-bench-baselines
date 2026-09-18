@@ -3,17 +3,17 @@
 	.p2align	4
 .type	<glam::f32::sse2::mat4::Mat4>::inverse,@function
 <glam::f32::sse2::mat4::Mat4>::inverse:
-		// src/f32/sse2/mat4.rs:855
+		// src/f32/sse2/mat4.rs:968
 		pub fn inverse(&self) -> Self {
 	.cfi_startproc
 	mov rax, rdi
-		// src/f32/sse2/mat4.rs:779
+		// src/f32/sse2/mat4.rs:892
 		let temp0 = _mm_shuffle_ps(self.y_axis.0, self.x_axis.0, 0b00_00_00_00);
 	movaps xmm1, xmmword ptr [rsi]
-		// src/f32/sse2/mat4.rs:702
+		// src/f32/sse2/mat4.rs:815
 		let swp00 = _mm_shuffle_ps(self.z_axis.0, self.y_axis.0, 0b10_10_10_10);
 	movaps xmm0, xmmword ptr [rsi + 16]
-		// src/f32/sse2/mat4.rs:699
+		// src/f32/sse2/mat4.rs:812
 		let swp0a = _mm_shuffle_ps(self.w_axis.0, self.z_axis.0, 0b11_11_11_11);
 	movaps xmm9, xmmword ptr [rsi + 32]
 	movaps xmm7, xmmword ptr [rsi + 48]
@@ -210,12 +210,12 @@
 	mulps xmm11, xmm1
 	mulps xmm0, xmm1
 	mulps xmm1, xmm7
-		// src/f32/sse2/mat4.rs:856
+		// src/f32/sse2/mat4.rs:969
 		self.inverse_checked::<false>().0
 	movaps xmmword ptr [rdi], xmm8
 	movaps xmmword ptr [rdi + 16], xmm11
 	movaps xmmword ptr [rdi + 32], xmm0
 	movaps xmmword ptr [rdi + 48], xmm1
-		// src/f32/sse2/mat4.rs:857
+		// src/f32/sse2/mat4.rs:970
 		}
 	ret

@@ -3,7 +3,7 @@
 .type	gungraun::mat2_mul_vec2::__gungraun_wrapper_mod::mat2_mul_vec2,@function
 gungraun::mat2_mul_vec2::__gungraun_wrapper_mod::mat2_mul_vec2:
 	.cfi_startproc
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	unpcklps xmm0, xmm0
 	movsd xmm2, qword ptr [rdi]

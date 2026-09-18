@@ -3,7 +3,7 @@
 .type	gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross,@function
 gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross:
 	.cfi_startproc
-		// benches/gungraun.rs:557
+		// benches/gungraun.rs:563
 		black_box(v1.cross(v2))
 	movss xmm0, dword ptr [rsi]
 	movss xmm1, dword ptr [rdx]
@@ -31,6 +31,6 @@ gungraun::vec3_cross::__gungraun_wrapper_mod::vec3_cross:
 	movss dword ptr [rdi + 8], xmm0
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:558
+		// benches/gungraun.rs:564
 		}
 	ret

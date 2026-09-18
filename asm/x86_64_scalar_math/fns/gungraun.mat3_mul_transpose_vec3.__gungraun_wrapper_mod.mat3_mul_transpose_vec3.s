@@ -3,18 +3,18 @@
 .type	gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3,@function
 gungraun::mat3_mul_transpose_vec3::__gungraun_wrapper_mod::mat3_mul_transpose_vec3:
 	.cfi_startproc
-		// src/f32/mat3.rs:718
+		// src/f32/mat3.rs:813
 		self.x_axis.dot(rhs),
 	movss xmm3, dword ptr [rdx + 8]
 	movss xmm0, dword ptr [rsi + 32]
 		// src/f32/vec3.rs:247
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	mulss xmm0, xmm3
-		// src/f32/mat3.rs:718
+		// src/f32/mat3.rs:813
 		self.x_axis.dot(rhs),
 	movsd xmm1, qword ptr [rdx]
 	movups xmm4, xmmword ptr [rsi]
-		// src/f32/mat3.rs:719
+		// src/f32/mat3.rs:814
 		self.y_axis.dot(rhs),
 	movsd xmm2, qword ptr [rsi + 16]
 		// src/f32/vec3.rs:247

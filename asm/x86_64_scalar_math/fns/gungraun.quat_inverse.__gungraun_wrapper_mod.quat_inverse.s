@@ -8,7 +8,7 @@ gungraun::quat_inverse::__gungraun_wrapper_mod::quat_inverse:
 	movsd xmm0, qword ptr [rsi]
 		// src/f32/scalar/quat.rs:541
 		x: -self.x,
-	xorps xmm0, xmmword ptr [rip + .LCPI170_0]
+	xorps xmm0, xmmword ptr [rip + .LCPI171_0]
 		// benches/gungraun.rs:431
 		black_box(q.inverse())
 	movss xmm1, dword ptr [rsi + 12]

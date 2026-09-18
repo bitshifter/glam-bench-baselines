@@ -23,7 +23,7 @@ gungraun::vec3a_normalize::__gungraun_wrapper_mod::vec3a_normalize:
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:2103
 		intrinsics::sqrtf32(x)
 	sqrtss xmm1, xmm1
-	movss xmm2, dword ptr [rip + .LCPI222_0]
+	movss xmm2, dword ptr [rip + .LCPI223_0]
 		// src/f32/scalar/vec3a.rs:597
 		1.0 / self.length()
 	divss xmm2, xmm1

@@ -17,7 +17,7 @@ gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle:
 	mov r14, rdi
 		// src/f32/scalar/quat.rs:146
 		let (s, c) = math::sin_cos(angle * 0.5);
-	mulss xmm0, dword ptr [rip + .LCPI250_0]
+	mulss xmm0, dword ptr [rip + .LCPI253_0]
 	lea rdi, [rsp + 4]
 	mov rsi, rsp
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/num/f32.rs:702
@@ -33,7 +33,7 @@ gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle:
 	unpcklps xmm2, xmm1
 	shufps xmm2, xmm2, 64
 	movss xmm1, dword ptr [rbx + 8]
-	shufps xmm1, xmmword ptr [rip + .LCPI250_1], 48
+	shufps xmm1, xmmword ptr [rip + .LCPI253_1], 48
 	shufps xmm0, xmm1, 132
 	mulps xmm0, xmm2
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491

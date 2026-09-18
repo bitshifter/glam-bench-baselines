@@ -3,7 +3,7 @@
 .type	gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_transpose_vec3a,@function
 gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_transpose_vec3a:
 	.cfi_startproc
-		// src/f32/scalar/mat3a.rs:794
+		// src/f32/scalar/mat3a.rs:889
 		self.x_axis.dot(rhs),
 	movups xmm0, xmmword ptr [rsi + 8]
 	movss xmm3, dword ptr [rdx + 8]
@@ -11,13 +11,13 @@ gungraun::mat3a_mul_transpose_vec3a::__gungraun_wrapper_mod::mat3a_mul_transpose
 		// src/f32/scalar/vec3a.rs:258
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	mulss xmm1, xmm3
-		// src/f32/scalar/mat3a.rs:794
+		// src/f32/scalar/mat3a.rs:889
 		self.x_axis.dot(rhs),
 	movsd xmm4, qword ptr [rsi]
 	movsd xmm2, qword ptr [rdx]
 	movaps xmm5, xmm2
 	shufps xmm5, xmm2, 225
-		// src/f32/scalar/mat3a.rs:795
+		// src/f32/scalar/mat3a.rs:890
 		self.y_axis.dot(rhs),
 	movsd xmm6, qword ptr [rsi + 16]
 		// src/f32/scalar/vec3a.rs:258

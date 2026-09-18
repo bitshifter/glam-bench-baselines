@@ -32,6 +32,6 @@ gungraun::affine3a_transform_vector3a::__gungraun_wrapper_mod::affine3a_transfor
 	movaps xmmword ptr [rdi], xmm0
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:630
+		// benches/gungraun.rs:636
 		}
 	ret

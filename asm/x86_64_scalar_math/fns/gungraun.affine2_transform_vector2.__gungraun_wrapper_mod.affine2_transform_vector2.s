@@ -7,7 +7,7 @@ gungraun::affine2_transform_vector2::__gungraun_wrapper_mod::affine2_transform_v
 		self.matrix2 * rhs
 	movsd xmm2, qword ptr [rdi]
 	movsd xmm3, qword ptr [rdi + 8]
-		// src/f32/scalar/mat2.rs:361
+		// src/f32/scalar/mat2.rs:445
 		(self.x_axis.x * rhs.x) + (self.y_axis.x * rhs.y),
 	unpcklps xmm0, xmm0
 	mulps xmm0, xmm2
@@ -20,7 +20,7 @@ gungraun::affine2_transform_vector2::__gungraun_wrapper_mod::affine2_transform_v
 	lea rax, [rsp - 8]
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:606
+		// benches/gungraun.rs:612
 		}
 	movss xmm0, dword ptr [rsp - 8]
 	movss xmm1, dword ptr [rsp - 4]

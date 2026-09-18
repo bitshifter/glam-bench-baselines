@@ -3,17 +3,17 @@
 	.p2align	4
 .type	<glam::f32::sse2::mat4::Mat4>::inverse_or_zero,@function
 <glam::f32::sse2::mat4::Mat4>::inverse_or_zero:
-		// src/f32/sse2/mat4.rs:872
+		// src/f32/sse2/mat4.rs:985
 		pub fn inverse_or_zero(&self) -> Self {
 	.cfi_startproc
 	mov rax, rdi
-		// src/f32/sse2/mat4.rs:779
+		// src/f32/sse2/mat4.rs:892
 		let temp0 = _mm_shuffle_ps(self.y_axis.0, self.x_axis.0, 0b00_00_00_00);
 	movaps xmm1, xmmword ptr [rsi]
-		// src/f32/sse2/mat4.rs:702
+		// src/f32/sse2/mat4.rs:815
 		let swp00 = _mm_shuffle_ps(self.z_axis.0, self.y_axis.0, 0b10_10_10_10);
 	movaps xmm0, xmmword ptr [rsi + 16]
-		// src/f32/sse2/mat4.rs:699
+		// src/f32/sse2/mat4.rs:812
 		let swp0a = _mm_shuffle_ps(self.w_axis.0, self.z_axis.0, 0b11_11_11_11);
 	movaps xmm10, xmmword ptr [rsi + 32]
 	movaps xmm5, xmmword ptr [rsi + 48]
@@ -198,7 +198,7 @@
 	shufps xmm2, xmm1, 85
 	addss xmm2, xmm1
 	xorps xmm1, xmm1
-		// src/f32/sse2/mat4.rs:826
+		// src/f32/sse2/mat4.rs:939
 		if dot0 == 0.0 {
 	ucomiss xmm2, xmm1
 	xorps xmm1, xmm1
@@ -226,12 +226,12 @@
 	movaps xmm4, xmm9
 	movaps xmm6, xmm8
 .LBB5_2:
-		// src/f32/sse2/mat4.rs:873
+		// src/f32/sse2/mat4.rs:986
 		self.inverse_checked::<true>().0
 	movaps xmmword ptr [rax], xmm6
 	movaps xmmword ptr [rax + 16], xmm4
 	movaps xmmword ptr [rax + 32], xmm3
 	movaps xmmword ptr [rax + 48], xmm1
-		// src/f32/sse2/mat4.rs:874
+		// src/f32/sse2/mat4.rs:987
 		}
 	ret

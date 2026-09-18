@@ -2,7 +2,7 @@
 	.p2align	4
 .type	gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation,@function
 gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation:
-		// benches/gungraun.rs:579
+		// benches/gungraun.rs:585
 		#[bench::args(vec2(), bb_f32(), vec2())]
 	.cfi_startproc
 	push rbx
@@ -21,10 +21,10 @@ gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_
 		intrinsics::sinf32(self)
 	movaps xmm0, xmm2
 	call qword ptr [rip + sincosf@GOTPCREL]
-		// src/f32/sse2/mat2.rs:136
+		// src/f32/sse2/mat2.rs:176
 		Self::new(cos, sin, -sin, cos)
 	movss xmm0, dword ptr [rsp + 12]
-	movaps xmm1, xmmword ptr [rip + .LCPI278_0]
+	movaps xmm1, xmmword ptr [rip + .LCPI281_0]
 	xorps xmm1, xmm0
 	movaps xmm3, xmmword ptr [rsp + 16]
 		// ~/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
@@ -44,7 +44,7 @@ gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_
 	movss dword ptr [rbx + 20], xmm0
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:582
+		// benches/gungraun.rs:588
 		}
 	add rsp, 48
 	.cfi_def_cfa_offset 16

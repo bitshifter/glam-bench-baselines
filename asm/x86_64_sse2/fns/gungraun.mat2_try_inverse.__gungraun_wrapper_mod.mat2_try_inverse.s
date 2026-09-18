@@ -20,13 +20,13 @@ gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse:
 		unsafe { cmpps(a, b, 0) }
 	xorps xmm1, xmm1
 	cmpeqps xmm1, xmm2
-		// src/f32/sse2/mat2.rs:332
+		// src/f32/sse2/mat2.rs:416
 		if Vec4(det) == Vec4::ZERO {
 	movmskps eax, xmm1
 	xor ecx, ecx
 	cmp eax, 15
 	setne cl
-	movaps xmm1, xmmword ptr [rip + .LCPI226_0]
+	movaps xmm1, xmmword ptr [rip + .LCPI227_0]
 	divps xmm1, xmm2
 	shufps xmm0, xmm0, 39
 	mulps xmm0, xmm1

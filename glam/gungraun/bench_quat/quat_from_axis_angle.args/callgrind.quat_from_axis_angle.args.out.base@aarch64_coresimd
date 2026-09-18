@@ -1,7 +1,7 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 16054
+pid: 11601
 cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00004 00001 00000
 part: 1
 thread: 1
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71255
+desc: Timerange: Basic block 0 - 71716
 desc: Trigger: Program termination
 
 positions: line
@@ -205,13 +205,14 @@ calls=1 0
 0 69
 
 fn=gungraun::quat_from_axis_angle::__gungraun_wrapper_mod::quat_from_axis_angle
-0 15
+0 12
 cob=/usr/lib/aarch64-linux-gnu/libm.so.6
 cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
 cfn=sincosf
 calls=1 67 
 0 35
 0 19
+0 3
 
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c

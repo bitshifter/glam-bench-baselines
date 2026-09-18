@@ -24,7 +24,7 @@ gungraun::affine2_transform_point2::__gungraun_wrapper_mod::affine2_transform_po
 	lea rax, [rsp - 8]
 	#APP
 	#NO_APP
-		// benches/gungraun.rs:600
+		// benches/gungraun.rs:606
 		}
 	movss xmm0, dword ptr [rsp - 8]
 	movss xmm1, dword ptr [rsp - 4]
