@@ -14,7 +14,7 @@ gungraun::vec3a_dot::__gungraun_wrapper_mod::vec3a_dot:
 	add x8, sp, #12
 	ldr s2, [x1]
 	ldur d3, [x1, #4]
-		// src/f32/scalar/vec3a.rs:258
+		// src/f32/scalar/vec3a.rs:277
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fmul s0, s0, s2
 	fmul v1.2s, v1.2s, v3.2s

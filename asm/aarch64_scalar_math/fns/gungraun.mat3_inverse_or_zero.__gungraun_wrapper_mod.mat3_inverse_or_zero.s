@@ -55,7 +55,7 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 		// src/f32/mat3.rs:630
 		if det == 0.0 {
 	fcmp s18, #0.0
-	b.ne .LBB249_2
+	b.ne .LBB250_2
 	movi d1, #0000000000000000
 	movi v2.2d, #0000000000000000
 	movi d0, #0000000000000000
@@ -72,7 +72,7 @@ gungraun::mat3_inverse_or_zero::__gungraun_wrapper_mod::mat3_inverse_or_zero:
 		// benches/gungraun.rs:235
 		}
 	ret
-.LBB249_2:
+.LBB250_2:
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
 	mov v20.16b, v3.16b

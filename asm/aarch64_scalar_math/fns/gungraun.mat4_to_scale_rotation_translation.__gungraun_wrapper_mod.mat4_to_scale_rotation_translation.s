@@ -119,7 +119,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul s6, s16, s22
 		// src/f32/scalar/quat.rs:212
 		if m22 <= 0.0 {
-	b.ls .LBB283_3
+	b.ls .LBB286_3
 		// src/f32/scalar/quat.rs:239
 		let sum10 = m11 + m00;
 	fadd s16, s20, s19
@@ -129,7 +129,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/scalar/quat.rs:241
 		if sum10 <= 0.0 {
 	fcmp s16, #0.0
-	b.ls .LBB283_5
+	b.ls .LBB286_5
 		// src/f32/scalar/quat.rs:253
 		let four_wsq = opm22 + sum10;
 	fadd s16, s17, s16
@@ -163,8 +163,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul s5, s16, s17
 		// src/f32/scalar/quat.rs:241
 		if sum10 <= 0.0 {
-	b .LBB283_8
-.LBB283_3:
+	b .LBB286_8
+.LBB286_3:
 		// src/f32/scalar/quat.rs:214
 		let dif10 = m11 - m00;
 	fsub s16, s20, s19
@@ -174,7 +174,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/scalar/quat.rs:216
 		if dif10 <= 0.0 {
 	fcmp s16, #0.0
-	b.ls .LBB283_6
+	b.ls .LBB286_6
 		// src/f32/scalar/quat.rs:228
 		let four_ysq = omm22 + dif10;
 	fadd s16, s17, s16
@@ -205,8 +205,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul s4, s5, s17
 		// src/f32/scalar/quat.rs:234
 		(m20 - m02) * inv4y,
-	b .LBB283_7
-.LBB283_5:
+	b .LBB286_7
+.LBB286_5:
 		// src/f32/scalar/quat.rs:243
 		let four_zsq = opm22 - sum10;
 	fsub s16, s17, s16
@@ -240,8 +240,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul s5, s5, s17
 		// src/f32/scalar/quat.rs:241
 		if sum10 <= 0.0 {
-	b .LBB283_8
-.LBB283_6:
+	b .LBB286_8
+.LBB286_6:
 		// src/f32/scalar/quat.rs:218
 		let four_xsq = omm22 - dif10;
 	fsub s16, s17, s16
@@ -270,9 +270,9 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/scalar/quat.rs:223
 		(m02 + m20) * inv4x,
 	fmul s4, s4, s17
-.LBB283_7:
+.LBB286_7:
 	fmul s5, s6, s17
-.LBB283_8:
+.LBB286_8:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	stp s2, s3, [x0]

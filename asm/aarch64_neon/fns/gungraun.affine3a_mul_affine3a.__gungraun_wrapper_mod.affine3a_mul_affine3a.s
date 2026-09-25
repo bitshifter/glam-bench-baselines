@@ -3,10 +3,10 @@
 .type	gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a,@function
 gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	.cfi_startproc
-		// src/f32/affine3a.rs:575
+		// src/f32/affine3a.rs:594
 		matrix3: self.matrix3 * rhs.matrix3,
 	ldp q0, q1, [x1]
-		// src/f32/affine3a.rs:576
+		// src/f32/affine3a.rs:595
 		translation: self.matrix3 * rhs.translation + self.translation,
 	ldp q7, q2, [x2, #32]
 		// src/f32/neon/mat3a.rs:1143
@@ -25,7 +25,7 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:1874
 		unsafe { simd_add(a, b) }
 	fadd v5.4s, v5.4s, v6.4s
-		// src/f32/affine3a.rs:575
+		// src/f32/affine3a.rs:594
 		matrix3: self.matrix3 * rhs.matrix3,
 	ldp q18, q6, [x1, #32]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:1874
@@ -52,6 +52,6 @@ gungraun::affine3a_mul_affine3a::__gungraun_wrapper_mod::affine3a_mul_affine3a:
 	stp q0, q1, [x0, #32]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:624
+		// benches/gungraun.rs:630
 		}
 	ret

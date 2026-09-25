@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7173
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17 --gungraun-run 00004 00009 00002
+pid: 9113
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a --gungraun-run 00004 00009 00002
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85308
+desc: Timerange: Basic block 0 - 84547
 desc: Trigger: Program termination
 
 positions: line
@@ -19,11 +19,14 @@ events: Ir
 summary: 39
 
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a
 fl=???
 fn=gungraun::bench_quat::__run
 cfn=gungraun::quat_slerp::__run_nearly_parallel
 calls=1 0 
+0 39
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 0 39
 
 fn=std::rt::lang_start_internal
@@ -37,7 +40,7 @@ calls=1 0
 0 39
 
 fn=gungraun::quat_slerp::__run_nearly_parallel
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_nearly_parallel::nearly_parallel
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
 calls=1 0 
 0 39
 
@@ -51,10 +54,7 @@ cfn=std::rt::lang_start_internal
 calls=1 0 
 0 39
 
-fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 39
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_nearly_parallel::nearly_parallel
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
 cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 calls=1 0 
 0 39
@@ -74,7 +74,7 @@ calls=1 0
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
 fn=0x000000000001f540
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a
 cfi=???
 cfn=(below main)
 calls=1 0 
@@ -90,7 +90,7 @@ calls=1 29
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a
 cfi=???
 cfn=main
 calls=1 0 

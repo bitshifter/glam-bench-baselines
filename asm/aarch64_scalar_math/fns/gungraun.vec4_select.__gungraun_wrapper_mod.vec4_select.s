@@ -3,12 +3,12 @@
 .type	gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select,@function
 gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select:
 	.cfi_startproc
-		// benches/gungraun.rs:551
+		// benches/gungraun.rs:557
 		black_box(Vec4::select(b, v1, v2))
 	dup v0.2s, w1
-	adrp x8, .LCPI163_0
+	adrp x8, .LCPI164_0
 	tst w1, #0x100
-	ldr d1, [x8, :lo12:.LCPI163_0]
+	ldr d1, [x8, :lo12:.LCPI164_0]
 	cset w8, eq
 	ldr q2, [x3]
 	ldr q3, [x2]
@@ -31,6 +31,6 @@ gungraun::vec4_select::__gungraun_wrapper_mod::vec4_select:
 	str q1, [x0]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:552
+		// benches/gungraun.rs:558
 		}
 	ret

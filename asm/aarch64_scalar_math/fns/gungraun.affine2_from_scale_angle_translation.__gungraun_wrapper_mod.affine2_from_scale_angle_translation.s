@@ -2,7 +2,7 @@
 	.p2align	2
 .type	gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation,@function
 gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_from_scale_angle_translation:
-		// benches/gungraun.rs:585
+		// benches/gungraun.rs:591
 		#[bench::args(vec2(), bb_f32(), vec2())]
 	.cfi_startproc
 	sub sp, sp, #80
@@ -52,7 +52,7 @@ gungraun::affine2_from_scale_angle_translation::__gungraun_wrapper_mod::affine2_
 	//APP
 	//NO_APP
 	.cfi_def_cfa wsp, 80
-		// benches/gungraun.rs:588
+		// benches/gungraun.rs:594
 		}
 	ldp x29, x30, [sp, #48]
 	ldr x19, [sp, #64]

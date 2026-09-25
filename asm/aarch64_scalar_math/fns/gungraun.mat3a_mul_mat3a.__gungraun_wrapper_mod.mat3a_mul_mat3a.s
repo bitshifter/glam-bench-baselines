@@ -3,32 +3,32 @@
 .type	gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a,@function
 gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	.cfi_startproc
-		// src/f32/scalar/mat3a.rs:871
+		// src/f32/scalar/mat3a.rs:882
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	ldr s0, [x2, #8]
-		// src/f32/scalar/mat3a.rs:1127
+		// src/f32/scalar/mat3a.rs:1138
 		self.mul(rhs.x_axis),
 	ldr d3, [x1]
-		// src/f32/scalar/mat3a.rs:1128
+		// src/f32/scalar/mat3a.rs:1139
 		self.mul(rhs.y_axis),
 	add x8, x2, #24
-		// src/f32/scalar/mat3a.rs:871
+		// src/f32/scalar/mat3a.rs:882
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	ldr d1, [x2]
-		// src/f32/scalar/mat3a.rs:1128
+		// src/f32/scalar/mat3a.rs:1139
 		self.mul(rhs.y_axis),
 	ldr d7, [x2, #16]
-		// src/f32/scalar/mat3a.rs:1127
+		// src/f32/scalar/mat3a.rs:1138
 		self.mul(rhs.x_axis),
 	ldr d4, [x1, #16]
 	ldur d5, [x1, #4]
-		// src/f32/scalar/mat3a.rs:873
+		// src/f32/scalar/mat3a.rs:884
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	mov v24.16b, v0.16b
-		// src/f32/scalar/mat3a.rs:1127
+		// src/f32/scalar/mat3a.rs:1138
 		self.mul(rhs.x_axis),
 	ldur d6, [x1, #20]
-		// src/f32/scalar/mat3a.rs:873
+		// src/f32/scalar/mat3a.rs:884
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	zip1 v16.2s, v1.2s, v7.2s
 	dup v17.2s, v7.s[0]
@@ -38,17 +38,17 @@ gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	ext v21.8b, v5.8b, v3.8b, #4
 	zip2 v22.2s, v4.2s, v6.2s
 	ext v23.8b, v6.8b, v4.8b, #4
-		// src/f32/scalar/mat3a.rs:1127
+		// src/f32/scalar/mat3a.rs:1138
 		self.mul(rhs.x_axis),
 	ldr d2, [x1, #32]
 	ldur d7, [x1, #36]
-		// src/f32/scalar/mat3a.rs:873
+		// src/f32/scalar/mat3a.rs:884
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	ld1 { v24.s }[1], [x8]
-		// src/f32/scalar/mat3a.rs:1129
+		// src/f32/scalar/mat3a.rs:1140
 		self.mul(rhs.z_axis),
 	add x8, x2, #40
-		// src/f32/scalar/mat3a.rs:873
+		// src/f32/scalar/mat3a.rs:884
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	mov v16.d[1], v17.d[0]
 	zip2 v25.2s, v2.2s, v7.2s
@@ -62,32 +62,32 @@ gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	zip1 v19.4s, v24.4s, v19.4s
 	fmul v16.4s, v21.4s, v16.4s
 	fmul v18.4s, v23.4s, v18.4s
-		// src/f32/scalar/mat3a.rs:871
+		// src/f32/scalar/mat3a.rs:882
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	dup v23.2s, v2.s[0]
 	fmov s21, #1.00000000
 	zip1 v2.2s, v2.2s, v7.2s
-		// src/f32/scalar/mat3a.rs:873
+		// src/f32/scalar/mat3a.rs:884
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	fadd v16.4s, v16.4s, v18.4s
 	fmul v18.4s, v17.4s, v19.4s
-		// src/f32/scalar/mat3a.rs:871
+		// src/f32/scalar/mat3a.rs:882
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	dup v17.2s, v4.s[0]
-		// src/f32/scalar/mat3a.rs:1129
+		// src/f32/scalar/mat3a.rs:1140
 		self.mul(rhs.z_axis),
 	ldr d19, [x2, #32]
-		// src/f32/scalar/mat3a.rs:871
+		// src/f32/scalar/mat3a.rs:882
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	zip1 v4.2s, v4.2s, v6.2s
 	mov v23.d[1], v7.d[0]
 	fmul v0.2s, v2.2s, v0.s[0]
 	dup v22.4s, v19.s[1]
 	dup v19.4s, v19.s[0]
-		// src/f32/scalar/mat3a.rs:873
+		// src/f32/scalar/mat3a.rs:884
 		self.x_axis.z * rhs.x + self.y_axis.z * rhs.y + self.z_axis.z * rhs.z,
 	fadd v16.4s, v16.4s, v18.4s
-		// src/f32/scalar/mat3a.rs:871
+		// src/f32/scalar/mat3a.rs:882
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	fmov v18.4s, #1.00000000
 	mov v17.d[1], v6.d[0]
@@ -104,7 +104,7 @@ gungraun::mat3a_mul_mat3a::__gungraun_wrapper_mod::mat3a_mul_mat3a:
 	add x8, x0, #44
 	str s16, [x0, #8]
 	stur q16, [x0, #12]
-		// src/f32/scalar/mat3a.rs:871
+		// src/f32/scalar/mat3a.rs:882
 		self.x_axis.x * rhs.x + self.y_axis.x * rhs.y + self.z_axis.x * rhs.z,
 	mov v24.d[1], v5.d[0]
 	dup v5.4s, v18.s[1]

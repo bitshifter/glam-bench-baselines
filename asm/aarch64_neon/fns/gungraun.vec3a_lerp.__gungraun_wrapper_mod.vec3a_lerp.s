@@ -9,7 +9,7 @@ gungraun::vec3a_lerp::__gungraun_wrapper_mod::vec3a_lerp:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798
 		unsafe { simd_mul(a, vdupq_n_f32(b)) }
 	fmul v1.4s, v1.4s, v2.s[0]
-		// src/f32/neon/vec3a.rs:996
+		// src/f32/neon/vec3a.rs:1002
 		self * (1.0 - s) + rhs * s
 	fsub s3, s3, s2
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32798

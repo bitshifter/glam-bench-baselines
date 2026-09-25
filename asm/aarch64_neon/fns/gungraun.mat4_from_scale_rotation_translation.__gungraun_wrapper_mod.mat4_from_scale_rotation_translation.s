@@ -3,7 +3,7 @@
 .type	gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation,@function
 gungraun::mat4_from_scale_rotation_translation::__gungraun_wrapper_mod::mat4_from_scale_rotation_translation:
 	.cfi_startproc
-		// src/f32/neon/vec4.rs:2051
+		// src/f32/neon/vec4.rs:2080
 		(v.x, v.y, v.z, v.w)
 	mov s1, v0.s[1]
 	mov s2, v0.s[2]

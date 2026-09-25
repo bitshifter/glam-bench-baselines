@@ -3,7 +3,7 @@
 .type	gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp,@function
 gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp:
 	.cfi_startproc
-		// src/f32/scalar/quat.rs:724
+		// src/f32/scalar/quat.rs:727
 		let dot = self.dot(end);
 	ldr q1, [x1]
 	ldr q2, [x2]
@@ -18,7 +18,7 @@ gungraun::quat_lerp::__gungraun_wrapper_mod::quat_lerp:
 	fmov s5, #-1.00000000
 	fadd v3.2s, v4.2s, v3.2s
 	fmov s4, #1.00000000
-		// src/f32/scalar/quat.rs:725
+		// src/f32/scalar/quat.rs:728
 		let bias = if dot >= 0.0 { 1.0 } else { -1.0 };
 	fcmp s3, #0.0
 	fcsel s3, s5, s4, lt

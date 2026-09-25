@@ -43,6 +43,6 @@ gungraun::affine2_mul_affine2::__gungraun_wrapper_mod::affine2_mul_affine2:
 	str d0, [x0, #16]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:600
+		// benches/gungraun.rs:606
 		}
 	ret

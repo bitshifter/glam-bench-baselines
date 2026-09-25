@@ -3,7 +3,7 @@
 .type	gungraun::vec4_mul_vec4::__gungraun_wrapper_mod::vec4_mul_vec4,@function
 gungraun::vec4_mul_vec4::__gungraun_wrapper_mod::vec4_mul_vec4:
 	.cfi_startproc
-		// benches/gungraun.rs:527
+		// benches/gungraun.rs:533
 		black_box(v1 * v2)
 	ldr q0, [x1]
 	ldr q1, [x2]
@@ -15,6 +15,6 @@ gungraun::vec4_mul_vec4::__gungraun_wrapper_mod::vec4_mul_vec4:
 	str q0, [x0]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:528
+		// benches/gungraun.rs:534
 		}
 	ret

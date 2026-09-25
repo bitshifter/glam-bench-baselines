@@ -3,7 +3,7 @@
 .type	gungraun::vec4_dot_into_vec::__gungraun_wrapper_mod::vec4_dot_into_vec,@function
 gungraun::vec4_dot_into_vec::__gungraun_wrapper_mod::vec4_dot_into_vec:
 	.cfi_startproc
-		// benches/gungraun.rs:539
+		// benches/gungraun.rs:545
 		black_box(v1.dot_into_vec(v2))
 	ldp d0, d3, [x2]
 	ldp d1, d2, [x1]
@@ -22,6 +22,6 @@ gungraun::vec4_dot_into_vec::__gungraun_wrapper_mod::vec4_dot_into_vec:
 	str q0, [x0]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:540
+		// benches/gungraun.rs:546
 		}
 	ret

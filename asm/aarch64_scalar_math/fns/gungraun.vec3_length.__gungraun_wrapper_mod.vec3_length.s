@@ -2,12 +2,12 @@
 	.p2align	2
 .type	gungraun::vec3_length::__gungraun_wrapper_mod::vec3_length,@function
 gungraun::vec3_length::__gungraun_wrapper_mod::vec3_length:
-		// benches/gungraun.rs:567
+		// benches/gungraun.rs:573
 		#[bench::args(vec3())]
 	.cfi_startproc
 	sub sp, sp, #16
 	.cfi_def_cfa_offset 16
-		// benches/gungraun.rs:569
+		// benches/gungraun.rs:575
 		black_box(v.length())
 	ldr s0, [x0]
 	ldur d1, [x0, #4]
@@ -27,7 +27,7 @@ gungraun::vec3_length::__gungraun_wrapper_mod::vec3_length:
 	str s0, [sp, #12]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:570
+		// benches/gungraun.rs:576
 		}
 	ldr s0, [sp, #12]
 	add sp, sp, #16

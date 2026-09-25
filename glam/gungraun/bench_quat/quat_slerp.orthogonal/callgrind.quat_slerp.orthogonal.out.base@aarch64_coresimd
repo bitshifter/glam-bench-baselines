@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 11610
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e --gungraun-run 00004 00009 00000
+pid: 15161
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd --gungraun-run 00004 00009 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71730
+desc: Timerange: Basic block 0 - 71745
 desc: Trigger: Program termination
 
 positions: line
@@ -82,29 +82,10 @@ fi=./math/../sysdeps/ieee754/flt-32/s_sinf.c
 fe=./math/../sysdeps/ieee754/flt-32/math_config.h
 
 ob=/usr/lib/aarch64-linux-gnu/libc.so.6
-fl=./nptl/./nptl/pthread_attr_destroy.c
-fn=pthread_attr_destroy
-fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
-cfi=???
-cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
-calls=1 0 
-0 226
-fe=./nptl/./nptl/pthread_attr_destroy.c
-
-fl=./nptl/./nptl/pthread_getattr_np.c
-fn=pthread_getattr_np@@GLIBC_2.32
-fi=???
-cfi=./nptl/./nptl/pthread_attr_destroy.c
-cfn=pthread_attr_destroy
-calls=1 26 
-0 226
-fe=./nptl/./nptl/pthread_getattr_np.c
-
 fl=./malloc/./malloc/malloc.c
 fn=free
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd
 cfi=???
 cfn=__rustc::__rust_dealloc'2
 calls=1 0 
@@ -113,13 +94,13 @@ fe=./malloc/./malloc/malloc.c
 
 fn=free'2
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd
 cfi=???
 cfn=gungraun::main'2
 calls=1 0 
 0 226
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd
 cfi=???
 cfn=gungraun::bench_quat::__run
 calls=1 0 
@@ -128,7 +109,7 @@ fe=./malloc/./malloc/malloc.c
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd
 cfi=???
 cfn=main
 calls=1 0 
@@ -146,7 +127,7 @@ cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
 350 226
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd
 cfi=???
 cfn=init_have_lse_atomics
 calls=1 0 
@@ -175,6 +156,25 @@ calls=1 145
 144 226
 fe=./stdlib/./stdlib/cxa_atexit.c
 
+fl=./nptl/./nptl/pthread_attr_destroy.c
+fn=pthread_attr_destroy
+fi=???
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd
+cfi=???
+cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 0 
+0 226
+fe=./nptl/./nptl/pthread_attr_destroy.c
+
+fl=./nptl/./nptl/pthread_getattr_np.c
+fn=pthread_getattr_np@@GLIBC_2.32
+fi=???
+cfi=./nptl/./nptl/pthread_attr_destroy.c
+cfn=pthread_attr_destroy
+calls=1 26 
+0 226
+fe=./nptl/./nptl/pthread_getattr_np.c
+
 ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
 fl=./elf/./elf/rtld.c
 fn=_dl_start
@@ -195,37 +195,15 @@ calls=1 517
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd
 cfi=???
 cfn=(below main)
 calls=1 0 
 52 226
 fe=./elf/./elf/dl-init.c
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/2fb2fe659e08479e/out/gungraun-2fb2fe659e08479e
+ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/f3f99f64f7bb8dbd/out/gungraun-f3f99f64f7bb8dbd
 fl=???
-fn=(below main)
-cob=/usr/lib/aarch64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 226
-
-fn=__rustc::__rust_dealloc
-cfn=__rustc::__rdl_dealloc
-calls=1 0 
-0 226
-
-fn=__rustc::__rust_dealloc'2
-cfn=__rustc::__rdl_dealloc'2
-calls=5 0 
-0 452
-
-fn=gungraun::quat_slerp::__run_orthogonal
-cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
-calls=1 0 
-0 226
-
 fn=main
 cfn=std::rt::lang_start_internal
 calls=1 0 
@@ -245,6 +223,11 @@ calls=1 0
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 226
+
+fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 calls=1 0 
 0 226
 
@@ -306,6 +289,16 @@ cfn=gungraun::quat_slerp::__run_orthogonal
 calls=1 0 
 0 226
 
+fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
+0 84
+cob=/usr/lib/aarch64-linux-gnu/libm.so.6
+cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
+cfn=sinf
+calls=3 67 
+0 104
+0 34
+0 4
+
 fn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 cfn=std::rt::lang_start::<()>::{closure#0}
 calls=1 0 
@@ -313,11 +306,6 @@ calls=1 0
 
 fn=std::env::args
 cfn=std::env::args_os
-calls=1 0 
-0 226
-
-fn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
-cfn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
 calls=1 0 
 0 226
 
@@ -338,14 +326,26 @@ cfn=gungraun::main
 calls=1 0 
 0 226
 
-fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 84
-cob=/usr/lib/aarch64-linux-gnu/libm.so.6
-cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
-cfn=sinf
-calls=3 67 
-0 104
-0 34
-0 4
+fn=gungraun::quat_slerp::__run_orthogonal
+cfn=gungraun::quat_slerp::__gungraun_wrapper_id_mod_orthogonal::orthogonal
+calls=1 0 
+0 226
+
+fn=(below main)
+cob=/usr/lib/aarch64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 226
+
+fn=__rustc::__rust_dealloc
+cfn=__rustc::__rdl_dealloc
+calls=1 0 
+0 226
+
+fn=__rustc::__rust_dealloc'2
+cfn=__rustc::__rdl_dealloc'2
+calls=5 0 
+0 452
 
 totals: 226

@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 12160
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd --gungraun-run 00006 00005 00001
+pid: 15668
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c --gungraun-run 00006 00006 00001
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 86418
+desc: Timerange: Basic block 0 - 85973
 desc: Trigger: Program termination
 
 positions: line
@@ -29,17 +29,20 @@ calls=1 29
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 cfi=???
 cfn=main
 calls=1 0 
 58 32
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 fl=???
 fn=gungraun::main
 cfn=gungraun::bench_vec3a::__run
 calls=1 0 
+0 32
+
+fn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero
 0 32
 
 fn=main
@@ -47,12 +50,9 @@ cfn=std::rt::lang_start_internal
 calls=1 0 
 0 32
 
-fn=gungraun::vec3a_normalize_or_zero::__run_zero
-cfn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_id_mod_zero::zero
+fn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_id_mod_zero::zero
+cfn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero
 calls=1 0 
-0 32
-
-fn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero
 0 32
 
 fn=std::rt::lang_start_internal
@@ -77,20 +77,20 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 32
 
-fn=gungraun::bench_vec3a::__run
-cfn=gungraun::vec3a_normalize_or_zero::__run_zero
+fn=gungraun::vec3a_normalize_or_zero::__run_zero
+cfn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_id_mod_zero::zero
 calls=1 0 
 0 32
 
-fn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_id_mod_zero::zero
-cfn=gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero
+fn=gungraun::bench_vec3a::__run
+cfn=gungraun::vec3a_normalize_or_zero::__run_zero
 calls=1 0 
 0 32
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
 fn=0x000000000001f540
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 cfi=???
 cfn=(below main)
 calls=1 0 

@@ -14,64 +14,72 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
 	uzp1 v5.4s, v4.4s, v4.4s
-	uzp1 v6.4s, v3.4s, v3.4s
-	ext v7.16b, v4.16b, v4.16b, #12
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:15148
+		let b: float32x4_t = simd_neg(b);
+	fneg v6.4s, v3.4s
 		// src/f32/neon/vec3a.rs:256
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	dup v1.4s, v0.s[1]
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:15148
+		let b: float32x4_t = simd_neg(b);
+	uzp1 v16.4s, v6.4s, v6.4s
+		// src/f32/neon/vec3a.rs:256
+		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fadd v1.4s, v0.4s, v1.4s
 	dup v0.4s, v0.s[2]
 	fadd v0.4s, v0.4s, v1.4s
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
-	ext v1.16b, v3.16b, v3.16b, #12
+	ext v1.16b, v3.16b, v3.16b, #4
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:2103
 		intrinsics::sqrtf32(x)
-	fsqrt s16, s0
+	fsqrt s7, s0
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
 		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
-	ext v0.16b, v1.16b, v3.16b, #8
-	ext v1.16b, v5.16b, v4.16b, #12
-	ext v5.16b, v6.16b, v3.16b, #12
-	ext v6.16b, v7.16b, v4.16b, #8
-		// src/f32/neon/vec3a.rs:256
-		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
-	ext v7.16b, v3.16b, v3.16b, #8
+	mov v1.s[2], v3.s[0]
+	ext v0.16b, v5.16b, v4.16b, #12
+	ext v5.16b, v4.16b, v4.16b, #4
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:32218
 		unsafe { simd_mul(a, b) }
-	fmul v0.4s, v0.4s, v1.4s
-		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:29996
-		unsafe { simd_sub(a, simd_mul(b, c)) }
-	fmul v1.4s, v5.4s, v6.4s
+	fmul v0.4s, v1.4s, v0.4s
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:15148
+		let b: float32x4_t = simd_neg(b);
+	ext v1.16b, v16.16b, v6.16b, #12
 		// src/f32/neon/vec3a.rs:256
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
-	zip2 v5.2s, v3.2s, v4.2s
 	ext v6.16b, v4.16b, v4.16b, #8
-		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:29996
-		unsafe { simd_sub(a, simd_mul(b, c)) }
-	fsub v0.4s, v0.4s, v1.4s
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/macros.rs:183
+		($x:expr, $idx:expr, $val:expr $(,)?) => {{ $crate::intrinsics::simd::simd_insert($x, const { $idx }, $val) }};
+	mov v5.s[2], v4.s[0]
+		// src/f32/neon/vec3a.rs:256
+		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
+	ext v16.16b, v3.16b, v3.16b, #8
+		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/arm_shared/neon/generated.rs:15008
+		unsafe { simd_fma(b, c, a) }
+	fmla v0.4s, v5.4s, v1.4s
 		// src/f32/neon/vec3a.rs:256
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	zip1 v1.2s, v3.2s, v4.2s
-	fmul v5.2s, v5.2s, v5.2s
-	zip1 v6.2s, v7.2s, v6.2s
+	zip2 v5.2s, v3.2s, v4.2s
+	zip1 v6.2s, v16.2s, v6.2s
 	fmul v0.4s, v2.4s, v0.4s
 	fmul v1.2s, v1.2s, v1.2s
+	fmul v5.2s, v5.2s, v5.2s
 	fmul v6.2s, v6.2s, v6.2s
-	faddp s7, v0.2s
+	faddp s16, v0.2s
 	mov s0, v0.s[2]
 	fadd v1.2s, v1.2s, v5.2s
 	fmov s5, #1.00000000
-	fadd s0, s0, s7
+	fadd s0, s0, s16
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1656
 		if self.is_nan() { Self::NAN } else { 1.0_f32.copysign(self) }
-	mvni v7.4s, #128, lsl #24
+	mvni v16.4s, #128, lsl #24
 		// src/f32/neon/vec3a.rs:256
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fadd v1.2s, v6.2s, v1.2s
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1656
 		if self.is_nan() { Self::NAN } else { 1.0_f32.copysign(self) }
-	mov v6.16b, v7.16b
+	mov v6.16b, v16.16b
 	fcmp s0, s0
 	bsl v6.16b, v5.16b, v0.16b
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:2103
@@ -83,7 +91,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fcsel s1, s1, s6, vs
 		// src/f32/neon/mat4.rs:310
 		r.x_axis.length() * math::signum(det),
-	fmul s1, s16, s1
+	fmul s1, s7, s1
 		// src/f32/vec3.rs:963
 		Self::new(1.0 / self.x, 1.0 / self.y, 1.0 / self.z)
 	fdiv s6, s5, s1
@@ -109,7 +117,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/neon/quat.rs:214
 		if m22 <= 0.0 {
 	fcmp s16, #0.0
-	b.ls .LBB279_3
+	b.ls .LBB282_3
 		// src/f32/neon/quat.rs:241
 		let sum10 = m11 + m00;
 	fadd s7, s7, s2
@@ -120,7 +128,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/neon/quat.rs:243
 		if sum10 <= 0.0 {
 	fcmp s7, #0.0
-	b.ls .LBB279_5
+	b.ls .LBB282_5
 		// src/f32/neon/quat.rs:255
 		let four_wsq = opm22 + sum10;
 	fadd s6, s16, s7
@@ -147,8 +155,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul v2.4s, v2.4s, v4.s[0]
 		// src/f32/neon/quat.rs:243
 		if sum10 <= 0.0 {
-	b .LBB279_7
-.LBB279_3:
+	b .LBB282_7
+.LBB282_3:
 		// src/f32/neon/quat.rs:216
 		let dif10 = m11 - m00;
 	fsub s7, s7, s2
@@ -158,7 +166,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/neon/quat.rs:218
 		if dif10 <= 0.0 {
 	fcmp s7, #0.0
-	b.ls .LBB279_6
+	b.ls .LBB282_6
 		// src/f32/neon/quat.rs:230
 		let four_ysq = omm22 + dif10;
 	fadd s5, s5, s7
@@ -194,8 +202,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul v2.4s, v3.4s, v7.s[0]
 		// src/f32/neon/quat.rs:218
 		if dif10 <= 0.0 {
-	b .LBB279_7
-.LBB279_5:
+	b .LBB282_7
+.LBB282_5:
 		// src/f32/neon/quat.rs:245
 		let four_zsq = opm22 - sum10;
 	fsub s6, s16, s7
@@ -222,8 +230,8 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 	fmul v2.4s, v2.4s, v3.4s
 		// src/f32/neon/quat.rs:243
 		if sum10 <= 0.0 {
-	b .LBB279_7
-.LBB279_6:
+	b .LBB282_7
+.LBB282_6:
 		// src/f32/neon/quat.rs:220
 		let four_xsq = omm22 - dif10;
 	trn1 v6.4s, v3.4s, v4.4s
@@ -247,7 +255,7 @@ gungraun::mat4_to_scale_rotation_translation::__gungraun_wrapper_mod::mat4_to_sc
 		// src/f32/neon/quat.rs:223
 		four_xsq * inv4x,
 	fmul v2.4s, v6.4s, v3.s[0]
-.LBB279_7:
+.LBB282_7:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str q2, [x0]

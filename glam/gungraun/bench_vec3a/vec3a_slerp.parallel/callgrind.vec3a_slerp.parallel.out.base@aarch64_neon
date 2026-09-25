@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 6870
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e --gungraun-run 00006 00006 00002
+pid: 8890
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363 --gungraun-run 00006 00007 00002
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 70825
+desc: Timerange: Basic block 0 - 70831
 desc: Trigger: Program termination
 
 positions: line
@@ -23,7 +23,7 @@ ob=/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363
 cfi=???
 cfn=(below main)
 calls=1 0 
@@ -73,7 +73,7 @@ fe=./nptl/./nptl/pthread_getattr_np.c
 fl=./malloc/./malloc/malloc.c
 fn=free
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363
 cfi=???
 cfn=__rustc::__rust_dealloc'2
 calls=1 0 
@@ -82,13 +82,13 @@ fe=./malloc/./malloc/malloc.c
 
 fn=free'2
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363
 cfi=???
 cfn=gungraun::main'2
 calls=1 0 
 0 50
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363
 cfi=???
 cfn=gungraun::bench_vec3a::__run
 calls=1 0 
@@ -116,7 +116,7 @@ cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
 350 50
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363
 cfi=???
 cfn=init_have_lse_atomics
 calls=1 0 
@@ -124,7 +124,7 @@ calls=1 0
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363
 cfi=???
 cfn=main
 calls=1 0 
@@ -133,14 +133,14 @@ calls=1 0
 fl=./nptl/./nptl/pthread_attr_destroy.c
 fn=pthread_attr_destroy
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363
 cfi=???
 cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
 calls=1 0 
 0 50
 fe=./nptl/./nptl/pthread_attr_destroy.c
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-aa52de484fd2003e
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-3f11ca2f487ab363
 fl=???
 fn=__rustc::__rust_dealloc
 cfn=__rustc::__rdl_dealloc
@@ -152,10 +152,15 @@ cfn=__rustc::__rdl_dealloc'2
 calls=5 0 
 0 100
 
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_parallel::parallel
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+0 40
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
 calls=1 0 
-0 50
+0 6
+0 4
+
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
+0 6
 
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -181,6 +186,11 @@ cfn=__rustc::__rust_dealloc
 calls=1 0 
 0 50
 
+fn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
+calls=1 0 
+0 50
+
 fn=__init_cpu_features
 fi=./csu/../csu/libc-start.c
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -192,11 +202,6 @@ fe=???
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 50
-
-fn=gungraun::vec3a_slerp::__run_parallel
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_parallel::parallel
 calls=1 0 
 0 50
 
@@ -257,6 +262,11 @@ cfn=free'2
 calls=5 3363 
 0 100
 
+fn=gungraun::vec3a_slerp::__run_parallel
+cfn=gungraun::vec3a_slerp::__gungraun_wrapper_id_mod_general::general
+calls=1 0 
+0 50
+
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
 calls=1 0 
@@ -266,14 +276,5 @@ fn=std::sys::pal::unix::stack_overflow::imp::make_handler
 cfn=std::sys::pal::unix::stack_overflow::thread_info::set_current_info
 calls=1 0 
 0 50
-
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp
-0 44
-cfn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
-calls=1 0 
-0 6
-
-fn=gungraun::vec3a_slerp::__gungraun_wrapper_mod::vec3a_slerp'2
-0 6
 
 totals: 50

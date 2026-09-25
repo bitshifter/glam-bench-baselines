@@ -3,11 +3,11 @@
 .type	gungraun::mat4_from_quat::__gungraun_wrapper_mod::mat4_from_quat,@function
 gungraun::mat4_from_quat::__gungraun_wrapper_mod::mat4_from_quat:
 	.cfi_startproc
-		// src/f32/neon/vec4.rs:2051
+		// src/f32/neon/vec4.rs:2080
 		(v.x, v.y, v.z, v.w)
 	mov s2, v0.s[1]
 	mov s3, v0.s[2]
-	adrp x8, .LCPI199_0
+	adrp x8, .LCPI200_0
 		// src/f32/neon/mat4.rs:236
 		let x2 = x + x;
 	fadd v6.4s, v0.4s, v0.4s
@@ -95,7 +95,7 @@ gungraun::mat4_from_quat::__gungraun_wrapper_mod::mat4_from_quat:
 	mov v22.s[2], v0.s[0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
-	ldr q0, [x8, :lo12:.LCPI199_0]
+	ldr q0, [x8, :lo12:.LCPI200_0]
 		// src/f32/neon/vec4.rs:110
 		unsafe { UnionCast { a: [x, y, z, w] }.v }
 	mov v21.s[2], v2.s[0]

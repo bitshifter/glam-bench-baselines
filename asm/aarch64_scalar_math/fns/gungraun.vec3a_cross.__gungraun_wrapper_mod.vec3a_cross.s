@@ -8,7 +8,7 @@ gungraun::vec3a_cross::__gungraun_wrapper_mod::vec3a_cross:
 	ldp d1, d0, [x2]
 	ldur d2, [x1, #4]
 	ldr d3, [x1]
-		// src/f32/scalar/vec3a.rs:273
+		// src/f32/scalar/vec3a.rs:292
 		self.y * rhs.z - rhs.y * self.z,
 	mov v4.16b, v2.16b
 	zip1 v0.2s, v0.2s, v1.2s

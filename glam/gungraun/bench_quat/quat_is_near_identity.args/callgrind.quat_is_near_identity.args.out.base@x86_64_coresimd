@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 12134
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd --gungraun-run 00004 00004 00000
+pid: 15644
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c --gungraun-run 00004 00004 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 86415
+desc: Timerange: Basic block 0 - 85970
 desc: Trigger: Program termination
 
 positions: line
@@ -29,21 +29,24 @@ calls=1 29
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 cfi=???
 cfn=main
 calls=1 0 
 58 7
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 fl=???
-fn=gungraun::main
-cfn=gungraun::bench_quat::__run
+fn=main
+cfn=std::rt::lang_start_internal
 calls=1 0 
 0 7
 
-fn=main
-cfn=std::rt::lang_start_internal
+fn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
+0 7
+
+fn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
+cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
 calls=1 0 
 0 7
 
@@ -54,11 +57,6 @@ calls=1 0
 
 fn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 cfn=gungraun::main
-calls=1 0 
-0 7
-
-fn=gungraun::quat_is_near_identity::__run_args
-cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
 calls=1 0 
 0 7
 
@@ -74,7 +72,9 @@ cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
 calls=1 0 
 0 7
 
-fn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
+fn=gungraun::quat_is_near_identity::__run_args
+cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
+calls=1 0 
 0 7
 
 fn=gungraun::bench_quat::__run
@@ -82,15 +82,15 @@ cfn=gungraun::quat_is_near_identity::__run_args
 calls=1 0 
 0 7
 
-fn=gungraun::quat_is_near_identity::__gungraun_wrapper_id_mod_args::args
-cfn=gungraun::quat_is_near_identity::__gungraun_wrapper_mod::quat_is_near_identity
+fn=gungraun::main
+cfn=gungraun::bench_quat::__run
 calls=1 0 
 0 7
 
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
 fn=0x000000000001f540
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 cfi=???
 cfn=(below main)
 calls=1 0 

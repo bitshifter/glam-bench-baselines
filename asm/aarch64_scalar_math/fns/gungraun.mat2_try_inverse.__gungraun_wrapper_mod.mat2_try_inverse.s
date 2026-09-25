@@ -14,7 +14,7 @@ gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse:
 		// src/f32/scalar/mat2.rs:389
 		if det == 0.0 {
 	fcmp s1, #0.0
-	b.ne .LBB229_2
+	b.ne .LBB230_2
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str wzr, [x0]
@@ -24,7 +24,7 @@ gungraun::mat2_try_inverse::__gungraun_wrapper_mod::mat2_try_inverse:
 		// benches/gungraun.rs:198
 		}
 	ret
-.LBB229_2:
+.LBB230_2:
 	fmov s2, #1.00000000
 	mov w8, #1
 		// src/f32/scalar/mat2.rs:395

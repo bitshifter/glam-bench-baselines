@@ -17,7 +17,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 	.cfi_offset w29, -32
 	.cfi_offset b8, -40
 	.cfi_offset b9, -48
-		// src/f32/scalar/quat.rs:762
+		// src/f32/scalar/quat.rs:765
 		let mut dot = self.dot(end);
 	ldr q6, [x1]
 	ldr q2, [x2]
@@ -27,7 +27,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/scalar/vec4.rs:243
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z) + (self.w * rhs.w)
 	fmul v0.4s, v6.4s, v2.4s
-		// src/f32/scalar/quat.rs:763
+		// src/f32/scalar/quat.rs:766
 		if dot < 0.0 {
 	fneg v5.4s, v2.4s
 	movk w8, #16255, lsl #16
@@ -40,7 +40,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 	fadd v1.2s, v1.2s, v3.2s
 	fadd v0.2s, v1.2s, v0.2s
 	movi d1, #0000000000000000
-		// src/f32/scalar/quat.rs:763
+		// src/f32/scalar/quat.rs:766
 		if dot < 0.0 {
 	fcmgt v3.4s, v1.4s, v0.4s
 	fneg s4, s0
@@ -49,10 +49,10 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 	fcsel s0, s4, s0, mi
 	fmov s4, w8
 	bit v2.16b, v5.16b, v3.16b
-		// src/f32/scalar/quat.rs:769
+		// src/f32/scalar/quat.rs:772
 		if dot > DOT_THRESHOLD {
 	fcmp s0, s4
-	b.le .LBB149_2
+	b.le .LBB150_2
 	fmov s0, #1.00000000
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:350
 		fn mul(self, other: $t) -> $t { self * other }
@@ -81,8 +81,8 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/scalar/vec4.rs:630
 		1.0 / self.length()
 	fdiv s0, s0, s2
-	b .LBB149_3
-.LBB149_2:
+	b .LBB150_3
+.LBB150_2:
 	mov w8, #31276
 	stur q2, [x29, #-32]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:1632
@@ -133,7 +133,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// src/f32/math.rs:28
 		if nonnegative {
 	fcmp s0, #0.0
-		// src/f32/scalar/quat.rs:734
+		// src/f32/scalar/quat.rs:737
 		let scale1 = math::sin(theta * (1.0 - s));
 	fsub s0, s9, s7
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:2103
@@ -161,7 +161,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		if nonnegative {
 	fsub s2, s2, s1
 	fcsel s8, s2, s1, lt
-		// src/f32/scalar/quat.rs:734
+		// src/f32/scalar/quat.rs:737
 		let scale1 = math::sin(theta * (1.0 - s));
 	fmul s0, s0, s8
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/num/f32.rs:702
@@ -169,7 +169,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 	bl sinf
 	ldr q1, [sp, #16]
 	str q0, [sp, #16]
-		// src/f32/scalar/quat.rs:735
+		// src/f32/scalar/quat.rs:738
 		let scale2 = math::sin(theta * s);
 	fmul s1, s1, s8
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/num/f32.rs:702
@@ -180,7 +180,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 	fmov s0, s8
 	bl sinf
 	ldp q2, q1, [sp, #16]
-		// src/f32/scalar/quat.rs:737
+		// src/f32/scalar/quat.rs:740
 		((self * scale1) + (end * scale2)) * (1.0 / theta_sin)
 	fdiv s0, s9, s0
 	ldr q3, [sp]
@@ -192,7 +192,7 @@ gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/arith.rs:104
 		fn add(self, other: $t) -> $t { self + other }
 	fadd v1.4s, v1.4s, v2.4s
-.LBB149_3:
+.LBB150_3:
 	fmul v0.4s, v1.4s, v0.s[0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)

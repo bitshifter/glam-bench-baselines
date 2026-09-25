@@ -3,28 +3,28 @@
 .type	gungraun::vec3a_select::__gungraun_wrapper_mod::vec3a_select,@function
 gungraun::vec3a_select::__gungraun_wrapper_mod::vec3a_select:
 	.cfi_startproc
-		// src/f32/scalar/vec3a.rs:136
+		// src/f32/scalar/vec3a.rs:155
 		if mask.test(0) { if_true.x } else { if_false.x },
 	ldp w8, w9, [x1]
 	ldr w10, [x1, #8]
 	tst w8, #0x1
 	csel x8, x2, x3, ne
-		// src/f32/scalar/vec3a.rs:137
+		// src/f32/scalar/vec3a.rs:156
 		if mask.test(1) { if_true.y } else { if_false.y },
 	tst w9, #0x1
-		// src/f32/scalar/vec3a.rs:136
+		// src/f32/scalar/vec3a.rs:155
 		if mask.test(0) { if_true.x } else { if_false.x },
 	ldr s0, [x8]
-		// src/f32/scalar/vec3a.rs:137
+		// src/f32/scalar/vec3a.rs:156
 		if mask.test(1) { if_true.y } else { if_false.y },
 	csel x8, x2, x3, ne
-		// src/f32/scalar/vec3a.rs:138
+		// src/f32/scalar/vec3a.rs:157
 		if mask.test(2) { if_true.z } else { if_false.z },
 	tst w10, #0x1
-		// src/f32/scalar/vec3a.rs:137
+		// src/f32/scalar/vec3a.rs:156
 		if mask.test(1) { if_true.y } else { if_false.y },
 	ldr s1, [x8, #4]
-		// src/f32/scalar/vec3a.rs:138
+		// src/f32/scalar/vec3a.rs:157
 		if mask.test(2) { if_true.z } else { if_false.z },
 	csel x8, x2, x3, ne
 	ldr s2, [x8, #8]

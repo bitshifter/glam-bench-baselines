@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 8543
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7 --gungraun-run 00004 00009 00000
+pid: 12068
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402 --gungraun-run 00004 00009 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 71462
+desc: Timerange: Basic block 0 - 71476
 desc: Trigger: Program termination
 
 positions: line
@@ -39,7 +39,7 @@ calls=1 517
 fl=./elf/./elf/dl-init.c
 fn=_dl_init
 fi=./elf/../sysdeps/aarch64/dl-start.S
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402
 cfi=???
 cfn=(below main)
 calls=1 0 
@@ -120,7 +120,7 @@ fe=./posix/../sysdeps/unix/sysv/linux/aarch64/sysconf.c
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402
 cfi=???
 cfn=main
 calls=1 0 
@@ -143,7 +143,7 @@ fe=./stdlib/./stdlib/cxa_atexit.c
 fl=./nptl/./nptl/pthread_attr_destroy.c
 fn=pthread_attr_destroy
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402
 cfi=???
 cfn=std::sys::pal::unix::stack_overflow::imp::make_handler
 calls=1 0 
@@ -162,7 +162,7 @@ fe=./nptl/./nptl/pthread_getattr_np.c
 fl=./malloc/./malloc/malloc.c
 fn=free
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402
 cfi=???
 cfn=__rustc::__rust_dealloc'2
 calls=1 0 
@@ -171,13 +171,13 @@ fe=./malloc/./malloc/malloc.c
 
 fn=free'2
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402
 cfi=???
 cfn=gungraun::main'2
 calls=1 0 
 0 226
 fi=???
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402
 cfi=???
 cfn=gungraun::bench_quat::__run
 calls=1 0 
@@ -196,13 +196,13 @@ cfi=./csu/../sysdeps/nptl/libc_start_call_main.h
 cfn=(below main)
 calls=1 29 
 350 226
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402
 cfi=???
 cfn=init_have_lse_atomics
 calls=1 0 
 145 226
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-5a20af21d05361f7
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-369ad9e0a06b9402
 fl=???
 fn=(below main)
 cob=/usr/lib/aarch64-linux-gnu/libc.so.6
@@ -325,13 +325,14 @@ calls=1 0
 0 226
 
 fn=gungraun::quat_slerp::__gungraun_wrapper_mod::quat_slerp
-0 88
+0 85
 cob=/usr/lib/aarch64-linux-gnu/libm.so.6
 cfi=./math/../sysdeps/ieee754/flt-32/math_config.h
 cfn=sinf
 calls=3 67 
 0 104
 0 34
+0 3
 
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>

@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 12077
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd --gungraun-run 00000 00002 00001
+pid: 15565
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c --gungraun-run 00000 00002 00001
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 86416
+desc: Timerange: Basic block 0 - 85971
 desc: Trigger: Program termination
 
 positions: line
@@ -29,25 +29,37 @@ calls=1 29
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 cfi=???
 cfn=main
 calls=1 0 
 58 19
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+ob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 fl=???
+fn=(below main)
+cob=/usr/lib/x86_64-linux-gnu/libc.so.6
+cfi=./csu/../csu/libc-start.c
+cfn=__libc_start_main@@GLIBC_2.34
+calls=1 242 
+0 19
+
+fn=std::rt::lang_start::<()>::{closure#0}
+cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+calls=1 0 
+0 19
+
+fn=gungraun::mat2_inverse_or_zero::__run_failure
+cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+calls=1 0 
+0 19
+
 fn=gungraun::bench_mat2::__run
 cfn=gungraun::mat2_inverse_or_zero::__run_failure
 calls=1 0 
 0 19
 
 fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
-0 19
-
-fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
-cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
-calls=1 0 
 0 19
 
 fn=gungraun::main
@@ -60,8 +72,8 @@ cfn=std::rt::lang_start_internal
 calls=1 0 
 0 19
 
-fn=gungraun::mat2_inverse_or_zero::__run_failure
-cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+fn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_id_mod_failure::failure
+cfn=gungraun::mat2_inverse_or_zero::__gungraun_wrapper_mod::mat2_inverse_or_zero
 calls=1 0 
 0 19
 
@@ -75,22 +87,10 @@ cfn=gungraun::main
 calls=1 0 
 0 19
 
-fn=(below main)
-cob=/usr/lib/x86_64-linux-gnu/libc.so.6
-cfi=./csu/../csu/libc-start.c
-cfn=__libc_start_main@@GLIBC_2.34
-calls=1 242 
-0 19
-
-fn=std::rt::lang_start::<()>::{closure#0}
-cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-calls=1 0 
-0 19
-
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
 fn=0x000000000001f540
-cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/3690daacd1c451bd/out/gungraun-3690daacd1c451bd
+cob=/home/runner/work/glam-rs/glam-rs/target/release/build/glam/d5095736ee909d1c/out/gungraun-d5095736ee909d1c
 cfi=???
 cfn=(below main)
 calls=1 0 

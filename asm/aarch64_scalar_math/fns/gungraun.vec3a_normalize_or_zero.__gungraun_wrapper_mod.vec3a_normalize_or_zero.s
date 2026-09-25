@@ -3,39 +3,39 @@
 .type	gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero,@function
 gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_zero:
 	.cfi_startproc
-		// benches/gungraun.rs:507
+		// benches/gungraun.rs:513
 		black_box(v.normalize_or_zero())
 	ldr d1, [x1]
 	ldur d2, [x1, #4]
 	fmov s0, #1.00000000
-		// src/f32/scalar/vec3a.rs:258
+		// src/f32/scalar/vec3a.rs:277
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fmul v3.2s, v1.2s, v1.2s
 	fmul v4.2s, v2.2s, v2.2s
-		// src/f32/scalar/vec3a.rs:684
+		// src/f32/scalar/vec3a.rs:703
 		if rcp.is_finite() && rcp > 0.0 {
 	dup v2.2s, v2.s[1]
-		// src/f32/scalar/vec3a.rs:258
+		// src/f32/scalar/vec3a.rs:277
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fadd v3.2s, v3.2s, v4.2s
 	dup v4.2s, v4.s[1]
-		// src/f32/scalar/vec3a.rs:684
+		// src/f32/scalar/vec3a.rs:703
 		if rcp.is_finite() && rcp > 0.0 {
 	mov v1.d[1], v2.d[0]
-		// src/f32/scalar/vec3a.rs:258
+		// src/f32/scalar/vec3a.rs:277
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fadd v3.2s, v3.2s, v4.2s
-		// src/f32/scalar/vec3a.rs:684
+		// src/f32/scalar/vec3a.rs:703
 		if rcp.is_finite() && rcp > 0.0 {
 	mov v1.s[3], v2.s[0]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/f32.rs:2103
 		intrinsics::sqrtf32(x)
 	fsqrt s3, s3
-		// src/f32/scalar/vec3a.rs:597
+		// src/f32/scalar/vec3a.rs:616
 		1.0 / self.length()
 	fdiv s0, s0, s3
 	fmov w8, s0
-		// src/f32/scalar/vec3a.rs:684
+		// src/f32/scalar/vec3a.rs:703
 		if rcp.is_finite() && rcp > 0.0 {
 	fmul v0.4s, v1.4s, v0.s[0]
 	and w9, w8, #0x7fffffff
@@ -57,6 +57,6 @@ gungraun::vec3a_normalize_or_zero::__gungraun_wrapper_mod::vec3a_normalize_or_ze
 	str q0, [x0]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:508
+		// benches/gungraun.rs:514
 		}
 	ret

@@ -10,8 +10,8 @@ gungraun::mat4_from_quat::__gungraun_wrapper_mod::mat4_from_quat:
 	ldp s3, s5, [x1, #8]
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
-	adrp x8, .Lanon.fea1c0cfd62eb1806694bd97ac99e3e5.363
-	add x8, x8, :lo12:.Lanon.fea1c0cfd62eb1806694bd97ac99e3e5.363
+	adrp x8, .Lanon.0f7c3b3332f979b2ca9e01e3c17fdc1c.366
+	add x8, x8, :lo12:.Lanon.0f7c3b3332f979b2ca9e01e3c17fdc1c.366
 	str wzr, [x0, #12]
 		// src/f32/scalar/mat4.rs:238
 		let x2 = x + x;

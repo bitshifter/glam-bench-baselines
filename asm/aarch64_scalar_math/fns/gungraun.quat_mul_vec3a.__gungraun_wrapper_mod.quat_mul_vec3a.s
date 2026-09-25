@@ -3,7 +3,7 @@
 .type	gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a,@function
 gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a:
 	.cfi_startproc
-		// src/f32/scalar/quat.rs:818
+		// src/f32/scalar/quat.rs:821
 		let b = Vec3::new(self.x, self.y, self.z);
 	ldr d0, [x1]
 	ldur d1, [x1, #4]
@@ -32,7 +32,7 @@ gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a:
 	fmul s5, s6, v1.s[1]
 	fadd v6.2s, v16.2s, v17.2s
 	fmul s7, s7, v1.s[1]
-		// src/f32/scalar/quat.rs:817
+		// src/f32/scalar/quat.rs:820
 		let w = self.w;
 	ldr s16, [x1, #12]
 		// src/f32/vec3.rs:262
@@ -41,10 +41,10 @@ gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a:
 		// src/f32/vec3.rs:247
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fadd s4, s4, s5
-		// src/f32/scalar/quat.rs:820
+		// src/f32/scalar/quat.rs:823
 		rhs.mul(w * w - b2)
 	fmul s5, s16, s16
-		// src/f32/scalar/quat.rs:822
+		// src/f32/scalar/quat.rs:825
 		.add(b.cross(rhs).mul(w * 2.0))
 	fadd s16, s16, s16
 		// src/f32/vec3.rs:247
@@ -57,10 +57,10 @@ gungraun::quat_mul_vec3a::__gungraun_wrapper_mod::quat_mul_vec3a:
 		// src/f32/vec3.rs:264
 		self.x * rhs.y - rhs.x * self.y,
 	fmul v18.2s, v2.2s, v1.2s
-		// src/f32/scalar/quat.rs:820
+		// src/f32/scalar/quat.rs:823
 		rhs.mul(w * w - b2)
 	fsub s4, s5, s4
-		// src/f32/scalar/quat.rs:821
+		// src/f32/scalar/quat.rs:824
 		.add(b.mul(rhs.dot(b) * 2.0))
 	fadd s5, s6, s6
 		// src/f32/vec3.rs:264

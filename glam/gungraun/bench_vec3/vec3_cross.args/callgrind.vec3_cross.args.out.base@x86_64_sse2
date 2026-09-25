@@ -1,8 +1,8 @@
 # callgrind format
 version: 1
 creator: callgrind-3.22.0
-pid: 7176
-cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17 --gungraun-run 00005 00001 00000
+pid: 9116
+cmd:  /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a --gungraun-run 00005 00001 00000
 part: 1
 thread: 1
 
@@ -11,7 +11,7 @@ desc: I1 cache:
 desc: D1 cache: 
 desc: LL cache: 
 
-desc: Timerange: Basic block 0 - 85306
+desc: Timerange: Basic block 0 - 84545
 desc: Trigger: Program termination
 
 positions: line
@@ -19,7 +19,7 @@ events: Ir
 summary: 19
 
 
-ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17
+ob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a
 fl=???
 fn=std::rt::lang_start::<()>::{closure#0}
 cfn=std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
@@ -74,7 +74,7 @@ calls=1 0
 ob=/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
 fl=???
 fn=0x000000000001f540
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a
 cfi=???
 cfn=(below main)
 calls=1 0 
@@ -90,7 +90,7 @@ calls=1 29
 
 fl=./csu/../sysdeps/nptl/libc_start_call_main.h
 fn=(below main)
-cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-510a2717fe50be17
+cob=/home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a
 cfi=???
 cfn=main
 calls=1 0 

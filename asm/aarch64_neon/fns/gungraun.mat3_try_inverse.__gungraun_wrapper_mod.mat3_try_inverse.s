@@ -55,15 +55,15 @@ gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 		// src/f32/mat3.rs:630
 		if det == 0.0 {
 	fcmp s18, #0.0
-	b.ne .LBB231_2
+	b.ne .LBB232_2
 	movi d0, #0000000000000000
 	movi v1.2d, #0000000000000000
 	mov w8, wzr
 	movi d2, #0000000000000000
 	movi d4, #0000000000000000
 	movi d3, #0000000000000000
-	b .LBB231_3
-.LBB231_2:
+	b .LBB232_3
+.LBB232_2:
 		// src/f32/vec3.rs:262
 		self.y * rhs.z - rhs.y * self.z,
 	mov v20.16b, v3.16b
@@ -150,7 +150,7 @@ gungraun::mat3_try_inverse::__gungraun_wrapper_mod::mat3_try_inverse:
 	fmul s4, s0, s18
 	fmul v1.4s, v6.4s, v18.s[0]
 	fmul v0.2s, v7.2s, v16.2s
-.LBB231_3:
+.LBB232_3:
 		// ~/.rustup/toolchains/1.98.0-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs:491
 		crate::intrinsics::black_box(dummy)
 	str w8, [x0]

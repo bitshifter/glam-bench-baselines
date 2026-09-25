@@ -12,7 +12,7 @@ gungraun::vec3a_length::__gungraun_wrapper_mod::vec3a_length:
 	ldr s0, [x0]
 	ldur d1, [x0, #4]
 	add x8, sp, #12
-		// src/f32/scalar/vec3a.rs:258
+		// src/f32/scalar/vec3a.rs:277
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fmul s0, s0, s0
 	fmul v1.2s, v1.2s, v1.2s

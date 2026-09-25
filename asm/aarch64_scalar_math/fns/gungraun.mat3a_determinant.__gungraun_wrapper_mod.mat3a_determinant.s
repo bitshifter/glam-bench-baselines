@@ -7,44 +7,44 @@ gungraun::mat3a_determinant::__gungraun_wrapper_mod::mat3a_determinant:
 	.cfi_startproc
 	sub sp, sp, #16
 	.cfi_def_cfa_offset 16
-		// src/f32/scalar/mat3a.rs:678
+		// src/f32/scalar/mat3a.rs:689
 		self.x_axis.dot(self.y_axis.cross(self.z_axis))
 	ldr d0, [x0, #16]
 	ldr d1, [x0, #32]
 	add x8, sp, #12
 	ldp s7, s4, [x0, #36]
-		// src/f32/scalar/vec3a.rs:275
+		// src/f32/scalar/vec3a.rs:294
 		self.x * rhs.y - rhs.x * self.y,
 	dup v2.2s, v0.s[0]
 	dup v3.2s, v1.s[0]
-		// src/f32/scalar/mat3a.rs:678
+		// src/f32/scalar/mat3a.rs:689
 		self.x_axis.dot(self.y_axis.cross(self.z_axis))
 	ldp s6, s5, [x0, #20]
-		// src/f32/scalar/vec3a.rs:275
+		// src/f32/scalar/vec3a.rs:294
 		self.x * rhs.y - rhs.x * self.y,
 	mov v2.s[0], v5.s[0]
 	mov v3.s[0], v4.s[0]
-		// src/f32/scalar/vec3a.rs:273
+		// src/f32/scalar/vec3a.rs:292
 		self.y * rhs.z - rhs.y * self.z,
 	fmul s4, s6, s4
 	fmul s5, s5, s7
-		// src/f32/scalar/vec3a.rs:275
+		// src/f32/scalar/vec3a.rs:294
 		self.x * rhs.y - rhs.x * self.y,
 	fmul v1.2s, v2.2s, v1.2s
 	fmul v0.2s, v0.2s, v3.2s
-		// src/f32/scalar/mat3a.rs:678
+		// src/f32/scalar/mat3a.rs:689
 		self.x_axis.dot(self.y_axis.cross(self.z_axis))
 	ldur d3, [x0, #4]
-		// src/f32/scalar/vec3a.rs:273
+		// src/f32/scalar/vec3a.rs:292
 		self.y * rhs.z - rhs.y * self.z,
 	fsub s2, s4, s5
-		// src/f32/scalar/vec3a.rs:275
+		// src/f32/scalar/vec3a.rs:294
 		self.x * rhs.y - rhs.x * self.y,
 	fsub v0.2s, v1.2s, v0.2s
-		// src/f32/scalar/mat3a.rs:678
+		// src/f32/scalar/mat3a.rs:689
 		self.x_axis.dot(self.y_axis.cross(self.z_axis))
 	ldr s1, [x0]
-		// src/f32/scalar/vec3a.rs:258
+		// src/f32/scalar/vec3a.rs:277
 		(self.x * rhs.x) + (self.y * rhs.y) + (self.z * rhs.z)
 	fmul s1, s1, s2
 	fmul v0.2s, v3.2s, v0.2s

@@ -1,0 +1,12 @@
+==9125== Callgrind, a call-graph generating cache profiler
+==9125== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==9125== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==9125== Command: /home/runner/work/glam-rs/glam-rs/target/release/deps/gungraun-1d53050c5910956a --gungraun-run 00006 00004 00000
+==9125== Parent PID: 9043
+==9125== 
+==9125== For interactive control, run 'callgrind_control -h'.
+==9125== 
+==9125== Events    : Ir
+==9125== Collected : 9
+==9125== 
+==9125== I   refs:      9

@@ -11,6 +11,6 @@ gungraun::vec4_mul_vec4::__gungraun_wrapper_mod::vec4_mul_vec4:
 	str q0, [x0]
 	//APP
 	//NO_APP
-		// benches/gungraun.rs:528
+		// benches/gungraun.rs:534
 		}
 	ret
